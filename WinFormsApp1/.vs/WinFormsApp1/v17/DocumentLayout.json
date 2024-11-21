@@ -1,0 +1,120 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\H\u1ECDc T\u1EADp\\BT_C#\\New-folder\\WinFormsApp1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D9720C57-C499-4EA4-9905-7F1094F3D504}|WinFormsApp1\\WinFormsApp1.csproj|c:\\h\u1ECDc t\u1EADp\\bt_c#\\new-folder\\winformsapp1\\winformsapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D9720C57-C499-4EA4-9905-7F1094F3D504}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D9720C57-C499-4EA4-9905-7F1094F3D504}|WinFormsApp1\\WinFormsApp1.csproj|c:\\h\u1ECDc t\u1EADp\\bt_c#\\new-folder\\winformsapp1\\winformsapp1\\connect\\csdlquanlynhansucsharp.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{D9720C57-C499-4EA4-9905-7F1094F3D504}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\connect\\csdlquanlynhansucsharp.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D9720C57-C499-4EA4-9905-7F1094F3D504}|WinFormsApp1\\WinFormsApp1.csproj|C:\\H\u1ECDc T\u1EADp\\BT_C#\\New-folder\\WinFormsApp1\\winformsapp1\\gui\\nhanviengui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D9720C57-C499-4EA4-9905-7F1094F3D504}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\gui\\nhanviengui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D9720C57-C499-4EA4-9905-7F1094F3D504}|WinFormsApp1\\WinFormsApp1.csproj|c:\\h\u1ECDc t\u1EADp\\bt_c#\\new-folder\\winformsapp1\\winformsapp1\\imports\\import.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D9720C57-C499-4EA4-9905-7F1094F3D504}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\imports\\import.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Antho\\Desktop\\duphong - Copy\\WinFormsApp1\\WinFormsApp1\\DTO_thuoctinh\\quyendto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Antho\\Desktop\\duphong - Copy\\WinFormsApp1\\WinFormsApp1\\DTO_thuoctinh\\taikhoandto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D9720C57-C499-4EA4-9905-7F1094F3D504}|WinFormsApp1\\WinFormsApp1.csproj|c:\\h\u1ECDc t\u1EADp\\bt_c#\\new-folder\\winformsapp1\\winformsapp1\\connect\\csdlquanlynhansucsharp.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
+      "RelativeMoniker": "D:0:0:{D9720C57-C499-4EA4-9905-7F1094F3D504}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\connect\\csdlquanlynhansucsharp.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "nhanviengui.cs [Design]",
+              "DocumentMoniker": "C:\\H\u1ECDc T\u1EADp\\BT_C#\\New-folder\\WinFormsApp1\\WinFormsApp1\\GUI\\nhanviengui.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\GUI\\nhanviengui.cs",
+              "ToolTip": "C:\\Users\\Antho\\Desktop\\duphong - Copy\\WinFormsApp1\\WinFormsApp1\\GUI\\nhanviengui.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\Users\\Antho\\Desktop\\duphong - Copy\\WinFormsApp1\\WinFormsApp1\\GUI\\nhanviengui.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T18:53:07.72Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "import.cs",
+              "DocumentMoniker": "C:\\H\u1ECDc T\u1EADp\\BT_C#\\New-folder\\WinFormsApp1\\WinFormsApp1\\Imports\\import.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\Imports\\import.cs",
+              "ToolTip": "C:\\H\u1ECDc T\u1EADp\\BT_C#\\New-folder\\WinFormsApp1\\WinFormsApp1\\Imports\\import.cs",
+              "RelativeToolTip": "WinFormsApp1\\Imports\\import.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T14:40:58.409Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\H\u1ECDc T\u1EADp\\BT_C#\\New-folder\\WinFormsApp1\\WinFormsApp1\\Program.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\Program.cs",
+              "ToolTip": "C:\\H\u1ECDc T\u1EADp\\BT_C#\\New-folder\\WinFormsApp1\\WinFormsApp1\\Program.cs",
+              "RelativeToolTip": "WinFormsApp1\\Program.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBsAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T04:42:27.407Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CSDLQuanLyNhanSuCSharp.sql ",
+              "DocumentMoniker": "C:\\H\u1ECDc T\u1EADp\\BT_C#\\New-folder\\WinFormsApp1\\WinFormsApp1\\connect\\CSDLQuanLyNhanSuCSharp.sql",
+              "RelativeDocumentMoniker": "WinFormsApp1\\connect\\CSDLQuanLyNhanSuCSharp.sql",
+              "ToolTip": "C:\\H\u1ECDc T\u1EADp\\BT_C#\\New-folder\\WinFormsApp1\\WinFormsApp1\\connect\\CSDLQuanLyNhanSuCSharp.sql",
+              "RelativeToolTip": "WinFormsApp1\\connect\\CSDLQuanLyNhanSuCSharp.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-11-19T08:12:12.793Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "quyendto.cs",
+              "DocumentMoniker": "C:\\Users\\Antho\\Desktop\\duphong - Copy\\WinFormsApp1\\WinFormsApp1\\DTO_thuoctinh\\quyendto.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Users\\Antho\\Desktop\\duphong - Copy\\WinFormsApp1\\WinFormsApp1\\DTO_thuoctinh\\quyendto.cs",
+              "ToolTip": "C:\\Users\\Antho\\Desktop\\duphong - Copy\\WinFormsApp1\\WinFormsApp1\\DTO_thuoctinh\\quyendto.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\Users\\Antho\\Desktop\\duphong - Copy\\WinFormsApp1\\WinFormsApp1\\DTO_thuoctinh\\quyendto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-19T08:12:04.599Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "taikhoandto.cs",
+              "DocumentMoniker": "C:\\Users\\Antho\\Desktop\\duphong - Copy\\WinFormsApp1\\WinFormsApp1\\DTO_thuoctinh\\taikhoandto.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Users\\Antho\\Desktop\\duphong - Copy\\WinFormsApp1\\WinFormsApp1\\DTO_thuoctinh\\taikhoandto.cs",
+              "ToolTip": "C:\\Users\\Antho\\Desktop\\duphong - Copy\\WinFormsApp1\\WinFormsApp1\\DTO_thuoctinh\\taikhoandto.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\Users\\Antho\\Desktop\\duphong - Copy\\WinFormsApp1\\WinFormsApp1\\DTO_thuoctinh\\taikhoandto.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-19T08:11:53.791Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
