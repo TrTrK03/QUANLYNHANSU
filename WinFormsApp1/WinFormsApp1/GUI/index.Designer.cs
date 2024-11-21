@@ -41,7 +41,6 @@
             phongban = new Button();
             home = new Button();
             panel2 = new Panel();
-            label2 = new Label();
             label1 = new Label();
             pictureBox1 = new PictureBox();
             fontDialog1 = new FontDialog();
@@ -68,16 +67,16 @@
             panel1.Controls.Add(panel2);
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
-            panel1.Margin = new Padding(2, 2, 2, 2);
+            panel1.Margin = new Padding(0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(135, 1055);
+            panel1.Size = new Size(143, 573);
             panel1.TabIndex = 0;
             // 
             // panNav
             // 
             panNav.BackColor = Color.FromArgb(0, 126, 249);
             panNav.Location = new Point(0, 138);
-            panNav.Margin = new Padding(2, 2, 2, 2);
+            panNav.Margin = new Padding(2);
             panNav.Name = "panNav";
             panNav.Size = new Size(5, 71);
             panNav.TabIndex = 3;
@@ -91,9 +90,9 @@
             chamcong.Image = Properties.Resources.home;
             chamcong.ImageAlign = ContentAlignment.MiddleLeft;
             chamcong.Location = new Point(0, 415);
-            chamcong.Margin = new Padding(2, 2, 2, 2);
+            chamcong.Margin = new Padding(2);
             chamcong.Name = "chamcong";
-            chamcong.Size = new Size(135, 39);
+            chamcong.Size = new Size(143, 39);
             chamcong.TabIndex = 2;
             chamcong.Text = "Chấm công";
             chamcong.TextAlign = ContentAlignment.MiddleRight;
@@ -111,9 +110,9 @@
             nhanvien.Image = Properties.Resources.home;
             nhanvien.ImageAlign = ContentAlignment.MiddleLeft;
             nhanvien.Location = new Point(0, 376);
-            nhanvien.Margin = new Padding(2, 2, 2, 2);
+            nhanvien.Margin = new Padding(2);
             nhanvien.Name = "nhanvien";
-            nhanvien.Size = new Size(135, 39);
+            nhanvien.Size = new Size(143, 39);
             nhanvien.TabIndex = 2;
             nhanvien.Text = "Nhân viên";
             nhanvien.TextAlign = ContentAlignment.MiddleRight;
@@ -131,9 +130,9 @@
             bangluong.Image = Properties.Resources.home;
             bangluong.ImageAlign = ContentAlignment.MiddleLeft;
             bangluong.Location = new Point(0, 337);
-            bangluong.Margin = new Padding(2, 2, 2, 2);
+            bangluong.Margin = new Padding(2);
             bangluong.Name = "bangluong";
-            bangluong.Size = new Size(135, 39);
+            bangluong.Size = new Size(143, 39);
             bangluong.TabIndex = 2;
             bangluong.Text = "Bảng lương";
             bangluong.TextAlign = ContentAlignment.MiddleRight;
@@ -151,9 +150,9 @@
             baohiem.Image = Properties.Resources.home;
             baohiem.ImageAlign = ContentAlignment.MiddleLeft;
             baohiem.Location = new Point(0, 298);
-            baohiem.Margin = new Padding(2, 2, 2, 2);
+            baohiem.Margin = new Padding(2);
             baohiem.Name = "baohiem";
-            baohiem.Size = new Size(135, 39);
+            baohiem.Size = new Size(143, 39);
             baohiem.TabIndex = 2;
             baohiem.Text = "Bảo hiểm";
             baohiem.TextAlign = ContentAlignment.MiddleRight;
@@ -170,10 +169,10 @@
             button10.ForeColor = Color.FromArgb(192, 192, 255);
             button10.Image = Properties.Resources.home;
             button10.ImageAlign = ContentAlignment.MiddleLeft;
-            button10.Location = new Point(0, 1016);
-            button10.Margin = new Padding(2, 2, 2, 2);
+            button10.Location = new Point(0, 534);
+            button10.Margin = new Padding(2);
             button10.Name = "button10";
-            button10.Size = new Size(135, 39);
+            button10.Size = new Size(143, 39);
             button10.TabIndex = 2;
             button10.Text = "Dashboard  ";
             button10.TextAlign = ContentAlignment.MiddleRight;
@@ -190,9 +189,9 @@
             thongbao.Image = Properties.Resources.home;
             thongbao.ImageAlign = ContentAlignment.MiddleLeft;
             thongbao.Location = new Point(0, 259);
-            thongbao.Margin = new Padding(2, 2, 2, 2);
+            thongbao.Margin = new Padding(2);
             thongbao.Name = "thongbao";
-            thongbao.Size = new Size(135, 39);
+            thongbao.Size = new Size(143, 39);
             thongbao.TabIndex = 2;
             thongbao.Text = "Thông báo";
             thongbao.TextAlign = ContentAlignment.MiddleRight;
@@ -210,9 +209,9 @@
             tuyendung.Image = Properties.Resources.home;
             tuyendung.ImageAlign = ContentAlignment.MiddleLeft;
             tuyendung.Location = new Point(0, 220);
-            tuyendung.Margin = new Padding(2, 2, 2, 2);
+            tuyendung.Margin = new Padding(2);
             tuyendung.Name = "tuyendung";
-            tuyendung.Size = new Size(135, 39);
+            tuyendung.Size = new Size(143, 39);
             tuyendung.TabIndex = 2;
             tuyendung.Text = "Tuyển dụng";
             tuyendung.TextAlign = ContentAlignment.MiddleRight;
@@ -230,9 +229,9 @@
             duan.Image = Properties.Resources.home;
             duan.ImageAlign = ContentAlignment.MiddleLeft;
             duan.Location = new Point(0, 181);
-            duan.Margin = new Padding(2, 2, 2, 2);
+            duan.Margin = new Padding(2);
             duan.Name = "duan";
-            duan.Size = new Size(135, 39);
+            duan.Size = new Size(143, 39);
             duan.TabIndex = 2;
             duan.Text = "Dự án";
             duan.TextAlign = ContentAlignment.MiddleRight;
@@ -250,9 +249,9 @@
             phongban.Image = Properties.Resources.home;
             phongban.ImageAlign = ContentAlignment.MiddleLeft;
             phongban.Location = new Point(0, 142);
-            phongban.Margin = new Padding(2, 2, 2, 2);
+            phongban.Margin = new Padding(2);
             phongban.Name = "phongban";
-            phongban.Size = new Size(135, 39);
+            phongban.Size = new Size(143, 39);
             phongban.TabIndex = 2;
             phongban.Text = "Phòng ban";
             phongban.TextAlign = ContentAlignment.MiddleRight;
@@ -271,9 +270,9 @@
             home.Image = Properties.Resources.home;
             home.ImageAlign = ContentAlignment.MiddleLeft;
             home.Location = new Point(0, 103);
-            home.Margin = new Padding(2, 2, 2, 2);
+            home.Margin = new Padding(2);
             home.Name = "home";
-            home.Size = new Size(135, 39);
+            home.Size = new Size(143, 39);
             home.TabIndex = 2;
             home.Text = "Dashboard  ";
             home.TextAlign = ContentAlignment.MiddleRight;
@@ -284,27 +283,15 @@
             // 
             // panel2
             // 
-            panel2.Controls.Add(label2);
             panel2.Controls.Add(label1);
             panel2.Controls.Add(pictureBox1);
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(0, 0);
-            panel2.Margin = new Padding(2, 2, 2, 2);
+            panel2.Margin = new Padding(2);
             panel2.Name = "panel2";
-            panel2.Size = new Size(135, 103);
+            panel2.Size = new Size(143, 103);
             panel2.TabIndex = 1;
             panel2.Paint += panel2_Paint;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.ForeColor = Color.FromArgb(158, 161, 178);
-            label2.Location = new Point(18, 76);
-            label2.Margin = new Padding(2, 0, 2, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(100, 20);
-            label2.TabIndex = 2;
-            label2.Text = "User text here";
             // 
             // label1
             // 
@@ -312,7 +299,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(0, 156, 149);
-            label1.Location = new Point(35, 61);
+            label1.Location = new Point(11, 61);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
             label1.Size = new Size(106, 25);
@@ -324,7 +311,7 @@
             pictureBox1.Anchor = AnchorStyles.Left;
             pictureBox1.Image = Properties.Resources.hr;
             pictureBox1.Location = new Point(35, 2);
-            pictureBox1.Margin = new Padding(2, 2, 2, 2);
+            pictureBox1.Margin = new Padding(2);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(58, 57);
             pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
@@ -336,10 +323,10 @@
             panel3.AutoSize = true;
             panel3.BackColor = Color.Navy;
             panel3.Dock = DockStyle.Top;
-            panel3.Location = new Point(135, 0);
+            panel3.Location = new Point(143, 0);
             panel3.Margin = new Padding(0);
             panel3.Name = "panel3";
-            panel3.Size = new Size(1789, 0);
+            panel3.Size = new Size(995, 0);
             panel3.TabIndex = 1;
             panel3.Paint += panel3_Paint;
             // 
@@ -349,12 +336,13 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
             BackColor = Color.FromArgb(46, 51, 73);
-            ClientSize = new Size(1924, 1055);
+            ClientSize = new Size(1138, 573);
             Controls.Add(panel3);
             Controls.Add(panel1);
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "index";
             Text = "Form1";
+            WindowState = FormWindowState.Maximized;
             Load += Form1_Load;
             panel1.ResumeLayout(false);
             panel2.ResumeLayout(false);
@@ -369,7 +357,6 @@
         private Panel panel1;
         private Panel panel2;
         private PictureBox pictureBox1;
-        private Label label2;
         private Label label1;
         private FontDialog fontDialog1;
         private Button home;

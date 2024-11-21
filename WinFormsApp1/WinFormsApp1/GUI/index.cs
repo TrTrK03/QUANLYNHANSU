@@ -1,4 +1,4 @@
-using System.Data;
+﻿using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -37,7 +37,7 @@ namespace WinFormsApp1
             //Controls.Add(usctr);
             //usctr.BringToFront();
             //usctr.Location = new System.Drawing.Point(186, 0);
-            
+
 
         }
 
@@ -68,6 +68,7 @@ namespace WinFormsApp1
             nhanviengui t2 = new nhanviengui();
             Controls.Add(t2);
             t2.BringToFront();
+            t2.Dock = DockStyle.Fill;
             t2.Location = new System.Drawing.Point(186, 0);
 
         }
@@ -91,9 +92,8 @@ namespace WinFormsApp1
             duangui d1 = new duangui();
             Controls.Add(d1);
             d1.BringToFront();
-            d1.Size = new System.Drawing.Size(this.ClientSize.Width - 186, this.ClientSize.Height);
+            d1.Dock = DockStyle.Fill;
             d1.Location = new System.Drawing.Point(186, 0);
-
         }
         private void bangluong_Click(object sender, EventArgs e)
         {
@@ -198,6 +198,9 @@ namespace WinFormsApp1
 
         }
 
-       
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

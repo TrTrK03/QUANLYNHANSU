@@ -85,7 +85,7 @@ namespace WinFormsApp1.GUI
 
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             panel1 = new Panel();
             panel5 = new Panel();
             panel7 = new Panel();
@@ -206,7 +206,7 @@ namespace WinFormsApp1.GUI
             cbNu.Location = new Point(649, 260);
             cbNu.Margin = new Padding(6, 5, 6, 5);
             cbNu.Name = "cbNu";
-            cbNu.Size = new Size(48, 24);
+            cbNu.Size = new Size(59, 29);
             cbNu.TabIndex = 74;
             cbNu.Text = "Nữ";
             cbNu.UseVisualStyleBackColor = true;
@@ -219,7 +219,7 @@ namespace WinFormsApp1.GUI
             cbNam.Location = new Point(521, 260);
             cbNam.Margin = new Padding(6, 5, 6, 5);
             cbNam.Name = "cbNam";
-            cbNam.Size = new Size(61, 24);
+            cbNam.Size = new Size(75, 29);
             cbNam.TabIndex = 73;
             cbNam.Text = "Nam";
             cbNam.UseVisualStyleBackColor = true;
@@ -231,14 +231,14 @@ namespace WinFormsApp1.GUI
             dtpNgaySinh.Location = new Point(521, 185);
             dtpNgaySinh.Margin = new Padding(6, 5, 6, 5);
             dtpNgaySinh.Name = "dtpNgaySinh";
-            dtpNgaySinh.Size = new Size(344, 33);
+            dtpNgaySinh.Size = new Size(344, 39);
             dtpNgaySinh.TabIndex = 63;
             // 
             // txtPhongBan
             // 
             txtPhongBan.Location = new Point(1100, 253);
             txtPhongBan.Name = "txtPhongBan";
-            txtPhongBan.Size = new Size(344, 34);
+            txtPhongBan.Size = new Size(344, 27);
             txtPhongBan.TabIndex = 6;
             // 
             // label11
@@ -246,7 +246,7 @@ namespace WinFormsApp1.GUI
             label11.AutoSize = true;
             label11.Location = new Point(962, 259);
             label11.Name = "label11";
-            label11.Size = new Size(111, 28);
+            label11.Size = new Size(83, 20);
             label11.TabIndex = 5;
             label11.Text = "Phòng ban:";
             // 
@@ -254,7 +254,7 @@ namespace WinFormsApp1.GUI
             // 
             txtNQL.Location = new Point(1100, 180);
             txtNQL.Name = "txtNQL";
-            txtNQL.Size = new Size(344, 34);
+            txtNQL.Size = new Size(344, 27);
             txtNQL.TabIndex = 4;
             // 
             // label10
@@ -262,7 +262,7 @@ namespace WinFormsApp1.GUI
             label10.AutoSize = true;
             label10.Location = new Point(962, 183);
             label10.Name = "label10";
-            label10.Size = new Size(141, 28);
+            label10.Size = new Size(106, 20);
             label10.TabIndex = 3;
             label10.Text = "Người quản lý:";
             // 
@@ -270,14 +270,14 @@ namespace WinFormsApp1.GUI
             // 
             txtDiaChi.Location = new Point(521, 326);
             txtDiaChi.Name = "txtDiaChi";
-            txtDiaChi.Size = new Size(344, 34);
+            txtDiaChi.Size = new Size(344, 27);
             txtDiaChi.TabIndex = 2;
             // 
             // txtHoTen
             // 
             txtHoTen.Location = new Point(521, 113);
             txtHoTen.Name = "txtHoTen";
-            txtHoTen.Size = new Size(344, 34);
+            txtHoTen.Size = new Size(344, 27);
             txtHoTen.TabIndex = 2;
             // 
             // txtDuAn
@@ -293,21 +293,21 @@ namespace WinFormsApp1.GUI
             // 
             txtSdt.Location = new Point(1100, 113);
             txtSdt.Name = "txtSdt";
-            txtSdt.Size = new Size(344, 34);
+            txtSdt.Size = new Size(344, 27);
             txtSdt.TabIndex = 2;
             // 
             // txtEmail
             // 
             txtEmail.Location = new Point(1100, 47);
             txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(344, 34);
+            txtEmail.Size = new Size(344, 27);
             txtEmail.TabIndex = 2;
             // 
             // txtMaNV
             // 
             txtMaNV.Location = new Point(521, 47);
             txtMaNV.Name = "txtMaNV";
-            txtMaNV.Size = new Size(344, 34);
+            txtMaNV.Size = new Size(344, 27);
             txtMaNV.TabIndex = 2;
             // 
             // label9
@@ -315,7 +315,7 @@ namespace WinFormsApp1.GUI
             label9.AutoSize = true;
             label9.Location = new Point(962, 329);
             label9.Name = "label9";
-            label9.Size = new Size(68, 28);
+            label9.Size = new Size(52, 20);
             label9.TabIndex = 1;
             label9.Text = "Dự án:";
             // 
@@ -324,7 +324,7 @@ namespace WinFormsApp1.GUI
             label8.AutoSize = true;
             label8.Location = new Point(962, 116);
             label8.Name = "label8";
-            label8.Size = new Size(132, 28);
+            label8.Size = new Size(100, 20);
             label8.TabIndex = 1;
             label8.Text = "Số điện thoại:";
             // 
@@ -333,7 +333,7 @@ namespace WinFormsApp1.GUI
             label5.AutoSize = true;
             label5.Location = new Point(392, 183);
             label5.Name = "label5";
-            label5.Size = new Size(103, 28);
+            label5.Size = new Size(77, 20);
             label5.TabIndex = 1;
             label5.Text = "Ngày sinh:";
             // 
@@ -342,7 +342,7 @@ namespace WinFormsApp1.GUI
             label7.AutoSize = true;
             label7.Location = new Point(962, 45);
             label7.Name = "label7";
-            label7.Size = new Size(63, 28);
+            label7.Size = new Size(49, 20);
             label7.TabIndex = 1;
             label7.Text = "Email:";
             // 
@@ -351,7 +351,7 @@ namespace WinFormsApp1.GUI
             label6.AutoSize = true;
             label6.Location = new Point(392, 326);
             label6.Name = "label6";
-            label6.Size = new Size(71, 28);
+            label6.Size = new Size(55, 20);
             label6.TabIndex = 1;
             label6.Text = "Địa chỉ";
             // 
@@ -360,7 +360,7 @@ namespace WinFormsApp1.GUI
             label4.AutoSize = true;
             label4.Location = new Point(392, 256);
             label4.Name = "label4";
-            label4.Size = new Size(91, 28);
+            label4.Size = new Size(68, 20);
             label4.TabIndex = 1;
             label4.Text = "Giới tính:";
             // 
@@ -369,7 +369,7 @@ namespace WinFormsApp1.GUI
             label3.AutoSize = true;
             label3.Location = new Point(392, 116);
             label3.Name = "label3";
-            label3.Size = new Size(75, 28);
+            label3.Size = new Size(57, 20);
             label3.TabIndex = 1;
             label3.Text = "Họ tên:";
             // 
@@ -378,7 +378,7 @@ namespace WinFormsApp1.GUI
             label2.AutoSize = true;
             label2.Location = new Point(392, 47);
             label2.Name = "label2";
-            label2.Size = new Size(76, 28);
+            label2.Size = new Size(57, 20);
             label2.TabIndex = 1;
             label2.Text = "Mã NV:";
             // 
@@ -416,15 +416,16 @@ namespace WinFormsApp1.GUI
             dataGridView1.Location = new Point(0, 0);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 15F);
-            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.False;
-            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Control;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 15F);
+            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dataGridView1.RowHeadersVisible = false;
+            dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 100;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView1.ShowRowErrors = false;
@@ -466,7 +467,7 @@ namespace WinFormsApp1.GUI
             hienhanh.ForeColor = Color.FromArgb(64, 64, 64);
             hienhanh.Location = new Point(3, 3);
             hienhanh.Name = "hienhanh";
-            hienhanh.Size = new Size(130, 57);
+            hienhanh.Size = new Size(138, 57);
             hienhanh.TabIndex = 0;
             hienhanh.Text = "Hiện hành";
             hienhanh.UseVisualStyleBackColor = true;
@@ -480,7 +481,7 @@ namespace WinFormsApp1.GUI
             tatca.FlatAppearance.BorderSize = 0;
             tatca.FlatStyle = FlatStyle.Flat;
             tatca.Font = new Font("Segoe UI", 15F);
-            tatca.Location = new Point(139, 4);
+            tatca.Location = new Point(147, 4);
             tatca.Name = "tatca";
             tatca.Size = new Size(94, 56);
             tatca.TabIndex = 1;
@@ -496,9 +497,9 @@ namespace WinFormsApp1.GUI
             danghi.FlatAppearance.BorderSize = 0;
             danghi.FlatStyle = FlatStyle.Flat;
             danghi.Font = new Font("Segoe UI", 15F);
-            danghi.Location = new Point(239, 3);
+            danghi.Location = new Point(247, 3);
             danghi.Name = "danghi";
-            danghi.Size = new Size(108, 58);
+            danghi.Size = new Size(112, 58);
             danghi.TabIndex = 2;
             danghi.Text = "Đã nghỉ";
             danghi.UseVisualStyleBackColor = true;
@@ -603,9 +604,9 @@ namespace WinFormsApp1.GUI
             // 
             // txtSearch
             // 
-            txtSearch.Location = new Point(46, 8);
+            txtSearch.Location = new Point(56, 11);
             txtSearch.Name = "txtSearch";
-            txtSearch.Size = new Size(344, 34);
+            txtSearch.Size = new Size(344, 27);
             txtSearch.TabIndex = 0;
             txtSearch.TextChanged += txtSearch_TextChanged;
             txtSearch.Leave += txtSearch_Leave;
@@ -641,6 +642,7 @@ namespace WinFormsApp1.GUI
             BackColor = Color.White;
             Controls.Add(panel1);
             ForeColor = Color.FromArgb(49, 17, 117);
+            Margin = new Padding(0);
             Name = "nhanviengui";
             Size = new Size(1698, 1100);
             Load += nhanviengui_Load;
