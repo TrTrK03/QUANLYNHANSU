@@ -44,7 +44,7 @@ go
 
 insert into Quyen(MaQuyen, TenQuyen, MoTa, TrangThai) values ('Q001', 'admin', N'Quyền của admin', '1');
 insert into Quyen(MaQuyen, TenQuyen, MoTa, TrangThai) values ('Q002', 'nhanvien', N'nhân viên bình thường', '1');
-insert into Quyen(MaQuyen, TenQuyen, MoTa, TrangThai) values ('Q003', 'quanlynhansu', N'Quản lý nhân sự', '1');
+insert into Quyen(MaQuyen, TenQuyen, MoTa, TrangThai) values ('Q003', 'quanlynhansu', N'Quản lý', '1');
 go
 
 -- 2. Tạo bảng tài khoản (mỗi nhân viên tương ứng khi được tuyển dụng, hệ thống tự tạo tài khoản mặc định cho nhân viên đó)
@@ -256,7 +256,7 @@ go
 
 -- 15. Tạo bảng lương
 CREATE TABLE BangLuong (
-	MaNhanVien NVARCHAR(10) not null,
+	MaNhanVien NVARCHAR(10) not null, -- khóa ngoại
 	ThangNam DATE not null,
 	PhuCap int default(0),
 	KhauTru int default(0),
@@ -269,8 +269,8 @@ go
 
 -- 16. Tạo bảng chi tiết nhân viên tham gia phúc lợi
 CREATE TABLE ChiTietPhucLoiNhanVien (
-	MaPhucLoi NVARCHAR(10) not null,
-	MaNhanVien NVARCHAR(10) not null
+	MaPhucLoi NVARCHAR(10) not null, -- khóa ngoại
+	MaNhanVien NVARCHAR(10) not null -- khóa ngoại
 );
 go
 
@@ -278,9 +278,9 @@ alter table ChiTietPhucLoiNhanVien add constraint pk_ChiTietPhucLoiNhanVien prim
 go
 
 -- 17. Tạo bảng chi tiết dự án nhân viên
-CREATE TABLE ChiTietDuAnNhanVien (
-	MaDuAn NVARCHAR(10) not null,
-	MaNhanVien NVARCHAR(10) not null
+CREATE TABLE ChiTietDuAnNhanVien ( 
+	MaDuAn NVARCHAR(10) not null, -- khóa ngoại
+	MaNhanVien NVARCHAR(10) not null -- khóa ngoại
 );
 go
 
@@ -290,9 +290,9 @@ go
 -- 18. Tạo bảng chi tiết nhân viên chấm công
 -- Trạng thái (1), (0) đi trễ, (-1) vắng có phép, (-2) vắng không phép
 CREATE TABLE ChiTietNhanVienChamCong (
-	MaBangChamCong NVARCHAR(10) not null,
-	MaNhanVien NVARCHAR(10) not null,
-	MaQuanLyNhanSu NVARCHAR(10) not null,
+	MaBangChamCong NVARCHAR(10) not null, -- khóa ngoại
+	MaNhanVien NVARCHAR(10) not null, -- khóa ngoại
+	MaQuanLyNhanSu NVARCHAR(10) not null, -- khóa ngoại
 	NgayGioChamCong DATETIME not null,
 	TrangThai int not null
 );
@@ -304,35 +304,27 @@ go
 ---------------------------------------------------------------------------------
 --------------------III. Tạo khóa ngoại cho các bảng
 
--- 1. Tài khoản
+-- 2. Tài khoản
 alter table TaiKhoan add constraint fk_Quyen_TaiKhoan foreign key (MaQuyen) references Quyen(MaQuyen)
 go
 alter table TaiKhoan add constraint fk_MaNhanVien_TaiKhoan foreign key (MaNhanVien) references NhanVien(MaNhanVien) on update cascade on delete cascade
 go
+-- 3. Phúc lợi
 
--- 2. Hồ sơ kỷ luật
+-- 4. Khen thưởng
+alter table KhenThuong add constraint fk_MaNhanVien_KhenThuong foreign key (MaNhanVien) references NhanVien(MaNhanVien)
+go
+
+-- 5. Hồ sơ kỷ luật
 alter table HoSoKyLuat add constraint fk_MaNhanVien_HoSoKyLuat foreign key (MaNhanVien) references NhanVien(MaNhanVien) on update cascade on delete cascade
 go
 
--- 3. Khen thưởng
-alter table KhenThuong add constraint fk_MaNhanVien_KhenThuong foreign key (MaNhanVien) references NhanVien(MaNhanVien)
-
--- 4. Phòng ban
-alter table PhongBan add constraint fk_TruongPhong_PhongBan foreign key (TruongPhong) references NhanVien(MaNhanVien)
+-- 6. Kỳ Tuyển dụng
+alter table KyTuyenDung add constraint fk_MaQuanLy_KyTuyenDung foreign key (MaQuanLy) references QuanLyNhanSu(MaQuanLyNhanSu)
 go
 
--- 5. Chức vụ
-alter table ChucVu add constraint fk_PhongBan_ChucVu foreign key (PhongBan) references PhongBan(MaPhongBan)
-go
-
--- 6. Dự án
-alter table DuAn add constraint fk_QuanLyDuAn_DuAn foreign key (QuanLyDuAn) references NhanVien(MaNhanVien)
-go
-alter table DuAn add constraint fk_PhongBanPhuTrach_DuAn foreign key (PhongBanPhuTrach) references PhongBan(MaPhongBan)
-go
-
--- 7. Quản lý nhân sự
-alter table QuanLyNhanSu add constraint fk_MaQuanLyNhanSu_QuanLyNhanSu foreign key (MaQuanLyNhanSu) references NhanVien(MaNhanVien)
+-- 7. Hồ sơ tuyển dụng
+alter table HosoTuyenDung add constraint fk_KyTuyenDung_HoSoTuyenDung foreign key (KyTuyenDung) references KyTuyenDung(MaKyTuyenDung)
 go
 
 -- 8. Nhân Viên
@@ -345,35 +337,47 @@ go
 alter table NhanVien add constraint fk_HoSoGioiThieu_NhanVien foreign key (HoSoGioiThieu) references HoSoTuyenDung(MaHoSoTuyenDung)
 go
 
--- 9. Kỳ Tuyển dụng
-alter table KyTuyenDung add constraint fk_MaQuanLy_KyTuyenDung foreign key (MaQuanLy) references QuanLyNhanSu(MaQuanLyNhanSu)
+-- 9. Quản lý nhân sự
+alter table QuanLyNhanSu add constraint fk_MaQuanLyNhanSu_QuanLyNhanSu foreign key (MaQuanLyNhanSu) references NhanVien(MaNhanVien)
 go
 
--- 10. Hồ sơ tuyển dụng
-alter table HosoTuyenDung add constraint fk_KyTuyenDung_HoSoTuyenDung foreign key (KyTuyenDung) references KyTuyenDung(MaKyTuyenDung)
-go
-
--- 11. Bảng thông báo
+-- 10. Bảng thông báo
 alter table BangThongBao add constraint fk_NguoiBanHanh_BangThongBao foreign key (NguoiBanHanh) references QuanLyNhanSu(MaQuanLyNhanSu)
 go
 
--- 12. Bảng lương
+-- 11. Phòng ban
+alter table PhongBan add constraint fk_TruongPhong_PhongBan foreign key (TruongPhong) references NhanVien(MaNhanVien)
+go
+
+-- 12. Chức vụ
+alter table ChucVu add constraint fk_PhongBan_ChucVu foreign key (PhongBan) references PhongBan(MaPhongBan)
+go
+
+-- 13. Dự án
+alter table DuAn add constraint fk_QuanLyDuAn_DuAn foreign key (QuanLyDuAn) references NhanVien(MaNhanVien)
+go
+alter table DuAn add constraint fk_PhongBanPhuTrach_DuAn foreign key (PhongBanPhuTrach) references PhongBan(MaPhongBan)
+go
+
+-- 14. Chấm công
+
+-- 15. Bảng lương
 alter table BangLuong add constraint fk_MaNhanVien_BangLuong foreign key (MaNhanVien) references NhanVien(MaNhanVien) on update cascade on delete cascade
 go
 
--- 13. Chi tiết phúc lợi nhân viên
+-- 16. Chi tiết nhân viên tham gia phúc lợi
 alter table ChiTietPhucLoiNhanVien add constraint fk_MaPhucLoi_ChiTietPhucLoiNhanVien foreign key (MaPhucLoi) references PhucLoi(MaPhucLoi) on update cascade on delete cascade
 go
 alter table ChiTietPhucLoiNhanVien add constraint fk_MaNhanVien_ChiTietPhucLoiNhanVien foreign key (MaNhanVien) references NhanVien(MaNhanVien) on update cascade on delete cascade
 go
 
--- 14. Chi Tiết dự án nhân viên
+-- 17. Chi Tiết dự án nhân viên
 alter table ChiTietDuAnNhanVien add constraint fk_MaDuAn_ChiTietDuAnNhanVien foreign key (MaDuAn) references DuAn(MaDuAn) on update cascade on delete cascade
 go
 alter table ChiTietDuAnNhanVien add constraint fk_MaNhanVien_ChiTietDuAnNhanVien foreign key (MaNhanVien) references NhanVien(MaNhanVien) on update cascade on delete cascade
 go
 
--- 15. Chi Tiết nhân viên chấm công
+-- 18. Chi Tiết nhân viên chấm công
 alter table ChiTietNhanVienChamCong add constraint fk_MaBangChamCong_ChiTietNhanVienChamCong foreign key (MaBangChamCong) references BangChamCong(MaBangChamCong) on update cascade on delete cascade
 go
 alter table ChiTietNhanVienChamCong add constraint fk_MaQuanLyNhanSu_ChiTietNhanVienChamCong foreign key (MaQuanLyNhanSu) references QuanLyNhanSu(MaQuanLyNhanSu) on update cascade on delete cascade
