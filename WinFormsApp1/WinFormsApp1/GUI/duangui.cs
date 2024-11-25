@@ -60,9 +60,7 @@ namespace WinFormsApp1.GUI
         private Label label9;
         private Label label8;
         private Label label5;
-        private Label label7;
         private Label label6;
-        private Label label4;
         private Label label3;
         private Label label2;
         private Panel panel8;
@@ -90,9 +88,7 @@ namespace WinFormsApp1.GUI
             label9 = new Label();
             label8 = new Label();
             label5 = new Label();
-            label7 = new Label();
             label6 = new Label();
-            label4 = new Label();
             label3 = new Label();
             label2 = new Label();
             panel8 = new Panel();
@@ -167,17 +163,15 @@ namespace WinFormsApp1.GUI
             panel7.Controls.Add(label9);
             panel7.Controls.Add(label8);
             panel7.Controls.Add(label5);
-            panel7.Controls.Add(label7);
             panel7.Controls.Add(label6);
-            panel7.Controls.Add(label4);
             panel7.Controls.Add(label3);
             panel7.Controls.Add(label2);
             panel7.Controls.Add(panel8);
             panel7.Dock = DockStyle.Fill;
             panel7.ForeColor = Color.FromArgb(49, 17, 117);
-            panel7.Location = new Point(0, 405);
+            panel7.Location = new Point(0, 339);
             panel7.Name = "panel7";
-            panel7.Size = new Size(1581, 435);
+            panel7.Size = new Size(1581, 501);
             panel7.TabIndex = 7;
             // 
             // cmbTrangThai
@@ -291,15 +285,6 @@ namespace WinFormsApp1.GUI
             label5.TabIndex = 1;
             label5.Text = "Ngày bắt đầu:";
             // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Location = new Point(962, 45);
-            label7.Name = "label7";
-            label7.Size = new Size(49, 20);
-            label7.TabIndex = 1;
-            label7.Text = "Email:";
-            // 
             // label6
             // 
             label6.AutoSize = true;
@@ -308,15 +293,6 @@ namespace WinFormsApp1.GUI
             label6.Size = new Size(51, 20);
             label6.TabIndex = 1;
             label6.Text = "Mô tả:";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(392, 256);
-            label4.Name = "label4";
-            label4.Size = new Size(68, 20);
-            label4.TabIndex = 1;
-            label4.Text = "Giới tính:";
             // 
             // label3
             // 
@@ -383,7 +359,7 @@ namespace WinFormsApp1.GUI
             dataGridView1.RowTemplate.Height = 100;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView1.ShowRowErrors = false;
-            dataGridView1.Size = new Size(1581, 405);
+            dataGridView1.Size = new Size(1581, 339);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellMouseClick += dataGridView1_CellMouseClick;
             dataGridView1.DataBindingComplete += dataGridView1_DataBindingComplete;
@@ -572,7 +548,7 @@ namespace WinFormsApp1.GUI
             label1.ForeColor = Color.FromArgb(49, 17, 117);
             label1.Location = new Point(0, 0);
             label1.Name = "label1";
-            label1.Size = new Size(171, 49);
+            label1.Size = new Size(241, 49);
             label1.TabIndex = 1;
             label1.Text = "Dự án";
             // 

@@ -70,7 +70,6 @@ namespace WinFormsApp1
             t2.BringToFront();
             t2.Dock = DockStyle.Fill;
             t2.Location = new System.Drawing.Point(186, 0);
-
         }
         private void phongban_Click(object sender, EventArgs e)
         {

@@ -618,7 +618,7 @@ namespace WinFormsApp1.GUI
             label1.ForeColor = Color.FromArgb(49, 17, 117);
             label1.Location = new Point(0, 0);
             label1.Name = "label1";
-            label1.Size = new Size(171, 49);
+            label1.Size = new Size(233, 49);
             label1.TabIndex = 1;
             label1.Text = "Nhân viên";
             // 
@@ -638,6 +638,7 @@ namespace WinFormsApp1.GUI
             // 
             // nhanviengui
             // 
+            AutoScaleMode = AutoScaleMode.None;
             AutoSize = true;
             BackColor = Color.White;
             Controls.Add(panel1);

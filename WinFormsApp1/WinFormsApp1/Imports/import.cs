@@ -77,7 +77,6 @@ namespace WinFormsApp1.Imports
                 {
                     var project = new duandto
                     {
-                        MaDuAn = worksheet.Cells[row, 1].Text,
                         TenDuAn = worksheet.Cells[row, 2].Text,
                         MoTa = worksheet.Cells[row, 3].Text,
                         QuanLyDuAn = worksheet.Cells[row, 4].Text,
