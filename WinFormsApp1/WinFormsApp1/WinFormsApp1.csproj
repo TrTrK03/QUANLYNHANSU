@@ -24,6 +24,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="GUI\detail\SuaPhongBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\detail\TaoPhongBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>

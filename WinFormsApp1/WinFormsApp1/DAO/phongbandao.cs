@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using WinFormsApp1.DTO;
+using WinFormsApp1.connect;
 
 namespace WinFormsApp1.DAO
 {
@@ -119,5 +120,24 @@ namespace WinFormsApp1.DAO
 
             return departments;
         }
+
+        public void DeletePhongBan(string maPhongBan)
+        {
+            using (SqlConnection connection = connectObj.connection())
+            {
+                if (connection.State == System.Data.ConnectionState.Closed)
+                {
+                    connection.Open();
+                }
+
+                // Xóa phòng ban theo mã phòng ban (MaPhongBan)
+                SqlCommand command = new SqlCommand("DELETE FROM PhongBan WHERE MaPhongBan = @MaPhongBan", connection);
+                command.Parameters.AddWithValue("@MaPhongBan", maPhongBan);
+
+                command.ExecuteNonQuery();
+                connection.Close();
+            }
+        }
+
     }
 }

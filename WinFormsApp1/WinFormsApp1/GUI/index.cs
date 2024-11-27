@@ -77,10 +77,10 @@ namespace WinFormsApp1
             panNav.Top = phongban.Top;
             panNav.Left = phongban.Left;
             phongban.BackColor = Color.FromArgb(46, 51, 73);
-            GUI.Home usctr = new GUI.Home();
-            Controls.Add(usctr);
-            usctr.BringToFront();
-            usctr.Location = new System.Drawing.Point(186, 0);
+            phongbangui pb = new phongbangui();
+            Controls.Add(pb);
+            pb.BringToFront();
+            pb.Location = new System.Drawing.Point(186, 0);
         }
         private void duan_Click(object sender, EventArgs e)
         {

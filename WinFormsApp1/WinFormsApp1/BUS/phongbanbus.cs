@@ -32,12 +32,6 @@ namespace WinFormsApp1.BUS
         {
             return phongBanDao.SearchPhongBanByTen(keyword);
         }
-        
-        // Lấy phòng ban theo mã phòng ban
-        public phongbandto GetPhongBanById(string maPhongBan)
-        {
-            return phongBanDao.GetPhongBanById(maPhongBan);
-        }
 
         // Xóa phòng ban theo mã
         public void DeletePhongBan(string maPhongBan)
@@ -45,16 +39,9 @@ namespace WinFormsApp1.BUS
             phongBanDao.DeletePhongBan(maPhongBan);
         }
 
-        // Lấy danh sách phòng ban có trạng thái nhất định
-        public List<phongbandto> GetDepartmentsByStatus(int trangThai)
+        internal void DeletePhongBan(phongbandto selectedphongban)
         {
-            return phongBanDao.GetDepartmentsByStatus(trangThai);
-        }
-
-        // Lấy danh sách phòng ban theo trưởng phòng
-        public List<phongbandto> GetDepartmentsByManager(string truongPhong)
-        {
-            return phongBanDao.GetDepartmentsByManager(truongPhong);
+            throw new NotImplementedException();
         }
     }
 }

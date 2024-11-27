@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using WinFormsApp1.DTO;
+using WinFormsApp1.connect;
 
 namespace WinFormsApp1.DAO
 {
