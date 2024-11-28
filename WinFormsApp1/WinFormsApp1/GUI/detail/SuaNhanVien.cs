@@ -121,7 +121,7 @@ public partial class SuaNhanVien : Form
 
             //employeeDTO.MaTK = Convert.ToInt32(cbbMaTK.SelectedItem);
             DateTime selectedDate = dtpNgaySinh.Value;
-            employeeDTO.NgaySinh = selectedDate.ToString("yyyy-MM-dd"); //5
+            employeeDTO.NgaySinh = selectedDate;
             if (txtNQL.Text == "") //6
             {
                 employeeDTO.NguoiQuanLy = null;

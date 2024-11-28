@@ -199,7 +199,7 @@ namespace WinFormsApp1.GUI.detail
 
                 //employeeDTO.MaTK = Convert.ToInt32(cbbMaTK.SelectedItem);
                 DateTime selectedDate = dtpNgaySinh.Value;
-                employeeDTO.NgaySinh = selectedDate.ToString("yyyy-MM-dd"); //5
+                employeeDTO.NgaySinh = selectedDate; //5
                 if (txtNQL.Text == "") //6
                 {
                     employeeDTO.NguoiQuanLy = null;

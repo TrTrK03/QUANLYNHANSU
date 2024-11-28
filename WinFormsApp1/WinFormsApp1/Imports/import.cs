@@ -39,7 +39,7 @@ namespace WinFormsApp1.Imports
                     var employee = new nhanviendto
                     {
                         HoTen = worksheet.Cells[row, 1].Text,
-                        NgaySinh = worksheet.Cells[row, 2].Text,
+                        NgaySinh = DateTime.Parse(worksheet.Cells[row, 2].Text),
                         GioiTinh = worksheet.Cells[row, 3].Text,
                         DiaChi = worksheet.Cells[row, 4].Text,
                         Email = worksheet.Cells[row, 5].Text,

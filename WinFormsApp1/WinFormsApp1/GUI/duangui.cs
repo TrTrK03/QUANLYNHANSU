@@ -568,7 +568,8 @@ namespace WinFormsApp1.GUI
             // 
             // duangui
             // 
-            AutoScaleMode = AutoScaleMode.Inherit;
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             Controls.Add(panel1);
             ForeColor = Color.FromArgb(49, 17, 117);

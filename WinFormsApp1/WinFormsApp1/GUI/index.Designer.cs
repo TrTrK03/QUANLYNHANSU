@@ -45,6 +45,7 @@
             pictureBox1 = new PictureBox();
             fontDialog1 = new FontDialog();
             panel3 = new Panel();
+            panel4 = new Panel();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -283,6 +284,7 @@
             // 
             // panel2
             // 
+            panel2.Controls.Add(panel4);
             panel2.Controls.Add(label1);
             panel2.Controls.Add(pictureBox1);
             panel2.Dock = DockStyle.Top;
@@ -330,12 +332,18 @@
             panel3.TabIndex = 1;
             panel3.Paint += panel3_Paint;
             // 
+            // panel4
+            // 
+            panel4.Location = new Point(146, 3);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(998, 570);
+            panel4.TabIndex = 2;
+            // 
             // index
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
-            AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = Color.FromArgb(46, 51, 73);
             ClientSize = new Size(1138, 573);
             Controls.Add(panel3);
@@ -371,5 +379,6 @@
         private Button baohiem;
         private Button button10;
         private Panel panel3;
+        private Panel panel4;
     }
 }

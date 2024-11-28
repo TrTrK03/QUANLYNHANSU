@@ -28,7 +28,7 @@ namespace WinFormsApp1
         public index()
         {
             InitializeComponent();
-            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
+            //Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
             panNav.Height = home.Height;
             panNav.Top = home.Top;
             panNav.Left = home.Left;
@@ -37,7 +37,6 @@ namespace WinFormsApp1
             //Controls.Add(usctr);
             //usctr.BringToFront();
             //usctr.Location = new System.Drawing.Point(186, 0);
-
 
         }
 
@@ -80,6 +79,7 @@ namespace WinFormsApp1
             phongbangui pb = new phongbangui();
             Controls.Add(pb);
             pb.BringToFront();
+            pb.Dock = DockStyle.Fill;
             pb.Location = new System.Drawing.Point(186, 0);
         }
         private void duan_Click(object sender, EventArgs e)
@@ -133,7 +133,16 @@ namespace WinFormsApp1
         private void button10_Click(object sender, EventArgs e)
         { }
 
+        private void LoadUserControlInPanel4(UserControl userControl)
+        {
+            // Xóa tất cả các UserControl trong panel4
+            panel4.Controls.Clear();
 
+            // Thêm UserControl mới vào panel4
+            userControl.Dock = DockStyle.Fill;
+            panel4.Controls.Add(userControl);
+            userControl.BringToFront();
+        }
 
 
 

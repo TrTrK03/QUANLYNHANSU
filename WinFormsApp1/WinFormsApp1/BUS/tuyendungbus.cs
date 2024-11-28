@@ -32,23 +32,5 @@ namespace WinFormsApp1.BUS
         {
             return tuyenDungDao.SearchTuyenDungByContent(keyword);
         }
-
-        // Lấy kỳ tuyển dụng theo mã kỳ tuyển dụng
-        public tuyendungdto GetTuyenDungById(string maKyTuyenDung)
-        {
-            return tuyenDungDao.GetTuyenDungById(maKyTuyenDung);
-        }
-
-        // Xóa kỳ tuyển dụng theo mã kỳ tuyển dụng
-        public void DeleteTuyenDung(string maKyTuyenDung)
-        {
-            tuyenDungDao.DeleteTuyenDung(maKyTuyenDung);
-        }
-
-        // Lấy các kỳ tuyển dụng có trạng thái nhất định
-        public List<tuyendungdto> GetTuyenDungByStatus(int trangThai)
-        {
-            return tuyenDungDao.GetTuyenDungByStatus(trangThai);
-        }
     }
 }

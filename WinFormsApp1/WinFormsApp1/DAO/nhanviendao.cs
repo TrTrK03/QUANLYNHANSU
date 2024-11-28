@@ -38,7 +38,7 @@ namespace WinFormsApp1.DAO
                         {
                             MaNhanVien = reader["MaNhanVien"].ToString(),
                             HoTen = reader["HoTen"].ToString(),
-                            NgaySinh = Convert.ToString(reader["ngaysinh"]),
+                            NgaySinh = DateTime.Parse(reader["ngaysinh"].ToString()),
                             GioiTinh = reader["GioiTinh"].ToString(),
                             DiaChi = reader["DiaChi"].ToString(),
                             Email = reader["Email"].ToString(),
@@ -124,7 +124,7 @@ namespace WinFormsApp1.DAO
                     {
                         MaNhanVien = reader["MaNhanVien"].ToString(),
                         HoTen = reader["HoTen"].ToString(),
-                        NgaySinh = Convert.ToString(reader["ngaysinh"]),
+                        NgaySinh = DateTime.Parse(reader["ngaysinh"].ToString()),
                         GioiTinh = reader["GioiTinh"].ToString(),
                         DiaChi = reader["DiaChi"].ToString(),
                         Email = reader["Email"].ToString(),
@@ -156,7 +156,7 @@ namespace WinFormsApp1.DAO
                     {
                         MaNhanVien = reader["MaNhanVien"].ToString(),
                         HoTen = reader["HoTen"].ToString(),
-                        NgaySinh = Convert.ToString(reader["ngaysinh"]),
+                        NgaySinh = DateTime.Parse(reader["ngaysinh"].ToString()),
                         GioiTinh = reader["GioiTinh"].ToString(),
                         DiaChi = reader["DiaChi"].ToString(),
                         Email = reader["Email"].ToString(),
@@ -189,7 +189,7 @@ namespace WinFormsApp1.DAO
                     {
                         MaNhanVien = reader["MaNhanVien"].ToString(),
                         HoTen = reader["HoTen"].ToString(),
-                        NgaySinh = Convert.ToString(reader["ngaysinh"]),
+                        NgaySinh = DateTime.Parse(reader["ngaysinh"].ToString()),
                         GioiTinh = reader["GioiTinh"].ToString(),
                         DiaChi = reader["DiaChi"].ToString(),
                         Email = reader["Email"].ToString(),

@@ -60,7 +60,7 @@ namespace WinFormsApp1.Exports
                     {
                         worksheet.Cells[row, 1].Value = employee.MaNhanVien;
                         worksheet.Cells[row, 2].Value = employee.HoTen;
-                        worksheet.Cells[row, 3].Value = employee.NgaySinh?.ToString() ?? string.Empty;
+                        worksheet.Cells[row, 3].Value = employee.NgaySinh.ToString("dd/MM/yyyy");
                         worksheet.Cells[row, 3].Style.Numberformat.Format = "dd/MM/yyyy";
                         worksheet.Cells[row, 4].Value = employee.GioiTinh;
                         worksheet.Cells[row, 5].Value = employee.DiaChi;

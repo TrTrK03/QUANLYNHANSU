@@ -36,10 +36,6 @@ namespace WinFormsApp1.GUI
     {
         static phongbanbus phongbanBUS = new phongbanbus();
         phongbandto phongbanDTO = new phongbandto();
-        private Label label11;
-        private DateTimePicker dtpNgaySinh;
-        private CheckBox cbNu;
-        private CheckBox cbNam;
         List<phongbandto> phongbans = phongbanBUS.GetPhongBan();
 
         //Khoi tao
@@ -59,40 +55,26 @@ namespace WinFormsApp1.GUI
         private TextBox txtTruongPhong;
         private TextBox txtMaPB;
         private Label label9;
-        private Label label8;
-        private Label label5;
         private Label label7;
-        private Label label6;
-        private Label label4;
         private Label label3;
         private Label label2;
         private Panel panel8;
         private PictureBox pictureBox1;
         private Panel panel3;
-        private Label label10;
         private Button edit;
 
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             panel1 = new Panel();
             panel5 = new Panel();
             panel7 = new Panel();
-            cbNu = new CheckBox();
-            cbNam = new CheckBox();
-            dtpNgaySinh = new DateTimePicker();
-            label11 = new Label();
-            label10 = new Label();
             txtTenPB = new TextBox();
             txtMoTa = new TextBox();
             txtTruongPhong = new TextBox();
             txtMaPB = new TextBox();
             label9 = new Label();
-            label8 = new Label();
-            label5 = new Label();
             label7 = new Label();
-            label6 = new Label();
-            label4 = new Label();
             label3 = new Label();
             label2 = new Label();
             panel8 = new Panel();
@@ -145,21 +127,12 @@ namespace WinFormsApp1.GUI
             // panel7
             // 
             panel7.BackColor = Color.Lavender;
-            panel7.Controls.Add(cbNu);
-            panel7.Controls.Add(cbNam);
-            panel7.Controls.Add(dtpNgaySinh);
-            panel7.Controls.Add(label11);
-            panel7.Controls.Add(label10);
             panel7.Controls.Add(txtTenPB);
             panel7.Controls.Add(txtMoTa);
             panel7.Controls.Add(txtTruongPhong);
             panel7.Controls.Add(txtMaPB);
             panel7.Controls.Add(label9);
-            panel7.Controls.Add(label8);
-            panel7.Controls.Add(label5);
             panel7.Controls.Add(label7);
-            panel7.Controls.Add(label6);
-            panel7.Controls.Add(label4);
             panel7.Controls.Add(label3);
             panel7.Controls.Add(label2);
             panel7.Controls.Add(panel8);
@@ -169,60 +142,6 @@ namespace WinFormsApp1.GUI
             panel7.Name = "panel7";
             panel7.Size = new Size(1581, 495);
             panel7.TabIndex = 7;
-            // 
-            // cbNu
-            // 
-            cbNu.AutoSize = true;
-            cbNu.Font = new Font("Microsoft Sans Serif", 12F);
-            cbNu.ImeMode = ImeMode.NoControl;
-            cbNu.Location = new Point(649, 260);
-            cbNu.Margin = new Padding(6, 5, 6, 5);
-            cbNu.Name = "cbNu";
-            cbNu.Size = new Size(59, 29);
-            cbNu.TabIndex = 74;
-            cbNu.Text = "Nữ";
-            cbNu.UseVisualStyleBackColor = true;
-            // 
-            // cbNam
-            // 
-            cbNam.AutoSize = true;
-            cbNam.Font = new Font("Microsoft Sans Serif", 12F);
-            cbNam.ImeMode = ImeMode.NoControl;
-            cbNam.Location = new Point(521, 260);
-            cbNam.Margin = new Padding(6, 5, 6, 5);
-            cbNam.Name = "cbNam";
-            cbNam.Size = new Size(75, 29);
-            cbNam.TabIndex = 73;
-            cbNam.Text = "Nam";
-            cbNam.UseVisualStyleBackColor = true;
-            // 
-            // dtpNgaySinh
-            // 
-            dtpNgaySinh.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dtpNgaySinh.Format = DateTimePickerFormat.Short;
-            dtpNgaySinh.Location = new Point(521, 185);
-            dtpNgaySinh.Margin = new Padding(6, 5, 6, 5);
-            dtpNgaySinh.Name = "dtpNgaySinh";
-            dtpNgaySinh.Size = new Size(344, 39);
-            dtpNgaySinh.TabIndex = 63;
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.Location = new Point(962, 259);
-            label11.Name = "label11";
-            label11.Size = new Size(83, 20);
-            label11.TabIndex = 5;
-            label11.Text = "Phòng ban:";
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Location = new Point(962, 183);
-            label10.Name = "label10";
-            label10.Size = new Size(106, 20);
-            label10.TabIndex = 3;
-            label10.Text = "Người quản lý:";
             // 
             // txtTenPB
             // 
@@ -234,7 +153,7 @@ namespace WinFormsApp1.GUI
             // txtMoTa
             // 
             txtMoTa.Enabled = false;
-            txtMoTa.Location = new Point(1100, 326);
+            txtMoTa.Location = new Point(1100, 106);
             txtMoTa.Multiline = true;
             txtMoTa.Name = "txtMoTa";
             txtMoTa.Size = new Size(344, 34);
@@ -257,74 +176,38 @@ namespace WinFormsApp1.GUI
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(962, 329);
+            label9.Location = new Point(1016, 120);
             label9.Name = "label9";
-            label9.Size = new Size(52, 20);
+            label9.Size = new Size(51, 20);
             label9.TabIndex = 1;
-            label9.Text = "Dự án:";
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Location = new Point(962, 116);
-            label8.Name = "label8";
-            label8.Size = new Size(100, 20);
-            label8.TabIndex = 1;
-            label8.Text = "Số điện thoại:";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(392, 183);
-            label5.Name = "label5";
-            label5.Size = new Size(77, 20);
-            label5.TabIndex = 1;
-            label5.Text = "Ngày sinh:";
+            label9.Text = "Mô tả:";
             // 
             // label7
             // 
             label7.AutoSize = true;
             label7.Location = new Point(962, 45);
             label7.Name = "label7";
-            label7.Size = new Size(100, 20);
+            label7.Size = new Size(105, 20);
             label7.TabIndex = 1;
-            label7.Text = "TruongPhong:";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new Point(392, 326);
-            label6.Name = "label6";
-            label6.Size = new Size(55, 20);
-            label6.TabIndex = 1;
-            label6.Text = "Địa chỉ";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(392, 256);
-            label4.Name = "label4";
-            label4.Size = new Size(68, 20);
-            label4.TabIndex = 1;
-            label4.Text = "Giới tính:";
+            label7.Text = "Trưởng Phòng:";
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Location = new Point(392, 116);
             label3.Name = "label3";
-            label3.Size = new Size(57, 20);
+            label3.Size = new Size(110, 20);
             label3.TabIndex = 1;
-            label3.Text = "Họ tên:";
+            label3.Text = "Tên Phòng Ban:";
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Location = new Point(392, 47);
             label2.Name = "label2";
-            label2.Size = new Size(57, 20);
+            label2.Size = new Size(108, 20);
             label2.TabIndex = 1;
-            label2.Text = "Mã NV:";
+            label2.Text = "Mã Phòng Ban:";
             // 
             // panel8
             // 
@@ -360,14 +243,14 @@ namespace WinFormsApp1.GUI
             dataGridView1.Location = new Point(0, 0);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 15F);
-            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.False;
-            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Control;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 15F);
+            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dataGridView1.RowHeadersVisible = false;
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 100;
@@ -425,7 +308,6 @@ namespace WinFormsApp1.GUI
             edit.TabIndex = 10;
             edit.Text = "Edit";
             edit.UseVisualStyleBackColor = false;
-            //edit.Click += edit_Click;
             // 
             // delete
             // 
@@ -501,7 +383,7 @@ namespace WinFormsApp1.GUI
 
         private void LoadDataToGUI()
         {
-            
+
             DataTable dt = new DataTable();
             dt.Columns.Add("Check", typeof(bool));
             dt.Columns.Add("Ma Phong Ban", typeof(string));
@@ -515,6 +397,8 @@ namespace WinFormsApp1.GUI
                 dt.Rows.Add(false, phongban.MaPhongBan, phongban.TenPhongBan, phongban.MoTa, phongban.TruongPhong, phongban.TrangThai.ToString());
             }
             dataGridView1.DataSource = dt;
+            dataGridView1.Columns["Mo ta"].Visible = false;
+            dataGridView1.Columns["Trang Thai"].Visible = false;
 
 
         }  //da xong
@@ -536,7 +420,7 @@ namespace WinFormsApp1.GUI
         {
             LoadDataToGUI();
             txtSearch.PlaceholderText = "Tìm kiếm ...";
-            dataGridView1.Size = new Size(1575, 870);
+                        dataGridView1.Size = new Size(1575, 870);
             panel7.Visible = false;
             //dataGridView1.ClearSelection();
         }
@@ -574,7 +458,7 @@ namespace WinFormsApp1.GUI
         private void phongbangui_MouseClick(object sender, MouseEventArgs e)
         {
             //LoadDataToGUI();
-            dataGridView1.Size = new Size(1575, 870);
+                        dataGridView1.Size = new Size(1575, 870);
             panel7.Visible = false;
             dataGridView1.ClearSelection();
 
@@ -583,7 +467,7 @@ namespace WinFormsApp1.GUI
         private void flowLayoutPanel1_MouseClick(object sender, MouseEventArgs e)
         {
             //LoadDataToGUI();
-            dataGridView1.Size = new Size(1575, 870);
+                        dataGridView1.Size = new Size(1575, 870);
             panel7.Visible = false;
             dataGridView1.ClearSelection();
         }
@@ -591,7 +475,7 @@ namespace WinFormsApp1.GUI
         private void panel2_MouseClick(object sender, MouseEventArgs e)
         {
             //LoadDataToGUI();
-            dataGridView1.Size = new Size(1575, 870);
+                        dataGridView1.Size = new Size(1575, 870);
             panel7.Visible = false;
             dataGridView1.ClearSelection();
         }
@@ -599,7 +483,7 @@ namespace WinFormsApp1.GUI
         private void panel6_MouseClick(object sender, MouseEventArgs e)
         {
             //LoadDataToGUI();
-            dataGridView1.Size = new Size(1575, 870);
+                        dataGridView1.Size = new Size(1575, 870);
             panel7.Visible = false;
             dataGridView1.ClearSelection();
         }

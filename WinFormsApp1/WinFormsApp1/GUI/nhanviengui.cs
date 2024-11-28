@@ -85,7 +85,7 @@ namespace WinFormsApp1.GUI
 
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             panel1 = new Panel();
             panel5 = new Panel();
             panel7 = new Panel();
@@ -149,7 +149,7 @@ namespace WinFormsApp1.GUI
             panel1.Controls.Add(panel4);
             panel1.Controls.Add(flowLayoutPanel1);
             panel1.Controls.Add(panel2);
-            panel1.Location = new Point(60, 60);
+            panel1.Location = new Point(60, -27);
             panel1.Name = "panel1";
             panel1.Size = new Size(1581, 951);
             panel1.TabIndex = 2;
@@ -416,14 +416,14 @@ namespace WinFormsApp1.GUI
             dataGridView1.Location = new Point(0, 0);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Control;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 15F);
-            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 15F);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.False;
+            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridView1.RowHeadersVisible = false;
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 100;
@@ -638,14 +638,15 @@ namespace WinFormsApp1.GUI
             // 
             // nhanviengui
             // 
-            AutoScaleMode = AutoScaleMode.None;
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
             BackColor = Color.White;
             Controls.Add(panel1);
             ForeColor = Color.FromArgb(49, 17, 117);
             Margin = new Padding(0);
             Name = "nhanviengui";
-            Size = new Size(1698, 1100);
+            Size = new Size(1644, 927);
             Load += nhanviengui_Load;
             MouseClick += nhanviengui_MouseClick;
             panel1.ResumeLayout(false);
