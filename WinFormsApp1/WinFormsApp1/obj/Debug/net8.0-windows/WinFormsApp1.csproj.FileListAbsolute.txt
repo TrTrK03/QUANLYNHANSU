@@ -290,6 +290,7 @@ C:\Học Tập\BT_C#\QUANLYNHANSU\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-win
 C:\Học Tập\BT_C#\QUANLYNHANSU\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.GUI.detail.TaoNhanVien.resources
 C:\Học Tập\BT_C#\QUANLYNHANSU\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.GUI.detail.TaoPhongBan.resources
 C:\Học Tập\BT_C#\QUANLYNHANSU\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.GUI.duangui.resources
+C:\Học Tập\BT_C#\QUANLYNHANSU\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.GUI.Formtest.resources
 C:\Học Tập\BT_C#\QUANLYNHANSU\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.GUI.Home.resources
 C:\Học Tập\BT_C#\QUANLYNHANSU\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.index.resources
 C:\Học Tập\BT_C#\QUANLYNHANSU\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.GUI.dangnhap.resources

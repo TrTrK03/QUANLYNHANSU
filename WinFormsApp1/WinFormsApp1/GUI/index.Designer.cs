@@ -34,18 +34,18 @@
             nhanvien = new Button();
             bangluong = new Button();
             baohiem = new Button();
-            button10 = new Button();
             thongbao = new Button();
             tuyendung = new Button();
             duan = new Button();
             phongban = new Button();
             home = new Button();
             panel2 = new Panel();
+            panel4 = new Panel();
             label1 = new Label();
             pictureBox1 = new PictureBox();
             fontDialog1 = new FontDialog();
             panel3 = new Panel();
-            panel4 = new Panel();
+            panel5 = new Panel();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -59,7 +59,6 @@
             panel1.Controls.Add(nhanvien);
             panel1.Controls.Add(bangluong);
             panel1.Controls.Add(baohiem);
-            panel1.Controls.Add(button10);
             panel1.Controls.Add(thongbao);
             panel1.Controls.Add(tuyendung);
             panel1.Controls.Add(duan);
@@ -70,7 +69,7 @@
             panel1.Location = new Point(0, 0);
             panel1.Margin = new Padding(0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(143, 573);
+            panel1.Size = new Size(143, 703);
             panel1.TabIndex = 0;
             // 
             // panNav
@@ -161,25 +160,6 @@
             baohiem.UseVisualStyleBackColor = true;
             baohiem.Click += baohiem_Click;
             baohiem.Leave += baohiem_Leave;
-            // 
-            // button10
-            // 
-            button10.Dock = DockStyle.Bottom;
-            button10.FlatAppearance.BorderSize = 0;
-            button10.FlatStyle = FlatStyle.Flat;
-            button10.ForeColor = Color.FromArgb(192, 192, 255);
-            button10.Image = Properties.Resources.home;
-            button10.ImageAlign = ContentAlignment.MiddleLeft;
-            button10.Location = new Point(0, 534);
-            button10.Margin = new Padding(2);
-            button10.Name = "button10";
-            button10.Size = new Size(143, 39);
-            button10.TabIndex = 2;
-            button10.Text = "Dashboard  ";
-            button10.TextAlign = ContentAlignment.MiddleRight;
-            button10.TextImageRelation = TextImageRelation.TextBeforeImage;
-            button10.UseVisualStyleBackColor = true;
-            button10.Click += button10_Click;
             // 
             // thongbao
             // 
@@ -295,13 +275,20 @@
             panel2.TabIndex = 1;
             panel2.Paint += panel2_Paint;
             // 
+            // panel4
+            // 
+            panel4.Location = new Point(146, 3);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(998, 570);
+            panel4.TabIndex = 2;
+            // 
             // label1
             // 
             label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(0, 156, 149);
-            label1.Location = new Point(11, 61);
+            label1.Location = new Point(11, 76);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
             label1.Size = new Size(106, 25);
@@ -312,7 +299,7 @@
             // 
             pictureBox1.Anchor = AnchorStyles.Left;
             pictureBox1.Image = Properties.Resources.hr;
-            pictureBox1.Location = new Point(35, 2);
+            pictureBox1.Location = new Point(38, 11);
             pictureBox1.Margin = new Padding(2);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(58, 57);
@@ -328,16 +315,17 @@
             panel3.Location = new Point(143, 0);
             panel3.Margin = new Padding(0);
             panel3.Name = "panel3";
-            panel3.Size = new Size(995, 0);
+            panel3.Size = new Size(1051, 0);
             panel3.TabIndex = 1;
             panel3.Paint += panel3_Paint;
             // 
-            // panel4
+            // panel5
             // 
-            panel4.Location = new Point(146, 3);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(998, 570);
-            panel4.TabIndex = 2;
+            panel5.Dock = DockStyle.Fill;
+            panel5.Location = new Point(143, 0);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(1051, 703);
+            panel5.TabIndex = 2;
             // 
             // index
             // 
@@ -345,7 +333,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
             BackColor = Color.FromArgb(46, 51, 73);
-            ClientSize = new Size(1138, 573);
+            ClientSize = new Size(1194, 703);
+            Controls.Add(panel5);
             Controls.Add(panel3);
             Controls.Add(panel1);
             Margin = new Padding(2);
@@ -377,8 +366,8 @@
         private Button thongbao;
         private Panel panNav;
         private Button baohiem;
-        private Button button10;
         private Panel panel3;
         private Panel panel4;
+        private Panel panel5;
     }
 }

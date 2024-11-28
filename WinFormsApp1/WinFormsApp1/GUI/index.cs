@@ -76,9 +76,10 @@ namespace WinFormsApp1
             panNav.Top = phongban.Top;
             panNav.Left = phongban.Left;
             phongban.BackColor = Color.FromArgb(46, 51, 73);
+
+            panel5.Controls.Clear();
             phongbangui pb = new phongbangui();
-            Controls.Add(pb);
-            pb.BringToFront();
+            panel5.Controls.Add(pb);
             pb.Dock = DockStyle.Fill;
             pb.Location = new System.Drawing.Point(186, 0);
         }

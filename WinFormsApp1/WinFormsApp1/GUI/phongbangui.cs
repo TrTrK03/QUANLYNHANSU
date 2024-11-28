@@ -37,197 +37,139 @@ namespace WinFormsApp1.GUI
         static phongbanbus phongbanBUS = new phongbanbus();
         phongbandto phongbanDTO = new phongbandto();
         List<phongbandto> phongbans = phongbanBUS.GetPhongBan();
-
-        //Khoi tao
-        private Panel panel1;
-        private Panel panel4;
         private Panel panel2;
         private Panel panel6;
+        private Button edit;
         private Button delete;
         private TextBox txtSearch;
-        private Label label1;
+        private Panel panel3;
         private Panel panel5;
         private DataGridView dataGridView1;
+        private Panel panel1;
+        private Label label1;
+        private Button button1;
         private OpenFileDialog openFileDialog1;
-        private Panel panel7;
-        private TextBox txtTenPB;
-        private TextBox txtMoTa;
-        private TextBox txtTruongPhong;
-        private TextBox txtMaPB;
-        private Label label9;
-        private Label label7;
-        private Label label3;
-        private Label label2;
-        private Panel panel8;
-        private PictureBox pictureBox1;
-        private Panel panel3;
-        private Button edit;
 
         private void InitializeComponent()
         {
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            panel1 = new Panel();
-            panel5 = new Panel();
-            panel7 = new Panel();
-            txtTenPB = new TextBox();
-            txtMoTa = new TextBox();
-            txtTruongPhong = new TextBox();
-            txtMaPB = new TextBox();
-            label9 = new Label();
-            label7 = new Label();
-            label3 = new Label();
-            label2 = new Label();
-            panel8 = new Panel();
-            pictureBox1 = new PictureBox();
-            dataGridView1 = new DataGridView();
-            panel4 = new Panel();
+            openFileDialog1 = new OpenFileDialog();
             panel2 = new Panel();
             panel6 = new Panel();
+            label1 = new Label();
             edit = new Button();
             delete = new Button();
             txtSearch = new TextBox();
-            label1 = new Label();
             panel3 = new Panel();
-            openFileDialog1 = new OpenFileDialog();
-            panel1.SuspendLayout();
-            panel5.SuspendLayout();
-            panel7.SuspendLayout();
-            panel8.SuspendLayout();
-            ((ISupportInitialize)pictureBox1).BeginInit();
-            ((ISupportInitialize)dataGridView1).BeginInit();
+            panel5 = new Panel();
+            dataGridView1 = new DataGridView();
+            panel1 = new Panel();
+            button1 = new Button();
             panel2.SuspendLayout();
             panel6.SuspendLayout();
+            panel5.SuspendLayout();
+            ((ISupportInitialize)dataGridView1).BeginInit();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
-            // panel1
+            // openFileDialog1
             // 
-            panel1.Anchor = AnchorStyles.Left;
-            panel1.AutoScroll = true;
-            panel1.BackColor = Color.FromArgb(252, 250, 255);
-            panel1.Controls.Add(panel5);
-            panel1.Controls.Add(panel4);
-            panel1.Controls.Add(panel2);
-            panel1.Location = new Point(60, 60);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1581, 951);
-            panel1.TabIndex = 2;
+            openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // panel2
+            // 
+            panel2.BackColor = Color.White;
+            panel2.Controls.Add(panel6);
+            panel2.Controls.Add(panel3);
+            panel2.ForeColor = Color.FromArgb(49, 17, 117);
+            panel2.Location = new Point(0, 0);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(1000, 51);
+            panel2.TabIndex = 0;
+            panel2.MouseClick += panel2_MouseClick;
+            // 
+            // panel6
+            // 
+            panel6.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            panel6.BackColor = Color.White;
+            panel6.Controls.Add(button1);
+            panel6.Controls.Add(label1);
+            panel6.Controls.Add(edit);
+            panel6.Controls.Add(delete);
+            panel6.Controls.Add(txtSearch);
+            panel6.Location = new Point(3, 0);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(997, 49);
+            panel6.TabIndex = 6;
+            panel6.MouseClick += panel6_MouseClick;
+            // 
+            // label1
+            // 
+            label1.Anchor = AnchorStyles.None;
+            label1.Font = new Font("Segoe UI", 24.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.FromArgb(49, 17, 117);
+            label1.Location = new Point(3, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(232, 49);
+            label1.TabIndex = 11;
+            label1.Text = "Phòng Ban";
+            // 
+            // edit
+            // 
+            edit.Anchor = AnchorStyles.None;
+            edit.BackColor = Color.Lavender;
+            edit.FlatAppearance.BorderColor = Color.FromArgb(224, 224, 224);
+            edit.FlatStyle = FlatStyle.Flat;
+            edit.Location = new Point(705, 9);
+            edit.Name = "edit";
+            edit.Size = new Size(81, 34);
+            edit.TabIndex = 10;
+            edit.Text = "Edit";
+            edit.UseVisualStyleBackColor = false;
+            // 
+            // delete
+            // 
+            delete.Anchor = AnchorStyles.None;
+            delete.BackColor = Color.Lavender;
+            delete.FlatAppearance.BorderColor = Color.FromArgb(224, 224, 224);
+            delete.FlatStyle = FlatStyle.Flat;
+            delete.Location = new Point(792, 8);
+            delete.Name = "delete";
+            delete.Size = new Size(81, 36);
+            delete.TabIndex = 9;
+            delete.Text = "Delete";
+            delete.UseVisualStyleBackColor = false;
+            delete.Click += delete_Click;
+            // 
+            // txtSearch
+            // 
+            txtSearch.Anchor = AnchorStyles.None;
+            txtSearch.Location = new Point(241, 13);
+            txtSearch.Name = "txtSearch";
+            txtSearch.Size = new Size(344, 27);
+            txtSearch.TabIndex = 0;
+            txtSearch.TextChanged += txtSearch_TextChanged;
+            txtSearch.Leave += txtSearch_Leave;
+            // 
+            // panel3
+            // 
+            panel3.BackColor = Color.FromArgb(252, 250, 255);
+            panel3.Dock = DockStyle.Bottom;
+            panel3.Location = new Point(0, 49);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(1000, 2);
+            panel3.TabIndex = 0;
+            panel3.Visible = false;
             // 
             // panel5
             // 
             panel5.AutoScroll = true;
             panel5.BackColor = Color.FromArgb(192, 0, 0);
-            panel5.Controls.Add(panel7);
             panel5.Controls.Add(dataGridView1);
-            panel5.Dock = DockStyle.Fill;
-            panel5.Location = new Point(0, 51);
+            panel5.Location = new Point(3, 52);
             panel5.Name = "panel5";
-            panel5.Size = new Size(1581, 900);
+            panel5.Size = new Size(1000, 551);
             panel5.TabIndex = 5;
-            // 
-            // panel7
-            // 
-            panel7.BackColor = Color.Lavender;
-            panel7.Controls.Add(txtTenPB);
-            panel7.Controls.Add(txtMoTa);
-            panel7.Controls.Add(txtTruongPhong);
-            panel7.Controls.Add(txtMaPB);
-            panel7.Controls.Add(label9);
-            panel7.Controls.Add(label7);
-            panel7.Controls.Add(label3);
-            panel7.Controls.Add(label2);
-            panel7.Controls.Add(panel8);
-            panel7.Dock = DockStyle.Fill;
-            panel7.ForeColor = Color.FromArgb(49, 17, 117);
-            panel7.Location = new Point(0, 405);
-            panel7.Name = "panel7";
-            panel7.Size = new Size(1581, 495);
-            panel7.TabIndex = 7;
-            // 
-            // txtTenPB
-            // 
-            txtTenPB.Location = new Point(521, 113);
-            txtTenPB.Name = "txtTenPB";
-            txtTenPB.Size = new Size(344, 27);
-            txtTenPB.TabIndex = 2;
-            // 
-            // txtMoTa
-            // 
-            txtMoTa.Enabled = false;
-            txtMoTa.Location = new Point(1100, 106);
-            txtMoTa.Multiline = true;
-            txtMoTa.Name = "txtMoTa";
-            txtMoTa.Size = new Size(344, 34);
-            txtMoTa.TabIndex = 2;
-            // 
-            // txtTruongPhong
-            // 
-            txtTruongPhong.Location = new Point(1100, 47);
-            txtTruongPhong.Name = "txtTruongPhong";
-            txtTruongPhong.Size = new Size(344, 27);
-            txtTruongPhong.TabIndex = 2;
-            // 
-            // txtMaPB
-            // 
-            txtMaPB.Location = new Point(521, 47);
-            txtMaPB.Name = "txtMaPB";
-            txtMaPB.Size = new Size(344, 27);
-            txtMaPB.TabIndex = 2;
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Location = new Point(1016, 120);
-            label9.Name = "label9";
-            label9.Size = new Size(51, 20);
-            label9.TabIndex = 1;
-            label9.Text = "Mô tả:";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Location = new Point(962, 45);
-            label7.Name = "label7";
-            label7.Size = new Size(105, 20);
-            label7.TabIndex = 1;
-            label7.Text = "Trưởng Phòng:";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(392, 116);
-            label3.Name = "label3";
-            label3.Size = new Size(110, 20);
-            label3.TabIndex = 1;
-            label3.Text = "Tên Phòng Ban:";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(392, 47);
-            label2.Name = "label2";
-            label2.Size = new Size(108, 20);
-            label2.TabIndex = 1;
-            label2.Text = "Mã Phòng Ban:";
-            // 
-            // panel8
-            // 
-            panel8.BackColor = Color.FromArgb(255, 192, 255);
-            panel8.Controls.Add(pictureBox1);
-            panel8.Location = new Point(52, 45);
-            panel8.Name = "panel8";
-            panel8.Size = new Size(251, 315);
-            panel8.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Dock = DockStyle.Fill;
-            pictureBox1.Image = Properties.Resources.Untitled2;
-            pictureBox1.Location = new Point(0, 0);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(251, 315);
-            pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
             // 
             // dataGridView1
             // 
@@ -238,7 +180,7 @@ namespace WinFormsApp1.GUI
             dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.None;
             dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridView1.ColumnHeadersHeight = 70;
-            dataGridView1.Dock = DockStyle.Top;
+            dataGridView1.Dock = DockStyle.Fill;
             dataGridView1.GridColor = SystemColors.Info;
             dataGridView1.Location = new Point(0, 0);
             dataGridView1.Name = "dataGridView1";
@@ -256,105 +198,32 @@ namespace WinFormsApp1.GUI
             dataGridView1.RowTemplate.Height = 100;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView1.ShowRowErrors = false;
-            dataGridView1.Size = new Size(1581, 405);
+            dataGridView1.Size = new Size(1000, 551);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellMouseClick += dataGridView1_CellMouseClick;
             dataGridView1.DataBindingComplete += dataGridView1_DataBindingComplete;
             // 
-            // panel4
+            // panel1
             // 
-            panel4.BackColor = Color.FromArgb(200, 158, 255);
-            panel4.Location = new Point(0, 108);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(157, 3);
-            panel4.TabIndex = 4;
+            panel1.AutoScroll = true;
+            panel1.AutoSize = true;
+            panel1.BackColor = Color.FromArgb(252, 250, 255);
+            panel1.Controls.Add(panel5);
+            panel1.Controls.Add(panel2);
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1006, 606);
+            panel1.TabIndex = 2;
             // 
-            // panel2
+            // button1
             // 
-            panel2.BackColor = Color.White;
-            panel2.Controls.Add(panel6);
-            panel2.Controls.Add(label1);
-            panel2.Controls.Add(panel3);
-            panel2.Dock = DockStyle.Top;
-            panel2.ForeColor = Color.FromArgb(49, 17, 117);
-            panel2.Location = new Point(0, 0);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(1581, 51);
-            panel2.TabIndex = 0;
-            panel2.MouseClick += panel2_MouseClick;
-            // 
-            // panel6
-            // 
-            panel6.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            panel6.BackColor = Color.White;
-            panel6.Controls.Add(edit);
-            panel6.Controls.Add(delete);
-            panel6.Controls.Add(txtSearch);
-            panel6.Dock = DockStyle.Right;
-            panel6.Location = new Point(239, 0);
-            panel6.Name = "panel6";
-            panel6.Size = new Size(1342, 49);
-            panel6.TabIndex = 6;
-            panel6.MouseClick += panel6_MouseClick;
-            // 
-            // edit
-            // 
-            edit.BackColor = Color.Lavender;
-            edit.FlatAppearance.BorderColor = Color.FromArgb(224, 224, 224);
-            edit.FlatStyle = FlatStyle.Flat;
-            edit.Location = new Point(485, 1);
-            edit.Name = "edit";
-            edit.Size = new Size(130, 49);
-            edit.TabIndex = 10;
-            edit.Text = "Edit";
-            edit.UseVisualStyleBackColor = false;
-            // 
-            // delete
-            // 
-            delete.BackColor = Color.Lavender;
-            delete.FlatAppearance.BorderColor = Color.FromArgb(224, 224, 224);
-            delete.FlatStyle = FlatStyle.Flat;
-            delete.Location = new Point(656, 0);
-            delete.Name = "delete";
-            delete.Size = new Size(130, 49);
-            delete.TabIndex = 9;
-            delete.Text = "Delete";
-            delete.UseVisualStyleBackColor = false;
-            delete.Click += delete_Click;
-            // 
-            // txtSearch
-            // 
-            txtSearch.Location = new Point(56, 11);
-            txtSearch.Name = "txtSearch";
-            txtSearch.Size = new Size(344, 27);
-            txtSearch.TabIndex = 0;
-            txtSearch.TextChanged += txtSearch_TextChanged;
-            txtSearch.Leave += txtSearch_Leave;
-            // 
-            // label1
-            // 
-            label1.Dock = DockStyle.Left;
-            label1.Font = new Font("Segoe UI", 24.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.FromArgb(49, 17, 117);
-            label1.Location = new Point(0, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(233, 49);
-            label1.TabIndex = 1;
-            label1.Text = "Phòng Ban";
-            // 
-            // panel3
-            // 
-            panel3.BackColor = Color.FromArgb(252, 250, 255);
-            panel3.Dock = DockStyle.Bottom;
-            panel3.Location = new Point(0, 49);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(1581, 2);
-            panel3.TabIndex = 0;
-            panel3.Visible = false;
-            // 
-            // openFileDialog1
-            // 
-            openFileDialog1.FileName = "openFileDialog1";
+            button1.Location = new Point(605, 8);
+            button1.Name = "button1";
+            button1.Size = new Size(94, 36);
+            button1.TabIndex = 12;
+            button1.Text = "Add";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // phongbangui
             // 
@@ -365,20 +234,17 @@ namespace WinFormsApp1.GUI
             ForeColor = Color.FromArgb(49, 17, 117);
             Margin = new Padding(0);
             Name = "phongbangui";
-            Size = new Size(1698, 1100);
+            Size = new Size(1009, 609);
             Load += phongbangui_Load;
             MouseClick += phongbangui_MouseClick;
-            panel1.ResumeLayout(false);
-            panel5.ResumeLayout(false);
-            panel7.ResumeLayout(false);
-            panel7.PerformLayout();
-            panel8.ResumeLayout(false);
-            ((ISupportInitialize)pictureBox1).EndInit();
-            ((ISupportInitialize)dataGridView1).EndInit();
             panel2.ResumeLayout(false);
             panel6.ResumeLayout(false);
             panel6.PerformLayout();
+            panel5.ResumeLayout(false);
+            ((ISupportInitialize)dataGridView1).EndInit();
+            panel1.ResumeLayout(false);
             ResumeLayout(false);
+            PerformLayout();
         }
 
         private void LoadDataToGUI()
@@ -420,36 +286,41 @@ namespace WinFormsApp1.GUI
         {
             LoadDataToGUI();
             txtSearch.PlaceholderText = "Tìm kiếm ...";
-                        dataGridView1.Size = new Size(1575, 870);
-            panel7.Visible = false;
+            dataGridView1.Size = new Size(1575, 870);
             //dataGridView1.ClearSelection();
         }
 
         string maPBSelected;
+
+
         private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            //hien thi bang detail
-
-            dataGridView1.Size = new Size(1575, 450);
-            dataGridView1.DefaultCellStyle.SelectionForeColor = Color.FromArgb(49, 17, 117);
-            dataGridView1.DefaultCellStyle.SelectionBackColor = Color.Lavender;
-
-            panel7.Visible = true;
-
-            //get data
-            maPBSelected = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+            // Lấy dữ liệu từ dòng được chọn
+            string maPBSelected = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
             phongbandto selectedphongban = phongbans.FirstOrDefault(phongban => phongban.MaPhongBan == maPBSelected);
 
             if (selectedphongban != null)
             {
-                txtMaPB.Text = selectedphongban.MaPhongBan.Trim();
-                txtTruongPhong.Text = selectedphongban.TruongPhong.Trim();
-                txtTenPB.Text = selectedphongban.TenPhongBan.Trim();
-                txtMoTa.Text = selectedphongban.MoTa.Trim();
+                // Khởi tạo Formtest
+                Formtest test = new Formtest
+                {
+                    MaPhongBan = selectedphongban.MaPhongBan.Trim(),
+                    TruongPhong = selectedphongban.TruongPhong.Trim(),
+                    TenPhongBan = selectedphongban.TenPhongBan.Trim(),
+                    MoTa = selectedphongban.MoTa.Trim()
+                };
 
+                // Hiển thị Formtest
+                test.LoadData();
+                test.ShowDialog();
             }
 
+            // Hiển thị bảng chi tiết
+            dataGridView1.Size = new Size(1575, 450);
+            dataGridView1.DefaultCellStyle.SelectionForeColor = Color.FromArgb(49, 17, 117);
+            dataGridView1.DefaultCellStyle.SelectionBackColor = Color.Lavender;
         }
+
 
 
 
@@ -458,8 +329,7 @@ namespace WinFormsApp1.GUI
         private void phongbangui_MouseClick(object sender, MouseEventArgs e)
         {
             //LoadDataToGUI();
-                        dataGridView1.Size = new Size(1575, 870);
-            panel7.Visible = false;
+            dataGridView1.Size = new Size(1575, 870);
             dataGridView1.ClearSelection();
 
         }
@@ -467,24 +337,21 @@ namespace WinFormsApp1.GUI
         private void flowLayoutPanel1_MouseClick(object sender, MouseEventArgs e)
         {
             //LoadDataToGUI();
-                        dataGridView1.Size = new Size(1575, 870);
-            panel7.Visible = false;
+            dataGridView1.Size = new Size(1575, 870);
             dataGridView1.ClearSelection();
         }
 
         private void panel2_MouseClick(object sender, MouseEventArgs e)
         {
             //LoadDataToGUI();
-                        dataGridView1.Size = new Size(1575, 870);
-            panel7.Visible = false;
+            dataGridView1.Size = new Size(1575, 870);
             dataGridView1.ClearSelection();
         }
 
         private void panel6_MouseClick(object sender, MouseEventArgs e)
         {
             //LoadDataToGUI();
-                        dataGridView1.Size = new Size(1575, 870);
-            panel7.Visible = false;
+            dataGridView1.Size = new Size(1575, 870);
             dataGridView1.ClearSelection();
         }
 
@@ -583,28 +450,36 @@ namespace WinFormsApp1.GUI
             return false;
         }
 
-        private void txtSearch_Leave(object sender, EventArgs e)
-        {
-            txtSearch.PlaceholderText = "Tìm kiếm ...";
-        }
-
-        //private void txtSearch_Enter(object sender, EventArgs e)
-        //{
-        //    if (txtSearch.Text == "Tìm kiếm ...")
-        //    {
-        //        txtSearch.Text = ""; // Xóa chữ khi người dùng bắt đầu nhập
-        //        txtSearch.ForeColor = Color.Black; // Chuyển sang màu chữ thường
-        //    }
-        //}
-
         //private void txtSearch_Leave(object sender, EventArgs e)
         //{
-        //    if (string.IsNullOrWhiteSpace(txtSearch.Text))
-        //    {
-        //        txtSearch.Text = "Tìm kiếm ..."; // Hiển thị lại chữ khi trống
-        //        txtSearch.ForeColor = Color.Gray; // Chuyển sang màu chữ mờ
-        //    }
+        //    txtSearch.PlaceholderText = "Tìm kiếm ...";
         //}
+
+
+
+        private void txtSearch_Enter(object sender, EventArgs e)
+        {
+            if (txtSearch.Text == "Tìm kiếm ...")
+            {
+                txtSearch.Text = ""; // Xóa chữ khi người dùng bắt đầu nhập
+                txtSearch.ForeColor = Color.Black; // Chuyển sang màu chữ thường
+            }
+        }
+
+        private void txtSearch_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtSearch.Text))
+            {
+                txtSearch.PlaceholderText = "Tìm kiếm ...";
+                txtSearch.ForeColor = Color.Gray; // Chuyển sang màu chữ mờ
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            TaoPhongBan taoPhongBanForm = new TaoPhongBan();
+            taoPhongBanForm.ShowDialog();
+        }
     }
 
 }
