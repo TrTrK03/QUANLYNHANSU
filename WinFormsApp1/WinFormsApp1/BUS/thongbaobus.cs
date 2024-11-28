@@ -33,28 +33,11 @@ namespace WinFormsApp1.BUS
             return thongBaoDao.SearchThongBaoByContent(keyword);
         }
 
-        // Lấy thông báo theo mã thông báo
-        public thongbaodto GetThongBaoById(string maThongBao)
-        {
-            return thongBaoDao.GetThongBaoById(maThongBao);
-        }
-
         // Xóa thông báo theo mã thông báo
         public void DeleteThongBao(string maThongBao)
         {
             thongBaoDao.DeleteThongBao(maThongBao);
         }
 
-        // Lấy các thông báo có trạng thái nhất định
-        public List<thongbaodto> GetNotificationsByStatus(int trangThai)
-        {
-            return thongBaoDao.GetNotificationsByStatus(trangThai);
-        }
-
-        // Lấy thông báo của một người ban hành
-        public List<thongbaodto> GetNotificationsByIssuer(string nguoiBanHanh)
-        {
-            return thongBaoDao.GetNotificationsByIssuer(nguoiBanHanh);
-        }
     }
 }

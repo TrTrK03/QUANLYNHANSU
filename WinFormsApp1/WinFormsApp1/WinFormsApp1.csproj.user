@@ -16,16 +16,28 @@
     <Compile Update="GUI\duangui.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="GUI\ForgetPassword.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="GUI\index.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="GUI\Home.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="GUI\Login.cs">
+    <Compile Update="GUI\login\login\dangnhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\login\login\ForgetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\login\login\LandR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\login\login\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\login\login\Regist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\login\login\Signup.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="GUI\phongbangui.cs">
@@ -33,9 +45,6 @@
     </Compile>
     <Compile Update="GUI\nhanviengui.cs">
       <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="GUI\Signup.cs">
-      <SubType>Form</SubType>
     </Compile>
     <Compile Update="GUI\test.cs">
       <SubType>UserControl</SubType>

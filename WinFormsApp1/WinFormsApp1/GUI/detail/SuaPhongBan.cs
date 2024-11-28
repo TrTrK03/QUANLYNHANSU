@@ -15,18 +15,18 @@ namespace WinFormsApp1.GUI.detail
         public SuaPhongBan(phongbandto selectedDepartment)
         {
             InitializeComponent();
-            SelectedDepartment = selectedDepartment;
+            selectedDepartment = selectedDepartment;
 
             txtMaPhongBan.Text = selectedDepartment.MaPhongBan.Trim();
             txtTenPhongBan.Text = selectedDepartment.TenPhongBan.Trim();
             txtMoTa.Text = selectedDepartment.MoTa?.Trim() ?? "";
             txtTruongPhong.Text = selectedDepartment.TruongPhong.Trim();
 
-            if (SelectedDepartment.TrangThai == 1)
+            if (selectedDepartment.TrangThai == 1)
             {
                 rdbHien.Checked = true;
             }
-            else if (SelectedDepartment.TrangThai == 0)
+            else if (selectedDepartment.TrangThai == 0)
             {
                 rdbAn.Checked = true;
             }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WinFormsApp1.DTO
 {
-    internal class phongbandto
+    public class phongbandto
     {
         private string maPhongBan;
         private string tenPhongBan;

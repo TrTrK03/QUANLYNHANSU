@@ -120,5 +120,22 @@ namespace WinFormsApp1.DAO
 
             return notifications;
         }
+
+        public void DeleteThongBao(string maThongBao)
+        {
+            using (SqlConnection connection = connectObj.connection())
+            {
+                if (connection.State == System.Data.ConnectionState.Closed)
+                {
+                    connection.Open();
+                }
+
+                SqlCommand command = new SqlCommand("DELETE FROM ThongBao WHERE MaThongBao = @MaThongBao", connection);
+                command.Parameters.AddWithValue("@MaThongBao", maThongBao);
+
+                command.ExecuteNonQuery();
+                connection.Close();
+            }
+        }
     }
 }

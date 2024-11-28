@@ -45,14 +45,9 @@ namespace WinFormsApp1.GUI
         //Khoi tao
         private Panel panel1;
         private Panel panel4;
-        private FlowLayoutPanel flowLayoutPanel1;
-        private Button hienhanh;
-        private Button tatca;
-        private Button danghi;
         private Panel panel2;
         private Panel panel6;
         private Button delete;
-        private Button Tao;
         private TextBox txtSearch;
         private Label label1;
         private Panel panel5;
@@ -79,7 +74,7 @@ namespace WinFormsApp1.GUI
 
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             panel1 = new Panel();
             panel5 = new Panel();
             panel7 = new Panel();
@@ -104,15 +99,10 @@ namespace WinFormsApp1.GUI
             pictureBox1 = new PictureBox();
             dataGridView1 = new DataGridView();
             panel4 = new Panel();
-            flowLayoutPanel1 = new FlowLayoutPanel();
-            hienhanh = new Button();
-            tatca = new Button();
-            danghi = new Button();
             panel2 = new Panel();
             panel6 = new Panel();
             edit = new Button();
             delete = new Button();
-            Tao = new Button();
             txtSearch = new TextBox();
             label1 = new Label();
             panel3 = new Panel();
@@ -123,7 +113,6 @@ namespace WinFormsApp1.GUI
             panel8.SuspendLayout();
             ((ISupportInitialize)pictureBox1).BeginInit();
             ((ISupportInitialize)dataGridView1).BeginInit();
-            flowLayoutPanel1.SuspendLayout();
             panel2.SuspendLayout();
             panel6.SuspendLayout();
             SuspendLayout();
@@ -135,7 +124,6 @@ namespace WinFormsApp1.GUI
             panel1.BackColor = Color.FromArgb(252, 250, 255);
             panel1.Controls.Add(panel5);
             panel1.Controls.Add(panel4);
-            panel1.Controls.Add(flowLayoutPanel1);
             panel1.Controls.Add(panel2);
             panel1.Location = new Point(60, 60);
             panel1.Name = "panel1";
@@ -149,9 +137,9 @@ namespace WinFormsApp1.GUI
             panel5.Controls.Add(panel7);
             panel5.Controls.Add(dataGridView1);
             panel5.Dock = DockStyle.Fill;
-            panel5.Location = new Point(0, 111);
+            panel5.Location = new Point(0, 51);
             panel5.Name = "panel5";
-            panel5.Size = new Size(1581, 840);
+            panel5.Size = new Size(1581, 900);
             panel5.TabIndex = 5;
             // 
             // panel7
@@ -179,7 +167,7 @@ namespace WinFormsApp1.GUI
             panel7.ForeColor = Color.FromArgb(49, 17, 117);
             panel7.Location = new Point(0, 405);
             panel7.Name = "panel7";
-            panel7.Size = new Size(1581, 435);
+            panel7.Size = new Size(1581, 495);
             panel7.TabIndex = 7;
             // 
             // cbNu
@@ -235,7 +223,7 @@ namespace WinFormsApp1.GUI
             label10.Size = new Size(106, 20);
             label10.TabIndex = 3;
             label10.Text = "Người quản lý:";
-            //
+            // 
             // txtTenPB
             // 
             txtTenPB.Location = new Point(521, 113);
@@ -298,7 +286,7 @@ namespace WinFormsApp1.GUI
             label7.AutoSize = true;
             label7.Location = new Point(962, 45);
             label7.Name = "label7";
-            label7.Size = new Size(49, 20);
+            label7.Size = new Size(100, 20);
             label7.TabIndex = 1;
             label7.Text = "TruongPhong:";
             // 
@@ -372,14 +360,14 @@ namespace WinFormsApp1.GUI
             dataGridView1.Location = new Point(0, 0);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Control;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 15F);
-            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 15F);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.False;
+            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridView1.RowHeadersVisible = false;
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 100;
@@ -397,69 +385,6 @@ namespace WinFormsApp1.GUI
             panel4.Name = "panel4";
             panel4.Size = new Size(157, 3);
             panel4.TabIndex = 4;
-            // 
-            // flowLayoutPanel1
-            // 
-            flowLayoutPanel1.BackColor = Color.White;
-            flowLayoutPanel1.Controls.Add(hienhanh);
-            flowLayoutPanel1.Controls.Add(tatca);
-            flowLayoutPanel1.Controls.Add(danghi);
-            flowLayoutPanel1.Dock = DockStyle.Top;
-            flowLayoutPanel1.Font = new Font("Bahnschrift Light", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            flowLayoutPanel1.Location = new Point(0, 51);
-            flowLayoutPanel1.Margin = new Padding(3, 0, 3, 0);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(1581, 60);
-            flowLayoutPanel1.TabIndex = 1;
-            flowLayoutPanel1.MouseClick += flowLayoutPanel1_MouseClick;
-            // 
-            // hienhanh
-            // 
-            hienhanh.AutoSize = true;
-            hienhanh.CausesValidation = false;
-            hienhanh.FlatAppearance.BorderSize = 0;
-            hienhanh.FlatStyle = FlatStyle.Flat;
-            hienhanh.Font = new Font("Segoe UI", 15F);
-            hienhanh.ForeColor = Color.FromArgb(64, 64, 64);
-            hienhanh.Location = new Point(3, 3);
-            hienhanh.Name = "hienhanh";
-            hienhanh.Size = new Size(138, 57);
-            hienhanh.TabIndex = 0;
-            hienhanh.Text = "Hiện hành";
-            hienhanh.UseVisualStyleBackColor = true;
-            hienhanh.Click += hienhanh_Click;
-            // 
-            // tatca
-            // 
-            tatca.Anchor = AnchorStyles.None;
-            tatca.AutoSize = true;
-            tatca.CausesValidation = false;
-            tatca.FlatAppearance.BorderSize = 0;
-            tatca.FlatStyle = FlatStyle.Flat;
-            tatca.Font = new Font("Segoe UI", 15F);
-            tatca.Location = new Point(147, 4);
-            tatca.Name = "tatca";
-            tatca.Size = new Size(94, 56);
-            tatca.TabIndex = 1;
-            tatca.Text = "Tất cả";
-            tatca.UseVisualStyleBackColor = true;
-            tatca.Click += tatca_Click;
-            // 
-            // danghi
-            // 
-            danghi.Anchor = AnchorStyles.None;
-            danghi.AutoSize = true;
-            danghi.CausesValidation = false;
-            danghi.FlatAppearance.BorderSize = 0;
-            danghi.FlatStyle = FlatStyle.Flat;
-            danghi.Font = new Font("Segoe UI", 15F);
-            danghi.Location = new Point(247, 3);
-            danghi.Name = "danghi";
-            danghi.Size = new Size(112, 58);
-            danghi.TabIndex = 2;
-            danghi.Text = "Đã nghỉ";
-            danghi.UseVisualStyleBackColor = true;
-            danghi.Click += danghi_Click;
             // 
             // panel2
             // 
@@ -481,7 +406,6 @@ namespace WinFormsApp1.GUI
             panel6.BackColor = Color.White;
             panel6.Controls.Add(edit);
             panel6.Controls.Add(delete);
-            panel6.Controls.Add(Tao);
             panel6.Controls.Add(txtSearch);
             panel6.Dock = DockStyle.Right;
             panel6.Location = new Point(239, 0);
@@ -501,7 +425,7 @@ namespace WinFormsApp1.GUI
             edit.TabIndex = 10;
             edit.Text = "Edit";
             edit.UseVisualStyleBackColor = false;
-            edit.Click += edit_Click;
+            //edit.Click += edit_Click;
             // 
             // delete
             // 
@@ -515,21 +439,6 @@ namespace WinFormsApp1.GUI
             delete.Text = "Delete";
             delete.UseVisualStyleBackColor = false;
             delete.Click += delete_Click;
-
-            // 
-            // Tao
-            // 
-            Tao.BackColor = Color.LimeGreen;
-            Tao.Dock = DockStyle.Right;
-            Tao.FlatAppearance.BorderSize = 0;
-            Tao.FlatStyle = FlatStyle.Flat;
-            Tao.Image = Properties.Resources.add2;
-            Tao.Location = new Point(1219, 0);
-            Tao.Name = "Tao";
-            Tao.Size = new Size(123, 49);
-            Tao.TabIndex = 2;
-            Tao.UseVisualStyleBackColor = false;
-            Tao.Click += Tao_Click;
             // 
             // txtSearch
             // 
@@ -549,7 +458,7 @@ namespace WinFormsApp1.GUI
             label1.Name = "label1";
             label1.Size = new Size(233, 49);
             label1.TabIndex = 1;
-            label1.Text = "Nhân viên";
+            label1.Text = "Phòng Ban";
             // 
             // panel3
             // 
@@ -584,8 +493,6 @@ namespace WinFormsApp1.GUI
             panel8.ResumeLayout(false);
             ((ISupportInitialize)pictureBox1).EndInit();
             ((ISupportInitialize)dataGridView1).EndInit();
-            flowLayoutPanel1.ResumeLayout(false);
-            flowLayoutPanel1.PerformLayout();
             panel2.ResumeLayout(false);
             panel6.ResumeLayout(false);
             panel6.PerformLayout();
@@ -622,9 +529,6 @@ namespace WinFormsApp1.GUI
         public phongbangui()
         {
             InitializeComponent();
-            panel4.Width = hienhanh.Width;
-            panel4.Left = hienhanh.Left;
-            hienhanh.ForeColor = Color.Green;
 
         }
 
@@ -635,11 +539,6 @@ namespace WinFormsApp1.GUI
             dataGridView1.Size = new Size(1575, 870);
             panel7.Visible = false;
             //dataGridView1.ClearSelection();
-            panel4.Width = hienhanh.Width;
-            panel4.Left = hienhanh.Left;
-            hienhanh.ForeColor = Color.FromArgb(49, 17, 117);
-            tatca.ForeColor = Color.FromArgb(64, 64, 64);
-            danghi.ForeColor = Color.FromArgb(64, 64, 64);
         }
 
         string maPBSelected;
@@ -705,19 +604,9 @@ namespace WinFormsApp1.GUI
             dataGridView1.ClearSelection();
         }
 
-        private void danghi_Click(object sender, EventArgs e)
-        {
-            panel4.Width = danghi.Width;
-            panel4.Left = danghi.Left;
-            hienhanh.ForeColor = Color.FromArgb(64, 64, 64);
-            tatca.ForeColor = Color.FromArgb(64, 64, 64);
-            danghi.ForeColor = Color.FromArgb(49, 17, 117);
-            LoadDataToGUI();
-        }
-
         private void delete_Click(object sender, EventArgs e)
         {
-            phongbandto selectedphongban = phongbans.FirstOrDefault(phongban => phongban.Maphongban == maPBSelected);
+            phongbandto selectedphongban = phongbans.FirstOrDefault(phongban => phongban.MaPhongBan == maPBSelected);
             if (selectedphongban != null)
             {
                 if (selectedphongban.TrangThai == 1)
@@ -725,7 +614,7 @@ namespace WinFormsApp1.GUI
                     try
                     {
                         phongbanBUS.DeletePhongBan(selectedphongban);
-                        MessageBox.Show("Xóa nhân viên thành công!!!");
+                        MessageBox.Show("Xóa Phòng Ban thành công!!!");
                     }
                     catch (Exception ex)
                     {
@@ -734,38 +623,38 @@ namespace WinFormsApp1.GUI
                 }
                 else
                 {
-                    MessageBox.Show("Nhân viên này đã được xóa!!!");
+                    MessageBox.Show("Phòng Ban này đã được xóa!!!");
                 }
             }
             else
             {
-                MessageBox.Show("Chọn một nhân viên để xóa!");
+                MessageBox.Show("Chọn một Phòng Ban để xóa!");
             }
         }
 
-        private void edit_Click(object sender, EventArgs e)
-        {
-            phongbandto selectedphongban = phongbans.FirstOrDefault(phongban => phongban.Maphongban == maPBSelected);
+        //private void edit_Click(object sender, EventArgs e)
+        //{
+        //    phongbandto selectedphongban = phongbans.FirstOrDefault(phongban => phongban.MaPhongBan == maPBSelected);
 
-            if (selectedphongban != null)
-            {
-                SuaPhongBan interf = new SuaPhongBan(selectedphongban);
-                interf.StartPosition = FormStartPosition.CenterParent;
-                interf.ShowDialog();
+        //    if (selectedphongban != null)
+        //    {
+        //        SuaPhongBan interf = new SuaPhongBan(selectedphongban);
+        //        interf.StartPosition = FormStartPosition.CenterParent;
+        //        interf.ShowDialog();
 
-            }
-            else
-            {
-                MessageBox.Show("Chọn một nhân viên để chỉnh sửa!");
-            }
-        }
+        //    }
+        //    else
+        //    {
+        //        MessageBox.Show("Chọn một Phòng Ban để chỉnh sửa!");
+        //    }
+        //}
 
-        private void Tao_Click(object sender, EventArgs e)
-        {
-            TaoPhongBan interf = new TaoPhongBan();
-            interf.StartPosition = FormStartPosition.CenterParent;
-            interf.ShowDialog();
-        }
+        //private void Tao_Click(object sender, EventArgs e)
+        //{
+        //    TaoPhongBan interf = new TaoPhongBan();
+        //    interf.StartPosition = FormStartPosition.CenterParent;
+        //    interf.ShowDialog();
+        //}
 
 
 
