@@ -27,16 +27,11 @@ namespace WinFormsApp1.BUS
             thongBaoDao.UpdateThongBao(notification);
         }
 
-        // Tìm kiếm thông báo theo nội dung
-        public List<thongbaodto> SearchThongBaoByContent(string keyword)
-        {
-            return thongBaoDao.SearchThongBaoByContent(keyword);
-        }
 
         // Xóa thông báo theo mã thông báo
-        public void DeleteThongBao(string maThongBao)
+        public void DeleteThongBao(thongbaodto selectedThongBao)
         {
-            thongBaoDao.DeleteThongBao(maThongBao);
+            thongBaoDao.DeleteThongBao(selectedThongBao.MaThongBao);
         }
 
     }

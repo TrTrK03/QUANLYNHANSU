@@ -344,3 +344,5 @@ C:\Học Tập\BT_C#\QUANLYNHANSU\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-win
 C:\Học Tập\BT_C#\QUANLYNHANSU\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.pdb
 C:\Học Tập\BT_C#\QUANLYNHANSU\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.genruntimeconfig.cache
 C:\Học Tập\BT_C#\QUANLYNHANSU\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\ref\WinFormsApp1.dll
+C:\Học Tập\BT_C#\QUANLYNHANSU\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.GUI.Info.ThongBaoInfo.resources
+C:\Học Tập\BT_C#\QUANLYNHANSU\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.GUI.thongbaogui.resources

@@ -106,10 +106,10 @@ namespace WinFormsApp1
             panNav.Top = thongbao.Top;
             panNav.Left = thongbao.Left;
             thongbao.BackColor = Color.FromArgb(46, 51, 73);
-            //thongbaogui usctr = new thongbaogui();
-            //Controls.Add(usctr);
-            //usctr.BringToFront();
-            //usctr.Location = new System.Drawing.Point(186, 0);
+            panel5.Controls.Clear();
+            thongbaogui tb = new thongbaogui();
+            panel5.Controls.Add(tb);
+            tb.Dock = DockStyle.Fill;
         }
 
         private void baohiem_Click(object sender, EventArgs e)

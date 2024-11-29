@@ -23,7 +23,7 @@ namespace WinFormsApp1.DAO
                     connection.Open();
                 }
 
-                SqlCommand command = new SqlCommand("SELECT * FROM ThongBao", connection);
+                SqlCommand command = new SqlCommand("SELECT * FROM BangThongBao", connection);
                 SqlDataReader reader = command.ExecuteReader();
 
                 while (reader.Read())
@@ -54,7 +54,7 @@ namespace WinFormsApp1.DAO
                     connection.Open();
                 }
 
-                SqlCommand command = new SqlCommand("INSERT INTO ThongBao VALUES(@MaThongBao, @NoiDung, @NguoiBanHanh, @NgayBanHanh, @TrangThai)", connection);
+                SqlCommand command = new SqlCommand("INSERT INTO BangThongBao VALUES(@MaThongBao, @NoiDung, @NguoiBanHanh, @NgayBanHanh, @TrangThai)", connection);
                 command.Parameters.AddWithValue("@MaThongBao", notification.MaThongBao);
                 command.Parameters.AddWithValue("@NoiDung", notification.NoiDung);
                 command.Parameters.AddWithValue("@NguoiBanHanh", notification.NguoiBanHanh);
@@ -75,7 +75,7 @@ namespace WinFormsApp1.DAO
                     connection.Open();
                 }
 
-                SqlCommand command = new SqlCommand("UPDATE ThongBao SET NoiDung = @NoiDung, NguoiBanHanh = @NguoiBanHanh, NgayBanHanh = @NgayBanHanh, TrangThai = @TrangThai WHERE MaThongBao = @MaThongBao", connection);
+                SqlCommand command = new SqlCommand("UPDATE BangThongBao SET NoiDung = @NoiDung, NguoiBanHanh = @NguoiBanHanh, NgayBanHanh = @NgayBanHanh, TrangThai = @TrangThai WHERE MaThongBao = @MaThongBao", connection);
                 command.Parameters.AddWithValue("@MaThongBao", notification.MaThongBao);
                 command.Parameters.AddWithValue("@NoiDung", notification.NoiDung);
                 command.Parameters.AddWithValue("@NguoiBanHanh", notification.NguoiBanHanh);
@@ -87,39 +87,6 @@ namespace WinFormsApp1.DAO
             }
         }
 
-        public List<thongbaodto> SearchThongBaoByContent(string keyword)
-        {
-            List<thongbaodto> notifications = new List<thongbaodto>();
-
-            using (SqlConnection connection = connectObj.connection())
-            {
-                if (connection.State == System.Data.ConnectionState.Closed)
-                {
-                    connection.Open();
-                }
-
-                SqlCommand command = new SqlCommand("SELECT * FROM ThongBao WHERE NoiDung LIKE @Keyword", connection);
-                command.Parameters.AddWithValue("@Keyword", "%" + keyword + "%");
-
-                SqlDataReader reader = command.ExecuteReader();
-
-                while (reader.Read())
-                {
-                    thongbaodto notification = new thongbaodto
-                    {
-                        MaThongBao = reader["MaThongBao"].ToString(),
-                        NoiDung = reader["NoiDung"].ToString(),
-                        NguoiBanHanh = reader["NguoiBanHanh"].ToString(),
-                        NgayBanHanh = Convert.ToDateTime(reader["NgayBanHanh"]),
-                        TrangThai = Convert.ToInt32(reader["TrangThai"])
-                    };
-                    notifications.Add(notification);
-                }
-                reader.Close();
-            }
-
-            return notifications;
-        }
 
         public void DeleteThongBao(string maThongBao)
         {
@@ -130,7 +97,7 @@ namespace WinFormsApp1.DAO
                     connection.Open();
                 }
 
-                SqlCommand command = new SqlCommand("DELETE FROM ThongBao WHERE MaThongBao = @MaThongBao", connection);
+                SqlCommand command = new SqlCommand("DELETE FROM BangThongBao WHERE MaThongBao = @MaThongBao", connection);
                 command.Parameters.AddWithValue("@MaThongBao", maThongBao);
 
                 command.ExecuteNonQuery();
