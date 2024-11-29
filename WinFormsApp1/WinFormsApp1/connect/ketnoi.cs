@@ -33,9 +33,7 @@ namespace WinFormsApp1.connect
             if (connection != null && connection.State == System.Data.ConnectionState.Open)
             {
                 connection.Close();
-                MessageBox.Show("Kết nối đã đóng");
                 System.Console.WriteLine("Thành công");
-
             }
             else
             {

@@ -21,15 +21,6 @@ namespace WinFormsApp1.GUI.detail
             txtTenPhongBan.Text = selectedDepartment.TenPhongBan.Trim();
             txtMoTa.Text = selectedDepartment.MoTa?.Trim() ?? "";
             txtTruongPhong.Text = selectedDepartment.TruongPhong.Trim();
-
-            if (selectedDepartment.TrangThai == 1)
-            {
-                rdbHien.Checked = true;
-            }
-            else if (selectedDepartment.TrangThai == 0)
-            {
-                rdbAn.Checked = true;
-            }
         }
 
         private void SuaPhongBan_Load(object sender, EventArgs e)
@@ -45,7 +36,7 @@ namespace WinFormsApp1.GUI.detail
             }
         }
 
-        private void btnSua_Click(object sender, EventArgs e)
+        private void btnSua_Click_1(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtTenPhongBan.Text))
             {
@@ -57,10 +48,6 @@ namespace WinFormsApp1.GUI.detail
                 MessageBox.Show("Trưởng phòng không được để trống!");
                 txtTruongPhong.Focus();
             }
-            else if (!rdbHien.Checked && !rdbAn.Checked)
-            {
-                MessageBox.Show("Hãy chọn trạng thái của phòng ban!");
-            }
             else
             {
                 phongbandto departmentDTO = new phongbandto
@@ -69,7 +56,6 @@ namespace WinFormsApp1.GUI.detail
                     TenPhongBan = txtTenPhongBan.Text.Trim(),
                     MoTa = string.IsNullOrWhiteSpace(txtMoTa.Text) ? null : txtMoTa.Text.Trim(),
                     TruongPhong = txtTruongPhong.Text.Trim(),
-                    TrangThai = rdbHien.Checked ? 1 : 0
                 };
 
                 try

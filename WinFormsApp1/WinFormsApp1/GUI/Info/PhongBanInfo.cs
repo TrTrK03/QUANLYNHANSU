@@ -8,15 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WinFormsApp1.GUI
+namespace WinFormsApp1.GUI.Info
 {
-    public partial class Formtest : Form
+    public partial class PhongBanInfo : Form
     {
         public string MaPhongBan { get; set; }
         public string TruongPhong { get; set; }
         public string TenPhongBan { get; set; }
         public string MoTa { get; set; }
-        public Formtest()
+        public PhongBanInfo()
         {
             InitializeComponent();
         }

@@ -54,13 +54,11 @@ namespace WinFormsApp1.DAO
                     connection.Open();
                 }
 
-                SqlCommand command = new SqlCommand("INSERT INTO PhongBan VALUES(@MaPhongBan, @TenPhongBan, @MoTa, @TruongPhong, @TrangThai)", connection);
+                SqlCommand command = new SqlCommand("INSERT INTO PhongBan VALUES(@MaPhongBan, @TenPhongBan, @MoTa, @TruongPhong, 1)", connection);
                 command.Parameters.AddWithValue("@MaPhongBan", department.MaPhongBan);
                 command.Parameters.AddWithValue("@TenPhongBan", department.TenPhongBan);
                 command.Parameters.AddWithValue("@MoTa", department.MoTa);
                 command.Parameters.AddWithValue("@TruongPhong", department.TruongPhong);
-                command.Parameters.AddWithValue("@TrangThai", department.TrangThai);
-
                 command.ExecuteNonQuery();
                 connection.Close();
             }

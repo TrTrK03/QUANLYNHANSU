@@ -16,14 +16,14 @@
     <Compile Update="GUI\duangui.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="GUI\Formtest.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="GUI\index.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="GUI\Home.cs">
       <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="GUI\Info\PhongBanInfo.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Update="GUI\login\login\dangnhap.cs">
       <SubType>Form</SubType>

@@ -1,6 +1,6 @@
 ﻿namespace WinFormsApp1.GUI
 {
-    partial class Formtest
+    partial class PhongBan
     {
         /// <summary>
         /// Required designer variable.

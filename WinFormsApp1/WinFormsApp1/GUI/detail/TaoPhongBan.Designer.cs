@@ -138,6 +138,7 @@
             btnHuy.TabIndex = 9;
             btnHuy.Text = "Hủy";
             btnHuy.UseVisualStyleBackColor = true;
+            btnHuy.Click += btnHuy_Click_1;
             // 
             // btnTao
             // 
@@ -149,6 +150,7 @@
             btnTao.TabIndex = 10;
             btnTao.Text = "Tạo";
             btnTao.UseVisualStyleBackColor = true;
+            btnTao.Click += btnTao_Click_1;
             // 
             // TaoPhongBan
             // 

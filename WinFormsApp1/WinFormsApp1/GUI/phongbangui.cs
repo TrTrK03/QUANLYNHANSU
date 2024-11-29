@@ -22,6 +22,7 @@ using WinFormsApp1.DTO;
 using WinFormsApp1.Imports;
 using WinFormsApp1.Exports;
 using WinFormsApp1.GUI.detail;
+using WinFormsApp1.GUI.Info;
 using static System.Windows.Forms.AxHost;
 using System;
 using System.Collections.Generic;
@@ -52,10 +53,11 @@ namespace WinFormsApp1.GUI
 
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             openFileDialog1 = new OpenFileDialog();
             panel2 = new Panel();
             panel6 = new Panel();
+            button1 = new Button();
             label1 = new Label();
             edit = new Button();
             delete = new Button();
@@ -64,7 +66,6 @@ namespace WinFormsApp1.GUI
             panel5 = new Panel();
             dataGridView1 = new DataGridView();
             panel1 = new Panel();
-            button1 = new Button();
             panel2.SuspendLayout();
             panel6.SuspendLayout();
             panel5.SuspendLayout();
@@ -103,6 +104,16 @@ namespace WinFormsApp1.GUI
             panel6.TabIndex = 6;
             panel6.MouseClick += panel6_MouseClick;
             // 
+            // button1
+            // 
+            button1.Location = new Point(605, 8);
+            button1.Name = "button1";
+            button1.Size = new Size(94, 36);
+            button1.TabIndex = 12;
+            button1.Text = "Add";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
             // label1
             // 
             label1.Anchor = AnchorStyles.None;
@@ -126,6 +137,7 @@ namespace WinFormsApp1.GUI
             edit.TabIndex = 10;
             edit.Text = "Edit";
             edit.UseVisualStyleBackColor = false;
+            edit.Click += edit_Click;
             // 
             // delete
             // 
@@ -185,14 +197,14 @@ namespace WinFormsApp1.GUI
             dataGridView1.Location = new Point(0, 0);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Control;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 15F);
-            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 15F);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.False;
+            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridView1.RowHeadersVisible = false;
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 100;
@@ -214,16 +226,6 @@ namespace WinFormsApp1.GUI
             panel1.Name = "panel1";
             panel1.Size = new Size(1006, 606);
             panel1.TabIndex = 2;
-            // 
-            // button1
-            // 
-            button1.Location = new Point(605, 8);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 36);
-            button1.TabIndex = 12;
-            button1.Text = "Add";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
             // 
             // phongbangui
             // 
@@ -290,19 +292,29 @@ namespace WinFormsApp1.GUI
             //dataGridView1.ClearSelection();
         }
 
-        string maPBSelected;
-
 
         private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
+            // Kiểm tra nếu nhấn vào tiêu đề hoặc bên ngoài vùng hợp lệ
+            if (e.RowIndex < 0 || e.ColumnIndex < 0) return;
+
+            // Kiểm tra nếu nhấn vào cột "Check"
+            if (dataGridView1.Columns[e.ColumnIndex].Name == "Check")
+            {
+                // Đảo trạng thái checkbox
+                bool isChecked = Convert.ToBoolean(dataGridView1.Rows[e.RowIndex].Cells["Check"].Value);
+                dataGridView1.Rows[e.RowIndex].Cells["Check"].Value = !isChecked;
+                return; // Không tiếp tục thực hiện logic khác
+            }
+
             // Lấy dữ liệu từ dòng được chọn
-            string maPBSelected = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+            string maPBSelected = dataGridView1.Rows[e.RowIndex].Cells["Ma Phong Ban"].Value.ToString();
             phongbandto selectedphongban = phongbans.FirstOrDefault(phongban => phongban.MaPhongBan == maPBSelected);
 
             if (selectedphongban != null)
             {
                 // Khởi tạo Formtest
-                Formtest test = new Formtest
+                PhongBanInfo test = new PhongBanInfo
                 {
                     MaPhongBan = selectedphongban.MaPhongBan.Trim(),
                     TruongPhong = selectedphongban.TruongPhong.Trim(),
@@ -320,10 +332,6 @@ namespace WinFormsApp1.GUI
             dataGridView1.DefaultCellStyle.SelectionForeColor = Color.FromArgb(49, 17, 117);
             dataGridView1.DefaultCellStyle.SelectionBackColor = Color.Lavender;
         }
-
-
-
-
 
 
         private void phongbangui_MouseClick(object sender, MouseEventArgs e)
@@ -357,48 +365,88 @@ namespace WinFormsApp1.GUI
 
         private void delete_Click(object sender, EventArgs e)
         {
-            phongbandto selectedphongban = phongbans.FirstOrDefault(phongban => phongban.MaPhongBan == maPBSelected);
-            if (selectedphongban != null)
+            // Lấy danh sách các MaPhongBan từ các dòng có checkbox được chọn
+            var selectedPhongBans = dataGridView1.Rows
+                .Cast<DataGridViewRow>()
+                .Where(row => Convert.ToBoolean(row.Cells["Check"].Value) == true)
+                .Select(row => row.Cells["Ma Phong Ban"].Value.ToString())
+                .ToList();
+
+            // Nếu không có dòng nào được chọn
+            if (!selectedPhongBans.Any())
             {
-                if (selectedphongban.TrangThai == 1)
+                MessageBox.Show("Chọn ít nhất một Phòng Ban để xóa!");
+                return;
+            }
+
+            // Duyệt qua danh sách các MaPhongBan đã chọn
+            foreach (string maPhongBan in selectedPhongBans)
+            {
+                var selectedPhongBan = phongbans.FirstOrDefault(phongban => phongban.MaPhongBan == maPhongBan);
+                if (selectedPhongBan != null)
                 {
                     try
                     {
-                        phongbanBUS.DeletePhongBan(selectedphongban);
-                        MessageBox.Show("Xóa Phòng Ban thành công!!!");
+                        phongbanBUS.DeletePhongBan(selectedPhongBan);
+                        MessageBox.Show($"Xóa Phòng Ban '{maPhongBan}' thành công!");
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Có lỗi xảy ra trong quá trình xóa: " + ex.Message);
+                        MessageBox.Show($"Có lỗi xảy ra khi xóa Phòng Ban '{maPhongBan}': {ex.Message}");
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Phòng Ban này đã được xóa!!!");
+                    MessageBox.Show($"Không tìm thấy Phòng Ban với mã '{maPhongBan}'!");
                 }
             }
-            else
-            {
-                MessageBox.Show("Chọn một Phòng Ban để xóa!");
-            }
+
+            // Làm mới lại danh sách phongbans (cập nhật từ cơ sở dữ liệu hoặc phương thức lấy dữ liệu)
+            phongbans = phongbanBUS.GetPhongBan(); // Lấy lại dữ liệu sau khi xóa
+            // Tải lại dữ liệu sau khi xóa
+            LoadDataToGUI();
         }
 
-        //private void edit_Click(object sender, EventArgs e)
-        //{
-        //    phongbandto selectedphongban = phongbans.FirstOrDefault(phongban => phongban.MaPhongBan == maPBSelected);
 
-        //    if (selectedphongban != null)
-        //    {
-        //        SuaPhongBan interf = new SuaPhongBan(selectedphongban);
-        //        interf.StartPosition = FormStartPosition.CenterParent;
-        //        interf.ShowDialog();
+        private void edit_Click(object sender, EventArgs e)
+        {
+            // Lấy danh sách các MaPhongBan từ các dòng có checkbox được chọn
+            var selectedPhongBans = dataGridView1.Rows
+                .Cast<DataGridViewRow>()
+                .Where(row => Convert.ToBoolean(row.Cells["Check"].Value) == true)
+                .Select(row => row.Cells["Ma Phong Ban"].Value.ToString())
+                .ToList();
 
-        //    }
-        //    else
-        //    {
-        //        MessageBox.Show("Chọn một Phòng Ban để chỉnh sửa!");
-        //    }
-        //}
+            // Nếu không có dòng nào được chọn
+            if (!selectedPhongBans.Any())
+            {
+                MessageBox.Show("Chọn ít nhất một Phòng Ban để chỉnh sửa!");
+                return;
+            }
+
+            // Duyệt qua danh sách các MaPhongBan đã chọn
+            foreach (string maPhongBan in selectedPhongBans)
+            {
+                var selectedPhongBan = phongbans.FirstOrDefault(phongban => phongban.MaPhongBan == maPhongBan);
+
+                if (selectedPhongBan != null)
+                {
+                    // Tạo và hiển thị form chỉnh sửa
+                    SuaPhongBan suaPhongBanForm = new SuaPhongBan(selectedPhongBan);
+                    suaPhongBanForm.StartPosition = FormStartPosition.CenterParent;
+                    suaPhongBanForm.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show($"Không tìm thấy Phòng Ban với mã '{maPhongBan}'!");
+                }
+            }
+            // Làm mới lại danh sách phongbans (cập nhật từ cơ sở dữ liệu hoặc phương thức lấy dữ liệu)
+            phongbans = phongbanBUS.GetPhongBan(); // Lấy lại dữ liệu sau khi xóa
+            // Tải lại dữ liệu sau khi xóa
+            LoadDataToGUI();
+        }
+
 
         //private void Tao_Click(object sender, EventArgs e)
         //{
@@ -479,7 +527,12 @@ namespace WinFormsApp1.GUI
         {
             TaoPhongBan taoPhongBanForm = new TaoPhongBan();
             taoPhongBanForm.ShowDialog();
+            // Làm mới lại danh sách phongbans (cập nhật từ cơ sở dữ liệu hoặc phương thức lấy dữ liệu)
+            phongbans = phongbanBUS.GetPhongBan(); // Lấy lại dữ liệu sau khi xóa
+            // Tải lại dữ liệu sau khi xóa
+            LoadDataToGUI();
         }
+
     }
 
 }

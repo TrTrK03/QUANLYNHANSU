@@ -72,18 +72,13 @@ namespace WinFormsApp1.GUI.detail
             };
         }
 
-        // Sự kiện nút "Hủy"
-        private void btnHuy_Click(object sender, EventArgs e)
+        // Sự kiện khi form tải
+        private void TaoPhongBan_Load(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Bạn có chắc chắn muốn hủy không?", "Xác nhận hủy", MessageBoxButtons.YesNo) == DialogResult.Yes)
-            {
-                this.DialogResult = DialogResult.Cancel;
-                Close();
-            }
+            // Bất kỳ xử lý khởi tạo nào khác có thể đặt tại đây
         }
 
-        // Sự kiện nút "Tạo"
-        private void btnTao_Click(object sender, EventArgs e)
+        private void btnTao_Click_1(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txtTenPhongBan.Text))
             {
@@ -96,6 +91,7 @@ namespace WinFormsApp1.GUI.detail
             departmentDTO.MaPhongBan = txtMaPhongBan.Text;
             departmentDTO.TenPhongBan = txtTenPhongBan.Text;
             departmentDTO.MoTa = txtMoTa.Text;
+            departmentDTO.TruongPhong = txtTruongPhong.Text;
 
             try
             {
@@ -110,10 +106,13 @@ namespace WinFormsApp1.GUI.detail
             }
         }
 
-        // Sự kiện khi form tải
-        private void TaoPhongBan_Load(object sender, EventArgs e)
+        private void btnHuy_Click_1(object sender, EventArgs e)
         {
-            // Bất kỳ xử lý khởi tạo nào khác có thể đặt tại đây
+            if (MessageBox.Show("Bạn có chắc chắn muốn hủy không?", "Xác nhận hủy", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                this.DialogResult = DialogResult.Cancel;
+                Close();
+            }
         }
     }
 }

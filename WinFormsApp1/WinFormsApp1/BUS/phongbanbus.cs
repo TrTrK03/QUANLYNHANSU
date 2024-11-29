@@ -34,14 +34,10 @@ namespace WinFormsApp1.BUS
         }
 
         // Xóa phòng ban theo mã
-        public void DeletePhongBan(string maPhongBan)
+        public void DeletePhongBan(phongbandto selectedphongban)
         {
-            phongBanDao.DeletePhongBan(maPhongBan);
+            phongBanDao.DeletePhongBan(selectedphongban.MaPhongBan);
         }
 
-        internal void DeletePhongBan(phongbandto selectedphongban)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
