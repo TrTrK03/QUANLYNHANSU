@@ -1,36 +1,59 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using WinFormsApp1.BUS;
 using WinFormsApp1.DTO;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace WinFormsApp1.GUI.detail
 {
     public partial class TaoDuAn : Form
     {
-        duandto projectDTO = new duandto();
-        duanbus projectBUS = new duanbus();
-        private DTO.duandto SelectedProject { get; set; }
+        private duandto projectDTO = new duandto(); // DTO đối tượng dự án
+        private duanbus projectBUS = new duanbus(); // BUS xử lý dự án
+        private DTO.duandto SelectedProject { get; set; } // Dự án được chọn (chỉnh sửa)
 
-        string lastMaDuAn = "";
-        int i = 0;
+        private string lastMaDuAn = ""; // Lưu mã dự án cuối cùng
+        private int i = 0; // Chỉ số để tạo mã dự án mới
 
+        // Constructor cho việc tạo mới dự án
         public TaoDuAn()
         {
             InitializeComponent();
-            List<duandto> projects = projectBUS.GetDuAn();
-            lastMaDuAn = projects[^1].MaDuAn;
-            i = Convert.ToInt32(lastMaDuAn.Substring(lastMaDuAn.Length - 5)) + 1;
-            txtMaDuAn.Text = GenerateMaDuAn(i);
+
+            try
+            {
+                // Lấy danh sách dự án và mã cuối cùng
+                List<duandto> projects = projectBUS.GetDuAn();
+                lastMaDuAn = projects[^1].MaDuAn;
+
+                // Xử lý mã dự án cuối cùng
+                string numericPart = lastMaDuAn.Substring(2); // Bỏ "DA", lấy phần số
+                if (int.TryParse(numericPart, out int lastIndex))
+                {
+                    i = lastIndex + 1; // Tăng chỉ số
+                }
+                else
+                {
+                    MessageBox.Show("Mã dự án không hợp lệ. Đặt mã mặc định là DA00001.");
+                    i = 1;
+                }
+
+                // Gán mã dự án mới
+                txtMaDuAn.Text = GenerateMaDuAn(i);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Có lỗi xảy ra khi tải dữ liệu dự án: " + ex.Message);
+            }
         }
 
+        // Constructor cho việc chỉnh sửa dự án
         public TaoDuAn(DTO.duandto selectedProject)
         {
             InitializeComponent();
             SelectedProject = selectedProject;
 
+            // Gán thông tin dự án đã chọn
             txtMaDuAn.Text = selectedProject.MaDuAn;
             txtTenDuAn.Text = selectedProject.TenDuAn;
             txtMoTa.Text = selectedProject.MoTa;
@@ -40,64 +63,64 @@ namespace WinFormsApp1.GUI.detail
             txtPhongBanPhuTrach.Text = selectedProject.PhongBanPhuTrach;
         }
 
+        // Phương thức sinh mã dự án mới dựa trên chỉ số
         private string GenerateMaDuAn(int index)
         {
             return index switch
             {
-                < 10 => "DA0000" + index,
-                < 100 => "DA000" + index,
-                < 1000 => "DA00" + index,
-                < 10000 => "DA0" + index,
+                < 1 => "DA0000" + index,
+                < 10 => "DA000" + index,
+                < 100 => "DA00" + index,
+                < 1000 => "DA0" + index,
                 _ => "DA" + index
             };
         }
 
-        private void btnHuy_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Bạn có chắc chắn muốn hủy không?", "Xác nhận hủy", MessageBoxButtons.YesNo) == DialogResult.Yes)
-            {
-                this.DialogResult = DialogResult.Cancel;
-            }
-        }
 
-        private void btnTao_Click(object sender, EventArgs e)
+        private void btnTao_Click_1(object sender, EventArgs e)
         {
+            // Kiểm tra ràng buộc dữ liệu
             if (string.IsNullOrEmpty(txtTenDuAn.Text))
             {
                 MessageBox.Show("Vui lòng nhập tên dự án!");
                 txtTenDuAn.Focus();
+                return;
             }
             else if (dtpNgayBatDau.Value >= dtpNgayKetThuc.Value)
             {
                 MessageBox.Show("Ngày bắt đầu phải trước ngày kết thúc!");
+                return;
             }
-            else
+
+            // Gán giá trị từ các ô nhập liệu vào DTO
+            projectDTO.MaDuAn = txtMaDuAn.Text;
+            projectDTO.TenDuAn = txtTenDuAn.Text;
+            projectDTO.MoTa = txtMoTa.Text;
+            projectDTO.NgayBatDau = dtpNgayBatDau.Value;
+            projectDTO.NgayKetThuc = dtpNgayKetThuc.Value;
+            projectDTO.QuanLyDuAn = string.IsNullOrEmpty(txtQuanLyDuAn.Text) ? null : txtQuanLyDuAn.Text;
+            projectDTO.PhongBanPhuTrach = string.IsNullOrEmpty(txtPhongBanPhuTrach.Text) ? null : txtPhongBanPhuTrach.Text;
+
+            try
             {
-                projectDTO.MaDuAn = txtMaDuAn.Text;
-                projectDTO.TenDuAn = txtTenDuAn.Text;
-                projectDTO.MoTa = txtMoTa.Text;
-                projectDTO.NgayBatDau = dtpNgayBatDau.Value;
-                projectDTO.NgayKetThuc = dtpNgayKetThuc.Value;
-                projectDTO.QuanLyDuAn = string.IsNullOrEmpty(txtQuanLyDuAn.Text) ? null : txtQuanLyDuAn.Text;
-                projectDTO.PhongBanPhuTrach = string.IsNullOrEmpty(txtPhongBanPhuTrach.Text) ? null : txtPhongBanPhuTrach.Text;
-
-                try
-                {
-                    projectBUS.AddDuAn(projectDTO);
-                    MessageBox.Show("Thêm dự án thành công!");
-                    this.Close();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Có lỗi xảy ra trong quá trình thêm: " + ex.Message);
-                }
+                // Thêm dự án mới thông qua BUS
+                projectBUS.AddDuAn(projectDTO);
+                MessageBox.Show("Thêm dự án thành công!");
+                Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Có lỗi xảy ra trong quá trình thêm: " + ex.Message);
             }
         }
 
-        private void TaoDuAn_Load(object sender, EventArgs e)
+        private void btnHuy_Click_1(object sender, EventArgs e)
         {
-            // Any additional initialization can go here
+            if (MessageBox.Show("Bạn có chắc chắn muốn hủy không?", "Xác nhận hủy", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                this.DialogResult = DialogResult.Cancel;
+                Close();
+            }
         }
-
     }
 }

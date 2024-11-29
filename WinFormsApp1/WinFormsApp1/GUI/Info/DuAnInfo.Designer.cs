@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             panel7 = new Panel();
-            cmbTrangThai = new ComboBox();
             dtpNgayKetThuc = new DateTimePicker();
             dtpNgayBatDau = new DateTimePicker();
             txtPhongBanPhuTrach = new TextBox();
@@ -40,7 +39,6 @@
             txtTenDuAn = new TextBox();
             txtMaDuAn = new TextBox();
             label9 = new Label();
-            label8 = new Label();
             label5 = new Label();
             label6 = new Label();
             label3 = new Label();
@@ -55,7 +53,6 @@
             // panel7
             // 
             panel7.BackColor = Color.Lavender;
-            panel7.Controls.Add(cmbTrangThai);
             panel7.Controls.Add(dtpNgayKetThuc);
             panel7.Controls.Add(dtpNgayBatDau);
             panel7.Controls.Add(txtPhongBanPhuTrach);
@@ -66,7 +63,6 @@
             panel7.Controls.Add(txtTenDuAn);
             panel7.Controls.Add(txtMaDuAn);
             panel7.Controls.Add(label9);
-            panel7.Controls.Add(label8);
             panel7.Controls.Add(label5);
             panel7.Controls.Add(label6);
             panel7.Controls.Add(label3);
@@ -76,25 +72,15 @@
             panel7.ForeColor = Color.FromArgb(49, 17, 117);
             panel7.Location = new Point(0, 0);
             panel7.Name = "panel7";
-            panel7.Size = new Size(1269, 412);
+            panel7.Size = new Size(776, 352);
             panel7.TabIndex = 8;
-            // 
-            // cmbTrangThai
-            // 
-            cmbTrangThai.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbTrangThai.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            cmbTrangThai.FormattingEnabled = true;
-            cmbTrangThai.Items.AddRange(new object[] { "Đang hoạt động", "Đã hoàn thành", "Tạm dừng" });
-            cmbTrangThai.Location = new Point(406, 339);
-            cmbTrangThai.Name = "cmbTrangThai";
-            cmbTrangThai.Size = new Size(344, 40);
-            cmbTrangThai.TabIndex = 75;
             // 
             // dtpNgayKetThuc
             // 
+            dtpNgayKetThuc.Enabled = false;
             dtpNgayKetThuc.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dtpNgayKetThuc.Format = DateTimePickerFormat.Short;
-            dtpNgayKetThuc.Location = new Point(907, 198);
+            dtpNgayKetThuc.Location = new Point(408, 210);
             dtpNgayKetThuc.Margin = new Padding(6, 5, 6, 5);
             dtpNgayKetThuc.Name = "dtpNgayKetThuc";
             dtpNgayKetThuc.Size = new Size(344, 39);
@@ -102,9 +88,10 @@
             // 
             // dtpNgayBatDau
             // 
+            dtpNgayBatDau.Enabled = false;
             dtpNgayBatDau.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dtpNgayBatDau.Format = DateTimePickerFormat.Short;
-            dtpNgayBatDau.Location = new Point(406, 198);
+            dtpNgayBatDau.Location = new Point(408, 161);
             dtpNgayBatDau.Margin = new Padding(6, 5, 6, 5);
             dtpNgayBatDau.Name = "dtpNgayBatDau";
             dtpNgayBatDau.Size = new Size(344, 39);
@@ -112,7 +99,8 @@
             // 
             // txtPhongBanPhuTrach
             // 
-            txtPhongBanPhuTrach.Location = new Point(907, 266);
+            txtPhongBanPhuTrach.Enabled = false;
+            txtPhongBanPhuTrach.Location = new Point(408, 257);
             txtPhongBanPhuTrach.Name = "txtPhongBanPhuTrach";
             txtPhongBanPhuTrach.Size = new Size(344, 27);
             txtPhongBanPhuTrach.TabIndex = 6;
@@ -120,7 +108,7 @@
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(769, 272);
+            label11.Location = new Point(279, 260);
             label11.Name = "label11";
             label11.Size = new Size(83, 20);
             label11.TabIndex = 5;
@@ -128,7 +116,8 @@
             // 
             // txtQuanLyDuAn
             // 
-            txtQuanLyDuAn.Location = new Point(907, 126);
+            txtQuanLyDuAn.Enabled = false;
+            txtQuanLyDuAn.Location = new Point(408, 126);
             txtQuanLyDuAn.Name = "txtQuanLyDuAn";
             txtQuanLyDuAn.Size = new Size(344, 27);
             txtQuanLyDuAn.TabIndex = 4;
@@ -136,7 +125,7 @@
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(769, 129);
+            label10.Location = new Point(279, 129);
             label10.Name = "label10";
             label10.Size = new Size(104, 20);
             label10.TabIndex = 3;
@@ -144,21 +133,24 @@
             // 
             // txtMoTa
             // 
-            txtMoTa.Location = new Point(406, 266);
+            txtMoTa.Enabled = false;
+            txtMoTa.Location = new Point(408, 294);
             txtMoTa.Name = "txtMoTa";
             txtMoTa.Size = new Size(344, 27);
             txtMoTa.TabIndex = 2;
             // 
             // txtTenDuAn
             // 
-            txtTenDuAn.Location = new Point(406, 126);
+            txtTenDuAn.Enabled = false;
+            txtTenDuAn.Location = new Point(408, 92);
             txtTenDuAn.Name = "txtTenDuAn";
             txtTenDuAn.Size = new Size(344, 27);
             txtTenDuAn.TabIndex = 2;
             // 
             // txtMaDuAn
             // 
-            txtMaDuAn.Location = new Point(406, 60);
+            txtMaDuAn.Enabled = false;
+            txtMaDuAn.Location = new Point(408, 59);
             txtMaDuAn.Name = "txtMaDuAn";
             txtMaDuAn.Size = new Size(344, 27);
             txtMaDuAn.TabIndex = 2;
@@ -166,25 +158,16 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(769, 201);
+            label9.Location = new Point(277, 219);
             label9.Name = "label9";
             label9.Size = new Size(103, 20);
             label9.TabIndex = 1;
             label9.Text = "Ngày kết thúc:";
             // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Location = new Point(277, 342);
-            label8.Name = "label8";
-            label8.Size = new Size(78, 20);
-            label8.TabIndex = 1;
-            label8.Text = "Trạng thái:";
-            // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(277, 196);
+            label5.Location = new Point(279, 169);
             label5.Name = "label5";
             label5.Size = new Size(102, 20);
             label5.TabIndex = 1;
@@ -193,7 +176,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(277, 269);
+            label6.Location = new Point(279, 297);
             label6.Name = "label6";
             label6.Size = new Size(51, 20);
             label6.TabIndex = 1;
@@ -202,7 +185,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(277, 129);
+            label3.Location = new Point(279, 95);
             label3.Name = "label3";
             label3.Size = new Size(77, 20);
             label3.TabIndex = 1;
@@ -211,7 +194,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(277, 60);
+            label2.Location = new Point(279, 59);
             label2.Name = "label2";
             label2.Size = new Size(75, 20);
             label2.TabIndex = 1;
@@ -221,7 +204,7 @@
             // 
             panel8.BackColor = Color.FromArgb(255, 192, 255);
             panel8.Controls.Add(pictureBox1);
-            panel8.Location = new Point(12, 51);
+            panel8.Location = new Point(12, 27);
             panel8.Name = "panel8";
             panel8.Size = new Size(251, 315);
             panel8.TabIndex = 0;
@@ -241,7 +224,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1269, 412);
+            ClientSize = new Size(776, 352);
             Controls.Add(panel7);
             Name = "DuAnInfo";
             Text = "DuAnInfo";
@@ -255,7 +238,6 @@
         #endregion
 
         private Panel panel7;
-        private ComboBox cmbTrangThai;
         private DateTimePicker dtpNgayKetThuc;
         private DateTimePicker dtpNgayBatDau;
         private TextBox txtPhongBanPhuTrach;
@@ -266,7 +248,6 @@
         private TextBox txtTenDuAn;
         private TextBox txtMaDuAn;
         private Label label9;
-        private Label label8;
         private Label label5;
         private Label label6;
         private Label label3;

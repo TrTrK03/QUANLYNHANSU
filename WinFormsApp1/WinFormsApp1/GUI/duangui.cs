@@ -21,6 +21,7 @@ using WinFormsApp1.Exports;
 using WinFormsApp1.GUI.detail;
 using static System.Windows.Forms.AxHost;
 using System.IO;
+using WinFormsApp1.GUI.Info;
 
 namespace WinFormsApp1.GUI
 {
@@ -40,7 +41,6 @@ namespace WinFormsApp1.GUI
         private TextBox txtSearch;
         private Label label1;
         private OpenFileDialog openFileDialog1;
-        private Panel panel3;
         private Panel panel5;
         private DataGridView dataGridView1;
         private Button edit;
@@ -55,12 +55,11 @@ namespace WinFormsApp1.GUI
             panel6 = new Panel();
             edit = new Button();
             delete = new Button();
+            Tao = new Button();
             Import = new Button();
             export = new Button();
-            Tao = new Button();
             txtSearch = new TextBox();
             label1 = new Label();
-            panel3 = new Panel();
             openFileDialog1 = new OpenFileDialog();
             panel1.SuspendLayout();
             panel5.SuspendLayout();
@@ -78,31 +77,31 @@ namespace WinFormsApp1.GUI
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1000, 600);
+            panel1.Size = new Size(1112, 641);
             panel1.TabIndex = 2;
             // 
             // panel5
             // 
+            panel5.BackColor = Color.Silver;
             panel5.Controls.Add(dataGridView1);
-            panel5.Location = new Point(3, 47);
+            panel5.Location = new Point(3, 65);
             panel5.Name = "panel5";
-            panel5.Size = new Size(994, 550);
+            panel5.Size = new Size(1106, 573);
             panel5.TabIndex = 6;
             // 
             // dataGridView1
             // 
             dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.AllowUserToDeleteRows = false;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.BackgroundColor = Color.White;
             dataGridView1.BorderStyle = BorderStyle.None;
             dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.None;
             dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridView1.ColumnHeadersHeight = 70;
+            dataGridView1.Dock = DockStyle.Fill;
             dataGridView1.GridColor = SystemColors.Info;
-            dataGridView1.Location = new Point(0, 8);
+            dataGridView1.Location = new Point(0, 0);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = SystemColors.Control;
@@ -117,19 +116,21 @@ namespace WinFormsApp1.GUI
             dataGridView1.RowTemplate.Height = 100;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView1.ShowRowErrors = false;
-            dataGridView1.Size = new Size(994, 542);
+            dataGridView1.Size = new Size(1106, 573);
             dataGridView1.TabIndex = 1;
+            dataGridView1.CellMouseClick += dataGridView1_CellMouseClick;
+            dataGridView1.DataBindingComplete += dataGridView1_DataBindingComplete;
             // 
             // panel2
             // 
             panel2.BackColor = Color.White;
             panel2.Controls.Add(panel6);
             panel2.Controls.Add(label1);
-            panel2.Controls.Add(panel3);
             panel2.ForeColor = Color.FromArgb(49, 17, 117);
-            panel2.Location = new Point(0, 0);
+            panel2.Location = new Point(3, 0);
+            panel2.Margin = new Padding(0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1000, 49);
+            panel2.Size = new Size(1033, 59);
             panel2.TabIndex = 0;
             panel2.MouseClick += panel2_MouseClick;
             // 
@@ -139,13 +140,13 @@ namespace WinFormsApp1.GUI
             panel6.BackColor = Color.White;
             panel6.Controls.Add(edit);
             panel6.Controls.Add(delete);
+            panel6.Controls.Add(Tao);
             panel6.Controls.Add(Import);
             panel6.Controls.Add(export);
-            panel6.Controls.Add(Tao);
             panel6.Controls.Add(txtSearch);
-            panel6.Location = new Point(132, 0);
+            panel6.Location = new Point(145, 0);
             panel6.Name = "panel6";
-            panel6.Size = new Size(825, 49);
+            panel6.Size = new Size(888, 59);
             panel6.TabIndex = 6;
             panel6.MouseClick += panel6_MouseClick;
             // 
@@ -154,7 +155,7 @@ namespace WinFormsApp1.GUI
             edit.BackColor = Color.Lavender;
             edit.FlatAppearance.BorderColor = Color.FromArgb(224, 224, 224);
             edit.FlatStyle = FlatStyle.Flat;
-            edit.Location = new Point(370, 9);
+            edit.Location = new Point(407, 13);
             edit.Name = "edit";
             edit.Size = new Size(80, 30);
             edit.TabIndex = 10;
@@ -167,7 +168,7 @@ namespace WinFormsApp1.GUI
             delete.BackColor = Color.Lavender;
             delete.FlatAppearance.BorderColor = Color.FromArgb(224, 224, 224);
             delete.FlatStyle = FlatStyle.Flat;
-            delete.Location = new Point(456, 9);
+            delete.Location = new Point(493, 13);
             delete.Name = "delete";
             delete.Size = new Size(80, 30);
             delete.TabIndex = 9;
@@ -175,12 +176,25 @@ namespace WinFormsApp1.GUI
             delete.UseVisualStyleBackColor = false;
             delete.Click += delete_Click;
             // 
+            // Tao
+            // 
+            Tao.BackColor = Color.LimeGreen;
+            Tao.FlatAppearance.BorderSize = 0;
+            Tao.FlatStyle = FlatStyle.Flat;
+            Tao.Image = Properties.Resources.add2;
+            Tao.Location = new Point(777, 6);
+            Tao.Name = "Tao";
+            Tao.Size = new Size(90, 40);
+            Tao.TabIndex = 2;
+            Tao.UseVisualStyleBackColor = false;
+            Tao.Click += Tao_Click;
+            // 
             // Import
             // 
             Import.BackColor = Color.Lavender;
             Import.FlatAppearance.BorderColor = Color.FromArgb(224, 224, 224);
             Import.FlatStyle = FlatStyle.Flat;
-            Import.Location = new Point(542, 9);
+            Import.Location = new Point(579, 13);
             Import.Name = "Import";
             Import.Size = new Size(80, 30);
             Import.TabIndex = 9;
@@ -193,7 +207,7 @@ namespace WinFormsApp1.GUI
             export.BackColor = Color.Lavender;
             export.FlatAppearance.BorderColor = Color.FromArgb(224, 224, 224);
             export.FlatStyle = FlatStyle.Flat;
-            export.Location = new Point(628, 9);
+            export.Location = new Point(665, 13);
             export.Name = "export";
             export.Size = new Size(80, 30);
             export.TabIndex = 8;
@@ -201,22 +215,9 @@ namespace WinFormsApp1.GUI
             export.UseVisualStyleBackColor = false;
             export.Click += export_Click;
             // 
-            // Tao
-            // 
-            Tao.BackColor = Color.LimeGreen;
-            Tao.FlatAppearance.BorderSize = 0;
-            Tao.FlatStyle = FlatStyle.Flat;
-            Tao.Image = Properties.Resources.add2;
-            Tao.Location = new Point(725, 4);
-            Tao.Name = "Tao";
-            Tao.Size = new Size(90, 40);
-            Tao.TabIndex = 2;
-            Tao.UseVisualStyleBackColor = false;
-            Tao.Click += Tao_Click;
-            // 
             // txtSearch
             // 
-            txtSearch.Location = new Point(6, 11);
+            txtSearch.Location = new Point(29, 15);
             txtSearch.Name = "txtSearch";
             txtSearch.Size = new Size(344, 27);
             txtSearch.TabIndex = 0;
@@ -225,23 +226,14 @@ namespace WinFormsApp1.GUI
             // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.None;
             label1.Font = new Font("Segoe UI", 24.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(49, 17, 117);
-            label1.Location = new Point(0, -5);
+            label1.Location = new Point(2, 4);
             label1.Name = "label1";
-            label1.Size = new Size(141, 47);
+            label1.Size = new Size(139, 47);
             label1.TabIndex = 1;
             label1.Text = "Dự án";
-            // 
-            // panel3
-            // 
-            panel3.BackColor = Color.FromArgb(252, 250, 255);
-            panel3.Dock = DockStyle.Bottom;
-            panel3.Location = new Point(0, 47);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(1000, 2);
-            panel3.TabIndex = 0;
-            panel3.Visible = false;
             // 
             // openFileDialog1
             // 
@@ -251,12 +243,13 @@ namespace WinFormsApp1.GUI
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSize = true;
             BackColor = Color.White;
             Controls.Add(panel1);
             ForeColor = Color.FromArgb(49, 17, 117);
             Margin = new Padding(0);
             Name = "duangui";
-            Size = new Size(1000, 600);
+            Size = new Size(1112, 641);
             Load += duangui_Load;
             MouseClick += duangui_MouseClick;
             panel1.ResumeLayout(false);
@@ -268,7 +261,7 @@ namespace WinFormsApp1.GUI
             ResumeLayout(false);
         }
 
-        private void LoadDataToGUI(int a)
+        private void LoadDataToGUI()
         {
             DataTable dt = new DataTable();
             dt.Columns.Add("Check", typeof(bool));
@@ -281,34 +274,15 @@ namespace WinFormsApp1.GUI
             dt.Columns.Add("Phong Ban Phu Trach", typeof(string));
             dt.Columns.Add("Trang Thai", typeof(int));
 
-            if (a == 2)
+            foreach (duandto project in projects)
             {
-                foreach (duandto project in projects)
-                {
-                    dt.Rows.Add(false, project.MaDuAn, project.TenDuAn, project.MoTa, project.NgayBatDau.ToString("dd/MM/yyyy"), project.NgayKetThuc.ToString("dd/MM/yyyy"), project.QuanLyDuAn, project.PhongBanPhuTrach, project.TrangThai);
-                }
-                dataGridView1.DataSource = dt;
-                dataGridView1.Columns["Mo ta"].Visible = false;
-                dataGridView1.Columns["Ngay Bat Dau"].Visible = false;
-                dataGridView1.Columns["Ngay Ket Thuc"].Visible = false;
-                dataGridView1.Columns["Quan Ly Du An"].Visible = false;
-                dataGridView1.Columns["Trang Thai"].Visible = false;
+                dt.Rows.Add(false, project.MaDuAn, project.TenDuAn, project.MoTa, project.NgayBatDau.ToString("dd/MM/yyyy"), project.NgayKetThuc.ToString("dd/MM/yyyy"), project.QuanLyDuAn, project.PhongBanPhuTrach, project.TrangThai);
             }
-            else
-            {
-                var filteredProjects = projects.Where(p => p.TrangThai == a).ToList();
-
-                foreach (duandto project in filteredProjects)
-                {
-                    dt.Rows.Add(false, project.MaDuAn, project.TenDuAn, project.MoTa, project.NgayBatDau.ToString("dd/MM/yyyy"), project.NgayKetThuc.ToString("dd/MM/yyyy"), project.QuanLyDuAn, project.PhongBanPhuTrach, project.TrangThai);
-                }
-                dataGridView1.DataSource = dt;
-                dataGridView1.Columns["Mo ta"].Visible = false;
-                dataGridView1.Columns["Ngay Bat Dau"].Visible = false;
-                dataGridView1.Columns["Ngay Ket Thuc"].Visible = false;
-                dataGridView1.Columns["Quan Ly Du An"].Visible = false;
-                dataGridView1.Columns["Trang Thai"].Visible = false;
-            }
+            dataGridView1.DataSource = dt;
+            dataGridView1.Columns["Mo ta"].Visible = false;
+            dataGridView1.Columns["Ngay Bat Dau"].Visible = false;
+            dataGridView1.Columns["Ngay Ket Thuc"].Visible = false;
+            dataGridView1.Columns["Trang Thai"].Visible = false;
         }
 
         private void dataGridView1_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
@@ -327,33 +301,51 @@ namespace WinFormsApp1.GUI
 
         private void duangui_Load(object sender, EventArgs e)
         {
-            LoadDataToGUI(1);
+            LoadDataToGUI();
             txtSearch.PlaceholderText = "Tìm kiếm ...";
             dataGridView1.Size = new Size(1575, 870);
         }
 
-        string maDuAnSelected;
         private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            //    dataGridView1.Size = new Size(1575, 450);
-            //    dataGridView1.DefaultCellStyle.SelectionForeColor = Color.FromArgb(49, 17, 117);
-            //    dataGridView1.DefaultCellStyle.SelectionBackColor = Color.Lavender;
+            if (e.RowIndex < 0 || e.ColumnIndex < 0) return;
 
+            if (dataGridView1.Columns[e.ColumnIndex].Name == "Check")
+            {
+                bool isChecked = Convert.ToBoolean(dataGridView1.Rows[e.RowIndex].Cells["Check"].Value);
+                dataGridView1.Rows[e.RowIndex].Cells["Check"].Value = !isChecked;
+                return;
+            }
 
-            //    maDuAnSelected = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
-            //    duandto selectedProject = projects.FirstOrDefault(project => project.MaDuAn == maDuAnSelected);
+            string maDASelected = dataGridView1.Rows[e.RowIndex].Cells["Ma Du An"].Value.ToString();
+            duandto selectedDuAn = projects.FirstOrDefault(duan => duan.MaDuAn == maDASelected);
 
-            //    if (selectedProject != null)
-            //    {
-            //        txtMaDuAn.Text = selectedProject.MaDuAn.Trim();
-            //        txtTenDuAn.Text = selectedProject.TenDuAn.Trim();
-            //        txtMoTa.Text = selectedProject.MoTa.Trim();
-            //        dtpNgayBatDau.Value = selectedProject.NgayBatDau;
-            //        dtpNgayKetThuc.Value = selectedProject.NgayKetThuc;
-            //        txtQuanLyDuAn.Text = selectedProject.QuanLyDuAn.Trim();
-            //        txtPhongBanPhuTrach.Text = selectedProject.PhongBanPhuTrach.Trim();
-            //        cmbTrangThai.SelectedIndex = selectedProject.TrangThai - 1;
-            //    }
+            if (selectedDuAn == null)
+            {
+                MessageBox.Show($"Không tìm thấy dự án có mã: {maDASelected}");
+                return;
+            }
+
+            DuAnInfo duAnInfoForm = new DuAnInfo
+            {
+                MaDuAn = selectedDuAn.MaDuAn.Trim(),
+                TenDuAn = selectedDuAn.TenDuAn.Trim(),
+                MoTa = selectedDuAn.MoTa.Trim(),
+                NgayBatDau = selectedDuAn.NgayBatDau,
+                NgayKetThuc = selectedDuAn.NgayKetThuc,
+                QuanLyDuAn = selectedDuAn.QuanLyDuAn.Trim(),
+                PhongBanPhuTrach = selectedDuAn.PhongBanPhuTrach.Trim(),
+            };
+
+            try
+            {
+                duAnInfoForm.LoadData();
+                duAnInfoForm.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi khi hiển thị form: {ex.Message}");
+            }
         }
 
         private void duangui_MouseClick(object sender, MouseEventArgs e)
@@ -382,57 +374,57 @@ namespace WinFormsApp1.GUI
 
         private void delete_Click(object sender, EventArgs e)
         {
-            duandto selectedProject = projects.FirstOrDefault(project => project.MaDuAn == maDuAnSelected);
-            if (selectedProject != null)
-            {
-                if (selectedProject.TrangThai == 1)
-                {
-                    try
-                    {
-                        projectBUS.UpdateDuAn(new duandto { MaDuAn = selectedProject.MaDuAn, TrangThai = 0 });
-                        MessageBox.Show("Xóa dự án thành công!!!");
-                        LoadDataToGUI(1);
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Có lỗi xảy ra trong quá trình xóa: " + ex.Message);
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Dự án này đã được xóa hoặc hoàn thành!!!");
-                }
-            }
-            else
-            {
-                MessageBox.Show("Chọn một dự án để xóa!");
-            }
+            //duandto selectedProject = projects.FirstOrDefault(project => project.MaDuAn == maDuAnSelected);
+            //if (selectedProject != null)
+            //{
+            //    if (selectedProject.TrangThai == 1)
+            //    {
+            //        try
+            //        {
+            //            projectBUS.UpdateDuAn(new duandto { MaDuAn = selectedProject.MaDuAn, TrangThai = 0 });
+            //            MessageBox.Show("Xóa dự án thành công!!!");
+            //            LoadDataToGUI(1);
+            //        }
+            //        catch (Exception ex)
+            //        {
+            //            MessageBox.Show("Có lỗi xảy ra trong quá trình xóa: " + ex.Message);
+            //        }
+            //    }
+            //    else
+            //    {
+            //        MessageBox.Show("Dự án này đã được xóa hoặc hoàn thành!!!");
+            //    }
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Chọn một dự án để xóa!");
+            //}
         }
 
 
         private void edit_Click(object sender, EventArgs e)
         {
-            duandto selectedProject = projects.FirstOrDefault(project => project.MaDuAn == maDuAnSelected);
+            //duandto selectedProject = projects.FirstOrDefault(project => project.MaDuAn == maDuAnSelected);
 
-            if (selectedProject != null)
-            {
-                SuaDuAn interf = new SuaDuAn(selectedProject);
-                interf.StartPosition = FormStartPosition.CenterParent;
-                interf.ShowDialog();
-                LoadDataToGUI(1);
-            }
-            else
-            {
-                MessageBox.Show("Chọn một dự án để chỉnh sửa!");
-            }
+            //if (selectedProject != null)
+            //{
+            //    SuaDuAn interf = new SuaDuAn(selectedProject);
+            //    interf.StartPosition = FormStartPosition.CenterParent;
+            //    interf.ShowDialog();
+            //    LoadDataToGUI(1);
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Chọn một dự án để chỉnh sửa!");
+            //}
         }
 
         private void Tao_Click(object sender, EventArgs e)
         {
-            //TaoDuAn interf = new TaoDuAn();
-            //interf.StartPosition = FormStartPosition.CenterParent;
-            //interf.ShowDialog();
-            //LoadDataToGUI(1);
+            TaoDuAn interf = new TaoDuAn();
+            interf.ShowDialog();
+            projects = projectBUS.GetDuAn(); // Lấy lại dữ liệu sau khi xóa
+            LoadDataToGUI();
         }
 
         private void Import_Click(object sender, EventArgs e)
@@ -452,7 +444,7 @@ namespace WinFormsApp1.GUI
                     Import im = new Import();
                     im.ImportProjectByExcel(filePath);
                     MessageBox.Show("Import dữ liệu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    LoadDataToGUI(1);
+                    LoadDataToGUI();
                 }
                 else
                 {

@@ -53,7 +53,7 @@ namespace WinFormsApp1.GUI
 
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             openFileDialog1 = new OpenFileDialog();
             panel2 = new Panel();
             panel6 = new Panel();
@@ -162,6 +162,7 @@ namespace WinFormsApp1.GUI
             txtSearch.TabIndex = 0;
             txtSearch.TextChanged += txtSearch_TextChanged;
             txtSearch.Leave += txtSearch_Leave;
+            txtSearch.PlaceholderText = "Tìm kiếm ...";
             // 
             // panel3
             // 
@@ -197,14 +198,14 @@ namespace WinFormsApp1.GUI
             dataGridView1.Location = new Point(0, 0);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 15F);
-            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.False;
-            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Control;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 15F);
+            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dataGridView1.RowHeadersVisible = false;
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 100;
@@ -269,7 +270,7 @@ namespace WinFormsApp1.GUI
             dataGridView1.Columns["Trang Thai"].Visible = false;
 
 
-        }  //da xong
+        }
         private void dataGridView1_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
             dataGridView1.ClearSelection();
@@ -287,7 +288,6 @@ namespace WinFormsApp1.GUI
         private void phongbangui_Load(object? sender, EventArgs e)
         {
             LoadDataToGUI();
-            txtSearch.PlaceholderText = "Tìm kiếm ...";
             dataGridView1.Size = new Size(1575, 870);
             //dataGridView1.ClearSelection();
         }
@@ -448,27 +448,9 @@ namespace WinFormsApp1.GUI
         }
 
 
-        //private void Tao_Click(object sender, EventArgs e)
-        //{
-        //    TaoPhongBan interf = new TaoPhongBan();
-        //    interf.StartPosition = FormStartPosition.CenterParent;
-        //    interf.ShowDialog();
-        //}
-
-
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            //string searchValue = txtSearch.Text.ToLower();
-            //if (searchValue == "")
-            //{
-            //    txtSearch.PlaceholderText = "Tìm kiếm ...";
-            //}
-
-            //foreach (DataGridViewRow row in dataGridView1.Rows)
-            //{
-            //    row.Visible = string.IsNullOrEmpty(searchValue) || RowContainsValue(row, searchValue);
-            //}
 
             string searchValue = txtSearch.Text.ToLower();
 
@@ -503,16 +485,6 @@ namespace WinFormsApp1.GUI
         //    txtSearch.PlaceholderText = "Tìm kiếm ...";
         //}
 
-
-
-        private void txtSearch_Enter(object sender, EventArgs e)
-        {
-            if (txtSearch.Text == "Tìm kiếm ...")
-            {
-                txtSearch.Text = ""; // Xóa chữ khi người dùng bắt đầu nhập
-                txtSearch.ForeColor = Color.Black; // Chuyển sang màu chữ thường
-            }
-        }
 
         private void txtSearch_Leave(object sender, EventArgs e)
         {

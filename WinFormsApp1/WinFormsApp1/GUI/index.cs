@@ -81,7 +81,6 @@ namespace WinFormsApp1
             phongbangui pb = new phongbangui();
             panel5.Controls.Add(pb);
             pb.Dock = DockStyle.Fill;
-            pb.Location = new System.Drawing.Point(186, 0);
         }
         private void duan_Click(object sender, EventArgs e)
         {
@@ -89,11 +88,10 @@ namespace WinFormsApp1
             panNav.Top = duan.Top;
             panNav.Left = duan.Left;
             duan.BackColor = Color.FromArgb(46, 51, 73);
-            duangui d1 = new duangui();
-            Controls.Add(d1);
-            d1.BringToFront();
-            d1.Dock = DockStyle.Fill;
-            d1.Location = new System.Drawing.Point(186, 0);
+            panel5.Controls.Clear();
+            duangui da = new duangui();
+            panel5.Controls.Add(da);
+            da.Dock = DockStyle.Fill;
         }
         private void bangluong_Click(object sender, EventArgs e)
         {
