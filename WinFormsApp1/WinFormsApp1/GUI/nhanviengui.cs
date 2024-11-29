@@ -36,11 +36,6 @@ namespace WinFormsApp1.GUI
     {
         static nhanvienbus employeeBUS = new nhanvienbus();
         nhanviendto employeeDTO = new nhanviendto();
-        private TextBox txtPhongBan;
-        private Label label11;
-        private DateTimePicker dtpNgaySinh;
-        private CheckBox cbNu;
-        private CheckBox cbNam;
         List<nhanviendto> employees = employeeBUS.GetNhanVien();
 
         //Khoi tao
@@ -61,7 +56,15 @@ namespace WinFormsApp1.GUI
         private Panel panel5;
         private DataGridView dataGridView1;
         private OpenFileDialog openFileDialog1;
+        private Panel panel3;
         private Panel panel7;
+        private CheckBox cbNu;
+        private CheckBox cbNam;
+        private DateTimePicker dtpNgaySinh;
+        private TextBox txtPhongBan;
+        private Label label11;
+        private TextBox txtNQL;
+        private Label label10;
         private TextBox txtDiaChi;
         private TextBox txtHoTen;
         private TextBox txtDuAn;
@@ -78,9 +81,6 @@ namespace WinFormsApp1.GUI
         private Label label2;
         private Panel panel8;
         private PictureBox pictureBox1;
-        private Panel panel3;
-        private TextBox txtNQL;
-        private Label label10;
         private Button edit;
 
         private void InitializeComponent()
@@ -88,6 +88,23 @@ namespace WinFormsApp1.GUI
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             panel1 = new Panel();
             panel5 = new Panel();
+            dataGridView1 = new DataGridView();
+            panel4 = new Panel();
+            flowLayoutPanel1 = new FlowLayoutPanel();
+            hienhanh = new Button();
+            tatca = new Button();
+            danghi = new Button();
+            panel2 = new Panel();
+            panel6 = new Panel();
+            edit = new Button();
+            delete = new Button();
+            Import = new Button();
+            export = new Button();
+            Tao = new Button();
+            txtSearch = new TextBox();
+            label1 = new Label();
+            panel3 = new Panel();
+            openFileDialog1 = new OpenFileDialog();
             panel7 = new Panel();
             cbNu = new CheckBox();
             cbNam = new CheckBox();
@@ -112,32 +129,15 @@ namespace WinFormsApp1.GUI
             label2 = new Label();
             panel8 = new Panel();
             pictureBox1 = new PictureBox();
-            dataGridView1 = new DataGridView();
-            panel4 = new Panel();
-            flowLayoutPanel1 = new FlowLayoutPanel();
-            hienhanh = new Button();
-            tatca = new Button();
-            danghi = new Button();
-            panel2 = new Panel();
-            panel6 = new Panel();
-            edit = new Button();
-            delete = new Button();
-            Import = new Button();
-            export = new Button();
-            Tao = new Button();
-            txtSearch = new TextBox();
-            label1 = new Label();
-            panel3 = new Panel();
-            openFileDialog1 = new OpenFileDialog();
             panel1.SuspendLayout();
             panel5.SuspendLayout();
-            panel7.SuspendLayout();
-            panel8.SuspendLayout();
-            ((ISupportInitialize)pictureBox1).BeginInit();
             ((ISupportInitialize)dataGridView1).BeginInit();
             flowLayoutPanel1.SuspendLayout();
             panel2.SuspendLayout();
             panel6.SuspendLayout();
+            panel7.SuspendLayout();
+            panel8.SuspendLayout();
+            ((ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -165,242 +165,6 @@ namespace WinFormsApp1.GUI
             panel5.Name = "panel5";
             panel5.Size = new Size(1581, 840);
             panel5.TabIndex = 5;
-            // 
-            // panel7
-            // 
-            panel7.BackColor = Color.Lavender;
-            panel7.Controls.Add(cbNu);
-            panel7.Controls.Add(cbNam);
-            panel7.Controls.Add(dtpNgaySinh);
-            panel7.Controls.Add(txtPhongBan);
-            panel7.Controls.Add(label11);
-            panel7.Controls.Add(txtNQL);
-            panel7.Controls.Add(label10);
-            panel7.Controls.Add(txtDiaChi);
-            panel7.Controls.Add(txtHoTen);
-            panel7.Controls.Add(txtDuAn);
-            panel7.Controls.Add(txtSdt);
-            panel7.Controls.Add(txtEmail);
-            panel7.Controls.Add(txtMaNV);
-            panel7.Controls.Add(label9);
-            panel7.Controls.Add(label8);
-            panel7.Controls.Add(label5);
-            panel7.Controls.Add(label7);
-            panel7.Controls.Add(label6);
-            panel7.Controls.Add(label4);
-            panel7.Controls.Add(label3);
-            panel7.Controls.Add(label2);
-            panel7.Controls.Add(panel8);
-            panel7.Dock = DockStyle.Fill;
-            panel7.ForeColor = Color.FromArgb(49, 17, 117);
-            panel7.Location = new Point(0, 405);
-            panel7.Name = "panel7";
-            panel7.Size = new Size(1581, 435);
-            panel7.TabIndex = 7;
-            // 
-            // cbNu
-            // 
-            cbNu.AutoSize = true;
-            cbNu.Font = new Font("Microsoft Sans Serif", 12F);
-            cbNu.ImeMode = ImeMode.NoControl;
-            cbNu.Location = new Point(649, 260);
-            cbNu.Margin = new Padding(6, 5, 6, 5);
-            cbNu.Name = "cbNu";
-            cbNu.Size = new Size(59, 29);
-            cbNu.TabIndex = 74;
-            cbNu.Text = "Nữ";
-            cbNu.UseVisualStyleBackColor = true;
-            // 
-            // cbNam
-            // 
-            cbNam.AutoSize = true;
-            cbNam.Font = new Font("Microsoft Sans Serif", 12F);
-            cbNam.ImeMode = ImeMode.NoControl;
-            cbNam.Location = new Point(521, 260);
-            cbNam.Margin = new Padding(6, 5, 6, 5);
-            cbNam.Name = "cbNam";
-            cbNam.Size = new Size(75, 29);
-            cbNam.TabIndex = 73;
-            cbNam.Text = "Nam";
-            cbNam.UseVisualStyleBackColor = true;
-            // 
-            // dtpNgaySinh
-            // 
-            dtpNgaySinh.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dtpNgaySinh.Format = DateTimePickerFormat.Short;
-            dtpNgaySinh.Location = new Point(521, 185);
-            dtpNgaySinh.Margin = new Padding(6, 5, 6, 5);
-            dtpNgaySinh.Name = "dtpNgaySinh";
-            dtpNgaySinh.Size = new Size(344, 39);
-            dtpNgaySinh.TabIndex = 63;
-            // 
-            // txtPhongBan
-            // 
-            txtPhongBan.Location = new Point(1100, 253);
-            txtPhongBan.Name = "txtPhongBan";
-            txtPhongBan.Size = new Size(344, 27);
-            txtPhongBan.TabIndex = 6;
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.Location = new Point(962, 259);
-            label11.Name = "label11";
-            label11.Size = new Size(83, 20);
-            label11.TabIndex = 5;
-            label11.Text = "Phòng ban:";
-            // 
-            // txtNQL
-            // 
-            txtNQL.Location = new Point(1100, 180);
-            txtNQL.Name = "txtNQL";
-            txtNQL.Size = new Size(344, 27);
-            txtNQL.TabIndex = 4;
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Location = new Point(962, 183);
-            label10.Name = "label10";
-            label10.Size = new Size(106, 20);
-            label10.TabIndex = 3;
-            label10.Text = "Người quản lý:";
-            // 
-            // txtDiaChi
-            // 
-            txtDiaChi.Location = new Point(521, 326);
-            txtDiaChi.Name = "txtDiaChi";
-            txtDiaChi.Size = new Size(344, 27);
-            txtDiaChi.TabIndex = 2;
-            // 
-            // txtHoTen
-            // 
-            txtHoTen.Location = new Point(521, 113);
-            txtHoTen.Name = "txtHoTen";
-            txtHoTen.Size = new Size(344, 27);
-            txtHoTen.TabIndex = 2;
-            // 
-            // txtDuAn
-            // 
-            txtDuAn.Enabled = false;
-            txtDuAn.Location = new Point(1100, 326);
-            txtDuAn.Multiline = true;
-            txtDuAn.Name = "txtDuAn";
-            txtDuAn.Size = new Size(344, 34);
-            txtDuAn.TabIndex = 2;
-            // 
-            // txtSdt
-            // 
-            txtSdt.Location = new Point(1100, 113);
-            txtSdt.Name = "txtSdt";
-            txtSdt.Size = new Size(344, 27);
-            txtSdt.TabIndex = 2;
-            // 
-            // txtEmail
-            // 
-            txtEmail.Location = new Point(1100, 47);
-            txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(344, 27);
-            txtEmail.TabIndex = 2;
-            // 
-            // txtMaNV
-            // 
-            txtMaNV.Location = new Point(521, 47);
-            txtMaNV.Name = "txtMaNV";
-            txtMaNV.Size = new Size(344, 27);
-            txtMaNV.TabIndex = 2;
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Location = new Point(962, 329);
-            label9.Name = "label9";
-            label9.Size = new Size(52, 20);
-            label9.TabIndex = 1;
-            label9.Text = "Dự án:";
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Location = new Point(962, 116);
-            label8.Name = "label8";
-            label8.Size = new Size(100, 20);
-            label8.TabIndex = 1;
-            label8.Text = "Số điện thoại:";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(392, 183);
-            label5.Name = "label5";
-            label5.Size = new Size(77, 20);
-            label5.TabIndex = 1;
-            label5.Text = "Ngày sinh:";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Location = new Point(962, 45);
-            label7.Name = "label7";
-            label7.Size = new Size(49, 20);
-            label7.TabIndex = 1;
-            label7.Text = "Email:";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new Point(392, 326);
-            label6.Name = "label6";
-            label6.Size = new Size(55, 20);
-            label6.TabIndex = 1;
-            label6.Text = "Địa chỉ";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(392, 256);
-            label4.Name = "label4";
-            label4.Size = new Size(68, 20);
-            label4.TabIndex = 1;
-            label4.Text = "Giới tính:";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(392, 116);
-            label3.Name = "label3";
-            label3.Size = new Size(57, 20);
-            label3.TabIndex = 1;
-            label3.Text = "Họ tên:";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(392, 47);
-            label2.Name = "label2";
-            label2.Size = new Size(57, 20);
-            label2.TabIndex = 1;
-            label2.Text = "Mã NV:";
-            // 
-            // panel8
-            // 
-            panel8.BackColor = Color.FromArgb(255, 192, 255);
-            panel8.Controls.Add(pictureBox1);
-            panel8.Location = new Point(52, 45);
-            panel8.Name = "panel8";
-            panel8.Size = new Size(251, 315);
-            panel8.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Dock = DockStyle.Fill;
-            pictureBox1.Image = Properties.Resources.Untitled2;
-            pictureBox1.Location = new Point(0, 0);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(251, 315);
-            pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
             // 
             // dataGridView1
             // 
@@ -636,6 +400,242 @@ namespace WinFormsApp1.GUI
             // 
             openFileDialog1.FileName = "openFileDialog1";
             // 
+            // panel7
+            // 
+            panel7.BackColor = Color.Lavender;
+            panel7.Controls.Add(cbNu);
+            panel7.Controls.Add(cbNam);
+            panel7.Controls.Add(dtpNgaySinh);
+            panel7.Controls.Add(txtPhongBan);
+            panel7.Controls.Add(label11);
+            panel7.Controls.Add(txtNQL);
+            panel7.Controls.Add(label10);
+            panel7.Controls.Add(txtDiaChi);
+            panel7.Controls.Add(txtHoTen);
+            panel7.Controls.Add(txtDuAn);
+            panel7.Controls.Add(txtSdt);
+            panel7.Controls.Add(txtEmail);
+            panel7.Controls.Add(txtMaNV);
+            panel7.Controls.Add(label9);
+            panel7.Controls.Add(label8);
+            panel7.Controls.Add(label5);
+            panel7.Controls.Add(label7);
+            panel7.Controls.Add(label6);
+            panel7.Controls.Add(label4);
+            panel7.Controls.Add(label3);
+            panel7.Controls.Add(label2);
+            panel7.Controls.Add(panel8);
+            panel7.Dock = DockStyle.Fill;
+            panel7.ForeColor = Color.FromArgb(49, 17, 117);
+            panel7.Location = new Point(0, 405);
+            panel7.Name = "panel7";
+            panel7.Size = new Size(1581, 435);
+            panel7.TabIndex = 8;
+            // 
+            // cbNu
+            // 
+            cbNu.AutoSize = true;
+            cbNu.Font = new Font("Microsoft Sans Serif", 12F);
+            cbNu.ImeMode = ImeMode.NoControl;
+            cbNu.Location = new Point(649, 260);
+            cbNu.Margin = new Padding(6, 5, 6, 5);
+            cbNu.Name = "cbNu";
+            cbNu.Size = new Size(59, 29);
+            cbNu.TabIndex = 74;
+            cbNu.Text = "Nữ";
+            cbNu.UseVisualStyleBackColor = true;
+            // 
+            // cbNam
+            // 
+            cbNam.AutoSize = true;
+            cbNam.Font = new Font("Microsoft Sans Serif", 12F);
+            cbNam.ImeMode = ImeMode.NoControl;
+            cbNam.Location = new Point(521, 260);
+            cbNam.Margin = new Padding(6, 5, 6, 5);
+            cbNam.Name = "cbNam";
+            cbNam.Size = new Size(75, 29);
+            cbNam.TabIndex = 73;
+            cbNam.Text = "Nam";
+            cbNam.UseVisualStyleBackColor = true;
+            // 
+            // dtpNgaySinh
+            // 
+            dtpNgaySinh.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dtpNgaySinh.Format = DateTimePickerFormat.Short;
+            dtpNgaySinh.Location = new Point(521, 185);
+            dtpNgaySinh.Margin = new Padding(6, 5, 6, 5);
+            dtpNgaySinh.Name = "dtpNgaySinh";
+            dtpNgaySinh.Size = new Size(344, 39);
+            dtpNgaySinh.TabIndex = 63;
+            // 
+            // txtPhongBan
+            // 
+            txtPhongBan.Location = new Point(1100, 253);
+            txtPhongBan.Name = "txtPhongBan";
+            txtPhongBan.Size = new Size(344, 27);
+            txtPhongBan.TabIndex = 6;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Location = new Point(962, 259);
+            label11.Name = "label11";
+            label11.Size = new Size(83, 20);
+            label11.TabIndex = 5;
+            label11.Text = "Phòng ban:";
+            // 
+            // txtNQL
+            // 
+            txtNQL.Location = new Point(1100, 180);
+            txtNQL.Name = "txtNQL";
+            txtNQL.Size = new Size(344, 27);
+            txtNQL.TabIndex = 4;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new Point(962, 183);
+            label10.Name = "label10";
+            label10.Size = new Size(106, 20);
+            label10.TabIndex = 3;
+            label10.Text = "Người quản lý:";
+            // 
+            // txtDiaChi
+            // 
+            txtDiaChi.Location = new Point(521, 326);
+            txtDiaChi.Name = "txtDiaChi";
+            txtDiaChi.Size = new Size(344, 27);
+            txtDiaChi.TabIndex = 2;
+            // 
+            // txtHoTen
+            // 
+            txtHoTen.Location = new Point(521, 113);
+            txtHoTen.Name = "txtHoTen";
+            txtHoTen.Size = new Size(344, 27);
+            txtHoTen.TabIndex = 2;
+            // 
+            // txtDuAn
+            // 
+            txtDuAn.Enabled = false;
+            txtDuAn.Location = new Point(1100, 326);
+            txtDuAn.Multiline = true;
+            txtDuAn.Name = "txtDuAn";
+            txtDuAn.Size = new Size(344, 34);
+            txtDuAn.TabIndex = 2;
+            // 
+            // txtSdt
+            // 
+            txtSdt.Location = new Point(1100, 113);
+            txtSdt.Name = "txtSdt";
+            txtSdt.Size = new Size(344, 27);
+            txtSdt.TabIndex = 2;
+            // 
+            // txtEmail
+            // 
+            txtEmail.Location = new Point(1100, 47);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(344, 27);
+            txtEmail.TabIndex = 2;
+            // 
+            // txtMaNV
+            // 
+            txtMaNV.Location = new Point(521, 47);
+            txtMaNV.Name = "txtMaNV";
+            txtMaNV.Size = new Size(344, 27);
+            txtMaNV.TabIndex = 2;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(962, 329);
+            label9.Name = "label9";
+            label9.Size = new Size(52, 20);
+            label9.TabIndex = 1;
+            label9.Text = "Dự án:";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(962, 116);
+            label8.Name = "label8";
+            label8.Size = new Size(100, 20);
+            label8.TabIndex = 1;
+            label8.Text = "Số điện thoại:";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(392, 183);
+            label5.Name = "label5";
+            label5.Size = new Size(77, 20);
+            label5.TabIndex = 1;
+            label5.Text = "Ngày sinh:";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(962, 45);
+            label7.Name = "label7";
+            label7.Size = new Size(49, 20);
+            label7.TabIndex = 1;
+            label7.Text = "Email:";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(392, 326);
+            label6.Name = "label6";
+            label6.Size = new Size(55, 20);
+            label6.TabIndex = 1;
+            label6.Text = "Địa chỉ";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(392, 256);
+            label4.Name = "label4";
+            label4.Size = new Size(68, 20);
+            label4.TabIndex = 1;
+            label4.Text = "Giới tính:";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(392, 116);
+            label3.Name = "label3";
+            label3.Size = new Size(57, 20);
+            label3.TabIndex = 1;
+            label3.Text = "Họ tên:";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(392, 47);
+            label2.Name = "label2";
+            label2.Size = new Size(57, 20);
+            label2.TabIndex = 1;
+            label2.Text = "Mã NV:";
+            // 
+            // panel8
+            // 
+            panel8.BackColor = Color.FromArgb(255, 192, 255);
+            panel8.Controls.Add(pictureBox1);
+            panel8.Location = new Point(52, 45);
+            panel8.Name = "panel8";
+            panel8.Size = new Size(251, 315);
+            panel8.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Dock = DockStyle.Fill;
+            pictureBox1.Image = Properties.Resources.Untitled2;
+            pictureBox1.Location = new Point(0, 0);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(251, 315);
+            pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
+            // 
             // nhanviengui
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -651,16 +651,16 @@ namespace WinFormsApp1.GUI
             MouseClick += nhanviengui_MouseClick;
             panel1.ResumeLayout(false);
             panel5.ResumeLayout(false);
-            panel7.ResumeLayout(false);
-            panel7.PerformLayout();
-            panel8.ResumeLayout(false);
-            ((ISupportInitialize)pictureBox1).EndInit();
             ((ISupportInitialize)dataGridView1).EndInit();
             flowLayoutPanel1.ResumeLayout(false);
             flowLayoutPanel1.PerformLayout();
             panel2.ResumeLayout(false);
             panel6.ResumeLayout(false);
             panel6.PerformLayout();
+            panel7.ResumeLayout(false);
+            panel7.PerformLayout();
+            panel8.ResumeLayout(false);
+            ((ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 

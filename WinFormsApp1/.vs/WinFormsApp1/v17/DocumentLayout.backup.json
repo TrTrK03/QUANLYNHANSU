@@ -3,20 +3,28 @@
   "WorkspaceRootPath": "C:\\H\u1ECDc T\u1EADp\\BT_C#\\QUANLYNHANSU\\WinFormsApp1\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D9720C57-C499-4EA4-9905-7F1094F3D504}|WinFormsApp1\\WinFormsApp1.csproj|c:\\h\u1ECDc t\u1EADp\\bt_c#\\quanlynhansu\\winformsapp1\\winformsapp1\\gui\\duangui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D9720C57-C499-4EA4-9905-7F1094F3D504}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\gui\\duangui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D9720C57-C499-4EA4-9905-7F1094F3D504}|WinFormsApp1\\WinFormsApp1.csproj|c:\\h\u1ECDc t\u1EADp\\bt_c#\\quanlynhansu\\winformsapp1\\winformsapp1\\gui\\duangui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D9720C57-C499-4EA4-9905-7F1094F3D504}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\gui\\duangui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D9720C57-C499-4EA4-9905-7F1094F3D504}|WinFormsApp1\\WinFormsApp1.csproj|c:\\h\u1ECDc t\u1EADp\\bt_c#\\quanlynhansu\\winformsapp1\\winformsapp1\\gui\\phongbangui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D9720C57-C499-4EA4-9905-7F1094F3D504}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\gui\\phongbangui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D9720C57-C499-4EA4-9905-7F1094F3D504}|WinFormsApp1\\WinFormsApp1.csproj|c:\\h\u1ECDc t\u1EADp\\bt_c#\\quanlynhansu\\winformsapp1\\winformsapp1\\gui\\nhanviengui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D9720C57-C499-4EA4-9905-7F1094F3D504}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\gui\\nhanviengui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D9720C57-C499-4EA4-9905-7F1094F3D504}|WinFormsApp1\\WinFormsApp1.csproj|c:\\h\u1ECDc t\u1EADp\\bt_c#\\quanlynhansu\\winformsapp1\\winformsapp1\\gui\\phongbangui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D9720C57-C499-4EA4-9905-7F1094F3D504}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\gui\\phongbangui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D9720C57-C499-4EA4-9905-7F1094F3D504}|WinFormsApp1\\WinFormsApp1.csproj|C:\\H\u1ECDc T\u1EADp\\BT_C#\\QUANLYNHANSU\\WinFormsApp1\\winformsapp1\\gui\\phongbangui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D9720C57-C499-4EA4-9905-7F1094F3D504}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\gui\\phongbangui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D9720C57-C499-4EA4-9905-7F1094F3D504}|WinFormsApp1\\WinFormsApp1.csproj|C:\\H\u1ECDc T\u1EADp\\BT_C#\\QUANLYNHANSU\\WinFormsApp1\\winformsapp1\\gui\\detail\\suaphongban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D9720C57-C499-4EA4-9905-7F1094F3D504}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\gui\\detail\\suaphongban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D9720C57-C499-4EA4-9905-7F1094F3D504}|WinFormsApp1\\WinFormsApp1.csproj|c:\\h\u1ECDc t\u1EADp\\bt_c#\\quanlynhansu\\winformsapp1\\winformsapp1\\gui\\info\\phongbaninfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D9720C57-C499-4EA4-9905-7F1094F3D504}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\gui\\info\\phongbaninfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D9720C57-C499-4EA4-9905-7F1094F3D504}|WinFormsApp1\\WinFormsApp1.csproj|c:\\h\u1ECDc t\u1EADp\\bt_c#\\quanlynhansu\\winformsapp1\\winformsapp1\\gui\\info\\duaninfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D9720C57-C499-4EA4-9905-7F1094F3D504}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\gui\\info\\duaninfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,57 +34,81 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "PhongBanInfo.cs",
-              "DocumentMoniker": "C:\\H\u1ECDc T\u1EADp\\BT_C#\\QUANLYNHANSU\\WinFormsApp1\\WinFormsApp1\\GUI\\Info\\PhongBanInfo.cs",
-              "RelativeDocumentMoniker": "WinFormsApp1\\GUI\\Info\\PhongBanInfo.cs",
-              "ToolTip": "C:\\H\u1ECDc T\u1EADp\\BT_C#\\QUANLYNHANSU\\WinFormsApp1\\WinFormsApp1\\GUI\\Info\\PhongBanInfo.cs*",
-              "RelativeToolTip": "WinFormsApp1\\GUI\\Info\\PhongBanInfo.cs*",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAAAvAAAAAAAAAA==",
+              "Title": "nhanviengui.cs [Design]",
+              "DocumentMoniker": "C:\\H\u1ECDc T\u1EADp\\BT_C#\\QUANLYNHANSU\\WinFormsApp1\\WinFormsApp1\\GUI\\nhanviengui.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\GUI\\nhanviengui.cs",
+              "ToolTip": "C:\\H\u1ECDc T\u1EADp\\BT_C#\\QUANLYNHANSU\\WinFormsApp1\\WinFormsApp1\\GUI\\nhanviengui.cs [Design]",
+              "RelativeToolTip": "WinFormsApp1\\GUI\\nhanviengui.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T03:15:19.147Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "SuaPhongBan.cs [Design]",
-              "DocumentMoniker": "C:\\H\u1ECDc T\u1EADp\\BT_C#\\QUANLYNHANSU\\WinFormsApp1\\WinFormsApp1\\GUI\\detail\\SuaPhongBan.cs",
-              "RelativeDocumentMoniker": "WinFormsApp1\\GUI\\detail\\SuaPhongBan.cs",
-              "ToolTip": "C:\\H\u1ECDc T\u1EADp\\BT_C#\\QUANLYNHANSU\\WinFormsApp1\\WinFormsApp1\\GUI\\detail\\SuaPhongBan.cs [Design]",
-              "RelativeToolTip": "WinFormsApp1\\GUI\\detail\\SuaPhongBan.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T02:51:09.596Z",
+              "WhenOpened": "2024-11-29T05:54:08.088Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "phongbangui.cs",
-              "DocumentMoniker": "C:\\H\u1ECDc T\u1EADp\\BT_C#\\QUANLYNHANSU\\WinFormsApp1\\WinFormsApp1\\GUI\\phongbangui.cs",
-              "RelativeDocumentMoniker": "WinFormsApp1\\GUI\\phongbangui.cs",
-              "ToolTip": "C:\\H\u1ECDc T\u1EADp\\BT_C#\\QUANLYNHANSU\\WinFormsApp1\\WinFormsApp1\\GUI\\phongbangui.cs",
-              "RelativeToolTip": "WinFormsApp1\\GUI\\phongbangui.cs",
-              "ViewState": "AgIAADYBAAAAAAAAAAAAADwBAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T01:51:52.568Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "phongbangui.cs [Design]",
               "DocumentMoniker": "C:\\H\u1ECDc T\u1EADp\\BT_C#\\QUANLYNHANSU\\WinFormsApp1\\WinFormsApp1\\GUI\\phongbangui.cs",
               "RelativeDocumentMoniker": "WinFormsApp1\\GUI\\phongbangui.cs",
               "ToolTip": "C:\\H\u1ECDc T\u1EADp\\BT_C#\\QUANLYNHANSU\\WinFormsApp1\\WinFormsApp1\\GUI\\phongbangui.cs [Design]",
               "RelativeToolTip": "WinFormsApp1\\GUI\\phongbangui.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T01:51:47.668Z",
+              "WhenOpened": "2024-11-29T05:49:35.776Z",
               "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DuAnInfo.cs [Design]",
+              "DocumentMoniker": "C:\\H\u1ECDc T\u1EADp\\BT_C#\\QUANLYNHANSU\\WinFormsApp1\\WinFormsApp1\\GUI\\Info\\DuAnInfo.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\GUI\\Info\\DuAnInfo.cs",
+              "ToolTip": "C:\\H\u1ECDc T\u1EADp\\BT_C#\\QUANLYNHANSU\\WinFormsApp1\\WinFormsApp1\\GUI\\Info\\DuAnInfo.cs [Design]",
+              "RelativeToolTip": "WinFormsApp1\\GUI\\Info\\DuAnInfo.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T05:36:39.536Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "duangui.cs [Design]",
+              "DocumentMoniker": "C:\\H\u1ECDc T\u1EADp\\BT_C#\\QUANLYNHANSU\\WinFormsApp1\\WinFormsApp1\\GUI\\duangui.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\GUI\\duangui.cs",
+              "ToolTip": "C:\\H\u1ECDc T\u1EADp\\BT_C#\\QUANLYNHANSU\\WinFormsApp1\\WinFormsApp1\\GUI\\duangui.cs [Design]",
+              "RelativeToolTip": "WinFormsApp1\\GUI\\duangui.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T05:36:23.667Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "phongbangui.cs",
+              "DocumentMoniker": "C:\\H\u1ECDc T\u1EADp\\BT_C#\\QUANLYNHANSU\\WinFormsApp1\\WinFormsApp1\\GUI\\phongbangui.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\GUI\\phongbangui.cs",
+              "ToolTip": "C:\\H\u1ECDc T\u1EADp\\BT_C#\\QUANLYNHANSU\\WinFormsApp1\\WinFormsApp1\\GUI\\phongbangui.cs",
+              "RelativeToolTip": "WinFormsApp1\\GUI\\phongbangui.cs",
+              "ViewState": "AgIAAP0AAAAAAAAAAAAYwP4AAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T05:32:32.479Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "duangui.cs",
+              "DocumentMoniker": "C:\\H\u1ECDc T\u1EADp\\BT_C#\\QUANLYNHANSU\\WinFormsApp1\\WinFormsApp1\\GUI\\duangui.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\GUI\\duangui.cs",
+              "ToolTip": "C:\\H\u1ECDc T\u1EADp\\BT_C#\\QUANLYNHANSU\\WinFormsApp1\\WinFormsApp1\\GUI\\duangui.cs",
+              "RelativeToolTip": "WinFormsApp1\\GUI\\duangui.cs",
+              "ViewState": "AgIAAJoBAAAAAAAAAAAAAKwBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T05:29:21.684Z",
+              "EditorCaption": ""
             }
           ]
         }

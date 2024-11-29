@@ -1,6 +1,7 @@
-﻿namespace WinFormsApp1.GUI
+﻿
+namespace WinFormsApp1.GUI.Info
 {
-    partial class PhongBan
+    partial class PhongBanInfo
     {
         /// <summary>
         /// Required designer variable.
@@ -26,7 +27,7 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
+        public void InitializeComponent()
         {
             panel7 = new Panel();
             pictureBox1 = new PictureBox();
@@ -144,14 +145,14 @@
             label2.TabIndex = 1;
             label2.Text = "Mã Phòng Ban:";
             // 
-            // Formtest
+            // PhongBanInfo
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(panel7);
-            Name = "Formtest";
-            Text = "Formtest";
+            Name = "PhongBanInfo";
+            Text = "PhongBanInfo";
             panel7.ResumeLayout(false);
             panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
