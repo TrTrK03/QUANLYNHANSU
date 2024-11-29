@@ -20,6 +20,7 @@
             // 
             // txtMaPhongBan
             // 
+            txtMaPhongBan.Enabled = false;
             txtMaPhongBan.Location = new Point(120, 27);
             txtMaPhongBan.Name = "txtMaPhongBan";
             txtMaPhongBan.Size = new Size(200, 27);

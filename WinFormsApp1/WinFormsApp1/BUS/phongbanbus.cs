@@ -27,11 +27,6 @@ namespace WinFormsApp1.BUS
             phongBanDao.UpdatePhongBan(phongBan);
         }
 
-        // Tìm kiếm phòng ban theo tên
-        public List<phongbandto> SearchPhongBanByName(string keyword)
-        {
-            return phongBanDao.SearchPhongBanByTen(keyword);
-        }
 
         // Xóa phòng ban theo mã
         public void DeletePhongBan(phongbandto selectedphongban)

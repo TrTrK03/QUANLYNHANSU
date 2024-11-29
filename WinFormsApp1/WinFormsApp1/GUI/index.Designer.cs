@@ -69,7 +69,7 @@
             panel1.Location = new Point(0, 0);
             panel1.Margin = new Padding(0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(143, 703);
+            panel1.Size = new Size(143, 713);
             panel1.TabIndex = 0;
             // 
             // panNav
@@ -315,7 +315,7 @@
             panel3.Location = new Point(143, 0);
             panel3.Margin = new Padding(0);
             panel3.Name = "panel3";
-            panel3.Size = new Size(1051, 0);
+            panel3.Size = new Size(1037, 0);
             panel3.TabIndex = 1;
             panel3.Paint += panel3_Paint;
             // 
@@ -324,7 +324,7 @@
             panel5.Dock = DockStyle.Fill;
             panel5.Location = new Point(143, 0);
             panel5.Name = "panel5";
-            panel5.Size = new Size(1051, 703);
+            panel5.Size = new Size(1037, 713);
             panel5.TabIndex = 2;
             // 
             // index
@@ -333,7 +333,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
             BackColor = Color.FromArgb(46, 51, 73);
-            ClientSize = new Size(1194, 703);
+            ClientSize = new Size(1180, 713);
             Controls.Add(panel5);
             Controls.Add(panel3);
             Controls.Add(panel1);

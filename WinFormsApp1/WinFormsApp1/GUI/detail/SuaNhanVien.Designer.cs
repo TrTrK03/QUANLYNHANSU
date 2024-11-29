@@ -41,16 +41,11 @@
             cbNam = new CheckBox();
             label6 = new Label();
             pictureBox1 = new PictureBox();
-            txtMaTK = new TextBox();
-            label5 = new Label();
             btnHuy = new Button();
             btnSua = new Button();
-            rdbAn = new RadioButton();
-            rdbHien = new RadioButton();
             dtpNgaySinh = new DateTimePicker();
             txtEmail = new TextBox();
             txtMaNV = new TextBox();
-            label7 = new Label();
             label8 = new Label();
             label3 = new Label();
             label4 = new Label();
@@ -109,12 +104,14 @@
             resources.ApplyResources(cbNu, "cbNu");
             cbNu.Name = "cbNu";
             cbNu.UseVisualStyleBackColor = true;
+            cbNu.CheckedChanged += cbNu_CheckedChanged;
             // 
             // cbNam
             // 
             resources.ApplyResources(cbNam, "cbNam");
             cbNam.Name = "cbNam";
             cbNam.UseVisualStyleBackColor = true;
+            cbNam.CheckedChanged += cbNam_CheckedChanged;
             // 
             // label6
             // 
@@ -128,16 +125,6 @@
             resources.ApplyResources(pictureBox1, "pictureBox1");
             pictureBox1.Name = "pictureBox1";
             pictureBox1.TabStop = false;
-            // 
-            // txtMaTK
-            // 
-            resources.ApplyResources(txtMaTK, "txtMaTK");
-            txtMaTK.Name = "txtMaTK";
-            // 
-            // label5
-            // 
-            resources.ApplyResources(label5, "label5");
-            label5.Name = "label5";
             // 
             // btnHuy
             // 
@@ -158,20 +145,6 @@
             btnSua.UseVisualStyleBackColor = false;
             btnSua.Click += btnSua_Click;
             // 
-            // rdbAn
-            // 
-            resources.ApplyResources(rdbAn, "rdbAn");
-            rdbAn.Name = "rdbAn";
-            rdbAn.TabStop = true;
-            rdbAn.UseVisualStyleBackColor = true;
-            // 
-            // rdbHien
-            // 
-            resources.ApplyResources(rdbHien, "rdbHien");
-            rdbHien.Name = "rdbHien";
-            rdbHien.TabStop = true;
-            rdbHien.UseVisualStyleBackColor = true;
-            // 
             // dtpNgaySinh
             // 
             resources.ApplyResources(dtpNgaySinh, "dtpNgaySinh");
@@ -187,11 +160,6 @@
             // 
             resources.ApplyResources(txtMaNV, "txtMaNV");
             txtMaNV.Name = "txtMaNV";
-            // 
-            // label7
-            // 
-            resources.ApplyResources(label7, "label7");
-            label7.Name = "label7";
             // 
             // label8
             // 
@@ -258,16 +226,11 @@
             Controls.Add(cbNam);
             Controls.Add(label6);
             Controls.Add(pictureBox1);
-            Controls.Add(txtMaTK);
-            Controls.Add(label5);
             Controls.Add(btnHuy);
             Controls.Add(btnSua);
-            Controls.Add(rdbAn);
-            Controls.Add(rdbHien);
             Controls.Add(dtpNgaySinh);
             Controls.Add(txtEmail);
             Controls.Add(txtMaNV);
-            Controls.Add(label7);
             Controls.Add(label8);
             Controls.Add(label3);
             Controls.Add(label4);
@@ -299,16 +262,11 @@
         private CheckBox cbNam;
         private Label label6;
         private PictureBox pictureBox1;
-        private TextBox txtMaTK;
-        private Label label5;
         private Button btnHuy;
         private Button btnSua;
-        private RadioButton rdbAn;
-        private RadioButton rdbHien;
         private DateTimePicker dtpNgaySinh;
         private TextBox txtEmail;
         private TextBox txtMaNV;
-        private Label label7;
         private Label label8;
         private Label label3;
         private Label label4;

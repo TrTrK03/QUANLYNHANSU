@@ -64,11 +64,10 @@ namespace WinFormsApp1
             panNav.Top = nhanvien.Top;
             panNav.Left = nhanvien.Left;
             nhanvien.BackColor = Color.FromArgb(46, 51, 73);
-            nhanviengui t2 = new nhanviengui();
-            Controls.Add(t2);
-            t2.BringToFront();
-            t2.Dock = DockStyle.Fill;
-            t2.Location = new System.Drawing.Point(186, 0);
+            panel5.Controls.Clear();
+            nhanviengui nv = new nhanviengui();
+            panel5.Controls.Add(nv);
+            nv.Dock = DockStyle.Fill;
         }
         private void phongban_Click(object sender, EventArgs e)
         {

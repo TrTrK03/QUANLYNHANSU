@@ -11,31 +11,25 @@ namespace WinFormsApp1.BUS
 {
     internal class duanbus
     {
-        private duandao duaodao = new duandao();
+        private duandao duandao = new duandao();
 
         public List<duandto> GetDuAn()
         {
-            return duaodao.GetDuAn();
+            return duandao.GetDuAn();
         }
 
         public void AddDuAn(duandto DuAn)
         {
-            duaodao.AddDuAn(DuAn);
+            duandao.AddDuAn(DuAn);
         }
 
         public void UpdateDuAn(duandto DuAn)
         {
-            duaodao.UpdateDuAn(DuAn);
+            duandao.UpdateDuAn(DuAn);
         }
-
-        public ArrayList SearchDuAnByID(string keyword)
+        public void DeleteDuAn(duandto selectedDuAn)
         {
-            return duaodao.SearchDuAnByID(keyword);
-        }
-
-        public ArrayList SearchDuAnByName(string keyword)
-        {
-            return duaodao.SearchDuAnByName(keyword);
+            duandao.DeleteDuAn(selectedDuAn.MaDuAn);
         }
 
         // Các hàm khác nếu cần

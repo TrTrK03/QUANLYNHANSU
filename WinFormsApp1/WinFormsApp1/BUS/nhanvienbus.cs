@@ -16,32 +16,18 @@ namespace WinFormsApp1.BUS
             return employeeDAO.GetNhanVien();
         }
 
-        public void AddEmployee(nhanviendto employee)
+        public void AddNhanVien(nhanviendto employee)
         {
-            employeeDAO.AddEmployee(employee);
+            employeeDAO.AddNhanVien(employee);
         }
 
-        public void UpdateEmployee(nhanviendto employee)
+        public void UpdateNhanVien(nhanviendto employee)
         {
-            employeeDAO.UpdateEmployee(employee);
+            employeeDAO.UpdateNhanVien(employee);
         }
-        public void HideEmployee(nhanviendto employee)
+        public void DeleteNhanVien(nhanviendto employee)
         {
-            employeeDAO.HideEmployee(employee);
-        }
-
-        public ArrayList SearchEmployeeByID(string keyword)
-        {
-            return employeeDAO.SearchEmployeeByID(keyword);
-        }
-
-        public ArrayList SearchEmployeeByName(string keyword)
-        {
-            return employeeDAO.SearchEmployeeByName(keyword);
-        }
-        public ArrayList SearchEmployeeByPhoneNumber(string keyword)
-        {
-            return employeeDAO.SearchEmployeeByPhoneNumber(keyword);
+            employeeDAO.DeleteNhanVien(employee);
         }
 
         //public List<string> LoadMaTK()

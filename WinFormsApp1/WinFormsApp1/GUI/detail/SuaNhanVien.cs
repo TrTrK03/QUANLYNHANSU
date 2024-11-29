@@ -46,18 +46,26 @@ public partial class SuaNhanVien : Form
         {
             cbNu.Checked = true;
         }
-        if (SelectedEmployee.TrangThai == 1)
-        {
-            rdbHien.Checked = true;
-        }
-        else if (SelectedEmployee.TrangThai == 0)
-        {
-            rdbAn.Checked = true;
-        }
 
     }
 
+    // Sự kiện khi cbNam được thay đổi
+    private void cbNam_CheckedChanged(object sender, EventArgs e)
+    {
+        if (cbNam.Checked)
+        {
+            cbNu.Checked = false;
+        }
+    }
 
+    // Sự kiện khi cbNu được thay đổi
+    private void cbNu_CheckedChanged(object sender, EventArgs e)
+    {
+        if (cbNu.Checked)
+        {
+            cbNam.Checked = false;
+        }
+    }
 
     private void SuaNhanVien_Load(object sender, EventArgs e)
     {
@@ -99,10 +107,6 @@ public partial class SuaNhanVien : Form
         {
             MessageBox.Show("Bạn chưa chọn ngày sinh của nhân viên!!!");
         }
-        else if (rdbHien.Checked == false && rdbAn.Checked == false)
-        {
-            MessageBox.Show("Hãy chọn trạng thái của nhân viên!!!");
-        }
         else if (!cbNam.Checked && !cbNu.Checked)
         {
             MessageBox.Show("Hãy chọn giới tính của nhân viên!!!");
@@ -140,15 +144,6 @@ public partial class SuaNhanVien : Form
                 employeeDTO.PhongBan = txtPhongBan.Text;
             }
 
-            if (rdbHien.Checked) //8
-            {
-                employeeDTO.TrangThai = 1;
-            }
-            else if (rdbAn.Checked)
-            {
-                employeeDTO.TrangThai = 0;
-            }
-
             if (cbNam.Checked) //9
             {
                 employeeDTO.GioiTinh = "Nam";
@@ -161,7 +156,7 @@ public partial class SuaNhanVien : Form
 
             try
             {
-                employeeBUS.UpdateEmployee(employeeDTO);
+                employeeBUS.UpdateNhanVien(employeeDTO);
                 MessageBox.Show("Chỉnh sửa nhân viên thành công!!!");
                 this.Close();
             }

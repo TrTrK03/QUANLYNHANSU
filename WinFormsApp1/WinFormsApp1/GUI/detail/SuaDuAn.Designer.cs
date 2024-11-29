@@ -13,8 +13,6 @@
             txtPhongBan = new TextBox();
             dtpNgayBatDau = new DateTimePicker();
             dtpNgayKetThuc = new DateTimePicker();
-            rdbHien = new RadioButton();
-            rdbAn = new RadioButton();
             btnHuy = new Button();
             btnSua = new Button();
             labelMaDuAn = new Label();
@@ -24,11 +22,11 @@
             labelPhongBan = new Label();
             labelNgayBatDau = new Label();
             labelNgayKetThuc = new Label();
-            labelTrangThai = new Label();
             SuspendLayout();
             // 
             // txtMaDuAn
             // 
+            txtMaDuAn.Enabled = false;
             txtMaDuAn.Location = new Point(120, 20);
             txtMaDuAn.Name = "txtMaDuAn";
             txtMaDuAn.Size = new Size(200, 27);
@@ -79,45 +77,25 @@
             dtpNgayKetThuc.Size = new Size(200, 27);
             dtpNgayKetThuc.TabIndex = 6;
             // 
-            // rdbHien
-            // 
-            rdbHien.AutoSize = true;
-            rdbHien.Location = new Point(120, 340);
-            rdbHien.Name = "rdbHien";
-            rdbHien.Size = new Size(61, 24);
-            rdbHien.TabIndex = 7;
-            rdbHien.TabStop = true;
-            rdbHien.Text = "Hiện";
-            rdbHien.UseVisualStyleBackColor = true;
-            // 
-            // rdbAn
-            // 
-            rdbAn.AutoSize = true;
-            rdbAn.Location = new Point(180, 340);
-            rdbAn.Name = "rdbAn";
-            rdbAn.Size = new Size(48, 24);
-            rdbAn.TabIndex = 8;
-            rdbAn.TabStop = true;
-            rdbAn.Text = "Ẩn";
-            rdbAn.UseVisualStyleBackColor = true;
-            // 
             // btnHuy
             // 
-            btnHuy.Location = new Point(120, 380);
+            btnHuy.Location = new Point(75, 365);
             btnHuy.Name = "btnHuy";
             btnHuy.Size = new Size(79, 28);
             btnHuy.TabIndex = 9;
             btnHuy.Text = "Hủy";
             btnHuy.UseVisualStyleBackColor = true;
+            btnHuy.Click += btnHuy_Click_1;
             // 
             // btnSua
             // 
-            btnSua.Location = new Point(245, 380);
+            btnSua.Location = new Point(200, 365);
             btnSua.Name = "btnSua";
             btnSua.Size = new Size(75, 28);
             btnSua.TabIndex = 10;
             btnSua.Text = "Sửa";
             btnSua.UseVisualStyleBackColor = true;
+            btnSua.Click += btnSua_Click_1;
             // 
             // labelMaDuAn
             // 
@@ -182,19 +160,9 @@
             labelNgayKetThuc.TabIndex = 17;
             labelNgayKetThuc.Text = "Ngày Kết Thúc";
             // 
-            // labelTrangThai
-            // 
-            labelTrangThai.AutoSize = true;
-            labelTrangThai.Location = new Point(30, 343);
-            labelTrangThai.Name = "labelTrangThai";
-            labelTrangThai.Size = new Size(78, 20);
-            labelTrangThai.TabIndex = 18;
-            labelTrangThai.Text = "Trạng Thái";
-            // 
             // SuaDuAn
             // 
             ClientSize = new Size(388, 420);
-            Controls.Add(labelTrangThai);
             Controls.Add(labelNgayKetThuc);
             Controls.Add(labelNgayBatDau);
             Controls.Add(labelPhongBan);
@@ -204,8 +172,6 @@
             Controls.Add(labelMaDuAn);
             Controls.Add(btnSua);
             Controls.Add(btnHuy);
-            Controls.Add(rdbAn);
-            Controls.Add(rdbHien);
             Controls.Add(dtpNgayKetThuc);
             Controls.Add(dtpNgayBatDau);
             Controls.Add(txtPhongBan);
@@ -226,8 +192,6 @@
         private System.Windows.Forms.TextBox txtPhongBan;
         private System.Windows.Forms.DateTimePicker dtpNgayBatDau;
         private System.Windows.Forms.DateTimePicker dtpNgayKetThuc;
-        private System.Windows.Forms.RadioButton rdbHien;
-        private System.Windows.Forms.RadioButton rdbAn;
         private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Label labelMaDuAn;
@@ -237,6 +201,5 @@
         private System.Windows.Forms.Label labelPhongBan;
         private System.Windows.Forms.Label labelNgayBatDau;
         private System.Windows.Forms.Label labelNgayKetThuc;
-        private System.Windows.Forms.Label labelTrangThai;
     }
 }

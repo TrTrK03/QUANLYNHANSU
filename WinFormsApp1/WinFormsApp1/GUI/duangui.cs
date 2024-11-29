@@ -374,49 +374,85 @@ namespace WinFormsApp1.GUI
 
         private void delete_Click(object sender, EventArgs e)
         {
-            //duandto selectedProject = projects.FirstOrDefault(project => project.MaDuAn == maDuAnSelected);
-            //if (selectedProject != null)
-            //{
-            //    if (selectedProject.TrangThai == 1)
-            //    {
-            //        try
-            //        {
-            //            projectBUS.UpdateDuAn(new duandto { MaDuAn = selectedProject.MaDuAn, TrangThai = 0 });
-            //            MessageBox.Show("Xóa dự án thành công!!!");
-            //            LoadDataToGUI(1);
-            //        }
-            //        catch (Exception ex)
-            //        {
-            //            MessageBox.Show("Có lỗi xảy ra trong quá trình xóa: " + ex.Message);
-            //        }
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("Dự án này đã được xóa hoặc hoàn thành!!!");
-            //    }
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Chọn một dự án để xóa!");
-            //}
+            // Lấy danh sách các maDuAn từ các dòng có checkbox được chọn
+            var selectedprojects = dataGridView1.Rows
+                .Cast<DataGridViewRow>()
+                .Where(row => Convert.ToBoolean(row.Cells["Check"].Value) == true)
+                .Select(row => row.Cells["Ma Du An"].Value.ToString())
+                .ToList();
+
+            // Nếu không có dòng nào được chọn
+            if (!selectedprojects.Any())
+            {
+                MessageBox.Show("Chọn ít nhất một Dự án để xóa!");
+                return;
+            }
+
+            // Duyệt qua danh sách các maDuAn đã chọn
+            foreach (string maDuAn in selectedprojects)
+            {
+                var selectedDuAn = projects.FirstOrDefault(duan => duan.MaDuAn == maDuAn);
+                if (selectedDuAn != null)
+                {
+                    try
+                    {
+                        projectBUS.DeleteDuAn(selectedDuAn);
+                        MessageBox.Show($"Xóa Dự án '{maDuAn}' thành công!");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Có lỗi xảy ra khi xóa Dự án '{maDuAn}': {ex.Message}");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show($"Không tìm thấy Dự án với mã '{maDuAn}'!");
+                }
+            }
+
+            // Làm mới lại danh sách projects (cập nhật từ cơ sở dữ liệu hoặc phương thức lấy dữ liệu)
+            projects = projectBUS.GetDuAn(); // Lấy lại dữ liệu sau khi xóa
+            // Tải lại dữ liệu sau khi xóa
+            LoadDataToGUI();
         }
 
 
         private void edit_Click(object sender, EventArgs e)
-        {
-            //duandto selectedProject = projects.FirstOrDefault(project => project.MaDuAn == maDuAnSelected);
+        {// Lấy danh sách các MaPhongBan từ các dòng có checkbox được chọn
+            var selectedDuAns = dataGridView1.Rows
+                .Cast<DataGridViewRow>()
+                .Where(row => Convert.ToBoolean(row.Cells["Check"].Value) == true)
+                .Select(row => row.Cells["Ma Du An"].Value.ToString())
+                .ToList();
 
-            //if (selectedProject != null)
-            //{
-            //    SuaDuAn interf = new SuaDuAn(selectedProject);
-            //    interf.StartPosition = FormStartPosition.CenterParent;
-            //    interf.ShowDialog();
-            //    LoadDataToGUI(1);
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Chọn một dự án để chỉnh sửa!");
-            //}
+            // Nếu không có dòng nào được chọn
+            if (!selectedDuAns.Any())
+            {
+                MessageBox.Show("Chọn ít nhất một Dự Án để chỉnh sửa!");
+                return;
+            }
+
+            // Duyệt qua danh sách các MaPhongBan đã chọn
+            foreach (string maDuAn in selectedDuAns)
+            {
+                var selectedDuAn = projects.FirstOrDefault(duan => duan.MaDuAn == maDuAn);
+
+                if (selectedDuAn != null)
+                {
+                    // Tạo và hiển thị form chỉnh sửa
+                    SuaDuAn suaDuAnForm = new SuaDuAn(selectedDuAn);
+                    suaDuAnForm.StartPosition = FormStartPosition.CenterParent;
+                    suaDuAnForm.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show($"Không tìm thấy Phòng Ban với mã '{maDuAn}'!");
+                }
+            }
+            // Làm mới lại danh sách phongbans (cập nhật từ cơ sở dữ liệu hoặc phương thức lấy dữ liệu)
+            projects = projectBUS.GetDuAn(); // Lấy lại dữ liệu sau khi xóa
+            // Tải lại dữ liệu sau khi xóa
+            LoadDataToGUI();
         }
 
         private void Tao_Click(object sender, EventArgs e)

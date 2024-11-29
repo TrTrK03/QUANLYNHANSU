@@ -25,6 +25,9 @@
     <Compile Update="GUI\Info\DuAnInfo.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="GUI\Info\NhanVienInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="GUI\Info\PhongBanInfo.cs">
       <SubType>Form</SubType>
     </Compile>

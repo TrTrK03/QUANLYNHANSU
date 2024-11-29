@@ -59,7 +59,7 @@ namespace WinFormsApp1.DAO
             }
         }
 
-        public void AddEmployee(nhanviendto employee)
+        public void AddNhanVien(nhanviendto employee)
         {
             using (SqlConnection connection = connectObj.connection())
             {
@@ -84,7 +84,7 @@ namespace WinFormsApp1.DAO
             }
         }
 
-        public void UpdateEmployee(nhanviendto employee)
+        public void UpdateNhanVien(nhanviendto employee)
         {
             using (SqlConnection connection = connectObj.connection())
             {
@@ -109,156 +109,19 @@ namespace WinFormsApp1.DAO
 
             }
         }
-        public ArrayList SearchEmployeeByID(string keyword)
-        {
-            ArrayList employees = new ArrayList();
-            using (SqlConnection connection = connectObj.connection())
-            {
-                SqlCommand command = new SqlCommand("SELECT * FROM nhanvien WHERE MaNhanVien LIKE @Keyword", connection);
-                command.Parameters.AddWithValue("@Keyword", "%" + keyword + "%");
-                SqlDataReader reader = command.ExecuteReader();
-                
-                while (reader.Read())
-                {
-                    nhanviendto employee = new nhanviendto
-                    {
-                        MaNhanVien = reader["MaNhanVien"].ToString(),
-                        HoTen = reader["HoTen"].ToString(),
-                        NgaySinh = DateTime.Parse(reader["ngaysinh"].ToString()),
-                        GioiTinh = reader["GioiTinh"].ToString(),
-                        DiaChi = reader["DiaChi"].ToString(),
-                        Email = reader["Email"].ToString(),
-                        SDT = reader["SDT"].ToString(),
-                        NguoiQuanLy = reader["NguoiQuanLy"].ToString(),
-                        PhongBan = reader["PhongBan"].ToString(),
-                        ChucVu = reader["ChucVu"].ToString(),
-                        HoSoGioiThieu = reader["HoSoGioiThieu"].ToString(),
-                        TrangThai = Convert.ToInt32(reader["TrangThai"])
-                    };
-                    employees.Add(employee);
-                }
-                reader.Close();
-            }
-            return employees;
-        }
-        public ArrayList SearchEmployeeByName(string keyword)
-        {
-            ArrayList employees = new ArrayList();
-            using (SqlConnection connection = connectObj.connection())
-            {
-                SqlCommand command = new SqlCommand("SELECT * FROM NhanVien WHERE HoTen LIKE @Keyword", connection);
-                command.Parameters.AddWithValue("@Keyword", "%" + keyword + "%");
-                SqlDataReader reader = command.ExecuteReader();
-                
-                while (reader.Read())
-                {
-                    nhanviendto employee = new nhanviendto
-                    {
-                        MaNhanVien = reader["MaNhanVien"].ToString(),
-                        HoTen = reader["HoTen"].ToString(),
-                        NgaySinh = DateTime.Parse(reader["ngaysinh"].ToString()),
-                        GioiTinh = reader["GioiTinh"].ToString(),
-                        DiaChi = reader["DiaChi"].ToString(),
-                        Email = reader["Email"].ToString(),
-                        SDT = reader["SDT"].ToString(),
-                        NguoiQuanLy = reader["NguoiQuanLy"].ToString(),
-                        PhongBan = reader["PhongBan"].ToString(),
-                        ChucVu = reader["ChucVu"].ToString(),
-                        HoSoGioiThieu = reader["HoSoGioiThieu"].ToString(),
-                        TrangThai = Convert.ToInt32(reader["TrangThai"])
 
-                    };
-                    employees.Add(employee);
-                }
-                reader.Close();
-            }
-            return employees;
-        }
-        public ArrayList SearchEmployeeByPhoneNumber(string keyword)
-        {
-            ArrayList employees = new ArrayList();
-            using (SqlConnection connection = connectObj.connection())
-            {
-                SqlCommand command = new SqlCommand("SELECT * FROM NhanVien WHERE SDT LIKE @Keyword OR Email LIKE @Keyword", connection);
-                command.Parameters.AddWithValue("@Keyword", "%" + keyword + "%");
-                SqlDataReader reader = command.ExecuteReader();
-               
-                while (reader.Read())
-                {
-                    nhanviendto employee = new nhanviendto
-                    {
-                        MaNhanVien = reader["MaNhanVien"].ToString(),
-                        HoTen = reader["HoTen"].ToString(),
-                        NgaySinh = DateTime.Parse(reader["ngaysinh"].ToString()),
-                        GioiTinh = reader["GioiTinh"].ToString(),
-                        DiaChi = reader["DiaChi"].ToString(),
-                        Email = reader["Email"].ToString(),
-                        SDT = reader["SDT"].ToString(),
-                        NguoiQuanLy = reader["NguoiQuanLy"].ToString(),
-                        PhongBan = reader["PhongBan"].ToString(),
-                        ChucVu = reader["ChucVu"].ToString(),
-                        HoSoGioiThieu = reader["HoSoGioiThieu"].ToString(),
-                        TrangThai = Convert.ToInt32(reader["TrangThai"])
-
-                    };
-                    employees.Add(employee);
-                }
-                reader.Close();
-            }
-            return employees;
-        }
-
-
-        public void HideEmployee(nhanviendto employee)
+        public void DeleteNhanVien(nhanviendto employee)
         {
             using (SqlConnection connection = connectObj.connection())
             {
                 SqlCommand command = new SqlCommand();
                 command.CommandType = System.Data.CommandType.Text;
-                command.CommandText = "UPDATE NhanVien SET TrangThai = 0 WHERE MaNhanVien = @MaNhanVien";
+                command.CommandText = "DELETE FROM NhanVien WHERE MaNhanVien = @MaNhanVien";
                 command.Parameters.Add(new SqlParameter("@MaNhanVien", SqlDbType.NVarChar)).Value = employee.MaNhanVien;
                 command.Connection = connection;
                 command.ExecuteNonQuery();
             }
         }
-
-       
-
-        //public List<string> LoadMaTK()
-        //{
-        //    List<string> userIDs = new List<string>();
-        //    using (SqlConnection connection = connectObj.connection())
-        //    {
-        //        SqlCommand command = new SqlCommand("SELECT UserID FROM TaiKhoan WHERE TrangThai = 0", connection);
-        //        SqlDataReader reader = command.ExecuteReader();
-        //        while (reader.Read())
-        //        {
-        //            userIDs.Add(reader["UserID"].ToString());
-        //        }
-        //        reader.Close();
-        //    }
-        //    return userIDs;
-        //}
-
-        //public void ChangeStateHidden(nhanviendto employee)
-        //{
-        //    using (SqlConnection connection = connectObj.connection())
-        //    {
-        //        SqlCommand command = new SqlCommand("UPDATE TaiKhoan SET TrangThai = 0 FROM NhanVien JOIN TaiKhoan ON NhanVien.maTK = TaiKhoan.UserID WHERE NhanVien.maNV = @MaNV", connection);
-        //        command.Parameters.AddWithValue("@MaNhanVien", employee.MaNhanVien);
-        //        command.ExecuteNonQuery();
-        //    }
-        //}
-
-        //public void ChangeStateCurrent(nhanviendto employee)
-        //{
-        //    using (SqlConnection connection = connectObj.connection())
-        //    {
-        //        SqlCommand command = new SqlCommand("UPDATE TaiKhoan SET TrangThai = 1 FROM NhanVien JOIN TaiKhoan ON NhanVien.maTK = TaiKhoan.UserID WHERE NhanVien.maNV = @MaNV", connection);
-        //        command.Parameters.AddWithValue("@MaNhanVien", employee.MaNhanVien);
-        //        command.ExecuteNonQuery();
-        //    }
-        //}
 
     }
 }

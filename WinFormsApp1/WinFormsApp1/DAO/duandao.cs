@@ -81,62 +81,22 @@ namespace WinFormsApp1.DAO
             }
         }
 
-        public ArrayList SearchDuAnByID(string keyword)
+        public void DeleteDuAn(string maDuAn)
         {
-            ArrayList projects = new ArrayList();
             using (SqlConnection connection = connectObj.connection())
             {
-                SqlCommand command = new SqlCommand("SELECT * FROM DuAn WHERE MaDuAn LIKE @Keyword", connection);
-                command.Parameters.AddWithValue("@Keyword", "%" + keyword + "%");
-                SqlDataReader reader = command.ExecuteReader();
-
-                while (reader.Read())
+                if (connection.State == System.Data.ConnectionState.Closed)
                 {
-                    duandto project = new duandto
-                    {
-                        MaDuAn = reader["MaDuAn"].ToString(),
-                        TenDuAn = reader["TenDuAn"].ToString(),
-                        MoTa = reader["MoTa"].ToString(),
-                        NgayBatDau = Convert.ToDateTime(reader["NgayBatDau"]),
-                        NgayKetThuc = Convert.ToDateTime(reader["NgayKetThuc"]),
-                        QuanLyDuAn = reader["QuanLyDuAn"].ToString(),
-                        PhongBanPhuTrach = reader["PhongBanPhuTrach"].ToString(),
-                        TrangThai = Convert.ToInt32(reader["TrangThai"])
-                    };
-                    projects.Add(project);
+                    connection.Open();
                 }
-                reader.Close();
-            }
-            return projects;
-        }
 
-        public ArrayList SearchDuAnByName(string keyword)
-        {
-            ArrayList projects = new ArrayList();
-            using (SqlConnection connection = connectObj.connection())
-            {
-                SqlCommand command = new SqlCommand("SELECT * FROM DuAn WHERE TenDuAn LIKE @Keyword", connection);
-                command.Parameters.AddWithValue("@Keyword", "%" + keyword + "%");
-                SqlDataReader reader = command.ExecuteReader();
+                // Xóa phòng ban theo mã phòng ban (MaDuAn)
+                SqlCommand command = new SqlCommand("DELETE FROM DuAN WHERE MaDuAN = @MaDuAn", connection);
+                command.Parameters.AddWithValue("@MaDuAn", maDuAn);
 
-                while (reader.Read())
-                {
-                    duandto project = new duandto
-                    {
-                        MaDuAn = reader["MaDuAn"].ToString(),
-                        TenDuAn = reader["TenDuAn"].ToString(),
-                        MoTa = reader["MoTa"].ToString(),
-                        NgayBatDau = Convert.ToDateTime(reader["NgayBatDau"]),
-                        NgayKetThuc = Convert.ToDateTime(reader["NgayKetThuc"]),
-                        QuanLyDuAn = reader["QuanLyDuAn"].ToString(),
-                        PhongBanPhuTrach = reader["PhongBanPhuTrach"].ToString(),
-                        TrangThai = Convert.ToInt32(reader["TrangThai"])
-                    };
-                    projects.Add(project);
-                }
-                reader.Close();
+                command.ExecuteNonQuery();
+                connection.Close();
             }
-            return projects;
         }
     }
 }

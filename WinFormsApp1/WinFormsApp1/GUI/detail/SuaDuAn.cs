@@ -23,15 +23,6 @@ public partial class SuaDuAn : Form
         txtPhongBan.Text = selectedProject.PhongBanPhuTrach.Trim();
         dtpNgayBatDau.Value = selectedProject.NgayBatDau;
         dtpNgayKetThuc.Value = selectedProject.NgayKetThuc;
-
-        if (SelectedProject.TrangThai == 1)
-        {
-            rdbHien.Checked = true;
-        }
-        else if (SelectedProject.TrangThai == 0)
-        {
-            rdbAn.Checked = true;
-        }
     }
 
     private void SuaDuAn_Load(object sender, EventArgs e)
@@ -39,15 +30,8 @@ public partial class SuaDuAn : Form
 
     }
 
-    private void btnHuy_Click(object sender, EventArgs e)
-    {
-        if (MessageBox.Show("Bạn có chắc chắn muốn hủy không?", "Xác nhận hủy", MessageBoxButtons.YesNo) == DialogResult.Yes)
-        {
-            this.DialogResult = DialogResult.Cancel;
-        }
-    }
 
-    private void btnSua_Click(object sender, EventArgs e)
+    private void btnSua_Click_1(object sender, EventArgs e)
     {
         if (string.IsNullOrWhiteSpace(txtTenDuAn.Text))
         {
@@ -68,10 +52,6 @@ public partial class SuaDuAn : Form
             MessageBox.Show("Hãy nhập mã quản lý dự án!");
             txtQuanLyDuAn.Focus();
         }
-        else if (!rdbHien.Checked && !rdbAn.Checked)
-        {
-            MessageBox.Show("Hãy chọn trạng thái của dự án!");
-        }
         else
         {
             duandto projectDTO = new duandto
@@ -82,8 +62,7 @@ public partial class SuaDuAn : Form
                 NgayBatDau = dtpNgayBatDau.Value,
                 NgayKetThuc = dtpNgayKetThuc.Value,
                 QuanLyDuAn = txtQuanLyDuAn.Text.Trim(),
-                PhongBanPhuTrach = txtPhongBan.Text.Trim(),
-                TrangThai = rdbHien.Checked ? 1 : 0
+                PhongBanPhuTrach = txtPhongBan.Text.Trim()
             };
 
             try
@@ -96,6 +75,14 @@ public partial class SuaDuAn : Form
             {
                 MessageBox.Show("Có lỗi xảy ra trong quá trình chỉnh sửa: " + ex.Message);
             }
+        }
+    }
+
+    private void btnHuy_Click_1(object sender, EventArgs e)
+    {
+        if (MessageBox.Show("Bạn có chắc chắn muốn hủy không?", "Xác nhận hủy", MessageBoxButtons.YesNo) == DialogResult.Yes)
+        {
+            this.DialogResult = DialogResult.Cancel;
         }
     }
 }

@@ -85,39 +85,6 @@ namespace WinFormsApp1.DAO
             }
         }
 
-        public List<phongbandto> SearchPhongBanByTen(string keyword)
-        {
-            List<phongbandto> departments = new List<phongbandto>();
-
-            using (SqlConnection connection = connectObj.connection())
-            {
-                if (connection.State == System.Data.ConnectionState.Closed)
-                {
-                    connection.Open();
-                }
-
-                SqlCommand command = new SqlCommand("SELECT * FROM PhongBan WHERE TenPhongBan LIKE @Keyword", connection);
-                command.Parameters.AddWithValue("@Keyword", "%" + keyword + "%");
-
-                SqlDataReader reader = command.ExecuteReader();
-
-                while (reader.Read())
-                {
-                    phongbandto department = new phongbandto
-                    {
-                        MaPhongBan = reader["MaPhongBan"].ToString(),
-                        TenPhongBan = reader["TenPhongBan"].ToString(),
-                        MoTa = reader["MoTa"].ToString(),
-                        TruongPhong = reader["TruongPhong"].ToString(),
-                        TrangThai = Convert.ToInt32(reader["TrangThai"])
-                    };
-                    departments.Add(department);
-                }
-                reader.Close();
-            }
-
-            return departments;
-        }
 
         public void DeletePhongBan(string maPhongBan)
         {
