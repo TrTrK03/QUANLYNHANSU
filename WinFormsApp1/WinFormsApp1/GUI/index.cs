@@ -7,6 +7,7 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using WinFormsApp1.GUI;
 using WinFormsApp1.GUI.NewFolder;
+using WinFormsApp1.BUS;
 namespace WinFormsApp1
 {
     public partial class index : Form
@@ -30,9 +31,9 @@ namespace WinFormsApp1
         {
             InitializeComponent();
             //Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
-            panNav.Height = home.Height;
-            panNav.Top = home.Top;
-            panNav.Left = home.Left;
+            //panNav.Height = home.Height;
+            //panNav.Top = home.Top;
+            //panNav.Left = home.Left;
             //home.BackColor = Color.FromArgb(46, 51, 73);
             //nhanviengui usctr = new nhanviengui();
             //Controls.Add(usctr);
@@ -45,10 +46,10 @@ namespace WinFormsApp1
 
         private void home_Click(object sender, EventArgs e)
         {
-            panNav.Height = home.Height;
-            panNav.Top = home.Top;
-            panNav.Left = home.Left;
-            home.BackColor = Color.FromArgb(46, 51, 73);
+            //panNav.Height = home.Height;
+            //panNav.Top = home.Top;
+            //panNav.Left = home.Left;
+            //home.BackColor = Color.FromArgb(46, 51, 73);
 
 
         }
@@ -58,6 +59,11 @@ namespace WinFormsApp1
             panNav.Top = chamcong.Top;
             panNav.Left = chamcong.Left;
             chamcong.BackColor = Color.FromArgb(46, 51, 73);
+            panel5.Controls.Clear();
+            chamconggui ccgui = new chamconggui();
+
+            panel5.Controls.Add(ccgui);
+            ccgui.Dock = DockStyle.Fill;
         }
         private void nhanvien_Click(object sender, EventArgs e)
         {
@@ -122,12 +128,16 @@ namespace WinFormsApp1
             tb.Dock = DockStyle.Fill;
         }
 
-        private void baohiem_Click(object sender, EventArgs e)
+        private void phucloi_Click(object sender, EventArgs e)
         {
-            panNav.Height = baohiem.Height;
-            panNav.Top = baohiem.Top;
-            panNav.Left = baohiem.Left;
-            baohiem.BackColor = Color.FromArgb(46, 51, 73);
+            panNav.Height = phucloi.Height;
+            panNav.Top = phucloi.Top;
+            panNav.Left = phucloi.Left;
+            phucloi.BackColor = Color.FromArgb(46, 51, 73);
+            panel5.Controls.Clear();
+            phucloigui pl = new phucloigui();
+            panel5.Controls.Add(pl);
+            pl.Dock = DockStyle.Fill;
         }
 
         private void tuyendung_Click(object sender, EventArgs e)
@@ -164,7 +174,7 @@ namespace WinFormsApp1
 
         private void home_Leave(object sender, EventArgs e)
         {
-            home.BackColor = Color.FromArgb(24, 30, 54);
+            //home.BackColor = Color.FromArgb(24, 30, 54);
         }
 
         private void phongban_Leave(object sender, EventArgs e)
@@ -187,9 +197,9 @@ namespace WinFormsApp1
             thongbao.BackColor = Color.FromArgb(24, 30, 54);
         }
 
-        private void baohiem_Leave(object sender, EventArgs e)
+        private void phucloi_Leave(object sender, EventArgs e)
         {
-            baohiem.BackColor = Color.FromArgb(24, 30, 54);
+            phucloi.BackColor = Color.FromArgb(24, 30, 54);
         }
 
         private void bangluong_Leave(object sender, EventArgs e)

@@ -1,16 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Compile Update="GUI\chamconggui.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="GUI\detail\SuaDuAn.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="GUI\detail\SuaNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="GUI\detail\SuaPhucLoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="GUI\detail\TaoDuAn.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="GUI\detail\TaoNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\detail\TaoPhucLoi.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="GUI\duangui.cs">
@@ -56,6 +65,9 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="GUI\nhanviengui.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="GUI\phucloigui.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="GUI\reward\khenThuongGUI.cs">

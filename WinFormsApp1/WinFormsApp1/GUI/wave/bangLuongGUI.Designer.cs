@@ -47,7 +47,7 @@
             groupBox1.Controls.Add(dataWage);
             groupBox1.Location = new Point(18, 143);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(934, 413);
+            groupBox1.Size = new Size(1023, 492);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Danh sách bảng lương";
@@ -58,7 +58,7 @@
             dataWage.Location = new Point(33, 35);
             dataWage.Name = "dataWage";
             dataWage.RowHeadersWidth = 51;
-            dataWage.Size = new Size(865, 335);
+            dataWage.Size = new Size(970, 451);
             dataWage.TabIndex = 0;
             dataWage.CellContentClick += dataWage_CellContentClick;
             // 
@@ -72,7 +72,7 @@
             groupBox2.Controls.Add(addWave);
             groupBox2.Location = new Point(18, 12);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(952, 97);
+            groupBox2.Size = new Size(1023, 97);
             groupBox2.TabIndex = 1;
             groupBox2.TabStop = false;
             groupBox2.Text = "Chức năng";
@@ -89,7 +89,7 @@
             // 
             // searchWage
             // 
-            searchWage.Location = new Point(588, 41);
+            searchWage.Location = new Point(626, 41);
             searchWage.Name = "searchWage";
             searchWage.PlaceholderText = "Tìm kiếm theo mã hoặc tên ";
             searchWage.Size = new Size(248, 27);
@@ -98,7 +98,7 @@
             // searchWaveByEmployee
             // 
             searchWaveByEmployee.Image = Properties.Resources.search;
-            searchWaveByEmployee.Location = new Point(862, 33);
+            searchWaveByEmployee.Location = new Point(908, 34);
             searchWaveByEmployee.Name = "searchWaveByEmployee";
             searchWaveByEmployee.Size = new Size(84, 41);
             searchWaveByEmployee.TabIndex = 3;
@@ -143,7 +143,7 @@
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Name = "bangLuongGUI";
-            Size = new Size(1000, 600);
+            Size = new Size(1060, 638);
             groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataWage).EndInit();
             groupBox2.ResumeLayout(false);

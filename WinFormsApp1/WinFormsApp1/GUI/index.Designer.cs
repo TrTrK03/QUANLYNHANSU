@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            khenthuong = new Button();
             panNav = new Panel();
             chamcong = new Button();
             nhanvien = new Button();
             bangluong = new Button();
-            baohiem = new Button();
+            phucloi = new Button();
             thongbao = new Button();
             tuyendung = new Button();
             duan = new Button();
             phongban = new Button();
-            home = new Button();
             panel2 = new Panel();
             panel4 = new Panel();
             label1 = new Label();
@@ -46,7 +46,6 @@
             fontDialog1 = new FontDialog();
             panel3 = new Panel();
             panel5 = new Panel();
-            khenthuong = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -60,12 +59,11 @@
             panel1.Controls.Add(chamcong);
             panel1.Controls.Add(nhanvien);
             panel1.Controls.Add(bangluong);
-            panel1.Controls.Add(baohiem);
+            panel1.Controls.Add(phucloi);
             panel1.Controls.Add(thongbao);
             panel1.Controls.Add(tuyendung);
             panel1.Controls.Add(duan);
             panel1.Controls.Add(phongban);
-            panel1.Controls.Add(home);
             panel1.Controls.Add(panel2);
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
@@ -73,6 +71,25 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(143, 713);
             panel1.TabIndex = 0;
+            // 
+            // khenthuong
+            // 
+            khenthuong.Dock = DockStyle.Top;
+            khenthuong.FlatAppearance.BorderSize = 0;
+            khenthuong.FlatStyle = FlatStyle.Flat;
+            khenthuong.ForeColor = Color.FromArgb(192, 192, 255);
+            khenthuong.Image = Properties.Resources.home;
+            khenthuong.ImageAlign = ContentAlignment.MiddleLeft;
+            khenthuong.Location = new Point(0, 615);
+            khenthuong.Margin = new Padding(2);
+            khenthuong.Name = "khenthuong";
+            khenthuong.Size = new Size(143, 64);
+            khenthuong.TabIndex = 4;
+            khenthuong.Text = "Khen Thưởng";
+            khenthuong.TextAlign = ContentAlignment.MiddleRight;
+            khenthuong.TextImageRelation = TextImageRelation.TextBeforeImage;
+            khenthuong.UseVisualStyleBackColor = true;
+            khenthuong.Click += button1_Click;
             // 
             // panNav
             // 
@@ -91,7 +108,7 @@
             chamcong.ForeColor = Color.FromArgb(192, 192, 255);
             chamcong.Image = Properties.Resources.home;
             chamcong.ImageAlign = ContentAlignment.MiddleLeft;
-            chamcong.Location = new Point(0, 615);
+            chamcong.Location = new Point(0, 551);
             chamcong.Margin = new Padding(2);
             chamcong.Name = "chamcong";
             chamcong.Size = new Size(143, 64);
@@ -111,7 +128,7 @@
             nhanvien.ForeColor = Color.FromArgb(192, 192, 255);
             nhanvien.Image = Properties.Resources.home;
             nhanvien.ImageAlign = ContentAlignment.MiddleLeft;
-            nhanvien.Location = new Point(0, 551);
+            nhanvien.Location = new Point(0, 487);
             nhanvien.Margin = new Padding(2);
             nhanvien.Name = "nhanvien";
             nhanvien.Size = new Size(143, 64);
@@ -131,7 +148,7 @@
             bangluong.ForeColor = Color.FromArgb(192, 192, 255);
             bangluong.Image = Properties.Resources.home;
             bangluong.ImageAlign = ContentAlignment.MiddleLeft;
-            bangluong.Location = new Point(0, 487);
+            bangluong.Location = new Point(0, 423);
             bangluong.Margin = new Padding(2);
             bangluong.Name = "bangluong";
             bangluong.Size = new Size(143, 64);
@@ -143,25 +160,25 @@
             bangluong.Click += bangluong_Click;
             bangluong.Leave += bangluong_Leave;
             // 
-            // baohiem
+            // phucloi
             // 
-            baohiem.Dock = DockStyle.Top;
-            baohiem.FlatAppearance.BorderSize = 0;
-            baohiem.FlatStyle = FlatStyle.Flat;
-            baohiem.ForeColor = Color.FromArgb(192, 192, 255);
-            baohiem.Image = Properties.Resources.home;
-            baohiem.ImageAlign = ContentAlignment.MiddleLeft;
-            baohiem.Location = new Point(0, 423);
-            baohiem.Margin = new Padding(2);
-            baohiem.Name = "baohiem";
-            baohiem.Size = new Size(143, 64);
-            baohiem.TabIndex = 2;
-            baohiem.Text = "Bảo hiểm";
-            baohiem.TextAlign = ContentAlignment.MiddleRight;
-            baohiem.TextImageRelation = TextImageRelation.TextBeforeImage;
-            baohiem.UseVisualStyleBackColor = true;
-            baohiem.Click += baohiem_Click;
-            baohiem.Leave += baohiem_Leave;
+            phucloi.Dock = DockStyle.Top;
+            phucloi.FlatAppearance.BorderSize = 0;
+            phucloi.FlatStyle = FlatStyle.Flat;
+            phucloi.ForeColor = Color.FromArgb(192, 192, 255);
+            phucloi.Image = Properties.Resources.home;
+            phucloi.ImageAlign = ContentAlignment.MiddleLeft;
+            phucloi.Location = new Point(0, 359);
+            phucloi.Margin = new Padding(2);
+            phucloi.Name = "phucloi";
+            phucloi.Size = new Size(143, 64);
+            phucloi.TabIndex = 2;
+            phucloi.Text = "Phúc Lợi";
+            phucloi.TextAlign = ContentAlignment.MiddleRight;
+            phucloi.TextImageRelation = TextImageRelation.TextBeforeImage;
+            phucloi.UseVisualStyleBackColor = true;
+            phucloi.Click += phucloi_Click;
+            phucloi.Leave += phucloi_Leave;
             // 
             // thongbao
             // 
@@ -171,7 +188,7 @@
             thongbao.ForeColor = Color.FromArgb(192, 192, 255);
             thongbao.Image = Properties.Resources.home;
             thongbao.ImageAlign = ContentAlignment.MiddleLeft;
-            thongbao.Location = new Point(0, 359);
+            thongbao.Location = new Point(0, 295);
             thongbao.Margin = new Padding(2);
             thongbao.Name = "thongbao";
             thongbao.Size = new Size(143, 64);
@@ -191,7 +208,7 @@
             tuyendung.ForeColor = Color.FromArgb(192, 192, 255);
             tuyendung.Image = Properties.Resources.home;
             tuyendung.ImageAlign = ContentAlignment.MiddleLeft;
-            tuyendung.Location = new Point(0, 295);
+            tuyendung.Location = new Point(0, 231);
             tuyendung.Margin = new Padding(2);
             tuyendung.Name = "tuyendung";
             tuyendung.Size = new Size(143, 64);
@@ -211,7 +228,7 @@
             duan.ForeColor = Color.FromArgb(192, 192, 255);
             duan.Image = Properties.Resources.home;
             duan.ImageAlign = ContentAlignment.MiddleLeft;
-            duan.Location = new Point(0, 231);
+            duan.Location = new Point(0, 167);
             duan.Margin = new Padding(2);
             duan.Name = "duan";
             duan.Size = new Size(143, 64);
@@ -231,7 +248,7 @@
             phongban.ForeColor = Color.FromArgb(192, 192, 255);
             phongban.Image = Properties.Resources.home;
             phongban.ImageAlign = ContentAlignment.MiddleLeft;
-            phongban.Location = new Point(0, 167);
+            phongban.Location = new Point(0, 103);
             phongban.Margin = new Padding(2);
             phongban.Name = "phongban";
             phongban.Size = new Size(143, 64);
@@ -242,27 +259,6 @@
             phongban.UseVisualStyleBackColor = true;
             phongban.Click += phongban_Click;
             phongban.Leave += phongban_Leave;
-            // 
-            // home
-            // 
-            home.BackColor = Color.FromArgb(24, 30, 54);
-            home.Dock = DockStyle.Top;
-            home.FlatAppearance.BorderSize = 0;
-            home.FlatStyle = FlatStyle.Flat;
-            home.ForeColor = Color.FromArgb(192, 192, 255);
-            home.Image = Properties.Resources.home;
-            home.ImageAlign = ContentAlignment.MiddleLeft;
-            home.Location = new Point(0, 103);
-            home.Margin = new Padding(2);
-            home.Name = "home";
-            home.Size = new Size(143, 64);
-            home.TabIndex = 2;
-            home.Text = "Dashboard  ";
-            home.TextAlign = ContentAlignment.MiddleRight;
-            home.TextImageRelation = TextImageRelation.TextBeforeImage;
-            home.UseVisualStyleBackColor = false;
-            home.Click += home_Click;
-            home.Leave += home_Leave;
             // 
             // panel2
             // 
@@ -329,25 +325,6 @@
             panel5.Size = new Size(1037, 713);
             panel5.TabIndex = 2;
             // 
-            // khenthuong
-            // 
-            khenthuong.Dock = DockStyle.Top;
-            khenthuong.FlatAppearance.BorderSize = 0;
-            khenthuong.FlatStyle = FlatStyle.Flat;
-            khenthuong.ForeColor = Color.FromArgb(192, 192, 255);
-            khenthuong.Image = Properties.Resources.home;
-            khenthuong.ImageAlign = ContentAlignment.MiddleLeft;
-            khenthuong.Location = new Point(0, 679);
-            khenthuong.Margin = new Padding(2);
-            khenthuong.Name = "khenthuong";
-            khenthuong.Size = new Size(143, 64);
-            khenthuong.TabIndex = 4;
-            khenthuong.Text = "Khen Thưởng";
-            khenthuong.TextAlign = ContentAlignment.MiddleRight;
-            khenthuong.TextImageRelation = TextImageRelation.TextBeforeImage;
-            khenthuong.UseVisualStyleBackColor = true;
-            khenthuong.Click += button1_Click;
-            // 
             // index
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -377,7 +354,6 @@
         private PictureBox pictureBox1;
         private Label label1;
         private FontDialog fontDialog1;
-        private Button home;
         private Button tuyendung;
         private Button duan;
         private Button phongban;
@@ -386,7 +362,7 @@
         private Button bangluong;
         private Button thongbao;
         private Panel panNav;
-        private Button baohiem;
+        private Button phucloi;
         private Panel panel3;
         private Panel panel4;
         private Panel panel5;
