@@ -68,10 +68,10 @@ namespace WinFormsApp1.GUI.detail
         {
             return index switch
             {
-                < 1 => "DA0000" + index,
                 < 10 => "DA000" + index,
                 < 100 => "DA00" + index,
                 < 1000 => "DA0" + index,
+                < 10000 => "DA" + index,
                 _ => "DA" + index
             };
         }

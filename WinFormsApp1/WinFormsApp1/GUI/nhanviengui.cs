@@ -38,7 +38,7 @@ namespace WinFormsApp1.GUI
         private Button Import;
         private Button export;
         private Button Tao;
-        private TextBox txtSearch;
+        public TextBox txtSearch;
         private Label label1;
         private OpenFileDialog openFileDialog1;
         private Panel panel5;
@@ -356,6 +356,11 @@ namespace WinFormsApp1.GUI
             {
                 MessageBox.Show($"Lỗi khi hiển thị form: {ex.Message}");
             }
+        }
+
+        public void SetSearchMaPB(string maPhongBan)
+        {
+            txtSearch.Text = maPhongBan;
         }
 
         private void nhanviengui_MouseClick(object sender, MouseEventArgs e)

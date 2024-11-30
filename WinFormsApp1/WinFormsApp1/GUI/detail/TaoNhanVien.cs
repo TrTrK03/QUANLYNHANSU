@@ -77,10 +77,10 @@ namespace WinFormsApp1.GUI.detail
         {
             return index switch
             {
-                < 10 => "NV0000" + index,
-                < 100 => "NV000" + index,
-                < 1000 => "NV00" + index,
-                < 10000 => "NV0" + index,
+                < 10 => "NV000" + index,
+                < 100 => "NV00" + index,
+                < 1000 => "NV0" + index,
+                < 10000 => "NV" + index,
                 _ => "NV" + index
             };
         }
