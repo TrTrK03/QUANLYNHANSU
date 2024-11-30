@@ -59,13 +59,13 @@ namespace WinFormsApp1.GUI.Info
             panel7.ForeColor = Color.FromArgb(49, 17, 117);
             panel7.Location = new Point(0, 0);
             panel7.Name = "panel7";
-            panel7.Size = new Size(800, 450);
+            panel7.Size = new Size(649, 282);
             panel7.TabIndex = 8;
             // 
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.Untitled2;
-            pictureBox1.Location = new Point(31, 115);
+            pictureBox1.Location = new Point(12, 21);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(202, 228);
             pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
@@ -75,7 +75,7 @@ namespace WinFormsApp1.GUI.Info
             // txtTenPB
             // 
             txtTenPB.Enabled = false;
-            txtTenPB.Location = new Point(406, 173);
+            txtTenPB.Location = new Point(387, 79);
             txtTenPB.Name = "txtTenPB";
             txtTenPB.ReadOnly = true;
             txtTenPB.Size = new Size(233, 27);
@@ -84,17 +84,17 @@ namespace WinFormsApp1.GUI.Info
             // txtMoTa
             // 
             txtMoTa.Enabled = false;
-            txtMoTa.Location = new Point(406, 259);
+            txtMoTa.Location = new Point(387, 165);
             txtMoTa.Multiline = true;
             txtMoTa.Name = "txtMoTa";
             txtMoTa.ReadOnly = true;
-            txtMoTa.Size = new Size(233, 27);
+            txtMoTa.Size = new Size(233, 84);
             txtMoTa.TabIndex = 2;
             // 
             // txtTruongPhong
             // 
             txtTruongPhong.Enabled = false;
-            txtTruongPhong.Location = new Point(406, 218);
+            txtTruongPhong.Location = new Point(387, 124);
             txtTruongPhong.Name = "txtTruongPhong";
             txtTruongPhong.ReadOnly = true;
             txtTruongPhong.Size = new Size(233, 27);
@@ -103,7 +103,7 @@ namespace WinFormsApp1.GUI.Info
             // txtMaPB
             // 
             txtMaPB.Enabled = false;
-            txtMaPB.Location = new Point(406, 131);
+            txtMaPB.Location = new Point(387, 37);
             txtMaPB.Name = "txtMaPB";
             txtMaPB.ReadOnly = true;
             txtMaPB.Size = new Size(233, 27);
@@ -112,7 +112,7 @@ namespace WinFormsApp1.GUI.Info
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(349, 259);
+            label9.Location = new Point(330, 165);
             label9.Name = "label9";
             label9.Size = new Size(51, 20);
             label9.TabIndex = 1;
@@ -121,7 +121,7 @@ namespace WinFormsApp1.GUI.Info
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(295, 218);
+            label7.Location = new Point(276, 124);
             label7.Name = "label7";
             label7.Size = new Size(105, 20);
             label7.TabIndex = 1;
@@ -130,7 +130,7 @@ namespace WinFormsApp1.GUI.Info
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(292, 176);
+            label3.Location = new Point(273, 82);
             label3.Name = "label3";
             label3.Size = new Size(110, 20);
             label3.TabIndex = 1;
@@ -139,7 +139,7 @@ namespace WinFormsApp1.GUI.Info
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(292, 134);
+            label2.Location = new Point(273, 40);
             label2.Name = "label2";
             label2.Size = new Size(108, 20);
             label2.TabIndex = 1;
@@ -149,7 +149,7 @@ namespace WinFormsApp1.GUI.Info
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(649, 282);
             Controls.Add(panel7);
             Name = "PhongBanInfo";
             Text = "PhongBanInfo";

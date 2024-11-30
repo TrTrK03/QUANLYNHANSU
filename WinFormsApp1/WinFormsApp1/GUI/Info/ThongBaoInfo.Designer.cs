@@ -78,8 +78,9 @@
             // 
             txtNoiDung.Enabled = false;
             txtNoiDung.Location = new Point(408, 174);
+            txtNoiDung.Multiline = true;
             txtNoiDung.Name = "txtNoiDung";
-            txtNoiDung.Size = new Size(344, 27);
+            txtNoiDung.Size = new Size(344, 70);
             txtNoiDung.TabIndex = 2;
             // 
             // txtNguoiBanHanh

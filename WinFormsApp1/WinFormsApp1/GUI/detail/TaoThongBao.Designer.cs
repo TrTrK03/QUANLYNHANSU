@@ -45,11 +45,11 @@
             // 
             labelTitle.AutoSize = true;
             labelTitle.Font = new Font("Segoe UI", 30F, FontStyle.Bold);
-            labelTitle.Location = new Point(195, 30);
+            labelTitle.Location = new Point(116, 28);
             labelTitle.Name = "labelTitle";
-            labelTitle.Size = new Size(279, 67);
+            labelTitle.Size = new Size(385, 67);
             labelTitle.TabIndex = 0;
-            labelTitle.Text = "Tạo Dự Án";
+            labelTitle.Text = "Tạo Thông Báo";
             // 
             // txtMaThongBao
             // 
@@ -171,7 +171,7 @@
             Controls.Add(btnTao);
             Margin = new Padding(3, 4, 3, 4);
             Name = "TaoThongBao";
-            Text = "Tạo Dự Án";
+            Text = "Tạo Thông Báo";
             ResumeLayout(false);
             PerformLayout();
         }
