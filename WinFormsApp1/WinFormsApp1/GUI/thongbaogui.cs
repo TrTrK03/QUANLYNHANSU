@@ -411,103 +411,103 @@ namespace WinFormsApp1.GUI
 
         private void edit_Click(object sender, EventArgs e)
         {// Lấy danh sách các MaPhongBan từ các dòng có checkbox được chọn
-            //var selectedThongBaos = dataGridView1.Rows
-            //    .Cast<DataGridViewRow>()
-            //    .Where(row => Convert.ToBoolean(row.Cells["Check"].Value) == true)
-            //    .Select(row => row.Cells["Ma Thong Bao"].Value.ToString())
-            //    .ToList();
+            var selectedThongBaos = dataGridView1.Rows
+                .Cast<DataGridViewRow>()
+                .Where(row => Convert.ToBoolean(row.Cells["Check"].Value) == true)
+                .Select(row => row.Cells["Ma Thong Bao"].Value.ToString())
+                .ToList();
 
-            //// Nếu không có dòng nào được chọn
-            //if (!selectedThongBaos.Any())
-            //{
-            //    MessageBox.Show("Chọn ít nhất một Dự Án để chỉnh sửa!");
-            //    return;
-            //}
+            // Nếu không có dòng nào được chọn
+            if (!selectedThongBaos.Any())
+            {
+                MessageBox.Show("Chọn ít nhất một Dự Án để chỉnh sửa!");
+                return;
+            }
 
-            //// Duyệt qua danh sách các MaPhongBan đã chọn
-            //foreach (string MaThongBao in selectedThongBaos)
-            //{
-            //    var selectedThongBao = thongbaos.FirstOrDefault(ThongBao => ThongBao.MaThongBao == MaThongBao);
+            // Duyệt qua danh sách các MaPhongBan đã chọn
+            foreach (string MaThongBao in selectedThongBaos)
+            {
+                var selectedThongBao = thongbaos.FirstOrDefault(ThongBao => ThongBao.MaThongBao == MaThongBao);
 
-            //    if (selectedThongBao != null)
-            //    {
-            //        // Tạo và hiển thị form chỉnh sửa
-            //        SuaThongBao suaThongBaoForm = new SuaThongBao(selectedThongBao);
-            //        suaThongBaoForm.StartPosition = FormStartPosition.CenterParent;
-            //        suaThongBaoForm.ShowDialog();
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show($"Không tìm thấy Phòng Ban với mã '{MaThongBao}'!");
-            //    }
-            //}
-            //// Làm mới lại danh sách phongbans (cập nhật từ cơ sở dữ liệu hoặc phương thức lấy dữ liệu)
-            //thongbaos = thongbaobus.GetThongBao(); // Lấy lại dữ liệu sau khi xóa
-            //// Tải lại dữ liệu sau khi xóa
-            //LoadDataToGUI();
+                if (selectedThongBao != null)
+                {
+                    // Tạo và hiển thị form chỉnh sửa
+                    SuaThongBao suaThongBaoForm = new SuaThongBao(selectedThongBao);
+                    suaThongBaoForm.StartPosition = FormStartPosition.CenterParent;
+                    suaThongBaoForm.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show($"Không tìm thấy Phòng Ban với mã '{MaThongBao}'!");
+                }
+            }
+            // Làm mới lại danh sách phongbans (cập nhật từ cơ sở dữ liệu hoặc phương thức lấy dữ liệu)
+            thongbaos = thongbaobus.GetThongBao(); // Lấy lại dữ liệu sau khi xóa
+            // Tải lại dữ liệu sau khi xóa
+            LoadDataToGUI();
         }
 
         private void Tao_Click(object sender, EventArgs e)
         {
-            //TaoThongBao interf = new TaoThongBao();
-            //interf.ShowDialog();
-            //thongbaos = thongbaobus.GetThongBao(); // Lấy lại dữ liệu sau khi xóa
-            //LoadDataToGUI();
+            TaoThongBao interf = new TaoThongBao();
+            interf.ShowDialog();
+            thongbaos = thongbaobus.GetThongBao(); // Lấy lại dữ liệu sau khi xóa
+            LoadDataToGUI();
         }
 
         private void Import_Click(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    OpenFileDialog openFileDialog = new OpenFileDialog
-            //    {
-            //        Title = "Chọn tệp Excel",
-            //        Filter = "Excel Files (*.xlsx;*.xls)|*.xlsx;*.xls|All Files (*.*)|*.*",
-            //        InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop)
-            //    };
+            try
+            {
+                OpenFileDialog openFileDialog = new OpenFileDialog
+                {
+                    Title = "Chọn tệp Excel",
+                    Filter = "Excel Files (*.xlsx;*.xls)|*.xlsx;*.xls|All Files (*.*)|*.*",
+                    InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop)
+                };
 
-            //    if (openFileDialog.ShowDialog() == DialogResult.OK)
-            //    {
-            //        string filePath = openFileDialog.FileName;
-            //        Import im = new Import();
-            //        im.ImportTBByExcel(filePath);
-            //        MessageBox.Show("Import dữ liệu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //        LoadDataToGUI();
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("Bạn đã hủy chọn file.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show($"Đã xảy ra lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    string filePath = openFileDialog.FileName;
+                    Import im = new Import();
+                    im.ImportThongBaoByExcel(filePath);
+                    MessageBox.Show("Import dữ liệu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadDataToGUI();
+                }
+                else
+                {
+                    MessageBox.Show("Bạn đã hủy chọn file.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Đã xảy ra lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void export_Click(object sender, EventArgs e)
         {
-            //    SaveFileDialog saveFileDialog = new SaveFileDialog
-            //    {
-            //        Title = "Chọn vị trí lưu file",
-            //        Filter = "Excel Files (*.xlsx)|*.xlsx|Text Files (*.txt)|*.txt|All Files (*.*)|*.*",
-            //        DefaultExt = "xlsx",
-            //        AddExtension = true,
-            //        InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop)
-            //    };
+            SaveFileDialog saveFileDialog = new SaveFileDialog
+            {
+                Title = "Chọn vị trí lưu file",
+                Filter = "Excel Files (*.xlsx)|*.xlsx|Text Files (*.txt)|*.txt|All Files (*.*)|*.*",
+                DefaultExt = "xlsx",
+                AddExtension = true,
+                InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop)
+            };
 
-            //    if (saveFileDialog.ShowDialog() == DialogResult.OK)
-            //    {
-            //        string filePath = saveFileDialog.FileName;
-            //        MessageBox.Show($"File sẽ được lưu tại: {filePath}", "Thông báo");
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string filePath = saveFileDialog.FileName;
+                MessageBox.Show($"File sẽ được lưu tại: {filePath}", "Thông báo");
 
-            //        export ex = new export();
-            //        ex.SaveTBToExcel(filePath);
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("Bạn đã hủy lưu file.", "Thông báo");
-            //    }
+                export ex = new export();
+                ex.SaveThongBaoToExcel(filePath);
+            }
+            else
+            {
+                MessageBox.Show("Bạn đã hủy lưu file.", "Thông báo");
+            }
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)

@@ -18,6 +18,8 @@ namespace WinFormsApp1.Exports
         nhanvienbus employeeBUS = new nhanvienbus();
         duandto projectDTO = new duandto();
         duanbus projectBUS = new duanbus();
+        thongbaobus thongbaobus = new thongbaobus();
+        thongbaodto thongbaodto = new thongbaodto();
 
         // Export employee data to Excel
         public void SaveEmployeeToExcel(string filePath)
@@ -147,5 +149,60 @@ namespace WinFormsApp1.Exports
                 MessageBox.Show($"Đã xảy ra lỗi khi lưu file Excel: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        public void SaveThongBaoToExcel(string filePath)
+        {
+            List<thongbaodto> thongbaos = thongbaobus.GetThongBao(); // Giả sử bạn có phương thức để lấy danh sách thông báo
+            try
+            {
+                ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.Commercial;
+
+                using (ExcelPackage package = new ExcelPackage())
+                {
+                    var worksheet = package.Workbook.Worksheets.Add("ThongBao");
+
+                    // Header for thongbao data
+                    worksheet.Cells[1, 1].Value = "Mã Thông Báo";
+                    worksheet.Cells[1, 2].Value = "Nội Dung";
+                    worksheet.Cells[1, 3].Value = "Người Ban Hành";
+                    worksheet.Cells[1, 4].Value = "Ngày Ban Hành";
+                    worksheet.Cells[1, 5].Value = "Trạng Thái";
+
+                    // Apply header styles
+                    using (var range = worksheet.Cells[1, 1, 1, 5])
+                    {
+                        range.Style.Font.Bold = true;
+                        range.Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                        range.Style.VerticalAlignment = ExcelVerticalAlignment.Center;
+                        range.Style.Fill.PatternType = ExcelFillStyle.Solid;
+                        range.Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.LightBlue);
+                    }
+
+                    // Write thongbao data
+                    int row = 2;
+                    foreach (var thongbao in thongbaos)
+                    {
+                        worksheet.Cells[row, 1].Value = thongbao.MaThongBao;
+                        worksheet.Cells[row, 2].Value = thongbao.NoiDung;
+                        worksheet.Cells[row, 3].Value = thongbao.NguoiBanHanh;
+                        worksheet.Cells[row, 4].Value = thongbao.NgayBanHanh.ToString("dd/MM/yyyy");
+                        worksheet.Cells[row, 4].Style.Numberformat.Format = "dd/MM/yyyy"; // Format the date column
+                        worksheet.Cells[row, 5].Value = thongbao.TrangThai == 1 ? "Hiện" : "Ẩn"; // Assuming 1 = "Hiện", 0 = "Ẩn"
+
+                        row++;
+                    }
+
+                    worksheet.Cells[worksheet.Dimension.Address].AutoFitColumns();
+                    package.SaveAs(new FileInfo(filePath));
+                }
+
+                MessageBox.Show("File Excel đã được lưu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Đã xảy ra lỗi khi lưu file Excel: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
     }
 }

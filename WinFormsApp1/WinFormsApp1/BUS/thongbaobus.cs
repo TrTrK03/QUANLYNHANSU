@@ -16,15 +16,15 @@ namespace WinFormsApp1.BUS
         }
 
         // Thêm mới thông báo
-        public void AddThongBao(thongbaodto notification)
+        public void AddThongBao(thongbaodto thongbao)
         {
-            thongBaoDao.AddThongBao(notification);
+            thongBaoDao.AddThongBao(thongbao);
         }
 
         // Cập nhật thông báo
-        public void UpdateThongBao(thongbaodto notification)
+        public void UpdateThongBao(thongbaodto thongbao)
         {
-            thongBaoDao.UpdateThongBao(notification);
+            thongBaoDao.UpdateThongBao(thongbao);
         }
 
 

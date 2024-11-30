@@ -54,12 +54,11 @@ namespace WinFormsApp1.DAO
                     connection.Open();
                 }
 
-                SqlCommand command = new SqlCommand("INSERT INTO BangThongBao VALUES(@MaThongBao, @NoiDung, @NguoiBanHanh, @NgayBanHanh, @TrangThai)", connection);
+                SqlCommand command = new SqlCommand("INSERT INTO BangThongBao VALUES(@MaThongBao, @NoiDung, @NguoiBanHanh, @NgayBanHanh, 1)", connection);
                 command.Parameters.AddWithValue("@MaThongBao", notification.MaThongBao);
                 command.Parameters.AddWithValue("@NoiDung", notification.NoiDung);
                 command.Parameters.AddWithValue("@NguoiBanHanh", notification.NguoiBanHanh);
                 command.Parameters.AddWithValue("@NgayBanHanh", notification.NgayBanHanh);
-                command.Parameters.AddWithValue("@TrangThai", notification.TrangThai);
 
                 command.ExecuteNonQuery();
                 connection.Close();
@@ -75,12 +74,11 @@ namespace WinFormsApp1.DAO
                     connection.Open();
                 }
 
-                SqlCommand command = new SqlCommand("UPDATE BangThongBao SET NoiDung = @NoiDung, NguoiBanHanh = @NguoiBanHanh, NgayBanHanh = @NgayBanHanh, TrangThai = @TrangThai WHERE MaThongBao = @MaThongBao", connection);
+                SqlCommand command = new SqlCommand("UPDATE BangThongBao SET NoiDung = @NoiDung, NguoiBanHanh = @NguoiBanHanh, NgayBanHanh = @NgayBanHanh, TrangThai = 1 WHERE MaThongBao = @MaThongBao", connection);
                 command.Parameters.AddWithValue("@MaThongBao", notification.MaThongBao);
                 command.Parameters.AddWithValue("@NoiDung", notification.NoiDung);
                 command.Parameters.AddWithValue("@NguoiBanHanh", notification.NguoiBanHanh);
                 command.Parameters.AddWithValue("@NgayBanHanh", notification.NgayBanHanh);
-                command.Parameters.AddWithValue("@TrangThai", notification.TrangThai);
 
                 command.ExecuteNonQuery();
                 connection.Close();

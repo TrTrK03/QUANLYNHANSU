@@ -6,6 +6,7 @@ using WinFormsApp1.DAO;
 using WinFormsApp1.BUS;
 using WinFormsApp1.GUI.detail;
 using OfficeOpenXml;
+using WinFormsApp1.GUI;
 
 namespace WinFormsApp1.Imports
 {
@@ -17,7 +18,9 @@ namespace WinFormsApp1.Imports
         duandto duanDTO = new duandto();
         duanbus duanBUS = new duanbus();
 
-        public List<nhanviendto> ReadExcelFile(string filePath)
+        thongbaodto thongbaodto = new thongbaodto();
+        thongbaobus thongbaobus = new thongbaobus();
+        private List<nhanviendto> ReadExcelFile(string filePath)
         {
             var employees = new List<nhanviendto>();
 
@@ -57,7 +60,7 @@ namespace WinFormsApp1.Imports
             return employees;
         }
 
-        public List<duandto> ReadProjectExcelFile(string filePath)
+        private List<duandto> ReadProjectExcelFile(string filePath)
         {
             var projects = new List<duandto>();
 
@@ -132,5 +135,60 @@ namespace WinFormsApp1.Imports
                 Console.WriteLine("Lỗi: " + ex.Message);
             }
         }
+
+        private List<thongbaodto> ReadThongBaoExcelFile(string filePath)
+        {
+            var thongBaos = new List<thongbaodto>();
+
+            // Check if the file exists
+            if (!File.Exists(filePath))
+                throw new FileNotFoundException("File không tồn tại!");
+
+            // Read the Excel file
+            ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
+            using (var package = new ExcelPackage(new FileInfo(filePath)))
+            {
+                var worksheet = package.Workbook.Worksheets[0]; // Get the first sheet
+                int rowCount = worksheet.Dimension.Rows;       // Number of rows
+
+                // Start from row 2, assuming the first row is the header
+                for (int row = 2; row <= rowCount; row++)
+                {
+                    var thongBao = new thongbaodto
+                    {
+                        MaThongBao = worksheet.Cells[row, 1].Text,
+                        NoiDung = worksheet.Cells[row, 2].Text,
+                        NguoiBanHanh = worksheet.Cells[row, 3].Text,
+                        NgayBanHanh = DateTime.TryParse(worksheet.Cells[row, 4].Text, out var ngayBanHanh) ? ngayBanHanh : DateTime.MinValue, // Default to DateTime.MinValue if invalid
+                        TrangThai = worksheet.Cells[row, 5].Text == "Hiện" ? 1 : 0 // Assuming "Hiện" is for active notifications
+                    };
+
+                    thongBaos.Add(thongBao);
+                }
+            }
+
+            return thongBaos;
+        }
+
+        public void ImportThongBaoByExcel(string filePath)
+        {
+            try
+            {
+                List<thongbaodto> thongBaos = ReadThongBaoExcelFile(filePath);
+                foreach (var thongbao in thongBaos)
+                {
+                    // Assuming you have a method in thongBaoBUS to add a notification
+                    thongbaobus.AddThongBao(thongbao);
+                    // Optionally, you can show a dialog or message for each imported notification
+                    Console.WriteLine($"Thông Báo: {thongbao.MaThongBao} đã được nhập.");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Lỗi: " + ex.Message);
+            }
+        }
+
+
     }
 }

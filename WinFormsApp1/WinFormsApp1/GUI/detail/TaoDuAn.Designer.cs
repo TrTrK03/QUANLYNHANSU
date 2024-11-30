@@ -217,7 +217,7 @@
             btnTao.UseVisualStyleBackColor = true;
             btnTao.Click += btnTao_Click_1;
             // 
-            // TaoDuAn
+            // TaoThongBao
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -240,7 +240,7 @@
             Controls.Add(btnHuy);
             Controls.Add(btnTao);
             Margin = new Padding(3, 4, 3, 4);
-            Name = "TaoDuAn";
+            Name = "TaoThongBao";
             Text = "Tạo Dự Án";
             ResumeLayout(false);
             PerformLayout();
