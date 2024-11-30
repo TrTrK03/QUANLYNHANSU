@@ -97,7 +97,7 @@ namespace WinFormsApp1.DAO
                     connection.Open();
                 }
 
-                SqlCommand command = new SqlCommand("DELETE FROM KyTuyenDung WHERE MaKyTuyenDung = @MaKyTuyenDung", connection);
+                SqlCommand command = new SqlCommand("UPDATE KyTuyenDung SET TrangThai = 0 WHERE MaKyTuyenDung = @MaKyTuyenDung", connection);
                 command.Parameters.AddWithValue("@MaKyTuyenDung", MaKyTuyenDung);
 
                 command.ExecuteNonQuery();

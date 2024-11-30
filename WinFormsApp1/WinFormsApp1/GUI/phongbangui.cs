@@ -252,7 +252,6 @@ namespace WinFormsApp1.GUI
 
         private void LoadDataToGUI()
         {
-
             DataTable dt = new DataTable();
             dt.Columns.Add("Check", typeof(bool));
             dt.Columns.Add("Ma Phong Ban", typeof(string));
@@ -266,9 +265,24 @@ namespace WinFormsApp1.GUI
                 dt.Rows.Add(false, phongban.MaPhongBan, phongban.TenPhongBan, phongban.MoTa, phongban.TruongPhong, phongban.TrangThai.ToString());
             }
             dataGridView1.DataSource = dt;
+
+            // Kiểm tra trạng thái và ẩn dòng nếu trạng thái = 0
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                // Kiểm tra trạng thái của dòng
+                if (row.Cells["Trang Thai"].Value != null && (int)row.Cells["Trang Thai"].Value == 0)
+                {
+                    // Ẩn toàn bộ dòng nếu trạng thái = 0
+                    row.Visible = false;
+                }
+            }
+
+            // Nếu bạn muốn ẩn các cột cụ thể (thay vì toàn bộ dòng), chỉ cần ẩn cột
             dataGridView1.Columns["Mo ta"].Visible = false;
             dataGridView1.Columns["Trang Thai"].Visible = false;
         }
+
+
         private void dataGridView1_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
             dataGridView1.ClearSelection();

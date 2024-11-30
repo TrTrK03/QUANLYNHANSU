@@ -7,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{D9720C57-C499-4EA4-9905-7F1094F3D504}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\gui\\wave\\bangluonggui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D9720C57-C499-4EA4-9905-7F1094F3D504}|WinFormsApp1\\WinFormsApp1.csproj|c:\\users\\hoang\\documents\\c#_test\\quanlynhansu\\winformsapp1\\winformsapp1\\gui\\phongbangui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{D9720C57-C499-4EA4-9905-7F1094F3D504}|WinFormsApp1\\WinFormsApp1.csproj|C:\\Users\\hoang\\Documents\\C#_Test\\QUANLYNHANSU\\WinFormsApp1\\winformsapp1\\gui\\phongbangui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D9720C57-C499-4EA4-9905-7F1094F3D504}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\gui\\phongbangui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -15,7 +15,7 @@
       "RelativeMoniker": "D:0:0:{D9720C57-C499-4EA4-9905-7F1094F3D504}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\gui\\index.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D9720C57-C499-4EA4-9905-7F1094F3D504}|WinFormsApp1\\WinFormsApp1.csproj|c:\\users\\hoang\\documents\\c#_test\\quanlynhansu\\winformsapp1\\winformsapp1\\gui\\index.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{D9720C57-C499-4EA4-9905-7F1094F3D504}|WinFormsApp1\\WinFormsApp1.csproj|C:\\Users\\hoang\\Documents\\C#_Test\\QUANLYNHANSU\\WinFormsApp1\\winformsapp1\\gui\\index.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D9720C57-C499-4EA4-9905-7F1094F3D504}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\gui\\index.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -116,9 +116,8 @@
               "RelativeDocumentMoniker": "WinFormsApp1\\GUI\\phongbangui.cs",
               "ToolTip": "C:\\Users\\hoang\\Documents\\C#_Test\\QUANLYNHANSU\\WinFormsApp1\\WinFormsApp1\\GUI\\phongbangui.cs [Design]",
               "RelativeToolTip": "WinFormsApp1\\GUI\\phongbangui.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-30T15:17:45.012Z",
-              "EditorCaption": " [Design]"
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
+              "WhenOpened": "2024-11-30T15:17:45.012Z"
             },
             {
               "$type": "Document",
@@ -130,8 +129,7 @@
               "RelativeToolTip": "WinFormsApp1\\GUI\\index.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-30T15:10:44.574Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-30T15:10:44.574Z"
             },
             {
               "$type": "Document",
@@ -154,9 +152,8 @@
               "RelativeDocumentMoniker": "WinFormsApp1\\GUI\\index.cs",
               "ToolTip": "C:\\Users\\hoang\\Documents\\C#_Test\\QUANLYNHANSU\\WinFormsApp1\\WinFormsApp1\\GUI\\index.cs [Design]",
               "RelativeToolTip": "WinFormsApp1\\GUI\\index.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-30T15:07:56.5Z",
-              "EditorCaption": " [Design]"
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2024-11-30T15:07:56.5Z"
             },
             {
               "$type": "Document",
@@ -168,8 +165,7 @@
               "RelativeToolTip": "WinFormsApp1\\connect\\ketnoi.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-30T15:04:22.735Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-30T15:04:22.735Z"
             },
             {
               "$type": "Document",

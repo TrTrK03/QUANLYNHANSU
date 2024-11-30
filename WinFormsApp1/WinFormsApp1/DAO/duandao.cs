@@ -91,7 +91,7 @@ namespace WinFormsApp1.DAO
                 }
 
                 // Xóa phòng ban theo mã phòng ban (MaDuAn)
-                SqlCommand command = new SqlCommand("DELETE FROM DuAN WHERE MaDuAN = @MaDuAn", connection);
+                SqlCommand command = new SqlCommand("UPDATE DuAn SET TrangThai = 0 WHERE MaDuAN = @MaDuAn", connection);
                 command.Parameters.AddWithValue("@MaDuAn", maDuAn);
 
                 command.ExecuteNonQuery();
