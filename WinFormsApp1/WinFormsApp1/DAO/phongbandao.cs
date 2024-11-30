@@ -96,7 +96,7 @@ namespace WinFormsApp1.DAO
                 }
 
                 // Xóa phòng ban theo mã phòng ban (MaPhongBan)
-                SqlCommand command = new SqlCommand("DELETE FROM PhongBan WHERE MaPhongBan = @MaPhongBan", connection);
+                SqlCommand command = new SqlCommand("UPDATE PhongBan SET TrangThai = 0 WHERE MaPhongBan = @MaPhongBan", connection);
                 command.Parameters.AddWithValue("@MaPhongBan", maPhongBan);
 
                 command.ExecuteNonQuery();

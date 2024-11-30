@@ -276,6 +276,18 @@ namespace WinFormsApp1.GUI
                 dt.Rows.Add(false, notification.MaThongBao, notification.NoiDung, notification.NguoiBanHanh, notification.NgayBanHanh.ToString("dd/MM/yyyy"), notification.TrangThai);
             }
             dataGridView1.DataSource = dt;
+
+            // Kiểm tra trạng thái và ẩn dòng nếu trạng thái = 0
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                // Kiểm tra trạng thái của dòng
+                if (row.Cells["Trang Thai"].Value != null && (int)row.Cells["Trang Thai"].Value == 0)
+                {
+                    // Ẩn toàn bộ dòng nếu trạng thái = 0
+                    row.Visible = false;
+                }
+            }
+
             dataGridView1.Columns["Noi Dung"].Visible = false;
             dataGridView1.Columns["Trang Thai"].Visible = false;
         }

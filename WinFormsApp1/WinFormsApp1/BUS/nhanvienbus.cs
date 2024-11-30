@@ -30,6 +30,11 @@ namespace WinFormsApp1.BUS
             employeeDAO.DeleteNhanVien(employee);
         }
 
+        public string GetMaDuAnFromDatabase(nhanviendto employee)
+        {
+            return employeeDAO.GetMaDuAnFromDatabase(employee); // Gọi phương thức và trả về string
+        }
+
         //public List<string> LoadMaTK()
         //{
         //    return employeeDAO.LoadMaTK();
