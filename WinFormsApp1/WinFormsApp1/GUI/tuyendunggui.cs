@@ -56,7 +56,7 @@ namespace WinFormsApp1.GUI
 
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             openFileDialog1 = new OpenFileDialog();
             panel2 = new Panel();
             panel6 = new Panel();
@@ -120,13 +120,13 @@ namespace WinFormsApp1.GUI
             // label1
             // 
             label1.Anchor = AnchorStyles.None;
-            label1.Font = new Font("Segoe UI", 24.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Segoe UI", 23F);
             label1.ForeColor = Color.FromArgb(49, 17, 117);
             label1.Location = new Point(3, 0);
             label1.Name = "label1";
             label1.Size = new Size(232, 49);
             label1.TabIndex = 11;
-            label1.Text = "Phòng Ban";
+            label1.Text = "Tuyển Dụng";
             // 
             // edit
             // 
@@ -161,11 +161,11 @@ namespace WinFormsApp1.GUI
             txtSearch.Anchor = AnchorStyles.None;
             txtSearch.Location = new Point(241, 13);
             txtSearch.Name = "txtSearch";
+            txtSearch.PlaceholderText = "Tìm kiếm ...";
             txtSearch.Size = new Size(344, 27);
             txtSearch.TabIndex = 0;
             txtSearch.TextChanged += txtSearch_TextChanged;
             txtSearch.Leave += txtSearch_Leave;
-            txtSearch.PlaceholderText = "Tìm kiếm ...";
             // 
             // panel3
             // 
@@ -201,14 +201,14 @@ namespace WinFormsApp1.GUI
             dataGridView1.Location = new Point(0, 0);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Control;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 15F);
-            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 15F);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.False;
+            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridView1.RowHeadersVisible = false;
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 100;
