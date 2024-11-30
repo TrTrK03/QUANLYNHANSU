@@ -46,6 +46,7 @@
             fontDialog1 = new FontDialog();
             panel3 = new Panel();
             panel5 = new Panel();
+            khenthuong = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -54,6 +55,7 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(24, 30, 54);
+            panel1.Controls.Add(khenthuong);
             panel1.Controls.Add(panNav);
             panel1.Controls.Add(chamcong);
             panel1.Controls.Add(nhanvien);
@@ -327,6 +329,25 @@
             panel5.Size = new Size(1037, 713);
             panel5.TabIndex = 2;
             // 
+            // khenthuong
+            // 
+            khenthuong.Dock = DockStyle.Top;
+            khenthuong.FlatAppearance.BorderSize = 0;
+            khenthuong.FlatStyle = FlatStyle.Flat;
+            khenthuong.ForeColor = Color.FromArgb(192, 192, 255);
+            khenthuong.Image = Properties.Resources.home;
+            khenthuong.ImageAlign = ContentAlignment.MiddleLeft;
+            khenthuong.Location = new Point(0, 679);
+            khenthuong.Margin = new Padding(2);
+            khenthuong.Name = "khenthuong";
+            khenthuong.Size = new Size(143, 64);
+            khenthuong.TabIndex = 4;
+            khenthuong.Text = "Khen Thưởng";
+            khenthuong.TextAlign = ContentAlignment.MiddleRight;
+            khenthuong.TextImageRelation = TextImageRelation.TextBeforeImage;
+            khenthuong.UseVisualStyleBackColor = true;
+            khenthuong.Click += button1_Click;
+            // 
             // index
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -369,5 +390,6 @@
         private Panel panel3;
         private Panel panel4;
         private Panel panel5;
+        private Button khenthuong;
     }
 }

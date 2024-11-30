@@ -58,8 +58,23 @@
     <Compile Update="GUI\nhanviengui.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="GUI\reward\khenThuongGUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="GUI\reward\suaKhenThuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="GUI\test.cs">
       <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="GUI\wave\bangLuongGUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="GUI\wave\suaBangLuongGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\wave\themBangLuongGUI.cs">
+      <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
 </Project>

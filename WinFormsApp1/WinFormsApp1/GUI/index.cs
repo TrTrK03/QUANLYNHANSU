@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using WinFormsApp1.GUI;
+using WinFormsApp1.GUI.NewFolder;
 namespace WinFormsApp1
 {
     public partial class index : Form
@@ -98,7 +99,16 @@ namespace WinFormsApp1
             panNav.Top = bangluong.Top;
             panNav.Left = bangluong.Left;
             bangluong.BackColor = Color.FromArgb(46, 51, 73);
+
+            // Xóa tất cả các điều khiển cũ trong panel5 trước khi thêm mới
+            panel5.Controls.Clear();
+
+            // Tạo đối tượng GUI cho bangLuong
+            bangLuongGUI da = new bangLuongGUI();
+            panel5.Controls.Add(da);
+            da.Dock = DockStyle.Fill;
         }
+
 
         private void thongbao_Click(object sender, EventArgs e)
         {
@@ -128,6 +138,18 @@ namespace WinFormsApp1
             tuyendung.BackColor = Color.FromArgb(46, 51, 73);
             panel5.Controls.Clear();
             tuyendunggui td = new tuyendunggui();
+            panel5.Controls.Add(td);
+            td.Dock = DockStyle.Fill;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            panNav.Height = tuyendung.Height;
+            panNav.Top = tuyendung.Top;
+            panNav.Left = tuyendung.Left;
+            tuyendung.BackColor = Color.FromArgb(46, 51, 73);
+            panel5.Controls.Clear();
+            khenThuongGUI td = new khenThuongGUI();
             panel5.Controls.Add(td);
             td.Dock = DockStyle.Fill;
         }
@@ -175,6 +197,11 @@ namespace WinFormsApp1
             bangluong.BackColor = Color.FromArgb(24, 30, 54);
         }
 
+        private void khenthuong_leave(object sender, EventArgs e)
+        {
+            khenthuong.BackColor = Color.FromArgb(24, 30, 54);
+        }
+
         private void nhanvien_Leave(object sender, EventArgs e)
         {
             nhanvien.BackColor = Color.FromArgb(24, 30, 54);
@@ -199,5 +226,7 @@ namespace WinFormsApp1
         {
 
         }
+
+       
     }
 }
