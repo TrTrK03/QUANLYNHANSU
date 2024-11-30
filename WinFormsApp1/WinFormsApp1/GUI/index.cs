@@ -112,12 +112,16 @@ namespace WinFormsApp1
             tb.Dock = DockStyle.Fill;
         }
 
-        private void baohiem_Click(object sender, EventArgs e)
+        private void phucloi_Click(object sender, EventArgs e)
         {
-            panNav.Height = baohiem.Height;
-            panNav.Top = baohiem.Top;
-            panNav.Left = baohiem.Left;
-            baohiem.BackColor = Color.FromArgb(46, 51, 73);
+            panNav.Height = phucloi.Height;
+            panNav.Top = phucloi.Top;
+            panNav.Left = phucloi.Left;
+            phucloi.BackColor = Color.FromArgb(46, 51, 73);
+            panel5.Controls.Clear();
+            phucloigui pl = new phucloigui();
+            panel5.Controls.Add(pl);
+            pl.Dock = DockStyle.Fill;
         }
 
         private void tuyendung_Click(object sender, EventArgs e)
@@ -165,9 +169,9 @@ namespace WinFormsApp1
             thongbao.BackColor = Color.FromArgb(24, 30, 54);
         }
 
-        private void baohiem_Leave(object sender, EventArgs e)
+        private void phucloi_Leave(object sender, EventArgs e)
         {
-            baohiem.BackColor = Color.FromArgb(24, 30, 54);
+            phucloi.BackColor = Color.FromArgb(24, 30, 54);
         }
 
         private void bangluong_Leave(object sender, EventArgs e)

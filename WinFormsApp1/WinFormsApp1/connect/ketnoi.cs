@@ -13,7 +13,7 @@ namespace WinFormsApp1.connect
         //private string conn = "Data Source=DESKTOP-EEGRU4J\\NGUYETSER;Initial Catalog=basicdb;User ID=sa;Password=123456;";
         //private string conn = "Data Source=DESKTOP-5OES69K\\SQLEXPRESS;Initial Catalog=QLDienThoai;User ID=sa;Password=phat7733419";
         //private String sql = @"Data Source=MSI\SQLEXPRESS;Initial Catalog=QLDACHBDT;Integrated Security=True";
-        private string conn = "Data Source=KHANG;Initial Catalog=QuanLyNhanSuCSharp;Persist Security Info=True;User ID=sa;Password=sa;";
+        private string conn = "Data Source=DESKTOP-E8EUEDV;Initial Catalog=QuanLyNhanSuCSharp;User ID=sa;Password=sa;";
         public SqlConnection connection()
         {
             SqlConnection connection = new SqlConnection(conn);

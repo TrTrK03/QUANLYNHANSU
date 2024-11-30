@@ -33,7 +33,7 @@
             chamcong = new Button();
             nhanvien = new Button();
             bangluong = new Button();
-            baohiem = new Button();
+            phucloi = new Button();
             thongbao = new Button();
             tuyendung = new Button();
             duan = new Button();
@@ -58,7 +58,7 @@
             panel1.Controls.Add(chamcong);
             panel1.Controls.Add(nhanvien);
             panel1.Controls.Add(bangluong);
-            panel1.Controls.Add(baohiem);
+            panel1.Controls.Add(phucloi);
             panel1.Controls.Add(thongbao);
             panel1.Controls.Add(tuyendung);
             panel1.Controls.Add(duan);
@@ -141,25 +141,25 @@
             bangluong.Click += bangluong_Click;
             bangluong.Leave += bangluong_Leave;
             // 
-            // baohiem
+            // phucloi
             // 
-            baohiem.Dock = DockStyle.Top;
-            baohiem.FlatAppearance.BorderSize = 0;
-            baohiem.FlatStyle = FlatStyle.Flat;
-            baohiem.ForeColor = Color.FromArgb(192, 192, 255);
-            baohiem.Image = Properties.Resources.home;
-            baohiem.ImageAlign = ContentAlignment.MiddleLeft;
-            baohiem.Location = new Point(0, 423);
-            baohiem.Margin = new Padding(2);
-            baohiem.Name = "baohiem";
-            baohiem.Size = new Size(143, 64);
-            baohiem.TabIndex = 2;
-            baohiem.Text = "Bảo hiểm";
-            baohiem.TextAlign = ContentAlignment.MiddleRight;
-            baohiem.TextImageRelation = TextImageRelation.TextBeforeImage;
-            baohiem.UseVisualStyleBackColor = true;
-            baohiem.Click += baohiem_Click;
-            baohiem.Leave += baohiem_Leave;
+            phucloi.Dock = DockStyle.Top;
+            phucloi.FlatAppearance.BorderSize = 0;
+            phucloi.FlatStyle = FlatStyle.Flat;
+            phucloi.ForeColor = Color.FromArgb(192, 192, 255);
+            phucloi.Image = Properties.Resources.home;
+            phucloi.ImageAlign = ContentAlignment.MiddleLeft;
+            phucloi.Location = new Point(0, 423);
+            phucloi.Margin = new Padding(2);
+            phucloi.Name = "phucloi";
+            phucloi.Size = new Size(143, 64);
+            phucloi.TabIndex = 2;
+            phucloi.Text = "Phúc Lợi";
+            phucloi.TextAlign = ContentAlignment.MiddleRight;
+            phucloi.TextImageRelation = TextImageRelation.TextBeforeImage;
+            phucloi.UseVisualStyleBackColor = true;
+            phucloi.Click += phucloi_Click;
+            phucloi.Leave += phucloi_Leave;
             // 
             // thongbao
             // 
@@ -365,7 +365,7 @@
         private Button bangluong;
         private Button thongbao;
         private Panel panNav;
-        private Button baohiem;
+        private Button phucloi;
         private Panel panel3;
         private Panel panel4;
         private Panel panel5;

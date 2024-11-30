@@ -48,6 +48,9 @@
     <Compile Update="GUI\Info\ThongBaoInfo.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="GUI\phucloigui.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="GUI\tuyendunggui.cs">
       <SubType>UserControl</SubType>
     </Compile>

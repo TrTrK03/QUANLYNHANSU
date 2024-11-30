@@ -7,10 +7,16 @@
     <Compile Update="GUI\detail\SuaNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="GUI\detail\SuaPhucLoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="GUI\detail\TaoDuAn.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="GUI\detail\TaoNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\detail\TaoPhucLoi.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="GUI\duangui.cs">

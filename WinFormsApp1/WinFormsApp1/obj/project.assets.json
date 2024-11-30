@@ -1390,23 +1390,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\chan_\\.nuget\\packages\\": {},
+    "C:\\Users\\haun4\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Học Tập\\BT_C#\\QUANLYNHANSU\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj",
+      "projectUniqueName": "D:\\Work\\C#\\DoAn\\QUANLYNHANSU\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj",
       "projectName": "WinFormsApp1",
-      "projectPath": "C:\\Học Tập\\BT_C#\\QUANLYNHANSU\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj",
-      "packagesPath": "C:\\Users\\chan_\\.nuget\\packages\\",
-      "outputPath": "C:\\Học Tập\\BT_C#\\QUANLYNHANSU\\WinFormsApp1\\WinFormsApp1\\obj\\",
+      "projectPath": "D:\\Work\\C#\\DoAn\\QUANLYNHANSU\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj",
+      "packagesPath": "C:\\Users\\haun4\\.nuget\\packages\\",
+      "outputPath": "D:\\Work\\C#\\DoAn\\QUANLYNHANSU\\WinFormsApp1\\WinFormsApp1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\chan_\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\haun4\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
