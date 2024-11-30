@@ -26,10 +26,9 @@ namespace WinFormsApp1.BUS
         {
             hosotuyendungDao.UpdateHoSoTuyenDung(hoSo);
         }
-
-        public List<hosotuyendungdto> SearchHoSoTuyenDung(string keyword)
+        public void DeleteHoSoTuyenDung(hosotuyendungdto selectedhoso)
         {
-            return hosotuyendungDao.SearchHoSoTuyenDung(keyword);
+            hosotuyendungDao.DeleteHoSoTuyenDung(selectedhoso.MaHoSoTuyenDung);
         }
     }
 }

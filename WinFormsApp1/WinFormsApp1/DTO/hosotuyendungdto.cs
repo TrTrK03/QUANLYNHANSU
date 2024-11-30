@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WinFormsApp1.DTO
 {
-    internal class hosotuyendungdto
+    public class hosotuyendungdto
     {
         private string maHoSoTuyenDung;
         private string hoTen;

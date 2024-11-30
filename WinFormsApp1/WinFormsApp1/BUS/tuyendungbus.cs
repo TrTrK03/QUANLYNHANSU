@@ -27,10 +27,10 @@ namespace WinFormsApp1.BUS
             tuyenDungDao.UpdateTuyenDung(recruitment);
         }
 
-        // Tìm kiếm kỳ tuyển dụng theo nội dung
-        public List<tuyendungdto> SearchTuyenDungByContent(string keyword)
+        public void DeleteThongBao(tuyendungdto selectedtuyendung)
         {
-            return tuyenDungDao.SearchTuyenDungByContent(keyword);
+            tuyenDungDao.DeleteTuyenDung(selectedtuyendung.MaKyTuyenDung);
         }
+
     }
 }

@@ -310,7 +310,7 @@ namespace WinFormsApp1.GUI
         {
             LoadDataToGUI();
             txtSearch.PlaceholderText = "Tìm kiếm ...";
-            dataGridView1.Size = new Size(1575, 870);
+            dataGridView1.Dock = DockStyle.Fill;
         }
 
         private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -365,25 +365,25 @@ namespace WinFormsApp1.GUI
 
         private void nhanviengui_MouseClick(object sender, MouseEventArgs e)
         {
-            dataGridView1.Size = new Size(1575, 870);
+            dataGridView1.Dock = DockStyle.Fill;
             dataGridView1.ClearSelection();
         }
 
         private void flowLayoutPanel1_MouseClick(object sender, MouseEventArgs e)
         {
-            dataGridView1.Size = new Size(1575, 870);
+            dataGridView1.Dock = DockStyle.Fill;
             dataGridView1.ClearSelection();
         }
 
         private void panel2_MouseClick(object sender, MouseEventArgs e)
         {
-            dataGridView1.Size = new Size(1575, 870);
+            dataGridView1.Dock = DockStyle.Fill;
             dataGridView1.ClearSelection();
         }
 
         private void panel6_MouseClick(object sender, MouseEventArgs e)
         {
-            dataGridView1.Size = new Size(1575, 870);
+            dataGridView1.Dock = DockStyle.Fill;
             dataGridView1.ClearSelection();
         }
 

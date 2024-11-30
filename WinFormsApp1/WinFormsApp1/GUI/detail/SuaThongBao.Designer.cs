@@ -119,7 +119,7 @@
             Controls.Add(txtNoiDung);
             Controls.Add(txtMaThongBao);
             Name = "SuaThongBao";
-            Text = "Sửa Dự Án";
+            Text = "Sửa Thông Báo";
             Load += SuaThongBao_Load_1;
             ResumeLayout(false);
             PerformLayout();

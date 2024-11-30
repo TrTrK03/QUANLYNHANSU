@@ -287,13 +287,17 @@ C:\Học Tập\BT_C#\QUANLYNHANSU\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-win
 C:\Học Tập\BT_C#\QUANLYNHANSU\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.GUI.detail.SuaNhanVien.resources
 C:\Học Tập\BT_C#\QUANLYNHANSU\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.GUI.detail.SuaPhongBan.resources
 C:\Học Tập\BT_C#\QUANLYNHANSU\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.GUI.detail.SuaThongBao.resources
+C:\Học Tập\BT_C#\QUANLYNHANSU\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.GUI.detail.SuaTuyenDung.resources
 C:\Học Tập\BT_C#\QUANLYNHANSU\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.GUI.detail.TaoDuAn.resources
+C:\Học Tập\BT_C#\QUANLYNHANSU\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.GUI.detail.TaoHoSo.resources
 C:\Học Tập\BT_C#\QUANLYNHANSU\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.GUI.detail.TaoNhanVien.resources
 C:\Học Tập\BT_C#\QUANLYNHANSU\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.GUI.detail.TaoPhongBan.resources
 C:\Học Tập\BT_C#\QUANLYNHANSU\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.GUI.detail.TaoThongBao.resources
+C:\Học Tập\BT_C#\QUANLYNHANSU\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.GUI.detail.TaoTuyenDung.resources
 C:\Học Tập\BT_C#\QUANLYNHANSU\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.GUI.duangui.resources
 C:\Học Tập\BT_C#\QUANLYNHANSU\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.GUI.Home.resources
 C:\Học Tập\BT_C#\QUANLYNHANSU\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.index.resources
+C:\Học Tập\BT_C#\QUANLYNHANSU\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.GUI.Info.DanhSachTuyenDung.resources
 C:\Học Tập\BT_C#\QUANLYNHANSU\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.GUI.Info.DuAnInfo.resources
 C:\Học Tập\BT_C#\QUANLYNHANSU\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.GUI.Info.NhanVienInfo.resources
 C:\Học Tập\BT_C#\QUANLYNHANSU\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.GUI.Info.PhongBanInfo.resources
@@ -308,6 +312,7 @@ C:\Học Tập\BT_C#\QUANLYNHANSU\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-win
 C:\Học Tập\BT_C#\QUANLYNHANSU\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.GUI.phongbangui.resources
 C:\Học Tập\BT_C#\QUANLYNHANSU\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.GUI.test.resources
 C:\Học Tập\BT_C#\QUANLYNHANSU\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.GUI.thongbaogui.resources
+C:\Học Tập\BT_C#\QUANLYNHANSU\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.GUI.tuyendunggui.resources
 C:\Học Tập\BT_C#\QUANLYNHANSU\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.Properties.Resources.resources
 C:\Học Tập\BT_C#\QUANLYNHANSU\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.csproj.GenerateResource.cache
 C:\Học Tập\BT_C#\QUANLYNHANSU\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.GeneratedMSBuildEditorConfig.editorconfig

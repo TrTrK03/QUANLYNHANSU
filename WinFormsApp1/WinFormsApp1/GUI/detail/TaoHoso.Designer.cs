@@ -1,6 +1,6 @@
 ﻿namespace WinFormsApp1.GUI.detail
 {
-    partial class TaoNhanVien
+    partial class TaoHoSo
     {
         /// <summary>
         /// Required designer variable.
@@ -32,30 +32,28 @@
             txtDiaChi = new TextBox();
             label10 = new Label();
             label9 = new Label();
-            txtPhongBan = new TextBox();
+            txtMoTaBangCap = new TextBox();
             cbNu = new CheckBox();
             cbNam = new CheckBox();
             label6 = new Label();
             pictureBox1 = new PictureBox();
-            txtMaTK = new TextBox();
-            label5 = new Label();
             btnHuy = new Button();
             btnTao = new Button();
             dtpNgaySinh = new DateTimePicker();
             txtEmail = new TextBox();
             txtSDT = new TextBox();
             txtHoTen = new TextBox();
-            txtMaNV = new TextBox();
+            txtMaHS = new TextBox();
             label8 = new Label();
             label3 = new Label();
             label4 = new Label();
             label2 = new Label();
             label1 = new Label();
             panel1 = new Panel();
-            txtNQL = new TextBox();
+            txtTrinhDo = new TextBox();
             label12 = new Label();
             label13 = new Label();
-            txtChucVu = new TextBox();
+            txtKyTuyenDung = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -68,9 +66,9 @@
             label11.Location = new Point(13, 379);
             label11.Margin = new Padding(4, 0, 4, 0);
             label11.Name = "label11";
-            label11.Size = new Size(130, 32);
+            label11.Size = new Size(82, 32);
             label11.TabIndex = 76;
-            label11.Text = "Phòng ban";
+            label11.Text = "Mô Tả";
             // 
             // txtDiaChi
             // 
@@ -99,21 +97,22 @@
             label9.Font = new Font("Segoe UI", 30F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label9.ForeColor = Color.White;
             label9.ImeMode = ImeMode.NoControl;
-            label9.Location = new Point(153, 0);
+            label9.Location = new Point(185, 0);
             label9.Margin = new Padding(4, 0, 4, 0);
             label9.Name = "label9";
-            label9.Size = new Size(375, 67);
+            label9.Size = new Size(273, 67);
             label9.TabIndex = 46;
-            label9.Text = "Tạo Nhân Viên";
+            label9.Text = "Tạo Hồ Sơ";
             // 
-            // txtPhongBan
+            // txtMoTaBangCap
             // 
-            txtPhongBan.Font = new Font("Microsoft Sans Serif", 12F);
-            txtPhongBan.Location = new Point(185, 382);
-            txtPhongBan.Margin = new Padding(4);
-            txtPhongBan.Name = "txtPhongBan";
-            txtPhongBan.Size = new Size(176, 30);
-            txtPhongBan.TabIndex = 77;
+            txtMoTaBangCap.Font = new Font("Microsoft Sans Serif", 12F);
+            txtMoTaBangCap.Location = new Point(185, 382);
+            txtMoTaBangCap.Margin = new Padding(4);
+            txtMoTaBangCap.Multiline = true;
+            txtMoTaBangCap.Name = "txtMoTaBangCap";
+            txtMoTaBangCap.Size = new Size(176, 76);
+            txtMoTaBangCap.TabIndex = 77;
             // 
             // cbNu
             // 
@@ -165,28 +164,6 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox1.TabIndex = 69;
             pictureBox1.TabStop = false;
-            // 
-            // txtMaTK
-            // 
-            txtMaTK.Enabled = false;
-            txtMaTK.Font = new Font("Microsoft Sans Serif", 12F);
-            txtMaTK.Location = new Point(185, 466);
-            txtMaTK.Margin = new Padding(4);
-            txtMaTK.Name = "txtMaTK";
-            txtMaTK.Size = new Size(176, 30);
-            txtMaTK.TabIndex = 68;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 14.25F);
-            label5.ImeMode = ImeMode.NoControl;
-            label5.Location = new Point(10, 466);
-            label5.Margin = new Padding(4, 0, 4, 0);
-            label5.Name = "label5";
-            label5.Size = new Size(158, 32);
-            label5.TabIndex = 67;
-            label5.Text = "Mã Tài Khoản";
             // 
             // btnHuy
             // 
@@ -256,15 +233,15 @@
             txtHoTen.Size = new Size(176, 30);
             txtHoTen.TabIndex = 59;
             // 
-            // txtMaNV
+            // txtMaHS
             // 
-            txtMaNV.Enabled = false;
-            txtMaNV.Font = new Font("Microsoft Sans Serif", 12F);
-            txtMaNV.Location = new Point(185, 96);
-            txtMaNV.Margin = new Padding(4);
-            txtMaNV.Name = "txtMaNV";
-            txtMaNV.Size = new Size(176, 30);
-            txtMaNV.TabIndex = 58;
+            txtMaHS.Enabled = false;
+            txtMaHS.Font = new Font("Microsoft Sans Serif", 12F);
+            txtMaHS.Location = new Point(185, 96);
+            txtMaHS.Margin = new Padding(4);
+            txtMaHS.Name = "txtMaHS";
+            txtMaHS.Size = new Size(176, 30);
+            txtMaHS.TabIndex = 58;
             // 
             // label8
             // 
@@ -322,9 +299,9 @@
             label1.Location = new Point(13, 93);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(168, 32);
+            label1.Size = new Size(120, 32);
             label1.TabIndex = 52;
-            label1.Text = "Mã Nhân Viên";
+            label1.Text = "Mã Hồ Sơ";
             // 
             // panel1
             // 
@@ -336,14 +313,14 @@
             panel1.Size = new Size(691, 67);
             panel1.TabIndex = 73;
             // 
-            // txtNQL
+            // txtTrinhDo
             // 
-            txtNQL.Font = new Font("Microsoft Sans Serif", 12F);
-            txtNQL.Location = new Point(185, 348);
-            txtNQL.Margin = new Padding(4);
-            txtNQL.Name = "txtNQL";
-            txtNQL.Size = new Size(176, 30);
-            txtNQL.TabIndex = 79;
+            txtTrinhDo.Font = new Font("Microsoft Sans Serif", 12F);
+            txtTrinhDo.Location = new Point(185, 348);
+            txtTrinhDo.Margin = new Padding(4);
+            txtTrinhDo.Name = "txtTrinhDo";
+            txtTrinhDo.Size = new Size(176, 30);
+            txtTrinhDo.TabIndex = 79;
             // 
             // label12
             // 
@@ -353,58 +330,56 @@
             label12.Location = new Point(13, 343);
             label12.Margin = new Padding(4, 0, 4, 0);
             label12.Name = "label12";
-            label12.Size = new Size(166, 32);
+            label12.Size = new Size(105, 32);
             label12.TabIndex = 78;
-            label12.Text = "Người quản lý";
+            label12.Text = "Trình Độ";
             // 
             // label13
             // 
             label13.AutoSize = true;
             label13.Font = new Font("Segoe UI", 14.25F);
             label13.ImeMode = ImeMode.NoControl;
-            label13.Location = new Point(13, 414);
+            label13.Location = new Point(7, 460);
             label13.Margin = new Padding(4, 0, 4, 0);
             label13.Name = "label13";
-            label13.Size = new Size(101, 32);
+            label13.Size = new Size(178, 32);
             label13.TabIndex = 80;
-            label13.Text = "Chức vụ";
+            label13.Text = "Kỳ Tuyển Dụng";
             // 
-            // txtChucVu
+            // txtKyTuyenDung
             // 
-            txtChucVu.Font = new Font("Microsoft Sans Serif", 12F);
-            txtChucVu.Location = new Point(185, 414);
-            txtChucVu.Margin = new Padding(4);
-            txtChucVu.Name = "txtChucVu";
-            txtChucVu.Size = new Size(176, 30);
-            txtChucVu.TabIndex = 81;
+            txtKyTuyenDung.Font = new Font("Microsoft Sans Serif", 12F);
+            txtKyTuyenDung.Location = new Point(185, 466);
+            txtKyTuyenDung.Margin = new Padding(4);
+            txtKyTuyenDung.Name = "txtKyTuyenDung";
+            txtKyTuyenDung.Size = new Size(176, 30);
+            txtKyTuyenDung.TabIndex = 81;
             // 
-            // TaoNhanVien
+            // TaoHoSo
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(692, 530);
             Controls.Add(label13);
-            Controls.Add(txtChucVu);
-            Controls.Add(txtNQL);
+            Controls.Add(txtKyTuyenDung);
+            Controls.Add(txtTrinhDo);
             Controls.Add(label12);
             Controls.Add(label11);
             Controls.Add(txtDiaChi);
             Controls.Add(label10);
-            Controls.Add(txtPhongBan);
+            Controls.Add(txtMoTaBangCap);
             Controls.Add(cbNu);
             Controls.Add(cbNam);
             Controls.Add(label6);
             Controls.Add(pictureBox1);
-            Controls.Add(txtMaTK);
-            Controls.Add(label5);
             Controls.Add(btnHuy);
             Controls.Add(btnTao);
             Controls.Add(dtpNgaySinh);
             Controls.Add(txtEmail);
             Controls.Add(txtSDT);
             Controls.Add(txtHoTen);
-            Controls.Add(txtMaNV);
+            Controls.Add(txtMaHS);
             Controls.Add(label8);
             Controls.Add(label3);
             Controls.Add(label4);
@@ -412,8 +387,8 @@
             Controls.Add(label1);
             Controls.Add(panel1);
             Margin = new Padding(2);
-            Name = "TaoNhanVien";
-            Text = "TaoNhanVien";
+            Name = "TaoHoSo";
+            Text = "TaoHoSo";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -424,32 +399,30 @@
         #endregion
 
         private Label label11;
-        public TextBox txtDiaChi;
+        private TextBox txtDiaChi;
         private Label label10;
         private Label label9;
-        public TextBox txtPhongBan;
-        public CheckBox cbNu;
-        public CheckBox cbNam;
+        private TextBox txtMoTaBangCap;
+        private CheckBox cbNu;
+        private CheckBox cbNam;
         private Label label6;
         private PictureBox pictureBox1;
-        public TextBox txtMaTK;
-        private Label label5;
         private Button btnHuy;
         private Button btnTao;
-        public DateTimePicker dtpNgaySinh;
-        public TextBox txtEmail;
-        public TextBox txtSDT;
-        public TextBox txtHoTen;
-        public TextBox txtMaNV;
+        private DateTimePicker dtpNgaySinh;
+        private TextBox txtEmail;
+        private TextBox txtSDT;
+        private TextBox txtHoTen;
+        private TextBox txtMaHS;
         private Label label8;
         private Label label3;
         private Label label4;
         private Label label2;
         private Label label1;
         private Panel panel1;
-        public TextBox txtNQL;
+        private TextBox txtTrinhDo;
         private Label label12;
         private Label label13;
-        private TextBox txtChucVu;
+        private TextBox txtKyTuyenDung;
     }
 }

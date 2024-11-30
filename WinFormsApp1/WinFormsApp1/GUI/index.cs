@@ -126,23 +126,14 @@ namespace WinFormsApp1
             panNav.Top = tuyendung.Top;
             panNav.Left = tuyendung.Left;
             tuyendung.BackColor = Color.FromArgb(46, 51, 73);
+            panel5.Controls.Clear();
+            tuyendunggui td = new tuyendunggui();
+            panel5.Controls.Add(td);
+            td.Dock = DockStyle.Fill;
         }
 
         private void button10_Click(object sender, EventArgs e)
         { }
-
-        private void LoadUserControlInPanel4(UserControl userControl)
-        {
-            // Xóa tất cả các UserControl trong panel4
-            panel4.Controls.Clear();
-
-            // Thêm UserControl mới vào panel4
-            userControl.Dock = DockStyle.Fill;
-            panel4.Controls.Add(userControl);
-            userControl.BringToFront();
-        }
-
-
 
         private void Form1_Load(object sender, EventArgs e)
         {

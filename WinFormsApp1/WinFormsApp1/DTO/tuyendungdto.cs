@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WinFormsApp1.DTO
 {
-    internal class tuyendungdto
+    public class tuyendungdto
     {
         private string maKyTuyenDung;
         private string noiDung;

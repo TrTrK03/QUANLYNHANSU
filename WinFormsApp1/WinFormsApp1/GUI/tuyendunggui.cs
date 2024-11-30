@@ -33,11 +33,14 @@ using OfficeOpenXml;
 
 namespace WinFormsApp1.GUI
 {
-    public partial class phongbangui : UserControl
+    public partial class tuyendunggui : UserControl
     {
-        static phongbanbus phongbanBUS = new phongbanbus();
-        phongbandto phongbanDTO = new phongbandto();
-        List<phongbandto> phongbans = phongbanBUS.GetPhongBan();
+        static tuyendungbus tuyendungbus = new tuyendungbus();
+        static hosotuyendungbus hosotuyendungbus = new hosotuyendungbus();
+        tuyendungdto tuyendungdto = new tuyendungdto();
+        hosotuyendungdto hosotuyendungdto = new hosotuyendungdto();
+        List<tuyendungdto> tuyendungs = tuyendungbus.GetTuyenDung();
+        List<hosotuyendungdto> hosos = hosotuyendungbus.GetHoSoTuyenDung();
         private Panel panel2;
         private Panel panel6;
         private Button edit;
@@ -228,7 +231,7 @@ namespace WinFormsApp1.GUI
             panel1.Size = new Size(1006, 606);
             panel1.TabIndex = 2;
             // 
-            // phongbangui
+            // tuyendunggui
             // 
             AutoScaleMode = AutoScaleMode.None;
             AutoSize = true;
@@ -236,10 +239,10 @@ namespace WinFormsApp1.GUI
             Controls.Add(panel1);
             ForeColor = Color.FromArgb(49, 17, 117);
             Margin = new Padding(0);
-            Name = "phongbangui";
+            Name = "tuyendunggui";
             Size = new Size(1009, 609);
-            Load += phongbangui_Load;
-            MouseClick += phongbangui_MouseClick;
+            Load += tuyendunggui_Load;
+            MouseClick += tuyendunggui_MouseClick;
             panel2.ResumeLayout(false);
             panel6.ResumeLayout(false);
             panel6.PerformLayout();
@@ -250,25 +253,36 @@ namespace WinFormsApp1.GUI
             PerformLayout();
         }
 
-        private void LoadDataToGUI()
+        public void LoadDataToGUI()
         {
-
             DataTable dt = new DataTable();
             dt.Columns.Add("Check", typeof(bool));
-            dt.Columns.Add("Ma Phong Ban", typeof(string));
-            dt.Columns.Add("Ten Phong Ban", typeof(string));
-            dt.Columns.Add("Mo ta", typeof(string));
-            dt.Columns.Add("Truong Phong", typeof(string));
+            dt.Columns.Add("Ma Ky tuyen Dung", typeof(string));
+            dt.Columns.Add("Noi Dung", typeof(string));
+            dt.Columns.Add("Ngay Bat Dau", typeof(DateTime));
+            dt.Columns.Add("Ngay Ket Thuc", typeof(DateTime));
+            dt.Columns.Add("Ma Quan Ly", typeof(string));
             dt.Columns.Add("Trang Thai", typeof(int));
 
-            foreach (phongbandto phongban in phongbans)
+            foreach (tuyendungdto kyTuyenDung in tuyendungs)
             {
-                dt.Rows.Add(false, phongban.MaPhongBan, phongban.TenPhongBan, phongban.MoTa, phongban.TruongPhong, phongban.TrangThai.ToString());
+                dt.Rows.Add(
+                    false,
+                    kyTuyenDung.MaKyTuyenDung,
+                    kyTuyenDung.NoiDung,
+                    kyTuyenDung.NgayBatDau,
+                    kyTuyenDung.NgayKetThuc,
+                    kyTuyenDung.MaQuanLy,
+                    kyTuyenDung.TrangThai
+                );
             }
+
             dataGridView1.DataSource = dt;
-            dataGridView1.Columns["Mo ta"].Visible = false;
+            dataGridView1.Columns["Ngay Bat Dau"].Visible = false;
             dataGridView1.Columns["Trang Thai"].Visible = false;
+            dataGridView1.Columns["Ngay Ket Thuc"].Visible = false;
         }
+
         private void dataGridView1_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
             dataGridView1.ClearSelection();
@@ -277,13 +291,13 @@ namespace WinFormsApp1.GUI
             dataGridView1.ColumnHeadersDefaultCellStyle.SelectionBackColor = dataGridView1.ColumnHeadersDefaultCellStyle.BackColor;
             dataGridView1.ColumnHeadersDefaultCellStyle.SelectionForeColor = dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor;
         }
-        public phongbangui()
+        public tuyendunggui()
         {
             InitializeComponent();
 
         }
 
-        private void phongbangui_Load(object? sender, EventArgs e)
+        private void tuyendunggui_Load(object? sender, EventArgs e)
         {
             LoadDataToGUI();
             dataGridView1.Dock = DockStyle.Fill;
@@ -306,18 +320,22 @@ namespace WinFormsApp1.GUI
             }
 
             // Lấy dữ liệu từ dòng được chọn
-            string maPBSelected = dataGridView1.Rows[e.RowIndex].Cells["Ma Phong Ban"].Value.ToString();
-            phongbandto selectedphongban = phongbans.FirstOrDefault(phongban => phongban.MaPhongBan == maPBSelected);
-
-            if (selectedphongban != null)
+            string maTDSelected = dataGridView1.Rows[e.RowIndex].Cells["Ma Ky Tuyen Dung"].Value.ToString();
+            tuyendungdto selectedtuyendung = tuyendungs.FirstOrDefault(tuyendung => tuyendung.MaKyTuyenDung == maTDSelected);
+            hosotuyendungdto selectedhoso = hosos.FirstOrDefault(hoso => hoso.KyTuyenDung == maTDSelected);
+            if (selectedtuyendung != null || selectedhoso != null)
             {
                 // Khởi tạo Formtest
-                PhongBanInfo test = new PhongBanInfo
+                DanhSachTuyenDung test = new DanhSachTuyenDung
                 {
-                    MaPhongBan = selectedphongban.MaPhongBan.Trim(),
-                    TruongPhong = selectedphongban.TruongPhong.Trim(),
-                    TenPhongBan = selectedphongban.TenPhongBan.Trim(),
-                    MoTa = selectedphongban.MoTa.Trim()
+                    NoiDung = selectedtuyendung.NoiDung,
+                    NgayBatDau = selectedtuyendung.NgayBatDau,
+                    NgayKetThuc = selectedtuyendung.NgayKetThuc,
+                    QuanLy = selectedtuyendung.MaQuanLy,
+
+                    hosotuyendungs = hosos
+                        .Where(h => h.KyTuyenDung == selectedtuyendung.MaKyTuyenDung)
+                        .ToList() // Lọc danh sách hồ sơ theo kỳ tuyển dụng
                 };
 
                 // Hiển thị Formtest
@@ -332,7 +350,7 @@ namespace WinFormsApp1.GUI
         }
 
 
-        private void phongbangui_MouseClick(object sender, MouseEventArgs e)
+        private void tuyendunggui_MouseClick(object sender, MouseEventArgs e)
         {
             //LoadDataToGUI();
             dataGridView1.Dock = DockStyle.Fill;
@@ -364,43 +382,43 @@ namespace WinFormsApp1.GUI
         private void delete_Click(object sender, EventArgs e)
         {
             // Lấy danh sách các MaPhongBan từ các dòng có checkbox được chọn
-            var selectedPhongBans = dataGridView1.Rows
+            var selectedtuyendungs = dataGridView1.Rows
                 .Cast<DataGridViewRow>()
                 .Where(row => Convert.ToBoolean(row.Cells["Check"].Value) == true)
-                .Select(row => row.Cells["Ma Phong Ban"].Value.ToString())
+                .Select(row => row.Cells["Ma Ky Tuyen Dung"].Value.ToString())
                 .ToList();
 
             // Nếu không có dòng nào được chọn
-            if (!selectedPhongBans.Any())
+            if (!selectedtuyendungs.Any())
             {
                 MessageBox.Show("Chọn ít nhất một Phòng Ban để xóa!");
                 return;
             }
 
             // Duyệt qua danh sách các MaPhongBan đã chọn
-            foreach (string maPhongBan in selectedPhongBans)
+            foreach (string maTuyenDung in selectedtuyendungs)
             {
-                var selectedPhongBan = phongbans.FirstOrDefault(phongban => phongban.MaPhongBan == maPhongBan);
-                if (selectedPhongBan != null)
+                var selectedtuyendung = tuyendungs.FirstOrDefault(tuyendung => tuyendung.MaKyTuyenDung == maTuyenDung);
+                if (selectedtuyendung != null)
                 {
                     try
                     {
-                        phongbanBUS.DeletePhongBan(selectedPhongBan);
-                        MessageBox.Show($"Xóa Phòng Ban '{maPhongBan}' thành công!");
+                        tuyendungbus.DeleteThongBao(selectedtuyendung);
+                        MessageBox.Show($"Xóa Phòng Ban '{maTuyenDung}' thành công!");
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show($"Có lỗi xảy ra khi xóa Phòng Ban '{maPhongBan}': {ex.Message}");
+                        MessageBox.Show($"Có lỗi xảy ra khi xóa Phòng Ban '{maTuyenDung}': {ex.Message}");
                     }
                 }
                 else
                 {
-                    MessageBox.Show($"Không tìm thấy Phòng Ban với mã '{maPhongBan}'!");
+                    MessageBox.Show($"Không tìm thấy Phòng Ban với mã '{maTuyenDung}'!");
                 }
             }
 
-            // Làm mới lại danh sách phongbans (cập nhật từ cơ sở dữ liệu hoặc phương thức lấy dữ liệu)
-            phongbans = phongbanBUS.GetPhongBan(); // Lấy lại dữ liệu sau khi xóa
+            // Làm mới lại danh sách tuyendungs (cập nhật từ cơ sở dữ liệu hoặc phương thức lấy dữ liệu)
+            tuyendungs = tuyendungbus.GetTuyenDung(); // Lấy lại dữ liệu sau khi xóa
             // Tải lại dữ liệu sau khi xóa
             LoadDataToGUI();
         }
@@ -408,62 +426,59 @@ namespace WinFormsApp1.GUI
         private void edit_Click(object sender, EventArgs e)
         {
             // Lấy danh sách các MaPhongBan từ các dòng có checkbox được chọn
-            var selectedPhongBans = dataGridView1.Rows
+            var selectedtuyendungs = dataGridView1.Rows
                 .Cast<DataGridViewRow>()
                 .Where(row => Convert.ToBoolean(row.Cells["Check"].Value) == true)
-                .Select(row => row.Cells["Ma Phong Ban"].Value.ToString())
+                .Select(row => row.Cells["Ma Ky Tuyen Dung"].Value.ToString())
                 .ToList();
 
             // Nếu không có dòng nào được chọn
-            if (!selectedPhongBans.Any())
+            if (!selectedtuyendungs.Any())
             {
                 MessageBox.Show("Chọn ít nhất một Phòng Ban để chỉnh sửa!");
                 return;
             }
 
             // Duyệt qua danh sách các MaPhongBan đã chọn
-            foreach (string maPhongBan in selectedPhongBans)
+            foreach (string maTuyenDung in selectedtuyendungs)
             {
-                var selectedPhongBan = phongbans.FirstOrDefault(phongban => phongban.MaPhongBan == maPhongBan);
+                var selectedtuyendung = tuyendungs.FirstOrDefault(tuyendung => tuyendung.MaKyTuyenDung == maTuyenDung);
 
-                if (selectedPhongBan != null)
+                if (selectedtuyendung != null)
                 {
                     // Tạo và hiển thị form chỉnh sửa
-                    SuaPhongBan suaPhongBanForm = new SuaPhongBan(selectedPhongBan);
-                    suaPhongBanForm.StartPosition = FormStartPosition.CenterParent;
-                    suaPhongBanForm.ShowDialog();
+                    SuaTuyenDung SuaTuyenDungForm = new SuaTuyenDung(selectedtuyendung);
+                    SuaTuyenDungForm.StartPosition = FormStartPosition.CenterParent;
+                    SuaTuyenDungForm.ShowDialog();
                 }
                 else
                 {
-                    MessageBox.Show($"Không tìm thấy Phòng Ban với mã '{maPhongBan}'!");
+                    MessageBox.Show($"Không tìm thấy Phòng Ban với mã '{maTuyenDung}'!");
                 }
             }
-            // Làm mới lại danh sách phongbans (cập nhật từ cơ sở dữ liệu hoặc phương thức lấy dữ liệu)
-            phongbans = phongbanBUS.GetPhongBan(); // Lấy lại dữ liệu sau khi xóa
-            // Tải lại dữ liệu sau khi xóa
+            // Làm mới lại danh sách tuyendungs (cập nhật từ cơ sở dữ liệu hoặc phương thức lấy dữ liệu)
+            tuyendungs = tuyendungbus.GetTuyenDung(); // Lấy lại dữ liệu sau khi xóa
+                                                      // Tải lại dữ liệu sau khi xóa
             LoadDataToGUI();
         }
 
-        private void txtSearch_TextChanged(object sender, EventArgs e)
+    private void txtSearch_TextChanged(object sender, EventArgs e)
+    {
+        string searchValue = txtSearch.Text.ToLower();
+
+        if (string.IsNullOrWhiteSpace(searchValue))
         {
-
-            string searchValue = txtSearch.Text.ToLower();
-
-            // Kiểm tra và đặt lại placeholder nếu trống
-            if (string.IsNullOrWhiteSpace(searchValue))
-            {
-                txtSearch.PlaceholderText = "Tìm kiếm ...";
-            }
-
-            // Lọc các hàng của DataGridView dựa trên giá trị tìm kiếm
-            foreach (DataGridViewRow row in dataGridView1.Rows)
-            {
-                row.Visible = string.IsNullOrEmpty(searchValue) || RowContainsValue(row, searchValue);
-            }
+            txtSearch.PlaceholderText = "Tìm kiếm ...";
         }
 
-        // Hàm kiểm tra hàng có chứa chuỗi tìm kiếm không
-        private bool RowContainsValue(DataGridViewRow row, string searchValue)
+        foreach (DataGridViewRow row in dataGridView1.Rows)
+        {
+            row.Visible = string.IsNullOrEmpty(searchValue) || RowContainsValue(row, searchValue);
+        }
+    }
+
+    // Hàm kiểm tra hàng có chứa chuỗi tìm kiếm không
+    private bool RowContainsValue(DataGridViewRow row, string searchValue)
         {
             foreach (DataGridViewCell cell in row.Cells)
             {
@@ -486,10 +501,10 @@ namespace WinFormsApp1.GUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            TaoPhongBan taoPhongBanForm = new TaoPhongBan();
-            taoPhongBanForm.ShowDialog();
-            // Làm mới lại danh sách phongbans (cập nhật từ cơ sở dữ liệu hoặc phương thức lấy dữ liệu)
-            phongbans = phongbanBUS.GetPhongBan(); // Lấy lại dữ liệu sau khi xóa
+            TaoTuyenDung TaoTuyenDungForm = new TaoTuyenDung();
+            TaoTuyenDungForm.ShowDialog();
+            // Làm mới lại danh sách tuyendungs (cập nhật từ cơ sở dữ liệu hoặc phương thức lấy dữ liệu)
+            tuyendungs = tuyendungbus.GetTuyenDung(); // Lấy lại dữ liệu sau khi xóa
             // Tải lại dữ liệu sau khi xóa
             LoadDataToGUI();
         }

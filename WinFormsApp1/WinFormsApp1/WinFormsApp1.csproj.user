@@ -22,6 +22,9 @@
     <Compile Update="GUI\Home.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="GUI\Info\DanhSachTuyenDung.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="GUI\Info\DuAnInfo.cs">
       <SubType>Form</SubType>
     </Compile>
