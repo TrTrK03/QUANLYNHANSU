@@ -27,7 +27,7 @@ namespace WinFormsApp1.DAO
                 }
 
                 // Thực thi câu lệnh SQL để lấy dữ liệu từ bảng KhenThuong
-                SqlCommand command = new SqlCommand("SELECT * FROM KhenThuong", connection);
+                SqlCommand command = new SqlCommand("SELECT * FROM KhenThuong WHERE TrangThai = 1", connection);
                 SqlDataReader reader = command.ExecuteReader();
 
                 // Đọc dữ liệu từ SqlDataReader

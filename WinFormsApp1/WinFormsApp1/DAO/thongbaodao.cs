@@ -23,7 +23,7 @@ namespace WinFormsApp1.DAO
                     connection.Open();
                 }
 
-                SqlCommand command = new SqlCommand("SELECT * FROM BangThongBao", connection);
+                SqlCommand command = new SqlCommand("SELECT * FROM BangThongBao WHERE TrangThai = 1", connection);
                 SqlDataReader reader = command.ExecuteReader();
 
                 while (reader.Read())

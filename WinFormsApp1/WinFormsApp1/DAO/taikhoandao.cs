@@ -29,7 +29,7 @@ namespace WinFormsApp1.DAO
                 }
                 SqlCommand command = new SqlCommand();
                 command.CommandType = System.Data.CommandType.Text;
-                command.CommandText = "SELECT * FROM TaiKhoan";
+                command.CommandText = "SELECT * FROM TaiKhoan WHERE TrangThai = 1";
                 command.Connection = connection;
                 SqlDataReader reader = command.ExecuteReader();
 
