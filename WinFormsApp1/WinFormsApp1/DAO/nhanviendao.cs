@@ -65,7 +65,7 @@ namespace WinFormsApp1.DAO
         {
             using (SqlConnection connection = connectObj.connection())
             {
-                SqlCommand command = new SqlCommand("INSERT INTO NhanVien VALUES(@MaNhanVien, @HoTen, @NgaySinh, @GioiTinh, @DiaChi, @Email, @SDT, @NguoiQuanLy, @PhongBan, @ChucVu, @HoSoGioiThieu, @TrangThai)", connection);
+                SqlCommand command = new SqlCommand("INSERT INTO NhanVien VALUES(@MaNhanVien, @HoTen, @NgaySinh, @GioiTinh, @DiaChi, @Email, @SDT, @NguoiQuanLy, @PhongBan, @ChucVu, @HoSoGioiThieu, 1)", connection);
 
                 // Sử dụng SqlParameter với kiểu dữ liệu rõ ràng
                 command.Parameters.Add(new SqlParameter("@MaNhanVien", SqlDbType.NVarChar)).Value = employee.MaNhanVien;
@@ -79,7 +79,6 @@ namespace WinFormsApp1.DAO
                 command.Parameters.Add(new SqlParameter("@PhongBan", SqlDbType.NVarChar)).Value = (object)employee.PhongBan ?? DBNull.Value; // Xử lý NULL
                 command.Parameters.Add(new SqlParameter("@ChucVu", SqlDbType.NVarChar)).Value = employee.ChucVu;
                 command.Parameters.Add(new SqlParameter("@HoSoGioiThieu", SqlDbType.NVarChar)).Value = (object)employee.HoSoGioiThieu ?? DBNull.Value; // Xử lý NULL
-                command.Parameters.Add(new SqlParameter("@TrangThai", SqlDbType.Int)).Value = employee.TrangThai;
 
                 // Thực thi lệnh
                 command.ExecuteNonQuery();

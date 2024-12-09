@@ -77,16 +77,18 @@ namespace WinFormsApp1.GUI
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1112, 641);
+            panel1.Size = new Size(1016, 713);
             panel1.TabIndex = 2;
             // 
             // panel5
             // 
             panel5.BackColor = Color.Silver;
             panel5.Controls.Add(dataGridView1);
-            panel5.Location = new Point(3, 65);
+            panel5.Dock = DockStyle.Fill;
+            panel5.Location = new Point(0, 59);
+            panel5.Margin = new Padding(0);
             panel5.Name = "panel5";
-            panel5.Size = new Size(1106, 573);
+            panel5.Size = new Size(1016, 654);
             panel5.TabIndex = 6;
             // 
             // dataGridView1
@@ -116,7 +118,7 @@ namespace WinFormsApp1.GUI
             dataGridView1.RowTemplate.Height = 100;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView1.ShowRowErrors = false;
-            dataGridView1.Size = new Size(1106, 573);
+            dataGridView1.Size = new Size(1016, 654);
             dataGridView1.TabIndex = 1;
             dataGridView1.CellMouseClick += dataGridView1_CellMouseClick;
             dataGridView1.DataBindingComplete += dataGridView1_DataBindingComplete;
@@ -126,11 +128,12 @@ namespace WinFormsApp1.GUI
             panel2.BackColor = Color.White;
             panel2.Controls.Add(panel6);
             panel2.Controls.Add(label1);
+            panel2.Dock = DockStyle.Top;
             panel2.ForeColor = Color.FromArgb(49, 17, 117);
-            panel2.Location = new Point(3, 0);
+            panel2.Location = new Point(0, 0);
             panel2.Margin = new Padding(0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1033, 59);
+            panel2.Size = new Size(1016, 59);
             panel2.TabIndex = 0;
             panel2.MouseClick += panel2_MouseClick;
             // 
@@ -144,9 +147,10 @@ namespace WinFormsApp1.GUI
             panel6.Controls.Add(Import);
             panel6.Controls.Add(export);
             panel6.Controls.Add(txtSearch);
-            panel6.Location = new Point(145, 0);
+            panel6.Dock = DockStyle.Fill;
+            panel6.Location = new Point(149, 0);
             panel6.Name = "panel6";
-            panel6.Size = new Size(888, 59);
+            panel6.Size = new Size(867, 59);
             panel6.TabIndex = 6;
             panel6.MouseClick += panel6_MouseClick;
             // 
@@ -155,7 +159,7 @@ namespace WinFormsApp1.GUI
             edit.BackColor = Color.Lavender;
             edit.FlatAppearance.BorderColor = Color.FromArgb(224, 224, 224);
             edit.FlatStyle = FlatStyle.Flat;
-            edit.Location = new Point(407, 13);
+            edit.Location = new Point(385, 12);
             edit.Name = "edit";
             edit.Size = new Size(80, 30);
             edit.TabIndex = 10;
@@ -168,7 +172,7 @@ namespace WinFormsApp1.GUI
             delete.BackColor = Color.Lavender;
             delete.FlatAppearance.BorderColor = Color.FromArgb(224, 224, 224);
             delete.FlatStyle = FlatStyle.Flat;
-            delete.Location = new Point(493, 13);
+            delete.Location = new Point(471, 12);
             delete.Name = "delete";
             delete.Size = new Size(80, 30);
             delete.TabIndex = 9;
@@ -182,7 +186,7 @@ namespace WinFormsApp1.GUI
             Tao.FlatAppearance.BorderSize = 0;
             Tao.FlatStyle = FlatStyle.Flat;
             Tao.Image = Properties.Resources.add2;
-            Tao.Location = new Point(777, 6);
+            Tao.Location = new Point(749, 4);
             Tao.Name = "Tao";
             Tao.Size = new Size(90, 40);
             Tao.TabIndex = 2;
@@ -194,7 +198,7 @@ namespace WinFormsApp1.GUI
             Import.BackColor = Color.Lavender;
             Import.FlatAppearance.BorderColor = Color.FromArgb(224, 224, 224);
             Import.FlatStyle = FlatStyle.Flat;
-            Import.Location = new Point(579, 13);
+            Import.Location = new Point(557, 12);
             Import.Name = "Import";
             Import.Size = new Size(80, 30);
             Import.TabIndex = 9;
@@ -207,7 +211,7 @@ namespace WinFormsApp1.GUI
             export.BackColor = Color.Lavender;
             export.FlatAppearance.BorderColor = Color.FromArgb(224, 224, 224);
             export.FlatStyle = FlatStyle.Flat;
-            export.Location = new Point(665, 13);
+            export.Location = new Point(643, 12);
             export.Name = "export";
             export.Size = new Size(80, 30);
             export.TabIndex = 8;
@@ -226,12 +230,12 @@ namespace WinFormsApp1.GUI
             // 
             // label1
             // 
-            label1.Anchor = AnchorStyles.None;
+            label1.Dock = DockStyle.Left;
             label1.Font = new Font("Segoe UI", 16F);
             label1.ForeColor = Color.FromArgb(49, 17, 117);
-            label1.Location = new Point(0, 6);
+            label1.Location = new Point(0, 0);
             label1.Name = "label1";
-            label1.Size = new Size(149, 47);
+            label1.Size = new Size(149, 59);
             label1.TabIndex = 1;
             label1.Text = "Thông Báo";
             // 
@@ -249,7 +253,7 @@ namespace WinFormsApp1.GUI
             ForeColor = Color.FromArgb(49, 17, 117);
             Margin = new Padding(0);
             Name = "thongbaogui";
-            Size = new Size(1112, 641);
+            Size = new Size(1016, 713);
             Load += thongbaogui_Load;
             MouseClick += thongbaogui_MouseClick;
             panel1.ResumeLayout(false);

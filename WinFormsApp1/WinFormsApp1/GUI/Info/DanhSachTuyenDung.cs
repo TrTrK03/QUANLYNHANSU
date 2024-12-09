@@ -80,23 +80,13 @@ namespace WinFormsApp1.GUI.Info
                     hosotuyendung.SDT,
                     hosotuyendung.TrinhDo,
                     hosotuyendung.MoTaBangCap,
-                    hosotuyendung.KyTuyenDung
+                    hosotuyendung.KyTuyenDung,
+                    hosotuyendung.TrangThai
                 );
             }
 
             // Gán DataTable cho DataGridView
             dataGridView1.DataSource = dt;
-
-            // Kiểm tra trạng thái và ẩn dòng nếu trạng thái = 0
-            foreach (DataGridViewRow row in dataGridView1.Rows)
-            {
-                // Kiểm tra trạng thái của dòng
-                if (row.Cells["Trang Thai"].Value != null && (int)row.Cells["Trang Thai"].Value == 0)
-                {
-                    // Ẩn toàn bộ dòng nếu trạng thái = 0
-                    row.Visible = false;
-                }
-            }
 
             // Ẩn một số cột không cần thiết
             dataGridView1.Columns["Trạng Thái"].Visible = false;
@@ -128,16 +118,16 @@ namespace WinFormsApp1.GUI.Info
                     try
                     {
                         hosotuyendungbus.DeleteHoSoTuyenDung(selectedHoSo);
-                        MessageBox.Show($"Xóa Phòng Ban '{MaHoSoTuyenDung}' thành công!");
+                        MessageBox.Show($"Xóa Hồ Sơ '{MaHoSoTuyenDung}' thành công!");
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show($"Có lỗi xảy ra khi xóa Phòng Ban '{MaHoSoTuyenDung}': {ex.Message}");
+                        MessageBox.Show($"Có lỗi xảy ra khi xóa Hồ Sơ '{MaHoSoTuyenDung}': {ex.Message}");
                     }
                 }
                 else
                 {
-                    MessageBox.Show($"Không tìm thấy Phòng Ban với mã '{MaHoSoTuyenDung}'!");
+                    MessageBox.Show($"Không tìm thấy Hồ Sơ với mã '{MaHoSoTuyenDung}'!");
                 }
             }
             MessageBox.Show("Xóa thành công!");
@@ -150,10 +140,27 @@ namespace WinFormsApp1.GUI.Info
         {
             TaoHoSo TaoHoSoForm = new TaoHoSo();
             TaoHoSoForm.ShowDialog();
-            // Làm mới lại danh sách phongbans (cập nhật từ cơ sở dữ liệu hoặc phương thức lấy dữ liệu)
-            hosotuyendungs = hosotuyendungbus.GetHoSoTuyenDung(); // Lấy lại dữ liệu sau khi xóa
-                                                                  // Tải lại dữ liệu sau khi xóa
-            LoadData();
+
+            // Lấy danh sách các MaHoSoTuyenDung từ các dòng có checkbox được chọn
+            var selectedHoSos = dataGridView1.Rows
+                .Cast<DataGridViewRow>()
+                .Where(row => Convert.ToBoolean(row.Cells["Check"].Value) == true)
+                .Select(row => row.Cells["Mã Hồ Sơ"].Value.ToString())
+                .ToList();
+            foreach (string MaHoSoTuyenDung in selectedHoSos)
+            {
+                var selectedHoSo = hosos.FirstOrDefault(hoso => hoso.MaHoSoTuyenDung == MaHoSoTuyenDung);
+                try
+                {
+                    hosotuyendungbus.DeleteHoSoTuyenDung(selectedHoSo);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Có lỗi xảy ra khi xóa Hồ Sơ '{MaHoSoTuyenDung}': {ex.Message}");
+                }
+                hosotuyendungs = hosotuyendungbus.GetHoSoTuyenDung();
+                LoadData();
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
