@@ -154,10 +154,10 @@ namespace WinFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            panNav.Height = tuyendung.Height;
-            panNav.Top = tuyendung.Top;
-            panNav.Left = tuyendung.Left;
-            tuyendung.BackColor = Color.FromArgb(46, 51, 73);
+            panNav.Height = khenthuong.Height;
+            panNav.Top = khenthuong.Top;
+            panNav.Left = khenthuong.Left;
+            khenthuong.BackColor = Color.FromArgb(46, 51, 73);
             panel5.Controls.Clear();
             khenThuongGUI td = new khenThuongGUI();
             panel5.Controls.Add(td);

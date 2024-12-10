@@ -45,22 +45,52 @@
             // groupBox1
             // 
             groupBox1.Controls.Add(dataWage);
-            groupBox1.Location = new Point(18, 143);
+            groupBox1.Dock = DockStyle.Bottom;
+            groupBox1.Location = new Point(0, 103);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(1023, 492);
+            groupBox1.Size = new Size(1016, 610);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Danh sách bảng lương";
             // 
             // dataWage
             // 
-            dataWage.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataWage.Location = new Point(33, 35);
+            dataWage.AllowUserToAddRows = false;
+            dataWage.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataWage.BackgroundColor = Color.White;
+            dataWage.BorderStyle = BorderStyle.None;
+            dataWage.CellBorderStyle = DataGridViewCellBorderStyle.None;
+            dataWage.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataWage.ColumnHeadersHeight = 70;
+            dataWage.Dock = DockStyle.Fill;
+            dataWage.GridColor = SystemColors.Info;
+            dataWage.Location = new Point(3, 23);
             dataWage.Name = "dataWage";
+            dataWage.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle
+            {
+                Alignment = DataGridViewContentAlignment.MiddleLeft,
+                BackColor = SystemColors.Control,
+                Font = new Font("Segoe UI", 15F),
+                ForeColor = SystemColors.WindowText,
+                SelectionBackColor = SystemColors.Highlight,
+                SelectionForeColor = SystemColors.HighlightText,
+                WrapMode = DataGridViewTriState.False
+            };
+            dataWage.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+
+            dataWage.RowHeadersVisible = false;
             dataWage.RowHeadersWidth = 51;
-            dataWage.Size = new Size(970, 451);
+            dataWage.RowTemplate.Height = 100;
+            dataWage.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataWage.ShowRowErrors = false;
+            dataWage.Size = new Size(1010, 584);
             dataWage.TabIndex = 0;
+
+            // Sự kiện
             dataWage.CellContentClick += dataWage_CellContentClick;
+
             // 
             // groupBox2
             // 
@@ -70,9 +100,10 @@
             groupBox2.Controls.Add(deleteWate);
             groupBox2.Controls.Add(editWave);
             groupBox2.Controls.Add(addWave);
-            groupBox2.Location = new Point(18, 12);
+            groupBox2.Dock = DockStyle.Top;
+            groupBox2.Location = new Point(0, 0);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(1023, 97);
+            groupBox2.Size = new Size(1016, 97);
             groupBox2.TabIndex = 1;
             groupBox2.TabStop = false;
             groupBox2.Text = "Chức năng";
@@ -143,7 +174,7 @@
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Name = "bangLuongGUI";
-            Size = new Size(1060, 638);
+            Size = new Size(1016, 713);
             groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataWage).EndInit();
             groupBox2.ResumeLayout(false);

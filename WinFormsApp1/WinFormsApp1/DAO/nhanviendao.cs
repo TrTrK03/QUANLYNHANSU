@@ -127,33 +127,18 @@ namespace WinFormsApp1.DAO
         {
             string maDuAn = string.Empty;
 
-            using (SqlConnection connection = connectObj.connection()) // Sử dụng connection
+            using (SqlConnection connection = connectObj.connection())
             {
-                try
-                {
-                    connection.Open(); // Mở kết nối cơ sở dữ liệu
-                    string query = "SELECT MaDuAn FROM ChiTietDuAnNhanVien WHERE MaNhanVien = @MaNhanVien"; // Câu lệnh SQL
-                    SqlCommand cmd = new SqlCommand(query, connection); // Sử dụng connection để thực thi câu lệnh SQL
-                    cmd.Parameters.Add(new SqlParameter("@MaNhanVien", SqlDbType.NVarChar)).Value = employee.MaNhanVien;
-
-                    object result = cmd.ExecuteScalar(); // Thực thi câu lệnh và lấy kết quả trả về
-                    if (result != null)
-                    {
-                        maDuAn = result.ToString(); // Gán giá trị nếu có kết quả
-                    }
-                    else
-                    {
-                        maDuAn = "Không tìm thấy"; // Trường hợp không tìm thấy
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Lỗi khi truy vấn cơ sở dữ liệu: " + ex.Message);
-                }
+                SqlCommand command = new SqlCommand();
+                command.CommandType = System.Data.CommandType.Text;
+                command.CommandText = "SELECT MaDuAn FROM ChiTietDuAnNhanVien WHERE MaNhanVien = @MaNhanVien";
+                command.Parameters.Add(new SqlParameter("@MaNhanVien", SqlDbType.NVarChar)).Value = employee.MaNhanVien;
+                command.Connection = connection;
             }
 
-            return maDuAn;  // Trả về giá trị kiểu string
+            return maDuAn;
         }
+
 
 
 

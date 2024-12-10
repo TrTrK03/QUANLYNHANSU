@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             panel1 = new Panel();
+            panNav = new Panel();
             khenthuong = new Button();
             chamcong = new Button();
             nhanvien = new Button();
@@ -39,20 +41,19 @@
             duan = new Button();
             phongban = new Button();
             panel2 = new Panel();
-            panNav = new Panel();
-            label1 = new Label();
-            pictureBox1 = new PictureBox();
             fontDialog1 = new FontDialog();
             panel3 = new Panel();
             panel5 = new Panel();
+            timer1 = new System.Windows.Forms.Timer(components);
+            timer2 = new System.Windows.Forms.Timer(components);
+            timer3 = new System.Windows.Forms.Timer(components);
             panel1.SuspendLayout();
-            panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
-            panel1.BackColor = Color.FromArgb(24, 30, 54);
+            panel1.BackColor = Color.FromArgb(64, 64, 64);
+            panel1.Controls.Add(panNav);
             panel1.Controls.Add(khenthuong);
             panel1.Controls.Add(chamcong);
             panel1.Controls.Add(nhanvien);
@@ -69,6 +70,15 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(164, 713);
             panel1.TabIndex = 0;
+            // 
+            // panNav
+            // 
+            panNav.BackColor = Color.FromArgb(0, 126, 249);
+            panNav.Location = new Point(2, 103);
+            panNav.Margin = new Padding(2);
+            panNav.Name = "panNav";
+            panNav.Size = new Size(5, 71);
+            panNav.TabIndex = 3;
             // 
             // khenthuong
             // 
@@ -251,50 +261,13 @@
             // 
             // panel2
             // 
-            panel2.Controls.Add(panNav);
-            panel2.Controls.Add(label1);
-            panel2.Controls.Add(pictureBox1);
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(0, 0);
-            panel2.Margin = new Padding(2);
+            panel2.Margin = new Padding(0);
             panel2.Name = "panel2";
             panel2.Size = new Size(164, 103);
             panel2.TabIndex = 1;
             panel2.Paint += panel2_Paint;
-            // 
-            // panNav
-            // 
-            panNav.BackColor = Color.FromArgb(0, 126, 249);
-            panNav.Location = new Point(0, 103);
-            panNav.Margin = new Padding(2);
-            panNav.Name = "panNav";
-            panNav.Size = new Size(5, 71);
-            panNav.TabIndex = 3;
-            // 
-            // label1
-            // 
-            label1.Anchor = AnchorStyles.None;
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.FromArgb(0, 156, 149);
-            label1.Location = new Point(30, 70);
-            label1.Margin = new Padding(2, 0, 2, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(106, 25);
-            label1.TabIndex = 1;
-            label1.Text = "User name";
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Anchor = AnchorStyles.Left;
-            pictureBox1.Image = Properties.Resources.hr;
-            pictureBox1.Location = new Point(52, 11);
-            pictureBox1.Margin = new Padding(2);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(58, 57);
-            pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
             // 
             // panel3
             // 
@@ -321,7 +294,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
-            BackColor = Color.FromArgb(46, 51, 73);
+            BackColor = Color.Silver;
             ClientSize = new Size(1180, 713);
             Controls.Add(panel5);
             Controls.Add(panel3);
@@ -331,9 +304,6 @@
             Text = "Form1";
             Load += Form1_Load;
             panel1.ResumeLayout(false);
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -342,8 +312,6 @@
 
         private Panel panel1;
         private Panel panel2;
-        private PictureBox pictureBox1;
-        private Label label1;
         private FontDialog fontDialog1;
         private Button tuyendung;
         private Button duan;
@@ -357,5 +325,8 @@
         private Panel panel3;
         private Panel panel5;
         private Button khenthuong;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.Timer timer3;
     }
 }

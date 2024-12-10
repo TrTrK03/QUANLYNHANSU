@@ -41,11 +41,11 @@
             comboBoxKhenThuong = new ComboBox();
             groupBox1 = new GroupBox();
             groupBox2 = new GroupBox();
+            btnSearch = new Button();
+            searchReward = new TextBox();
             button1 = new Button();
             groupBox3 = new GroupBox();
             dataKhenThuong = new DataGridView();
-            searchReward = new TextBox();
-            btnSearch = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
@@ -55,7 +55,7 @@
             // comboBoxNhanVien
             // 
             comboBoxNhanVien.FormattingEnabled = true;
-            comboBoxNhanVien.Location = new Point(171, 58);
+            comboBoxNhanVien.Location = new Point(209, 49);
             comboBoxNhanVien.Name = "comboBoxNhanVien";
             comboBoxNhanVien.Size = new Size(194, 28);
             comboBoxNhanVien.TabIndex = 0;
@@ -64,7 +64,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(28, 58);
+            label1.Location = new Point(66, 49);
             label1.Name = "label1";
             label1.Size = new Size(77, 20);
             label1.TabIndex = 1;
@@ -73,7 +73,7 @@
             // 
             // textBoxKhenThuong
             // 
-            textBoxKhenThuong.Location = new Point(176, 129);
+            textBoxKhenThuong.Location = new Point(214, 123);
             textBoxKhenThuong.Name = "textBoxKhenThuong";
             textBoxKhenThuong.Size = new Size(194, 27);
             textBoxKhenThuong.TabIndex = 2;
@@ -91,7 +91,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(28, 129);
+            label2.Location = new Point(66, 123);
             label2.Name = "label2";
             label2.Size = new Size(142, 20);
             label2.TabIndex = 3;
@@ -100,7 +100,7 @@
             // 
             // dateTimePicker
             // 
-            dateTimePicker.Location = new Point(609, 132);
+            dateTimePicker.Location = new Point(647, 126);
             dateTimePicker.Name = "dateTimePicker";
             dateTimePicker.Size = new Size(239, 27);
             dateTimePicker.TabIndex = 4;
@@ -119,7 +119,7 @@
             // Ngày
             // 
             Ngày.AutoSize = true;
-            Ngày.Location = new Point(441, 132);
+            Ngày.Location = new Point(479, 126);
             Ngày.Name = "Ngày";
             Ngày.Size = new Size(131, 20);
             Ngày.TabIndex = 5;
@@ -127,7 +127,7 @@
             // 
             // buttonReset
             // 
-            buttonReset.Location = new Point(432, 36);
+            buttonReset.Location = new Point(430, 36);
             buttonReset.Name = "buttonReset";
             buttonReset.Size = new Size(118, 41);
             buttonReset.TabIndex = 6;
@@ -138,7 +138,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(441, 66);
+            label3.Location = new Point(479, 57);
             label3.Name = "label3";
             label3.Size = new Size(124, 20);
             label3.TabIndex = 7;
@@ -148,7 +148,7 @@
             // comboBoxKhenThuong
             // 
             comboBoxKhenThuong.FormattingEnabled = true;
-            comboBoxKhenThuong.Location = new Point(609, 63);
+            comboBoxKhenThuong.Location = new Point(647, 54);
             comboBoxKhenThuong.Name = "comboBoxKhenThuong";
             comboBoxKhenThuong.Size = new Size(239, 28);
             comboBoxKhenThuong.TabIndex = 8;
@@ -164,9 +164,10 @@
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(textBoxKhenThuong);
             groupBox1.Controls.Add(label3);
-            groupBox1.Location = new Point(20, 3);
+            groupBox1.Dock = DockStyle.Top;
+            groupBox1.Location = new Point(0, 0);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(961, 303);
+            groupBox1.Size = new Size(1016, 303);
             groupBox1.TabIndex = 9;
             groupBox1.TabStop = false;
             groupBox1.Text = "Khen Thưởng";
@@ -179,12 +180,30 @@
             groupBox2.Controls.Add(buttonAdd);
             groupBox2.Controls.Add(buttonReset);
             groupBox2.Controls.Add(buttonDelete);
-            groupBox2.Location = new Point(39, 197);
+            groupBox2.Location = new Point(33, 189);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new Size(903, 92);
             groupBox2.TabIndex = 9;
             groupBox2.TabStop = false;
             groupBox2.Text = "Chức năng";
+            // 
+            // btnSearch
+            // 
+            btnSearch.BackColor = Color.White;
+            btnSearch.Image = Properties.Resources.search;
+            btnSearch.Location = new Point(809, 36);
+            btnSearch.Name = "btnSearch";
+            btnSearch.Size = new Size(88, 33);
+            btnSearch.TabIndex = 9;
+            btnSearch.UseVisualStyleBackColor = false;
+            btnSearch.Click += btnSearch_Click;
+            // 
+            // searchReward
+            // 
+            searchReward.Location = new Point(570, 42);
+            searchReward.Name = "searchReward";
+            searchReward.Size = new Size(221, 27);
+            searchReward.TabIndex = 8;
             // 
             // button1
             // 
@@ -199,39 +218,48 @@
             // groupBox3
             // 
             groupBox3.Controls.Add(dataKhenThuong);
-            groupBox3.Location = new Point(20, 312);
+            groupBox3.Dock = DockStyle.Fill;
+            groupBox3.Location = new Point(0, 303);
             groupBox3.Name = "groupBox3";
-            groupBox3.Size = new Size(961, 276);
+            groupBox3.Size = new Size(1016, 410);
             groupBox3.TabIndex = 10;
             groupBox3.TabStop = false;
             groupBox3.Text = "Danh sách khen thưởng";
             // 
             // dataKhenThuong
             // 
-            dataKhenThuong.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataKhenThuong.Location = new Point(6, 26);
+            dataKhenThuong.AllowUserToAddRows = false;
+            dataKhenThuong.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataKhenThuong.BackgroundColor = Color.White;
+            dataKhenThuong.BorderStyle = BorderStyle.None;
+            dataKhenThuong.CellBorderStyle = DataGridViewCellBorderStyle.None;
+            dataKhenThuong.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataKhenThuong.ColumnHeadersHeight = 70;
+            dataKhenThuong.Dock = DockStyle.Fill;
+            dataKhenThuong.GridColor = SystemColors.Info;
+            dataKhenThuong.Location = new Point(3, 23);
             dataKhenThuong.Name = "dataKhenThuong";
+            dataKhenThuong.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle
+            {
+                Alignment = DataGridViewContentAlignment.MiddleLeft,
+                BackColor = SystemColors.Control,
+                Font = new Font("Segoe UI", 15F),
+                ForeColor = SystemColors.WindowText,
+                SelectionBackColor = SystemColors.Highlight,
+                SelectionForeColor = SystemColors.HighlightText,
+                WrapMode = DataGridViewTriState.False
+            };
+            dataKhenThuong.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+
+            dataKhenThuong.RowHeadersVisible = false;
             dataKhenThuong.RowHeadersWidth = 51;
-            dataKhenThuong.Size = new Size(949, 249);
+            dataKhenThuong.RowTemplate.Height = 100;
+            dataKhenThuong.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataKhenThuong.ShowRowErrors = false;
+            dataKhenThuong.Size = new Size(1010, 384);
             dataKhenThuong.TabIndex = 0;
-            // 
-            // searchReward
-            // 
-            searchReward.Location = new Point(570, 42);
-            searchReward.Name = "searchReward";
-            searchReward.Size = new Size(221, 27);
-            searchReward.TabIndex = 8;
-            // 
-            // btnSearch
-            // 
-            btnSearch.BackColor = Color.White;
-            btnSearch.Image = Properties.Resources.search;
-            btnSearch.Location = new Point(809, 36);
-            btnSearch.Name = "btnSearch";
-            btnSearch.Size = new Size(88, 33);
-            btnSearch.TabIndex = 9;
-            btnSearch.UseVisualStyleBackColor = false;
-            btnSearch.Click += btnSearch_Click;
             // 
             // khenThuongGUI
             // 
@@ -241,7 +269,7 @@
             Controls.Add(groupBox3);
             Controls.Add(groupBox1);
             Name = "khenThuongGUI";
-            Size = new Size(1000, 600);
+            Size = new Size(1016, 713);
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);

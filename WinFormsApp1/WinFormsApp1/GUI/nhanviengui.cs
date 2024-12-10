@@ -77,16 +77,17 @@ namespace WinFormsApp1.GUI
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1046, 641);
+            panel1.Size = new Size(1016, 713);
             panel1.TabIndex = 2;
             // 
             // panel5
             // 
             panel5.BackColor = Color.Silver;
             panel5.Controls.Add(dataGridView1);
-            panel5.Location = new Point(3, 65);
+            panel5.Dock = DockStyle.Fill;
+            panel5.Location = new Point(0, 59);
             panel5.Name = "panel5";
-            panel5.Size = new Size(1033, 573);
+            panel5.Size = new Size(1016, 654);
             panel5.TabIndex = 6;
             // 
             // dataGridView1
@@ -116,7 +117,7 @@ namespace WinFormsApp1.GUI
             dataGridView1.RowTemplate.Height = 100;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView1.ShowRowErrors = false;
-            dataGridView1.Size = new Size(1033, 573);
+            dataGridView1.Size = new Size(1016, 654);
             dataGridView1.TabIndex = 1;
             dataGridView1.CellMouseClick += dataGridView1_CellMouseClick;
             dataGridView1.DataBindingComplete += dataGridView1_DataBindingComplete;
@@ -126,11 +127,12 @@ namespace WinFormsApp1.GUI
             panel2.BackColor = Color.White;
             panel2.Controls.Add(panel6);
             panel2.Controls.Add(label1);
+            panel2.Dock = DockStyle.Top;
             panel2.ForeColor = Color.FromArgb(49, 17, 117);
-            panel2.Location = new Point(3, 0);
+            panel2.Location = new Point(0, 0);
             panel2.Margin = new Padding(0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1000, 59);
+            panel2.Size = new Size(1016, 59);
             panel2.TabIndex = 0;
             panel2.MouseClick += panel2_MouseClick;
             // 
@@ -144,9 +146,10 @@ namespace WinFormsApp1.GUI
             panel6.Controls.Add(Import);
             panel6.Controls.Add(export);
             panel6.Controls.Add(txtSearch);
-            panel6.Location = new Point(128, 0);
+            panel6.Dock = DockStyle.Fill;
+            panel6.Location = new Point(139, 0);
             panel6.Name = "panel6";
-            panel6.Size = new Size(905, 59);
+            panel6.Size = new Size(877, 59);
             panel6.TabIndex = 6;
             panel6.MouseClick += panel6_MouseClick;
             // 
@@ -226,14 +229,15 @@ namespace WinFormsApp1.GUI
             // 
             // label1
             // 
-            label1.Anchor = AnchorStyles.None;
+            label1.Dock = DockStyle.Left;
             label1.Font = new Font("Segoe UI", 15F);
             label1.ForeColor = Color.FromArgb(49, 17, 117);
-            label1.Location = new Point(3, 13);
+            label1.Location = new Point(0, 0);
             label1.Name = "label1";
-            label1.Size = new Size(136, 36);
+            label1.Size = new Size(139, 59);
             label1.TabIndex = 1;
             label1.Text = "Nhân Viên";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // openFileDialog1
             // 
@@ -249,7 +253,7 @@ namespace WinFormsApp1.GUI
             ForeColor = Color.FromArgb(49, 17, 117);
             Margin = new Padding(0);
             Name = "nhanviengui";
-            Size = new Size(1046, 641);
+            Size = new Size(1016, 713);
             Load += nhanviengui_Load;
             MouseClick += nhanviengui_MouseClick;
             panel1.ResumeLayout(false);
@@ -576,5 +580,6 @@ namespace WinFormsApp1.GUI
         {
             txtSearch.PlaceholderText = "Tìm kiếm ...";
         }
+
     }
 }

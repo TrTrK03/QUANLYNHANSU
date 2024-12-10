@@ -81,11 +81,13 @@ namespace WinFormsApp1.GUI
             // 
             panel2.BackColor = Color.White;
             panel2.Controls.Add(panel6);
+            panel2.Controls.Add(label1);
             panel2.Controls.Add(panel3);
+            panel2.Dock = DockStyle.Top;
             panel2.ForeColor = Color.FromArgb(49, 17, 117);
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1000, 51);
+            panel2.Size = new Size(1016, 51);
             panel2.TabIndex = 0;
             panel2.MouseClick += panel2_MouseClick;
             // 
@@ -94,19 +96,19 @@ namespace WinFormsApp1.GUI
             panel6.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             panel6.BackColor = Color.White;
             panel6.Controls.Add(button1);
-            panel6.Controls.Add(label1);
             panel6.Controls.Add(edit);
             panel6.Controls.Add(delete);
             panel6.Controls.Add(txtSearch);
-            panel6.Location = new Point(3, 0);
+            panel6.Dock = DockStyle.Left;
+            panel6.Location = new Point(228, 0);
             panel6.Name = "panel6";
-            panel6.Size = new Size(997, 49);
+            panel6.Size = new Size(788, 49);
             panel6.TabIndex = 6;
             panel6.MouseClick += panel6_MouseClick;
             // 
             // button1
             // 
-            button1.Location = new Point(605, 8);
+            button1.Location = new Point(360, 7);
             button1.Name = "button1";
             button1.Size = new Size(94, 36);
             button1.TabIndex = 12;
@@ -116,22 +118,21 @@ namespace WinFormsApp1.GUI
             // 
             // label1
             // 
-            label1.Anchor = AnchorStyles.None;
+            label1.Dock = DockStyle.Left;
             label1.Font = new Font("Segoe UI", 24.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(49, 17, 117);
-            label1.Location = new Point(3, 0);
+            label1.Location = new Point(0, 0);
             label1.Name = "label1";
-            label1.Size = new Size(232, 49);
+            label1.Size = new Size(228, 49);
             label1.TabIndex = 11;
             label1.Text = "Phòng Ban";
             // 
             // edit
             // 
-            edit.Anchor = AnchorStyles.None;
             edit.BackColor = Color.Lavender;
             edit.FlatAppearance.BorderColor = Color.FromArgb(224, 224, 224);
             edit.FlatStyle = FlatStyle.Flat;
-            edit.Location = new Point(705, 9);
+            edit.Location = new Point(470, 8);
             edit.Name = "edit";
             edit.Size = new Size(81, 34);
             edit.TabIndex = 10;
@@ -141,11 +142,10 @@ namespace WinFormsApp1.GUI
             // 
             // delete
             // 
-            delete.Anchor = AnchorStyles.None;
             delete.BackColor = Color.Lavender;
             delete.FlatAppearance.BorderColor = Color.FromArgb(224, 224, 224);
             delete.FlatStyle = FlatStyle.Flat;
-            delete.Location = new Point(792, 8);
+            delete.Location = new Point(557, 7);
             delete.Name = "delete";
             delete.Size = new Size(81, 36);
             delete.TabIndex = 9;
@@ -155,14 +155,13 @@ namespace WinFormsApp1.GUI
             // 
             // txtSearch
             // 
-            txtSearch.Anchor = AnchorStyles.None;
-            txtSearch.Location = new Point(241, 13);
+            txtSearch.Location = new Point(6, 12);
             txtSearch.Name = "txtSearch";
+            txtSearch.PlaceholderText = "Tìm kiếm ...";
             txtSearch.Size = new Size(344, 27);
             txtSearch.TabIndex = 0;
             txtSearch.TextChanged += txtSearch_TextChanged;
             txtSearch.Leave += txtSearch_Leave;
-            txtSearch.PlaceholderText = "Tìm kiếm ...";
             // 
             // panel3
             // 
@@ -170,7 +169,7 @@ namespace WinFormsApp1.GUI
             panel3.Dock = DockStyle.Bottom;
             panel3.Location = new Point(0, 49);
             panel3.Name = "panel3";
-            panel3.Size = new Size(1000, 2);
+            panel3.Size = new Size(1016, 2);
             panel3.TabIndex = 0;
             panel3.Visible = false;
             // 
@@ -179,9 +178,10 @@ namespace WinFormsApp1.GUI
             panel5.AutoScroll = true;
             panel5.BackColor = Color.FromArgb(192, 0, 0);
             panel5.Controls.Add(dataGridView1);
-            panel5.Location = new Point(3, 52);
+            panel5.Dock = DockStyle.Fill;
+            panel5.Location = new Point(0, 51);
             panel5.Name = "panel5";
-            panel5.Size = new Size(1000, 551);
+            panel5.Size = new Size(1016, 662);
             panel5.TabIndex = 5;
             // 
             // dataGridView1
@@ -211,7 +211,7 @@ namespace WinFormsApp1.GUI
             dataGridView1.RowTemplate.Height = 100;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView1.ShowRowErrors = false;
-            dataGridView1.Size = new Size(1000, 551);
+            dataGridView1.Size = new Size(1016, 662);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellMouseClick += dataGridView1_CellMouseClick;
             dataGridView1.DataBindingComplete += dataGridView1_DataBindingComplete;
@@ -223,9 +223,10 @@ namespace WinFormsApp1.GUI
             panel1.BackColor = Color.FromArgb(252, 250, 255);
             panel1.Controls.Add(panel5);
             panel1.Controls.Add(panel2);
+            panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1006, 606);
+            panel1.Size = new Size(1016, 713);
             panel1.TabIndex = 2;
             // 
             // phongbangui
@@ -237,7 +238,7 @@ namespace WinFormsApp1.GUI
             ForeColor = Color.FromArgb(49, 17, 117);
             Margin = new Padding(0);
             Name = "phongbangui";
-            Size = new Size(1009, 609);
+            Size = new Size(1016, 713);
             Load += phongbangui_Load;
             MouseClick += phongbangui_MouseClick;
             panel2.ResumeLayout(false);
