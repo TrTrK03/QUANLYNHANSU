@@ -190,6 +190,7 @@ namespace WinFormsApp1.GUI
             dataGridView1.ShowRowErrors = false;
             dataGridView1.Size = new Size(1016, 514);
             dataGridView1.TabIndex = 20;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             dataGridView1.CellMouseClick += dataGridView1_CellMouseClick;
             dataGridView1.DataBindingComplete += dataGridView1_DataBindingComplete;
             // 
@@ -216,6 +217,12 @@ namespace WinFormsApp1.GUI
 
         public void LoadDataToGUI()
         {
+            if (phuclois == null || !phuclois.Any())
+            {
+                MessageBox.Show("Không có dữ liệu phúc lợi để hiển thị.");
+                return;
+            }
+
             DataTable pl = new DataTable();
             pl.Columns.Add("Check", typeof(bool));
             pl.Columns.Add("Ma Phuc Loi", typeof(string));
@@ -237,95 +244,92 @@ namespace WinFormsApp1.GUI
             }
 
             dataGridView1.DataSource = pl;
-            
-           // dataGridView1.Columns["Trang Thai"].Visible = false;
-            
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
+
 
         private void dataGridView1_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
+            if (dataGridView1.Rows.Count == 0)
+            {
+                MessageBox.Show("Không có dữ liệu trong bảng.");
+                return;
+            }
+
             dataGridView1.ClearSelection();
             dataGridView1.CurrentCell = null;
             dataGridView1.EnableHeadersVisualStyles = false;
             dataGridView1.ColumnHeadersDefaultCellStyle.SelectionBackColor = dataGridView1.ColumnHeadersDefaultCellStyle.BackColor;
             dataGridView1.ColumnHeadersDefaultCellStyle.SelectionForeColor = dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor;
         }
+
         public phucloigui()
         {
             InitializeComponent();
 
         }
 
-        private void phucloigui_Load(object? sender, EventArgs e)
+        private void phucloigui_Load(object sender, EventArgs e)
         {
-            LoadDataToGUI();
-            dataGridView1.Dock = DockStyle.Fill;
-            //dataGridView1.ClearSelection();
+            try
+            {
+                LoadDataToGUI();
+                dataGridView1.Dock = DockStyle.Fill;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi tải dữ liệu: " + ex.Message);
+            }
         }
+
 
 
         private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             if (e.RowIndex < 0 || e.ColumnIndex < 0) return;
 
+            // Xử lý cột "Check"
             if (dataGridView1.Columns[e.ColumnIndex].Name == "Check")
             {
                 bool isChecked = Convert.ToBoolean(dataGridView1.Rows[e.RowIndex].Cells["Check"].Value);
                 dataGridView1.Rows[e.RowIndex].Cells["Check"].Value = !isChecked;
-                return; 
+                return;
             }
 
-            
-            string maPLSelected = dataGridView1.Rows[e.RowIndex].Cells["Ma Phuc Loi"].Value.ToString();
-            phucloidto selectedphucloi = phuclois.FirstOrDefault(phucloi => phucloi.MaPhucLoi == maPLSelected);
-            chitietphucloidto selectedchitietpl = chitietpls.FirstOrDefault(chitietpl => chitietpl.MaPhucLoi == maPLSelected);
-            if (selectedphucloi != null || selectedchitietpl != null)
+            // Lấy mã phúc lợi được chọn
+            string maPLSelected = dataGridView1.Rows[e.RowIndex].Cells["Ma Phuc Loi"].Value?.ToString();
+            if (string.IsNullOrEmpty(maPLSelected))
             {
-               // Khởi tạo Formtest
-                ChiTietPhucLoiNhanVien test = new ChiTietPhucLoiNhanVien
-                {
-                    
-                    MoTa = selectedphucloi.MoTa,
-                    GiaTriPhucLoi = selectedphucloi.GiaTriPhucLoi.ToString(),
-                    
+                MessageBox.Show("Không thể xác định mã phúc lợi.");
+                return;
+            }
 
-                    chitietphuclois = chitietpls
-                        .Where(h => h.MaPhucLoi == selectedphucloi.MaPhucLoi)
-                        .ToList() // Lọc danh sách hồ sơ theo kỳ tuyển dụng
-                };
+            // Tìm phúc lợi trong danh sách
+            phucloidto selectedphucloi = phuclois.FirstOrDefault(phucLoi => phucLoi.MaPhucLoi == maPLSelected);
+            if (selectedphucloi == null)
+            {
+                MessageBox.Show("Không tìm thấy phúc lợi phù hợp.");
+                return;
+            }
 
-                // Hiển thị Formtest
-                test.LoadData();
-                test.ShowDialog();
+            // Mở form ChiTietPhucLoiNhanVien
+            var testForm = new ChiTietPhucLoiNhanVien
+            {
+                MoTa = selectedphucloi.MoTa,
+                GiaTriPhucLoi = selectedphucloi.GiaTriPhucLoi.ToString(),
+                chitietphuclois = chitietpls.Where(h => h.MaPhucLoi == selectedphucloi.MaPhucLoi).ToList()
+            };
+
+            testForm.LoadData();
+            testForm.ShowDialog();
         }
-
-       
-        dataGridView1.Size = new Size(1575, 450);
-        dataGridView1.DefaultCellStyle.SelectionForeColor = Color.FromArgb(49, 17, 117);
-        dataGridView1.DefaultCellStyle.SelectionBackColor = Color.Lavender;
-    }
-
-
-    private void phucloigui_MouseClick(object sender, MouseEventArgs e)
+ 
+        private void phucloigui_MouseClick(object sender, MouseEventArgs e)
         {
             //LoadDataToGUI();
             dataGridView1.Dock = DockStyle.Fill;
             dataGridView1.ClearSelection();
 
-        }
-
-        private void flowLayoutPanel1_MouseClick(object sender, MouseEventArgs e)
-        {
-            //LoadDataToGUI();
-            dataGridView1.Dock = DockStyle.Fill;
-            dataGridView1.ClearSelection();
-        }
-
-        private void panel2_MouseClick(object sender, MouseEventArgs e)
-        {
-            //LoadDataToGUI();
-            dataGridView1.Dock = DockStyle.Fill;
-            dataGridView1.ClearSelection();
         }
 
         private void panel6_MouseClick(object sender, MouseEventArgs e)
@@ -414,7 +418,7 @@ namespace WinFormsApp1.GUI
             }
             // Làm mới lại danh sách tuyendungs (cập nhật từ cơ sở dữ liệu hoặc phương thức lấy dữ liệu)
             phuclois = phucloibus.GetPhucLoi(); // Lấy lại dữ liệu sau khi xóa
-                                                      // Tải lại dữ liệu sau khi xóa
+                                                // Tải lại dữ liệu sau khi xóa
             LoadDataToGUI();
         }
 
@@ -468,6 +472,10 @@ namespace WinFormsApp1.GUI
             LoadDataToGUI();
         }
 
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 
 }

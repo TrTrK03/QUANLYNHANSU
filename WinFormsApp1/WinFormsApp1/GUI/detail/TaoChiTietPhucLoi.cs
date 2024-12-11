@@ -23,8 +23,14 @@ namespace WinFormsApp1.GUI.detail
         }
         public void LoadData()
         {
-            txtMaPhucLoi.Text=MaPhucLoi;
+            if (string.IsNullOrEmpty(MaPhucLoi))
+            {
+                MessageBox.Show("Mã phúc lợi không hợp lệ.");
+                return;
+            }
+            txtMaPhucLoi.Text = MaPhucLoi;
         }
+
         private void label9_Click(object sender, EventArgs e)
         {
 
@@ -42,6 +48,13 @@ namespace WinFormsApp1.GUI.detail
 
         private void btnTao_Click_1(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(txtMaPhucLoi.Text))
+            {
+                MessageBox.Show("Hãy ghi đúng mã phúc lợi.");
+                txtMaPhucLoi.Focus();
+                return;
+            }
+
             if (string.IsNullOrEmpty(txtMaNhanVien.Text))
             {
                 MessageBox.Show("Hãy ghi đúng mã nhân viên.");
@@ -50,10 +63,10 @@ namespace WinFormsApp1.GUI.detail
             }
 
             chitietphucloidto.MaPhucLoi = txtMaPhucLoi.Text;
+            chitietphucloidto.MaNhanVien = txtMaNhanVien.Text; // Thêm mã nhân viên vào đối tượng
 
             try
             {
-
                 chitietphucloinhanvienbus.AddChiTietPhucLoi(chitietphucloidto);
                 MessageBox.Show("Tham gia phúc lợi thành công!");
                 Close();
@@ -64,13 +77,15 @@ namespace WinFormsApp1.GUI.detail
             }
         }
 
+
         private void btnHuy_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Bạn có chắc chắn muốn hủy không?", "Xác nhận hủy", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("Bạn có chắc chắn muốn hủy? Tất cả dữ liệu chưa lưu sẽ bị mất.", "Xác nhận hủy", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 this.DialogResult = DialogResult.Cancel;
                 this.Close();
             }
         }
+
     }
 }

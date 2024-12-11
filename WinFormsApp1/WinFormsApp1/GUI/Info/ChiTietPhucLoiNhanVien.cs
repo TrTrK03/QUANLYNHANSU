@@ -36,7 +36,7 @@ namespace WinFormsApp1.GUI.Info
                 return;
             }
             txtMoTa.Text = MoTa;
-            txtGiaTriPhucLoi.Text = GiaTriPhucLoi.ToString();
+            txtGiaTriPhucLoi.Text = GiaTriPhucLoi?.ToString() ?? "N/A";
             DataTable dt = new DataTable();
             dt.Columns.Add("Check", typeof(bool));
             dt.Columns.Add("Mã Phúc Lợi", typeof(string));
@@ -72,7 +72,7 @@ namespace WinFormsApp1.GUI.Info
                 TaoChiTietPhucLoi TaoPLForm = new TaoChiTietPhucLoi();
                 TaoPLForm.ShowDialog();
                 chitietphuclois = chitietphucloinhanvienbus.GetChiTietPhucLoi();
-                TaoPLForm.Show();
+                LoadData();
             }
             catch (Exception ex)
             {
@@ -96,7 +96,7 @@ namespace WinFormsApp1.GUI.Info
 
             foreach (string MaNhanVien in selectedPLNVs)
             {
-                var selectedChiTiet = chitietpls.FirstOrDefault(hitietpls => hitietpls.MaNhanVien == MaNhanVien);
+                var selectedChiTiet = chitietpls.FirstOrDefault(chitiet => chitiet.MaNhanVien == MaNhanVien);
                 if (selectedChiTiet != null)
                 {
                     try
@@ -111,9 +111,10 @@ namespace WinFormsApp1.GUI.Info
                 }
                 else
                 {
-                    MessageBox.Show($"Không tìm thấy Nhân viêm với mã '{MaNhanVien}'!");
+                    MessageBox.Show($"Không tìm thấy Nhân viên với mã '{MaNhanVien}'!");
                 }
             }
+
             MessageBox.Show("Xóa thành công!");
             chitietphuclois = chitietphucloinhanvienbus.GetChiTietPhucLoi();
             LoadData();
@@ -138,24 +139,27 @@ namespace WinFormsApp1.GUI.Info
                 txtSearch.ForeColor = Color.Gray; // Chuyển sang màu chữ mờ
             }
         }
-        private void txtSearch_TextChanged(object sender, EventArgs e)
+        private async void txtSearch_TextChanged(object sender, EventArgs e)
         {
             string searchValue = txtSearch.Text.ToLower();
 
             if (string.IsNullOrWhiteSpace(searchValue))
             {
-                txtSearch.PlaceholderText = "Tìm kiếm ...";
+                foreach (DataGridViewRow row in dataGridView1.Rows)
+                {
+                    row.Visible = true; // Hiển thị tất cả các dòng khi không có từ khóa tìm kiếm
+                }
+                return;
             }
 
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
-                // Skip the new row (uncommitted row)
-                if (row.IsNewRow)
-                    continue;
+                if (row.IsNewRow) continue; // Bỏ qua dòng mới
 
                 row.Visible = RowContainsValue(row, searchValue);
             }
         }
-        
+
+
     }
 }

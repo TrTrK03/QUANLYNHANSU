@@ -1,14 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\H\u1ECDc T\u1EADp\\BT_C#\\QUANLYNHANSU\\WinFormsApp1\\",
+  "WorkspaceRootPath": "D:\\Work\\C#\\DoAn\\QUANLYNHANSU\\WinFormsApp1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D9720C57-C499-4EA4-9905-7F1094F3D504}|WinFormsApp1\\WinFormsApp1.csproj|c:\\h\u1ECDc t\u1EADp\\bt_c#\\quanlynhansu\\winformsapp1\\winformsapp1\\gui\\phucloigui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{D9720C57-C499-4EA4-9905-7F1094F3D504}|WinFormsApp1\\WinFormsApp1.csproj|d:\\work\\c#\\doan\\quanlynhansu\\winformsapp1\\winformsapp1\\gui\\phucloigui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D9720C57-C499-4EA4-9905-7F1094F3D504}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\gui\\phucloigui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D9720C57-C499-4EA4-9905-7F1094F3D504}|WinFormsApp1\\WinFormsApp1.csproj|d:\\work\\c#\\doan\\quanlynhansu\\winformsapp1\\winformsapp1\\gui\\phucloigui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D9720C57-C499-4EA4-9905-7F1094F3D504}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\gui\\phucloigui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D9720C57-C499-4EA4-9905-7F1094F3D504}|WinFormsApp1\\WinFormsApp1.csproj|c:\\h\u1ECDc t\u1EADp\\bt_c#\\quanlynhansu\\winformsapp1\\winformsapp1\\dao\\phucloidao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D9720C57-C499-4EA4-9905-7F1094F3D504}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\dao\\phucloidao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D9720C57-C499-4EA4-9905-7F1094F3D504}|WinFormsApp1\\WinFormsApp1.csproj|d:\\work\\c#\\doan\\quanlynhansu\\winformsapp1\\winformsapp1\\gui\\info\\chitietphucloinhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D9720C57-C499-4EA4-9905-7F1094F3D504}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\gui\\info\\chitietphucloinhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D9720C57-C499-4EA4-9905-7F1094F3D504}|WinFormsApp1\\WinFormsApp1.csproj|d:\\work\\c#\\doan\\quanlynhansu\\winformsapp1\\winformsapp1\\gui\\detail\\taochitietphucloi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D9720C57-C499-4EA4-9905-7F1094F3D504}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\gui\\detail\\taochitietphucloi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D9720C57-C499-4EA4-9905-7F1094F3D504}|WinFormsApp1\\WinFormsApp1.csproj|d:\\work\\c#\\doan\\quanlynhansu\\winformsapp1\\winformsapp1\\gui\\detail\\taochitietphucloi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D9720C57-C499-4EA4-9905-7F1094F3D504}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\gui\\detail\\taochitietphucloi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,31 +30,69 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "phucloigui.cs [Design]",
-              "DocumentMoniker": "C:\\H\u1ECDc T\u1EADp\\BT_C#\\QUANLYNHANSU\\WinFormsApp1\\WinFormsApp1\\GUI\\phucloigui.cs",
+              "DocumentMoniker": "D:\\Work\\C#\\DoAn\\QUANLYNHANSU\\WinFormsApp1\\WinFormsApp1\\GUI\\phucloigui.cs",
               "RelativeDocumentMoniker": "WinFormsApp1\\GUI\\phucloigui.cs",
-              "ToolTip": "C:\\H\u1ECDc T\u1EADp\\BT_C#\\QUANLYNHANSU\\WinFormsApp1\\WinFormsApp1\\GUI\\phucloigui.cs [Design]*",
-              "RelativeToolTip": "WinFormsApp1\\GUI\\phucloigui.cs [Design]*",
+              "ToolTip": "D:\\Work\\C#\\DoAn\\QUANLYNHANSU\\WinFormsApp1\\WinFormsApp1\\GUI\\phucloigui.cs [Design]",
+              "RelativeToolTip": "WinFormsApp1\\GUI\\phucloigui.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T12:00:10.179Z",
+              "WhenOpened": "2024-12-11T13:05:25.983Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "phucloidao.cs",
-              "DocumentMoniker": "C:\\H\u1ECDc T\u1EADp\\BT_C#\\QUANLYNHANSU\\WinFormsApp1\\WinFormsApp1\\DAO\\phucloidao.cs",
-              "RelativeDocumentMoniker": "WinFormsApp1\\DAO\\phucloidao.cs",
-              "ToolTip": "C:\\H\u1ECDc T\u1EADp\\BT_C#\\QUANLYNHANSU\\WinFormsApp1\\WinFormsApp1\\DAO\\phucloidao.cs",
-              "RelativeToolTip": "WinFormsApp1\\DAO\\phucloidao.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "phucloigui.cs",
+              "DocumentMoniker": "D:\\Work\\C#\\DoAn\\QUANLYNHANSU\\WinFormsApp1\\WinFormsApp1\\GUI\\phucloigui.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\GUI\\phucloigui.cs",
+              "ToolTip": "D:\\Work\\C#\\DoAn\\QUANLYNHANSU\\WinFormsApp1\\WinFormsApp1\\GUI\\phucloigui.cs",
+              "RelativeToolTip": "WinFormsApp1\\GUI\\phucloigui.cs",
+              "ViewState": "AgIAAG4BAAAAAAAAAAAkwH4BAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T11:59:56.682Z",
+              "WhenOpened": "2024-12-11T13:01:23.358Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ChiTietPhucLoiNhanVien.cs",
+              "DocumentMoniker": "D:\\Work\\C#\\DoAn\\QUANLYNHANSU\\WinFormsApp1\\WinFormsApp1\\GUI\\Info\\ChiTietPhucLoiNhanVien.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\GUI\\Info\\ChiTietPhucLoiNhanVien.cs",
+              "ToolTip": "D:\\Work\\C#\\DoAn\\QUANLYNHANSU\\WinFormsApp1\\WinFormsApp1\\GUI\\Info\\ChiTietPhucLoiNhanVien.cs",
+              "RelativeToolTip": "WinFormsApp1\\GUI\\Info\\ChiTietPhucLoiNhanVien.cs",
+              "ViewState": "AgIAAD0AAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T13:01:05.367Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TaoChiTietPhucLoi.cs [Design]",
+              "DocumentMoniker": "D:\\Work\\C#\\DoAn\\QUANLYNHANSU\\WinFormsApp1\\WinFormsApp1\\GUI\\detail\\TaoChiTietPhucLoi.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\GUI\\detail\\TaoChiTietPhucLoi.cs",
+              "ToolTip": "D:\\Work\\C#\\DoAn\\QUANLYNHANSU\\WinFormsApp1\\WinFormsApp1\\GUI\\detail\\TaoChiTietPhucLoi.cs [Design]",
+              "RelativeToolTip": "WinFormsApp1\\GUI\\detail\\TaoChiTietPhucLoi.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T13:00:38.266Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TaoChiTietPhucLoi.cs",
+              "DocumentMoniker": "D:\\Work\\C#\\DoAn\\QUANLYNHANSU\\WinFormsApp1\\WinFormsApp1\\GUI\\detail\\TaoChiTietPhucLoi.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\GUI\\detail\\TaoChiTietPhucLoi.cs",
+              "ToolTip": "D:\\Work\\C#\\DoAn\\QUANLYNHANSU\\WinFormsApp1\\WinFormsApp1\\GUI\\detail\\TaoChiTietPhucLoi.cs",
+              "RelativeToolTip": "WinFormsApp1\\GUI\\detail\\TaoChiTietPhucLoi.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAkwEIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T12:56:18.601Z",
               "EditorCaption": ""
             }
           ]
