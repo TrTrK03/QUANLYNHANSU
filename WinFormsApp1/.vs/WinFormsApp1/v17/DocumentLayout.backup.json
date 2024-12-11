@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\H\u1ECDc T\u1EADp\\BT_C#\\QUANLYNHANSU\\WinFormsApp1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D9720C57-C499-4EA4-9905-7F1094F3D504}|WinFormsApp1\\WinFormsApp1.csproj|c:\\h\u1ECDc t\u1EADp\\bt_c#\\quanlynhansu\\winformsapp1\\winformsapp1\\dao\\nhanviendao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D9720C57-C499-4EA4-9905-7F1094F3D504}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\dao\\nhanviendao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D9720C57-C499-4EA4-9905-7F1094F3D504}|WinFormsApp1\\WinFormsApp1.csproj|c:\\h\u1ECDc t\u1EADp\\bt_c#\\quanlynhansu\\winformsapp1\\winformsapp1\\gui\\index.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D9720C57-C499-4EA4-9905-7F1094F3D504}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\gui\\index.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D9720C57-C499-4EA4-9905-7F1094F3D504}|WinFormsApp1\\WinFormsApp1.csproj|c:\\h\u1ECDc t\u1EADp\\bt_c#\\quanlynhansu\\winformsapp1\\winformsapp1\\gui\\info\\nhanvieninfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D9720C57-C499-4EA4-9905-7F1094F3D504}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\gui\\info\\nhanvieninfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D9720C57-C499-4EA4-9905-7F1094F3D504}|WinFormsApp1\\WinFormsApp1.csproj|c:\\h\u1ECDc t\u1EADp\\bt_c#\\quanlynhansu\\winformsapp1\\winformsapp1\\gui\\index.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D9720C57-C499-4EA4-9905-7F1094F3D504}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\gui\\index.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D9720C57-C499-4EA4-9905-7F1094F3D504}|WinFormsApp1\\WinFormsApp1.csproj|c:\\h\u1ECDc t\u1EADp\\bt_c#\\quanlynhansu\\winformsapp1\\winformsapp1\\gui\\info\\nhanvieninfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D9720C57-C499-4EA4-9905-7F1094F3D504}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\gui\\info\\nhanvieninfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{D9720C57-C499-4EA4-9905-7F1094F3D504}|WinFormsApp1\\WinFormsApp1.csproj|c:\\h\u1ECDc t\u1EADp\\bt_c#\\quanlynhansu\\winformsapp1\\winformsapp1\\gui\\index.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D9720C57-C499-4EA4-9905-7F1094F3D504}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\gui\\index.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,40 +27,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "nhanviendao.cs",
-              "DocumentMoniker": "C:\\H\u1ECDc T\u1EADp\\BT_C#\\QUANLYNHANSU\\WinFormsApp1\\WinFormsApp1\\DAO\\nhanviendao.cs",
-              "RelativeDocumentMoniker": "WinFormsApp1\\DAO\\nhanviendao.cs",
-              "ToolTip": "C:\\H\u1ECDc T\u1EADp\\BT_C#\\QUANLYNHANSU\\WinFormsApp1\\WinFormsApp1\\DAO\\nhanviendao.cs*",
-              "RelativeToolTip": "WinFormsApp1\\DAO\\nhanviendao.cs*",
-              "ViewState": "AgIAAIEAAAAAAAAAAAAIwIcAAAAwAAAAAAAAAA==",
+              "Title": "index.cs [Design]",
+              "DocumentMoniker": "C:\\H\u1ECDc T\u1EADp\\BT_C#\\QUANLYNHANSU\\WinFormsApp1\\WinFormsApp1\\GUI\\index.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\GUI\\index.cs",
+              "ToolTip": "C:\\H\u1ECDc T\u1EADp\\BT_C#\\QUANLYNHANSU\\WinFormsApp1\\WinFormsApp1\\GUI\\index.cs [Design]*",
+              "RelativeToolTip": "WinFormsApp1\\GUI\\index.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T02:30:55.673Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T00:35:19.301Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "NhanVienInfo.cs",
-              "DocumentMoniker": "C:\\H\u1ECDc T\u1EADp\\BT_C#\\QUANLYNHANSU\\WinFormsApp1\\WinFormsApp1\\GUI\\Info\\NhanVienInfo.cs",
-              "RelativeDocumentMoniker": "WinFormsApp1\\GUI\\Info\\NhanVienInfo.cs",
-              "ToolTip": "C:\\H\u1ECDc T\u1EADp\\BT_C#\\QUANLYNHANSU\\WinFormsApp1\\WinFormsApp1\\GUI\\Info\\NhanVienInfo.cs",
-              "RelativeToolTip": "WinFormsApp1\\GUI\\Info\\NhanVienInfo.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAmwC4AAAA2AAAAAAAAAA==",
+              "Title": "index.cs",
+              "DocumentMoniker": "C:\\H\u1ECDc T\u1EADp\\BT_C#\\QUANLYNHANSU\\WinFormsApp1\\WinFormsApp1\\GUI\\index.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\GUI\\index.cs",
+              "ToolTip": "C:\\H\u1ECDc T\u1EADp\\BT_C#\\QUANLYNHANSU\\WinFormsApp1\\WinFormsApp1\\GUI\\index.cs*",
+              "RelativeToolTip": "WinFormsApp1\\GUI\\index.cs*",
+              "ViewState": "AgIAANwAAAAAAAAAAAAuwOMAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T02:27:48.234Z",
+              "WhenOpened": "2024-12-11T00:32:13.676Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "NhanVienInfo.cs [Design]",
-              "DocumentMoniker": "C:\\H\u1ECDc T\u1EADp\\BT_C#\\QUANLYNHANSU\\WinFormsApp1\\WinFormsApp1\\GUI\\Info\\NhanVienInfo.cs",
-              "RelativeDocumentMoniker": "WinFormsApp1\\GUI\\Info\\NhanVienInfo.cs",
-              "ToolTip": "C:\\H\u1ECDc T\u1EADp\\BT_C#\\QUANLYNHANSU\\WinFormsApp1\\WinFormsApp1\\GUI\\Info\\NhanVienInfo.cs [Design]",
-              "RelativeToolTip": "WinFormsApp1\\GUI\\Info\\NhanVienInfo.cs [Design]",
+              "Title": "index.Designer.cs",
+              "DocumentMoniker": "C:\\H\u1ECDc T\u1EADp\\BT_C#\\QUANLYNHANSU\\WinFormsApp1\\WinFormsApp1\\GUI\\index.Designer.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\GUI\\index.Designer.cs",
+              "ToolTip": "C:\\H\u1ECDc T\u1EADp\\BT_C#\\QUANLYNHANSU\\WinFormsApp1\\WinFormsApp1\\GUI\\index.Designer.cs*",
+              "RelativeToolTip": "WinFormsApp1\\GUI\\index.Designer.cs*",
+              "ViewState": "AgIAAB4BAAAAAAAAAAAQwB8BAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T02:27:18.018Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-12-11T00:28:01.739Z",
+              "EditorCaption": ""
             }
           ]
         }

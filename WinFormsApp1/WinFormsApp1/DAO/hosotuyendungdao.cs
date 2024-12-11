@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using WinFormsApp1.connect;
@@ -107,13 +107,14 @@ namespace WinFormsApp1.DAO
                     connection.Open();
                 }
 
-                // X�a ph�ng ban theo m� ph�ng ban (MaPhongBan)
-                SqlCommand command = new SqlCommand("UPDATE HoSoTuyenDung SET TrangThai = 0 WHERE MaHoSoTuyenDung = @MaHoSoTuyenDung", connection);
+                // Xóa hồ sơ tuyển dụng khỏi bảng
+                SqlCommand command = new SqlCommand("DELETE FROM HoSoTuyenDung WHERE MaHoSoTuyenDung = @MaHoSoTuyenDung", connection);
                 command.Parameters.AddWithValue("@MaHoSoTuyenDung", MaHoSoTuyenDung);
 
                 command.ExecuteNonQuery();
                 connection.Close();
             }
         }
+
     }
 }

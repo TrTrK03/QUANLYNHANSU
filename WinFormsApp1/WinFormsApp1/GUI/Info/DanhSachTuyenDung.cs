@@ -140,27 +140,7 @@ namespace WinFormsApp1.GUI.Info
         {
             TaoHoSo TaoHoSoForm = new TaoHoSo();
             TaoHoSoForm.ShowDialog();
-
-            // Lấy danh sách các MaHoSoTuyenDung từ các dòng có checkbox được chọn
-            var selectedHoSos = dataGridView1.Rows
-                .Cast<DataGridViewRow>()
-                .Where(row => Convert.ToBoolean(row.Cells["Check"].Value) == true)
-                .Select(row => row.Cells["Mã Hồ Sơ"].Value.ToString())
-                .ToList();
-            foreach (string MaHoSoTuyenDung in selectedHoSos)
-            {
-                var selectedHoSo = hosos.FirstOrDefault(hoso => hoso.MaHoSoTuyenDung == MaHoSoTuyenDung);
-                try
-                {
-                    hosotuyendungbus.DeleteHoSoTuyenDung(selectedHoSo);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Có lỗi xảy ra khi xóa Hồ Sơ '{MaHoSoTuyenDung}': {ex.Message}");
-                }
-                hosotuyendungs = hosotuyendungbus.GetHoSoTuyenDung();
-                LoadData();
-            }
+            Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -202,6 +182,7 @@ namespace WinFormsApp1.GUI.Info
 
                         // Hiển thị form TaoNhanVien
                         taoNhanVienForm.ShowDialog();
+                        Close();
                     }
                     catch (Exception ex)
                     {

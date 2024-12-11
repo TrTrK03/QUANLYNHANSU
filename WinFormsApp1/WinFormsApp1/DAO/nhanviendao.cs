@@ -59,6 +59,36 @@ namespace WinFormsApp1.DAO
             }
         }
 
+        public List<nhanviendto> GetNhanVienLast()
+        {
+            List<nhanviendto> employees = new List<nhanviendto>();
+
+            using (SqlConnection connection = connectObj.connection())
+            {
+                if (connection.State == System.Data.ConnectionState.Closed)
+                {
+                    connection.Open();
+                }
+                SqlCommand command = new SqlCommand();
+                command.CommandType = System.Data.CommandType.Text;
+                command.CommandText = "SELECT * FROM NhanVien";
+                command.Connection = connection;
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    nhanviendto employee = new nhanviendto
+                    {
+                        MaNhanVien = reader["MaNhanVien"].ToString(),
+                    };
+                    employees.Add(employee);
+                }
+                reader.Close();
+                connection.Close();
+                return employees;
+            }
+        }
+
         public string MaDuAn { get; set; }
 
         public void AddNhanVien(nhanviendto employee)

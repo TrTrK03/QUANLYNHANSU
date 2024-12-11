@@ -23,7 +23,7 @@ namespace WinFormsApp1.GUI.detail
             try
             {
                 // Get the list of employees and the last employee ID
-                List<nhanviendto> employees = employeeBUS.GetNhanVien();
+                List<nhanviendto> employees = employeeBUS.GetNhanVienLast();
                 lastMaNV = employees[^1].MaNhanVien;
 
                 // Process last employee ID to generate the next one

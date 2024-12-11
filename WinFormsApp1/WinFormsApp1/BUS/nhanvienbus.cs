@@ -16,6 +16,11 @@ namespace WinFormsApp1.BUS
             return employeeDAO.GetNhanVien();
         }
 
+        public List<nhanviendto> GetNhanVienLast()
+        {
+            return employeeDAO.GetNhanVienLast();
+        }
+
         public void AddNhanVien(nhanviendto employee)
         {
             employeeDAO.AddNhanVien(employee);

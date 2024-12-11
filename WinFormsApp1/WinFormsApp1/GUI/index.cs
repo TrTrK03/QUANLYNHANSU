@@ -41,6 +41,11 @@ namespace WinFormsApp1
             //usctr.Location = new System.Drawing.Point(186, 0);
 
         }
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            // Khởi động Timer khi form load
+            timer1.Start();
+        }
 
 
 
@@ -167,11 +172,6 @@ namespace WinFormsApp1
         private void button10_Click(object sender, EventArgs e)
         { }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void home_Leave(object sender, EventArgs e)
         {
             //home.BackColor = Color.FromArgb(24, 30, 54);
@@ -179,64 +179,54 @@ namespace WinFormsApp1
 
         private void phongban_Leave(object sender, EventArgs e)
         {
-            phongban.BackColor = Color.FromArgb(24, 30, 54);
+            phongban.BackColor = Color.FromArgb(64, 64, 64);
         }
 
         private void duan_Leave(object sender, EventArgs e)
         {
-            duan.BackColor = Color.FromArgb(24, 30, 54);
+            duan.BackColor = Color.FromArgb(64, 64, 64);
         }
 
         private void tuyendung_Leave(object sender, EventArgs e)
         {
-            tuyendung.BackColor = Color.FromArgb(24, 30, 54);
+            tuyendung.BackColor = Color.FromArgb(64, 64, 64);
         }
 
         private void thongbao_Leave(object sender, EventArgs e)
         {
-            thongbao.BackColor = Color.FromArgb(24, 30, 54);
+            thongbao.BackColor = Color.FromArgb(64, 64, 64);
         }
 
         private void phucloi_Leave(object sender, EventArgs e)
         {
-            phucloi.BackColor = Color.FromArgb(24, 30, 54);
+            phucloi.BackColor = Color.FromArgb(64, 64, 64);
         }
 
         private void bangluong_Leave(object sender, EventArgs e)
         {
-            bangluong.BackColor = Color.FromArgb(24, 30, 54);
+            bangluong.BackColor = Color.FromArgb(64, 64, 64);
         }
 
         private void khenthuong_leave(object sender, EventArgs e)
         {
-            khenthuong.BackColor = Color.FromArgb(24, 30, 54);
+            khenthuong.BackColor = Color.FromArgb(64, 64, 64);
         }
 
         private void nhanvien_Leave(object sender, EventArgs e)
         {
-            nhanvien.BackColor = Color.FromArgb(24, 30, 54);
+            nhanvien.BackColor = Color.FromArgb(64, 64, 64);
         }
 
         private void chamcong_Leave(object sender, EventArgs e)
         {
-            chamcong.BackColor = Color.FromArgb(24, 30, 54);
+            chamcong.BackColor = Color.FromArgb(64, 64, 64);
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
+        private void Timer_Tick(object sender, EventArgs e)
         {
-
+            // Cập nhật thời gian hiện tại
+            label1.Text = DateTime.Now.ToString("HH : mm");
         }
 
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel4_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-       
     }
 }

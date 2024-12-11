@@ -72,7 +72,7 @@
             panel7.ForeColor = Color.FromArgb(49, 17, 117);
             panel7.Location = new Point(0, 0);
             panel7.Name = "panel7";
-            panel7.Size = new Size(1110, 352);
+            panel7.Size = new Size(787, 352);
             panel7.TabIndex = 8;
             // 
             // dtpNgayKetThuc
@@ -224,7 +224,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1110, 352);
+            ClientSize = new Size(787, 352);
             Controls.Add(panel7);
             Name = "DuAnInfo";
             Text = "DuAnInfo";

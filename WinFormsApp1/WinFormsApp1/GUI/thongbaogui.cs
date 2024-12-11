@@ -147,8 +147,8 @@ namespace WinFormsApp1.GUI
             panel6.Controls.Add(Import);
             panel6.Controls.Add(export);
             panel6.Controls.Add(txtSearch);
-            panel6.Dock = DockStyle.Fill;
-            panel6.Location = new Point(149, 0);
+            panel6.Dock = DockStyle.Right;
+            panel6.Location = new Point(0, 0);
             panel6.Name = "panel6";
             panel6.Size = new Size(867, 59);
             panel6.TabIndex = 6;
@@ -230,10 +230,10 @@ namespace WinFormsApp1.GUI
             // 
             // label1
             // 
-            label1.Dock = DockStyle.Left;
+            label1.Dock = DockStyle.Right;
             label1.Font = new Font("Segoe UI", 16F);
             label1.ForeColor = Color.FromArgb(49, 17, 117);
-            label1.Location = new Point(0, 0);
+            label1.Location = new Point(867, 0);
             label1.Name = "label1";
             label1.Size = new Size(149, 59);
             label1.TabIndex = 1;

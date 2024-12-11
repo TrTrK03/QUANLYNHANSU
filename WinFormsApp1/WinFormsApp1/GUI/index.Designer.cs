@@ -6,6 +6,7 @@
         ///  Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
+        private System.Windows.Forms.Timer timer;
 
         /// <summary>
         ///  Clean up any resources being used.
@@ -41,12 +42,11 @@
             duan = new Button();
             phongban = new Button();
             panel2 = new Panel();
+            label1 = new Label();
             fontDialog1 = new FontDialog();
             panel3 = new Panel();
             panel5 = new Panel();
             timer1 = new System.Windows.Forms.Timer(components);
-            timer2 = new System.Windows.Forms.Timer(components);
-            timer3 = new System.Windows.Forms.Timer(components);
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -267,7 +267,19 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(164, 103);
             panel2.TabIndex = 1;
-            panel2.Paint += panel2_Paint;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.FromArgb(64, 64, 64);
+            label1.Font = new Font("Segoe UI", 20F);
+            label1.ForeColor = SystemColors.HotTrack;
+            label1.Location = new Point(24, 27);
+            label1.Name = "label1";
+            label1.Size = new Size(117, 46);
+            label1.TabIndex = 0;
+            label1.Text = "00 : 00";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // panel3
             // 
@@ -279,7 +291,6 @@
             panel3.Name = "panel3";
             panel3.Size = new Size(1016, 0);
             panel3.TabIndex = 1;
-            panel3.Paint += panel3_Paint;
             // 
             // panel5
             // 
@@ -289,6 +300,11 @@
             panel5.Size = new Size(1016, 713);
             panel5.TabIndex = 2;
             // 
+            // timer1
+            // 
+            timer1.Interval = 1000;
+            timer1.Tick += Timer_Tick;
+            // 
             // index
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -296,12 +312,14 @@
             AutoSize = true;
             BackColor = Color.Silver;
             ClientSize = new Size(1180, 713);
+            Controls.Add(label1);
             Controls.Add(panel5);
             Controls.Add(panel3);
             Controls.Add(panel1);
+            FormBorderStyle = FormBorderStyle.Fixed3D;
             Margin = new Padding(2);
             Name = "index";
-            Text = "Form1";
+            Text = "Quản lý nhân sự";
             Load += Form1_Load;
             panel1.ResumeLayout(false);
             ResumeLayout(false);
@@ -325,8 +343,7 @@
         private Panel panel3;
         private Panel panel5;
         private Button khenthuong;
+        private Label label1;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Timer timer2;
-        private System.Windows.Forms.Timer timer3;
     }
 }
