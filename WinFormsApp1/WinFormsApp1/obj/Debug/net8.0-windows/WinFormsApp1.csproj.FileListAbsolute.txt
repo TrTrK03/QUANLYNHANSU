@@ -519,3 +519,5 @@ D:\Work\C#\DoAn\QUANLYNHANSU\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\
 D:\Work\C#\DoAn\QUANLYNHANSU\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.pdb
 D:\Work\C#\DoAn\QUANLYNHANSU\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.genruntimeconfig.cache
 D:\Work\C#\DoAn\QUANLYNHANSU\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\ref\WinFormsApp1.dll
+C:\Học Tập\BT_C#\QUANLYNHANSU\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.GUI.detail.TaoChiTietPhucLoi.resources
+C:\Học Tập\BT_C#\QUANLYNHANSU\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.GUI.Info.ChiTietPhucLoiNhanVien.resources

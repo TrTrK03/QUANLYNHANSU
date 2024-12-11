@@ -469,9 +469,7 @@ namespace WinFormsApp1.GUI
                     MessageBox.Show($"Không tìm thấy Phòng Ban với mã '{maDuAn}'!");
                 }
             }
-            // Làm mới lại danh sách phongbans (cập nhật từ cơ sở dữ liệu hoặc phương thức lấy dữ liệu)
-            projects = projectBUS.GetDuAn(); // Lấy lại dữ liệu sau khi xóa
-            // Tải lại dữ liệu sau khi xóa
+            projects = projectBUS.GetDuAn();
             LoadDataToGUI();
         }
 
@@ -479,7 +477,7 @@ namespace WinFormsApp1.GUI
         {
             TaoDuAn interf = new TaoDuAn();
             interf.ShowDialog();
-            projects = projectBUS.GetDuAn(); // Lấy lại dữ liệu sau khi xóa
+            projects = projectBUS.GetDuAn();
             LoadDataToGUI();
         }
 

@@ -84,7 +84,7 @@ namespace WinFormsApp1.GUI
             panel1.Margin = new Padding(0);
             panel1.Name = "panel1";
             panel1.Size = new Size(1016, 53);
-            panel1.TabIndex = 12;
+            panel1.TabIndex = 1;
             // 
             // label1
             // 
@@ -94,7 +94,7 @@ namespace WinFormsApp1.GUI
             label1.Location = new Point(0, 0);
             label1.Name = "label1";
             label1.Size = new Size(149, 53);
-            label1.TabIndex = 11;
+            label1.TabIndex = 1;
             label1.Text = "Phúc Lợi";
             // 
             // panel6
@@ -105,16 +105,15 @@ namespace WinFormsApp1.GUI
             panel6.Controls.Add(edit);
             panel6.Controls.Add(delete);
             panel6.Controls.Add(txtSearch);
-            panel6.Dock = DockStyle.Right;
             panel6.Location = new Point(152, 0);
             panel6.Name = "panel6";
-            panel6.Size = new Size(864, 53);
+            panel6.Size = new Size(881, 53);
             panel6.TabIndex = 6;
             panel6.MouseClick += panel6_MouseClick;
             // 
             // button1
             // 
-            button1.Location = new Point(428, 10);
+            button1.Location = new Point(293, 10);
             button1.Name = "button1";
             button1.Size = new Size(94, 36);
             button1.TabIndex = 12;
@@ -127,7 +126,7 @@ namespace WinFormsApp1.GUI
             edit.BackColor = Color.Lavender;
             edit.FlatAppearance.BorderColor = Color.FromArgb(224, 224, 224);
             edit.FlatStyle = FlatStyle.Flat;
-            edit.Location = new Point(528, 12);
+            edit.Location = new Point(393, 12);
             edit.Name = "edit";
             edit.Size = new Size(81, 34);
             edit.TabIndex = 10;
@@ -140,7 +139,7 @@ namespace WinFormsApp1.GUI
             delete.BackColor = Color.Lavender;
             delete.FlatAppearance.BorderColor = Color.FromArgb(224, 224, 224);
             delete.FlatStyle = FlatStyle.Flat;
-            delete.Location = new Point(615, 12);
+            delete.Location = new Point(480, 12);
             delete.Name = "delete";
             delete.Size = new Size(81, 36);
             delete.TabIndex = 9;
@@ -150,7 +149,7 @@ namespace WinFormsApp1.GUI
             // 
             // txtSearch
             // 
-            txtSearch.Location = new Point(143, 17);
+            txtSearch.Location = new Point(8, 17);
             txtSearch.Name = "txtSearch";
             txtSearch.PlaceholderText = "Tìm kiếm ...";
             txtSearch.Size = new Size(279, 27);
@@ -163,12 +162,11 @@ namespace WinFormsApp1.GUI
             panel5.AutoScroll = true;
             panel5.BackColor = Color.FromArgb(192, 0, 0);
             panel5.Controls.Add(dataGridView1);
-            panel5.Dock = DockStyle.Fill;
-            panel5.Location = new Point(0, 0);
+            panel5.Location = new Point(0, 53);
             panel5.Margin = new Padding(0);
             panel5.Name = "panel5";
-            panel5.Size = new Size(1016, 766);
-            panel5.TabIndex = 5;
+            panel5.Size = new Size(1016, 514);
+            panel5.TabIndex = 16;
             // 
             // dataGridView1
             // 
@@ -190,8 +188,8 @@ namespace WinFormsApp1.GUI
             dataGridView1.RowTemplate.Height = 50;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView1.ShowRowErrors = false;
-            dataGridView1.Size = new Size(1016, 766);
-            dataGridView1.TabIndex = 1;
+            dataGridView1.Size = new Size(1016, 514);
+            dataGridView1.TabIndex = 20;
             dataGridView1.CellMouseClick += dataGridView1_CellMouseClick;
             dataGridView1.DataBindingComplete += dataGridView1_DataBindingComplete;
             // 
