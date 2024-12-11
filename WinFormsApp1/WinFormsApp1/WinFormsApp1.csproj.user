@@ -13,6 +13,9 @@
     <Compile Update="GUI\detail\SuaPhucLoi.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="GUI\detail\TaoChiTietPhucLoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="GUI\detail\TaoDuAn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -30,6 +33,9 @@
     </Compile>
     <Compile Update="GUI\Home.cs">
       <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="GUI\Info\ChiTietPhucLoiNhanVien.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Update="GUI\Info\DanhSachTuyenDung.cs">
       <SubType>Form</SubType>

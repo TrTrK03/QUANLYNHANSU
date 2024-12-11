@@ -36,10 +36,11 @@ namespace WinFormsApp1.GUI
     public partial class phucloigui : UserControl
     {
         static phucloibus phucloibus = new phucloibus();
-        //static chitietphucloibus chitietphucloibus = new chitietphucloibus();
+        static chitietphucloinhanvienbus chitietphucloinhanvienbus = new chitietphucloinhanvienbus();
         phucloidto phucloidto = new phucloidto();
-        //chitietphucloidto chitietphucloidto = new chitietphucloidto();
+        chitietphucloidto chitietphucloidto = new chitietphucloidto();
         List<phucloidto> phuclois = phucloibus.GetPhucLoi();
+        List<chitietphucloidto> chitietpls = chitietphucloinhanvienbus.GetChiTietPhucLoi();
         private Panel panel6;
         private Button button1;
         private Label label1;
@@ -149,10 +150,10 @@ namespace WinFormsApp1.GUI
             // 
             // txtSearch
             // 
-            txtSearch.Location = new Point(16, 17);
+            txtSearch.Location = new Point(143, 17);
             txtSearch.Name = "txtSearch";
             txtSearch.PlaceholderText = "Tìm kiếm ...";
-            txtSearch.Size = new Size(344, 27);
+            txtSearch.Size = new Size(279, 27);
             txtSearch.TabIndex = 0;
             txtSearch.TextChanged += txtSearch_TextChanged;
             txtSearch.Leave += txtSearch_Leave;
@@ -177,26 +178,19 @@ namespace WinFormsApp1.GUI
             dataGridView1.BorderStyle = BorderStyle.None;
             dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.None;
             dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-
-            // Điều chỉnh chiều cao tiêu đề cột để vừa nội dung
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-
             dataGridView1.Dock = DockStyle.Fill;
             dataGridView1.GridColor = SystemColors.Info;
             dataGridView1.Location = new Point(0, 0);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
-
             dataGridView1.RowHeadersVisible = false;
             dataGridView1.RowHeadersWidth = 51;
-
-            // Điều chỉnh chiều cao dòng cho phù hợp với nội dung
             dataGridView1.RowTemplate.Height = 50;
-
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView1.ShowRowErrors = false;
-            dataGridView1.Size = new Size(1337, 454);
+            dataGridView1.Size = new Size(1016, 766);
             dataGridView1.TabIndex = 1;
             dataGridView1.CellMouseClick += dataGridView1_CellMouseClick;
             dataGridView1.DataBindingComplete += dataGridView1_DataBindingComplete;
@@ -286,20 +280,20 @@ namespace WinFormsApp1.GUI
             
             string maPLSelected = dataGridView1.Rows[e.RowIndex].Cells["Ma Phuc Loi"].Value.ToString();
             phucloidto selectedphucloi = phuclois.FirstOrDefault(phucloi => phucloi.MaPhucLoi == maPLSelected);
-            //chitietphucloidto selectedchitietpl = chitietpls.FirstOrDefault(chitietpl => chitietpl.MaPhucLoi == maPLSelected);
-            if (selectedphucloi != null )//|| selectedhoso != null)
+            chitietphucloidto selectedchitietpl = chitietpls.FirstOrDefault(chitietpl => chitietpl.MaPhucLoi == maPLSelected);
+            if (selectedphucloi != null || selectedchitietpl != null)
             {
                // Khởi tạo Formtest
-                DanhSachTuyenDung test = new DanhSachTuyenDung
+                ChiTietPhucLoiNhanVien test = new ChiTietPhucLoiNhanVien
                 {
-                    //TenPhucLoi = selectedphucloi.TenPhucLoi,
-                    //MoTa = selectedphucloi.MoTa,
-                    //GiaTriPhucLoi = selectedphucloi.GiaTriPhucLoi,
-                    //TrangThai = selectedphucloi.TrangThai,
+                    
+                    MoTa = selectedphucloi.MoTa,
+                    GiaTriPhucLoi = selectedphucloi.GiaTriPhucLoi.ToString(),
+                    
 
-                    //hosotuyendungs = hosos
-                    //    .Where(h => h.KyTuyenDung == selectedtuyendung.MaKyTuyenDung)
-                    //    .ToList() // Lọc danh sách hồ sơ theo kỳ tuyển dụng
+                    chitietphuclois = chitietpls
+                        .Where(h => h.MaPhucLoi == selectedphucloi.MaPhucLoi)
+                        .ToList() // Lọc danh sách hồ sơ theo kỳ tuyển dụng
                 };
 
                 // Hiển thị Formtest
@@ -426,23 +420,24 @@ namespace WinFormsApp1.GUI
             LoadDataToGUI();
         }
 
-    private void txtSearch_TextChanged(object sender, EventArgs e)
-    {
-        string searchValue = txtSearch.Text.ToLower();
-
-        if (string.IsNullOrWhiteSpace(searchValue))
+        private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            txtSearch.PlaceholderText = "Tìm kiếm ...";
+            string searchValue = txtSearch.Text.Trim().ToLower();
+
+            if (string.IsNullOrWhiteSpace(searchValue))
+            {
+                txtSearch.PlaceholderText = "Tìm kiếm ...";
+            }
+
+            // Lọc dữ liệu trong DataGridView dựa trên giá trị tìm kiếm
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                row.Visible = string.IsNullOrEmpty(searchValue) || RowContainsValue(row, searchValue);
+            }
         }
 
-        foreach (DataGridViewRow row in dataGridView1.Rows)
-        {
-            row.Visible = string.IsNullOrEmpty(searchValue) || RowContainsValue(row, searchValue);
-        }
-    }
-
-    // Hàm kiểm tra hàng có chứa chuỗi tìm kiếm không
-    private bool RowContainsValue(DataGridViewRow row, string searchValue)
+        // Hàm kiểm tra hàng có chứa chuỗi tìm kiếm không
+        private bool RowContainsValue(DataGridViewRow row, string searchValue)
         {
             foreach (DataGridViewCell cell in row.Cells)
             {
@@ -454,6 +449,7 @@ namespace WinFormsApp1.GUI
             return false;
         }
 
+        // Sự kiện khi rời khỏi ô tìm kiếm
         private void txtSearch_Leave(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtSearch.Text))
@@ -462,6 +458,7 @@ namespace WinFormsApp1.GUI
                 txtSearch.ForeColor = Color.Gray; // Chuyển sang màu chữ mờ
             }
         }
+
 
         private void button1_Click(object sender, EventArgs e)
         {
