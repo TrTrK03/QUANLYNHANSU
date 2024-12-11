@@ -133,6 +133,7 @@
             btnHuy.TabIndex = 17;
             btnHuy.Text = "Hủy";
             btnHuy.UseVisualStyleBackColor = true;
+            btnHuy.Click += btnHuy_Click;
             // 
             // btnSua
             // 
@@ -142,6 +143,7 @@
             btnSua.TabIndex = 18;
             btnSua.Text = "Sửa";
             btnSua.UseVisualStyleBackColor = true;
+            btnSua.Click += btnSua_Click;
             // 
             // SuaPhucLoi
             // 

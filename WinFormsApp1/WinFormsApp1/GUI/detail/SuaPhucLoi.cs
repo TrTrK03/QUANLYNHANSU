@@ -16,7 +16,7 @@ namespace WinFormsApp1.GUI.detail
     {
         private phucloidto selectedPhucLoi { get; set; }
         static phucloibus phucloiBUS = new phucloibus();
-        public SuaPhucLoi(phucloidto selectedphucloi)
+        public SuaPhucLoi(phucloidto selectedPhucLoi)
         {
             InitializeComponent();
             selectedPhucLoi = selectedPhucLoi;
@@ -34,7 +34,8 @@ namespace WinFormsApp1.GUI.detail
 
         }
 
-        private void btnSua_Click_1(object sender, EventArgs e)
+
+        private void btnSua_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtTenPhucLoi.Text))
             {
@@ -48,7 +49,7 @@ namespace WinFormsApp1.GUI.detail
             }
             else if (string.IsNullOrWhiteSpace(txtGiaTriPhucLoi.Text))
             {
-                MessageBox.Show("Hãy nhập giá trị phúc lợi" +"!");
+                MessageBox.Show("Hãy nhập giá trị phúc lợi" + "!");
                 txtGiaTriPhucLoi.Focus();
             }
             else if (string.IsNullOrWhiteSpace(txtTrangThai.Text))
@@ -80,7 +81,7 @@ namespace WinFormsApp1.GUI.detail
             }
         }
 
-        private void btnHuy_Click_1(object sender, EventArgs e)
+        private void btnHuy_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Bạn có chắc chắn muốn hủy không?", "Xác nhận hủy", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {

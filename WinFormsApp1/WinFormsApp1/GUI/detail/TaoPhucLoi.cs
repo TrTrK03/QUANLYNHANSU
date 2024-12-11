@@ -14,23 +14,23 @@ namespace WinFormsApp1.GUI.detail
 {
     public partial class TaoPhucLoi : Form
     {
-        private phucloidto phucloiDTO = new phucloidto(); 
-        private phucloibus phucloiBUS = new phucloibus(); 
-        private DTO.phucloidto SelectedPhucLoi { get; set; } 
+        private phucloidto phucloiDTO = new phucloidto();
+        private phucloibus phucloiBUS = new phucloibus();
+        private DTO.phucloidto SelectedPhucLoi { get; set; }
 
-        private string lastMaPhucLoi = ""; 
-        private int i = 0; 
+        private string lastMaPhucLoi = "";
+        private int i = 0;
         public TaoPhucLoi()
         {
             InitializeComponent();
             try
             {
-                
+
                 List<phucloidto> phucloi = phucloiBUS.GetPhucLoi();
                 lastMaPhucLoi = phucloi[^1].MaPhucLoi;
 
-                
-                string numericPart = lastMaPhucLoi.Substring(2); 
+
+                string numericPart = lastMaPhucLoi.Substring(2);
                 if (int.TryParse(numericPart, out int lastIndex))
                 {
                     i = lastIndex + 1; // Tăng chỉ số
@@ -50,7 +50,7 @@ namespace WinFormsApp1.GUI.detail
             }
         }
 
-        
+
         public TaoPhucLoi(DTO.phucloidto SelectedPhucLoi)
         {
             InitializeComponent();
@@ -82,7 +82,7 @@ namespace WinFormsApp1.GUI.detail
             // Bất kỳ xử lý khởi tạo nào khác có thể đặt tại đây
         }
 
-        private void btnTao_Click_1(object sender, EventArgs e)
+        private void btnTao_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txtTenPhucLoi.Text))
             {
@@ -101,7 +101,7 @@ namespace WinFormsApp1.GUI.detail
 
             try
             {
-                
+
                 phucloiBUS.AddPhucLoi(phucloiDTO);
                 MessageBox.Show("Thêm phúc lợi thành công!");
                 Close();
@@ -112,7 +112,7 @@ namespace WinFormsApp1.GUI.detail
             }
         }
 
-        private void btnHuy_Click_1(object sender, EventArgs e)
+        private void btnHuy_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Bạn có chắc chắn muốn hủy không?", "Xác nhận hủy", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {

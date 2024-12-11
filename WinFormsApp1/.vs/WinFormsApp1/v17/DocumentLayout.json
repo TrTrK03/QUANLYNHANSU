@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "D:\\Work\\C#\\DoAn\\QUANLYNHANSU\\WinFormsApp1\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D9720C57-C499-4EA4-9905-7F1094F3D504}|WinFormsApp1\\WinFormsApp1.csproj|d:\\work\\c#\\doan\\quanlynhansu\\winformsapp1\\winformsapp1\\gui\\detail\\suaphucloi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D9720C57-C499-4EA4-9905-7F1094F3D504}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\gui\\detail\\suaphucloi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D9720C57-C499-4EA4-9905-7F1094F3D504}|WinFormsApp1\\WinFormsApp1.csproj|d:\\work\\c#\\doan\\quanlynhansu\\winformsapp1\\winformsapp1\\gui\\detail\\suatuyendung.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D9720C57-C499-4EA4-9905-7F1094F3D504}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\gui\\detail\\suatuyendung.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D9720C57-C499-4EA4-9905-7F1094F3D504}|WinFormsApp1\\WinFormsApp1.csproj|d:\\work\\c#\\doan\\quanlynhansu\\winformsapp1\\winformsapp1\\gui\\detail\\suaphucloi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D9720C57-C499-4EA4-9905-7F1094F3D504}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\gui\\detail\\suaphucloi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D9720C57-C499-4EA4-9905-7F1094F3D504}|WinFormsApp1\\WinFormsApp1.csproj|d:\\work\\c#\\doan\\quanlynhansu\\winformsapp1\\winformsapp1\\gui\\phucloigui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D9720C57-C499-4EA4-9905-7F1094F3D504}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\gui\\phucloigui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -14,11 +26,49 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SuaTuyenDung.cs",
+              "DocumentMoniker": "D:\\Work\\C#\\DoAn\\QUANLYNHANSU\\WinFormsApp1\\WinFormsApp1\\GUI\\detail\\SuaTuyenDung.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\GUI\\detail\\SuaTuyenDung.cs",
+              "ToolTip": "D:\\Work\\C#\\DoAn\\QUANLYNHANSU\\WinFormsApp1\\WinFormsApp1\\GUI\\detail\\SuaTuyenDung.cs",
+              "RelativeToolTip": "WinFormsApp1\\GUI\\detail\\SuaTuyenDung.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T08:34:08.28Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "SuaPhucLoi.cs",
+              "DocumentMoniker": "D:\\Work\\C#\\DoAn\\QUANLYNHANSU\\WinFormsApp1\\WinFormsApp1\\GUI\\detail\\SuaPhucLoi.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\GUI\\detail\\SuaPhucLoi.cs",
+              "ToolTip": "D:\\Work\\C#\\DoAn\\QUANLYNHANSU\\WinFormsApp1\\WinFormsApp1\\GUI\\detail\\SuaPhucLoi.cs",
+              "RelativeToolTip": "WinFormsApp1\\GUI\\detail\\SuaPhucLoi.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAYwBUAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T08:29:14Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SuaPhucLoi.cs [Design]",
+              "DocumentMoniker": "D:\\Work\\C#\\DoAn\\QUANLYNHANSU\\WinFormsApp1\\WinFormsApp1\\GUI\\detail\\SuaPhucLoi.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\GUI\\detail\\SuaPhucLoi.cs",
+              "ToolTip": "D:\\Work\\C#\\DoAn\\QUANLYNHANSU\\WinFormsApp1\\WinFormsApp1\\GUI\\detail\\SuaPhucLoi.cs [Design]",
+              "RelativeToolTip": "WinFormsApp1\\GUI\\detail\\SuaPhucLoi.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T08:29:02.934Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "phucloigui.cs",
               "DocumentMoniker": "D:\\Work\\C#\\DoAn\\QUANLYNHANSU\\WinFormsApp1\\WinFormsApp1\\GUI\\phucloigui.cs",
               "RelativeDocumentMoniker": "WinFormsApp1\\GUI\\phucloigui.cs",
