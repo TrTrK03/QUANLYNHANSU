@@ -60,9 +60,7 @@ namespace WinFormsApp1
         }
         private void chamcong_Click(object sender, EventArgs e)
         {
-            panNav.Height = chamcong.Height;
-            panNav.Top = chamcong.Top;
-            panNav.Left = chamcong.Left;
+
             chamcong.BackColor = Color.FromArgb(46, 51, 73);
             panel5.Controls.Clear();
             chamconggui ccgui = new chamconggui();
@@ -72,9 +70,6 @@ namespace WinFormsApp1
         }
         private void nhanvien_Click(object sender, EventArgs e)
         {
-            panNav.Height = nhanvien.Height;
-            panNav.Top = nhanvien.Top;
-            panNav.Left = nhanvien.Left;
             nhanvien.BackColor = Color.FromArgb(46, 51, 73);
             panel5.Controls.Clear();
             nhanviengui nv = new nhanviengui();
@@ -83,9 +78,6 @@ namespace WinFormsApp1
         }
         private void phongban_Click(object sender, EventArgs e)
         {
-            panNav.Height = phongban.Height;
-            panNav.Top = phongban.Top;
-            panNav.Left = phongban.Left;
             phongban.BackColor = Color.FromArgb(46, 51, 73);
 
             panel5.Controls.Clear();
@@ -95,9 +87,6 @@ namespace WinFormsApp1
         }
         private void duan_Click(object sender, EventArgs e)
         {
-            panNav.Height = duan.Height;
-            panNav.Top = duan.Top;
-            panNav.Left = duan.Left;
             duan.BackColor = Color.FromArgb(46, 51, 73);
             panel5.Controls.Clear();
             duangui da = new duangui();
@@ -106,9 +95,7 @@ namespace WinFormsApp1
         }
         private void bangluong_Click(object sender, EventArgs e)
         {
-            panNav.Height = bangluong.Height;
-            panNav.Top = bangluong.Top;
-            panNav.Left = bangluong.Left;
+
             bangluong.BackColor = Color.FromArgb(46, 51, 73);
 
             // Xóa tất cả các điều khiển cũ trong panel5 trước khi thêm mới
@@ -123,9 +110,7 @@ namespace WinFormsApp1
 
         private void thongbao_Click(object sender, EventArgs e)
         {
-            panNav.Height = thongbao.Height;
-            panNav.Top = thongbao.Top;
-            panNav.Left = thongbao.Left;
+
             thongbao.BackColor = Color.FromArgb(46, 51, 73);
             panel5.Controls.Clear();
             thongbaogui tb = new thongbaogui();
@@ -135,9 +120,7 @@ namespace WinFormsApp1
 
         private void phucloi_Click(object sender, EventArgs e)
         {
-            panNav.Height = phucloi.Height;
-            panNav.Top = phucloi.Top;
-            panNav.Left = phucloi.Left;
+
             phucloi.BackColor = Color.FromArgb(46, 51, 73);
             panel5.Controls.Clear();
             phucloigui pl = new phucloigui();
@@ -147,9 +130,7 @@ namespace WinFormsApp1
 
         private void tuyendung_Click(object sender, EventArgs e)
         {
-            panNav.Height = tuyendung.Height;
-            panNav.Top = tuyendung.Top;
-            panNav.Left = tuyendung.Left;
+
             tuyendung.BackColor = Color.FromArgb(46, 51, 73);
             panel5.Controls.Clear();
             tuyendunggui td = new tuyendunggui();
@@ -159,9 +140,6 @@ namespace WinFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            panNav.Height = khenthuong.Height;
-            panNav.Top = khenthuong.Top;
-            panNav.Left = khenthuong.Left;
             khenthuong.BackColor = Color.FromArgb(46, 51, 73);
             panel5.Controls.Clear();
             khenThuongGUI td = new khenThuongGUI();
@@ -220,6 +198,10 @@ namespace WinFormsApp1
         private void chamcong_Leave(object sender, EventArgs e)
         {
             chamcong.BackColor = Color.FromArgb(64, 64, 64);
+        }
+        private void khenthuong_Leave(object sender, EventArgs e)
+        {
+            khenthuong.BackColor = Color.FromArgb(64, 64, 64);
         }
 
         private void Timer_Tick(object sender, EventArgs e)

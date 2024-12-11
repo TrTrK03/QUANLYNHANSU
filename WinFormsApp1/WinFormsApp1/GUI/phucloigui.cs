@@ -177,27 +177,27 @@ namespace WinFormsApp1.GUI
             dataGridView1.BorderStyle = BorderStyle.None;
             dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.None;
             dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridView1.ColumnHeadersHeight = 70;
+
+            // Điều chỉnh chiều cao tiêu đề cột để vừa nội dung
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+
             dataGridView1.Dock = DockStyle.Fill;
             dataGridView1.GridColor = SystemColors.Info;
             dataGridView1.Location = new Point(0, 0);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 15F);
-            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.False;
             dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+
             dataGridView1.RowHeadersVisible = false;
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.RowTemplate.Height = 100;
+
+            // Điều chỉnh chiều cao dòng cho phù hợp với nội dung
+            dataGridView1.RowTemplate.Height = 50;
+
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView1.ShowRowErrors = false;
-            dataGridView1.Size = new Size(1016, 766);
-            dataGridView1.TabIndex = 0;
+            dataGridView1.Size = new Size(1337, 454);
+            dataGridView1.TabIndex = 1;
             dataGridView1.CellMouseClick += dataGridView1_CellMouseClick;
             dataGridView1.DataBindingComplete += dataGridView1_DataBindingComplete;
             // 

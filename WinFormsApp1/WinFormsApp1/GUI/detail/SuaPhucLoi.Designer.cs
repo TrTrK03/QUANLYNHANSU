@@ -142,6 +142,7 @@
             btnSua.TabIndex = 18;
             btnSua.Text = "Sửa";
             btnSua.UseVisualStyleBackColor = true;
+            btnSua.Click += btnSua_Click;
             // 
             // SuaPhucLoi
             // 

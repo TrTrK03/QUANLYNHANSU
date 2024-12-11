@@ -48,7 +48,7 @@ namespace WinFormsApp1.GUI.detail
             }
             else if (string.IsNullOrWhiteSpace(txtGiaTriPhucLoi.Text))
             {
-                MessageBox.Show("Hãy nhập giá trị phúc lợi" +"!");
+                MessageBox.Show("Hãy nhập giá trị phúc lợi" + "!");
                 txtGiaTriPhucLoi.Focus();
             }
             else if (string.IsNullOrWhiteSpace(txtTrangThai.Text))
@@ -86,6 +86,11 @@ namespace WinFormsApp1.GUI.detail
             {
                 this.DialogResult = DialogResult.Cancel;
             }
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

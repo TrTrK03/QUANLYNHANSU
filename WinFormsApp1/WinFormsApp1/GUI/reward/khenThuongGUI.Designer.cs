@@ -228,24 +228,38 @@
             // 
             // dataKhenThuong
             // 
+            // Cấu hình DataGridView
             dataKhenThuong.AllowUserToAddRows = false;
             dataKhenThuong.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataKhenThuong.BackgroundColor = Color.White;
             dataKhenThuong.BorderStyle = BorderStyle.None;
             dataKhenThuong.CellBorderStyle = DataGridViewCellBorderStyle.None;
             dataKhenThuong.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataKhenThuong.ColumnHeadersHeight = 70;
             dataKhenThuong.Dock = DockStyle.Fill;
             dataKhenThuong.GridColor = SystemColors.Info;
             dataKhenThuong.Location = new Point(3, 23);
             dataKhenThuong.Name = "dataKhenThuong";
-            dataKhenThuong.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataKhenThuong.Size = new Size(1010, 384);
+            dataKhenThuong.TabIndex = 0;
 
+            // Cấu hình cho Header của DataGridView
+            dataKhenThuong.ColumnHeadersHeight = 70; // Tự động điều chỉnh chiều cao của tiêu đề cột
+
+            // Cấu hình cho RowHeaders
+            dataKhenThuong.RowHeadersVisible = false; // Ẩn header của hàng
+            dataKhenThuong.RowHeadersWidth = 51; // Đặt chiều rộng của row header
+            dataKhenThuong.RowTemplate.Height = 100; // Chiều cao của mỗi hàng
+
+            // Cấu hình chế độ chọn
+            dataKhenThuong.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataKhenThuong.ShowRowErrors = false; // Ẩn lỗi hàng
+
+            // Cấu hình kiểu cho RowHeaders
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle
             {
                 Alignment = DataGridViewContentAlignment.MiddleLeft,
                 BackColor = SystemColors.Control,
-                Font = new Font("Segoe UI", 15F),
+                Font = new Font("Segoe UI", 12F), // Đặt font nhỏ hơn cho dễ đọc
                 ForeColor = SystemColors.WindowText,
                 SelectionBackColor = SystemColors.Highlight,
                 SelectionForeColor = SystemColors.HighlightText,
@@ -253,13 +267,6 @@
             };
             dataKhenThuong.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
 
-            dataKhenThuong.RowHeadersVisible = false;
-            dataKhenThuong.RowHeadersWidth = 51;
-            dataKhenThuong.RowTemplate.Height = 100;
-            dataKhenThuong.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataKhenThuong.ShowRowErrors = false;
-            dataKhenThuong.Size = new Size(1010, 384);
-            dataKhenThuong.TabIndex = 0;
             // 
             // khenThuongGUI
             // 

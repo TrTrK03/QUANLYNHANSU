@@ -62,7 +62,7 @@ namespace WinFormsApp1.GUI.detail
                 {
                     departmentBUS.UpdatePhongBan(departmentDTO);
                     MessageBox.Show("Chỉnh sửa phòng ban thành công!");
-                    this.Close();
+                    Close();
                 }
                 catch (Exception ex)
                 {

@@ -55,7 +55,7 @@ public partial class SuaTuyenDung : Form
             {
                 tuyendungbus.UpdateTuyenDung(tuyendungdto);
                 MessageBox.Show("Chỉnh sửa dự án thành công!");
-                this.Close();
+                Close();
             }
             catch (Exception ex)
             {

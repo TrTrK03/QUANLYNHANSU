@@ -43,11 +43,11 @@
             label6 = new Label();
             label3 = new Label();
             label2 = new Label();
-            panel8 = new Panel();
-            pictureBox1 = new PictureBox();
+            panel1 = new Panel();
+            dataGridView1 = new DataGridView();
             panel7.SuspendLayout();
-            panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // panel7
@@ -67,12 +67,11 @@
             panel7.Controls.Add(label6);
             panel7.Controls.Add(label3);
             panel7.Controls.Add(label2);
-            panel7.Controls.Add(panel8);
-            panel7.Dock = DockStyle.Fill;
+            panel7.Dock = DockStyle.Left;
             panel7.ForeColor = Color.FromArgb(49, 17, 117);
             panel7.Location = new Point(0, 0);
             panel7.Name = "panel7";
-            panel7.Size = new Size(787, 352);
+            panel7.Size = new Size(494, 352);
             panel7.TabIndex = 8;
             // 
             // dtpNgayKetThuc
@@ -80,7 +79,7 @@
             dtpNgayKetThuc.Enabled = false;
             dtpNgayKetThuc.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dtpNgayKetThuc.Format = DateTimePickerFormat.Short;
-            dtpNgayKetThuc.Location = new Point(408, 210);
+            dtpNgayKetThuc.Location = new Point(138, 193);
             dtpNgayKetThuc.Margin = new Padding(6, 5, 6, 5);
             dtpNgayKetThuc.Name = "dtpNgayKetThuc";
             dtpNgayKetThuc.Size = new Size(344, 39);
@@ -91,7 +90,7 @@
             dtpNgayBatDau.Enabled = false;
             dtpNgayBatDau.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dtpNgayBatDau.Format = DateTimePickerFormat.Short;
-            dtpNgayBatDau.Location = new Point(408, 161);
+            dtpNgayBatDau.Location = new Point(138, 144);
             dtpNgayBatDau.Margin = new Padding(6, 5, 6, 5);
             dtpNgayBatDau.Name = "dtpNgayBatDau";
             dtpNgayBatDau.Size = new Size(344, 39);
@@ -100,7 +99,7 @@
             // txtPhongBanPhuTrach
             // 
             txtPhongBanPhuTrach.Enabled = false;
-            txtPhongBanPhuTrach.Location = new Point(408, 257);
+            txtPhongBanPhuTrach.Location = new Point(138, 240);
             txtPhongBanPhuTrach.Name = "txtPhongBanPhuTrach";
             txtPhongBanPhuTrach.Size = new Size(344, 27);
             txtPhongBanPhuTrach.TabIndex = 6;
@@ -108,7 +107,7 @@
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(279, 260);
+            label11.Location = new Point(9, 243);
             label11.Name = "label11";
             label11.Size = new Size(83, 20);
             label11.TabIndex = 5;
@@ -117,7 +116,7 @@
             // txtQuanLyDuAn
             // 
             txtQuanLyDuAn.Enabled = false;
-            txtQuanLyDuAn.Location = new Point(408, 126);
+            txtQuanLyDuAn.Location = new Point(138, 109);
             txtQuanLyDuAn.Name = "txtQuanLyDuAn";
             txtQuanLyDuAn.Size = new Size(344, 27);
             txtQuanLyDuAn.TabIndex = 4;
@@ -125,7 +124,7 @@
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(279, 129);
+            label10.Location = new Point(9, 112);
             label10.Name = "label10";
             label10.Size = new Size(104, 20);
             label10.TabIndex = 3;
@@ -134,7 +133,7 @@
             // txtMoTa
             // 
             txtMoTa.Enabled = false;
-            txtMoTa.Location = new Point(408, 294);
+            txtMoTa.Location = new Point(138, 277);
             txtMoTa.Name = "txtMoTa";
             txtMoTa.Size = new Size(344, 27);
             txtMoTa.TabIndex = 2;
@@ -142,7 +141,7 @@
             // txtTenDuAn
             // 
             txtTenDuAn.Enabled = false;
-            txtTenDuAn.Location = new Point(408, 92);
+            txtTenDuAn.Location = new Point(138, 75);
             txtTenDuAn.Name = "txtTenDuAn";
             txtTenDuAn.Size = new Size(344, 27);
             txtTenDuAn.TabIndex = 2;
@@ -150,7 +149,7 @@
             // txtMaDuAn
             // 
             txtMaDuAn.Enabled = false;
-            txtMaDuAn.Location = new Point(408, 59);
+            txtMaDuAn.Location = new Point(138, 42);
             txtMaDuAn.Name = "txtMaDuAn";
             txtMaDuAn.Size = new Size(344, 27);
             txtMaDuAn.TabIndex = 2;
@@ -158,7 +157,7 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(277, 219);
+            label9.Location = new Point(7, 202);
             label9.Name = "label9";
             label9.Size = new Size(103, 20);
             label9.TabIndex = 1;
@@ -167,7 +166,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(279, 169);
+            label5.Location = new Point(9, 152);
             label5.Name = "label5";
             label5.Size = new Size(102, 20);
             label5.TabIndex = 1;
@@ -176,7 +175,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(279, 297);
+            label6.Location = new Point(9, 280);
             label6.Name = "label6";
             label6.Size = new Size(51, 20);
             label6.TabIndex = 1;
@@ -185,7 +184,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(279, 95);
+            label3.Location = new Point(9, 78);
             label3.Name = "label3";
             label3.Size = new Size(77, 20);
             label3.TabIndex = 1;
@@ -194,44 +193,74 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(279, 59);
+            label2.Location = new Point(9, 42);
             label2.Name = "label2";
             label2.Size = new Size(75, 20);
             label2.TabIndex = 1;
             label2.Text = "Mã dự án:";
             // 
-            // panel8
+            // panel1
             // 
-            panel8.BackColor = Color.FromArgb(255, 192, 255);
-            panel8.Controls.Add(pictureBox1);
-            panel8.Location = new Point(12, 27);
-            panel8.Name = "panel8";
-            panel8.Size = new Size(251, 315);
-            panel8.TabIndex = 0;
+            panel1.Controls.Add(dataGridView1);
+            panel1.Dock = DockStyle.Fill;
+            panel1.Location = new Point(494, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(392, 352);
+            panel1.TabIndex = 9;
             // 
-            // pictureBox1
+            // dataGridView1
             // 
-            pictureBox1.Dock = DockStyle.Fill;
-            pictureBox1.Image = Properties.Resources.Untitled2;
-            pictureBox1.Location = new Point(0, 0);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(251, 315);
-            pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.BackgroundColor = Color.White;
+            dataGridView1.BorderStyle = BorderStyle.None;
+            dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.None;
+            dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+
+            // Tự động điều chỉnh chiều cao tiêu đề cột để vừa nội dung
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+
+            dataGridView1.Dock = DockStyle.Fill;
+            dataGridView1.GridColor = SystemColors.Info;
+            dataGridView1.Location = new Point(0, 0);
+            dataGridView1.Name = "dataGridView1";
+
+            // Cấu hình DataGridViewCellStyle cho RowHeaders
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle
+            {
+                Alignment = DataGridViewContentAlignment.MiddleLeft,
+                BackColor = SystemColors.Control,
+                Font = new Font("Segoe UI", 12F), // Giảm kích thước font để tối ưu giao diện
+                ForeColor = SystemColors.WindowText,
+                SelectionBackColor = SystemColors.Highlight,
+                SelectionForeColor = SystemColors.HighlightText,
+                WrapMode = DataGridViewTriState.True // Điều chỉnh để nội dung không bị cắt
+            };
+            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+
+            dataGridView1.RowHeadersVisible = false;
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.RowTemplate.Height = 50; // Giảm chiều cao dòng để phù hợp
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridView1.ShowRowErrors = false;
+            dataGridView1.Size = new Size(1030, 654);
+            dataGridView1.TabIndex = 1;
+
+
             // 
             // DuAnInfo
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(787, 352);
+            ClientSize = new Size(886, 352);
+            Controls.Add(panel1);
             Controls.Add(panel7);
             Name = "DuAnInfo";
             Text = "DuAnInfo";
             panel7.ResumeLayout(false);
             panel7.PerformLayout();
-            panel8.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
 
@@ -252,7 +281,7 @@
         private Label label6;
         private Label label3;
         private Label label2;
-        private Panel panel8;
-        private PictureBox pictureBox1;
+        private Panel panel1;
+        private DataGridView dataGridView1;
     }
 }

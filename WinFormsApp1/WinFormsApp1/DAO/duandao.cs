@@ -37,7 +37,6 @@ namespace WinFormsApp1.DAO
                         NgayKetThuc = Convert.ToDateTime(reader["NgayKetThuc"]),
                         QuanLyDuAn = reader["QuanLyDuAn"].ToString(),
                         PhongBanPhuTrach = reader["PhongBanPhuTrach"].ToString(),
-                        TrangThai = Convert.ToInt32(reader["TrangThai"])
                     };
                     projects.Add(project);
                 }
@@ -51,7 +50,7 @@ namespace WinFormsApp1.DAO
         {
             using (SqlConnection connection = connectObj.connection())
             {
-                SqlCommand command = new SqlCommand("INSERT INTO DuAn VALUES(@MaDuAn, @TenDuAn, @MoTa, @NgayBatDau, @NgayKetThuc, @QuanLyDuAn, @PhongBanPhuTrach, @TrangThai)", connection);
+                SqlCommand command = new SqlCommand("INSERT INTO DuAn VALUES(@MaDuAn, @TenDuAn, @MoTa, @NgayBatDau, @NgayKetThuc, @QuanLyDuAn, @PhongBanPhuTrach, 1)", connection);
                 command.Parameters.AddWithValue("@MaDuAn", project.MaDuAn);
                 command.Parameters.AddWithValue("@TenDuAn", project.TenDuAn);
                 command.Parameters.AddWithValue("@MoTa", project.MoTa);
@@ -59,7 +58,6 @@ namespace WinFormsApp1.DAO
                 command.Parameters.AddWithValue("@NgayKetThuc", project.NgayKetThuc);
                 command.Parameters.AddWithValue("@QuanLyDuAn", project.QuanLyDuAn);
                 command.Parameters.AddWithValue("@PhongBanPhuTrach", project.PhongBanPhuTrach);
-                command.Parameters.AddWithValue("@TrangThai", project.TrangThai);
                 command.ExecuteNonQuery();
             }
         }
@@ -68,7 +66,7 @@ namespace WinFormsApp1.DAO
         {
             using (SqlConnection connection = connectObj.connection())
             {
-                SqlCommand command = new SqlCommand("UPDATE DuAn SET TenDuAn = @TenDuAn, MoTa = @MoTa, NgayBatDau = @NgayBatDau, NgayKetThuc = @NgayKetThuc, QuanLyDuAn = @QuanLyDuAn, PhongBanPhuTrach = @PhongBanPhuTrach, TrangThai = @TrangThai WHERE MaDuAn = @MaDuAn", connection);
+                SqlCommand command = new SqlCommand("UPDATE DuAn SET TenDuAn = @TenDuAn, MoTa = @MoTa, NgayBatDau = @NgayBatDau, NgayKetThuc = @NgayKetThuc, QuanLyDuAn = @QuanLyDuAn, PhongBanPhuTrach = @PhongBanPhuTrach, TrangThai = 1 WHERE MaDuAn = @MaDuAn", connection);
                 command.Parameters.AddWithValue("@MaDuAn", project.MaDuAn);
                 command.Parameters.AddWithValue("@TenDuAn", project.TenDuAn);
                 command.Parameters.AddWithValue("@MoTa", project.MoTa);
@@ -76,7 +74,6 @@ namespace WinFormsApp1.DAO
                 command.Parameters.AddWithValue("@NgayKetThuc", project.NgayKetThuc);
                 command.Parameters.AddWithValue("@QuanLyDuAn", project.QuanLyDuAn);
                 command.Parameters.AddWithValue("@PhongBanPhuTrach", project.PhongBanPhuTrach);
-                command.Parameters.AddWithValue("@TrangThai", project.TrangThai);
                 command.ExecuteNonQuery();
             }
         }

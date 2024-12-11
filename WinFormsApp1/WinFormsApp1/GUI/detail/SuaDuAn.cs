@@ -69,7 +69,7 @@ public partial class SuaDuAn : Form
             {
                 projectBUS.UpdateDuAn(projectDTO);
                 MessageBox.Show("Chỉnh sửa dự án thành công!");
-                this.Close();
+                Close();
             }
             catch (Exception ex)
             {

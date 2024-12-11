@@ -15,7 +15,6 @@ namespace WinFormsApp1.GUI.Info
 {
     public partial class DanhSachTuyenDung : Form
     {
-        tuyendunggui tuyendunggui = new tuyendunggui();
         static hosotuyendungbus hosotuyendungbus = new hosotuyendungbus();
         hosotuyendungdto hosotuyendungdto = new hosotuyendungdto();
         List<hosotuyendungdto> hosos = hosotuyendungbus.GetHoSoTuyenDung();

@@ -73,12 +73,11 @@ namespace WinFormsApp1.DAO
                     connection.Open();
                 }
 
-                SqlCommand command = new SqlCommand("UPDATE PhongBan SET TenPhongBan = @TenPhongBan, MoTa = @MoTa, TruongPhong = @TruongPhong, TrangThai = @TrangThai WHERE MaPhongBan = @MaPhongBan", connection);
+                SqlCommand command = new SqlCommand("UPDATE PhongBan SET TenPhongBan = @TenPhongBan, MoTa = @MoTa, TruongPhong = @TruongPhong, TrangThai = 1 WHERE MaPhongBan = @MaPhongBan", connection);
                 command.Parameters.AddWithValue("@MaPhongBan", department.MaPhongBan);
                 command.Parameters.AddWithValue("@TenPhongBan", department.TenPhongBan);
                 command.Parameters.AddWithValue("@MoTa", department.MoTa);
                 command.Parameters.AddWithValue("@TruongPhong", department.TruongPhong);
-                command.Parameters.AddWithValue("@TrangThai", department.TrangThai);
 
                 command.ExecuteNonQuery();
                 connection.Close();

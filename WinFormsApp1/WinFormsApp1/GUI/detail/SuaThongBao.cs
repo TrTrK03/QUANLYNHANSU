@@ -53,7 +53,7 @@ namespace WinFormsApp1.GUI.detail
                 {
                     thongbaobus.UpdateThongBao(updatedThongBao); // Update thongbao in the database
                     MessageBox.Show("Chỉnh sửa thông báo thành công!");
-                    this.Close();
+                    Close();
                 }
                 catch (Exception ex)
                 {

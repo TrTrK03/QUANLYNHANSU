@@ -31,7 +31,6 @@
         {
             components = new System.ComponentModel.Container();
             panel1 = new Panel();
-            panNav = new Panel();
             khenthuong = new Button();
             chamcong = new Button();
             nhanvien = new Button();
@@ -48,12 +47,12 @@
             panel5 = new Panel();
             timer1 = new System.Windows.Forms.Timer(components);
             panel1.SuspendLayout();
+            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(64, 64, 64);
-            panel1.Controls.Add(panNav);
             panel1.Controls.Add(khenthuong);
             panel1.Controls.Add(chamcong);
             panel1.Controls.Add(nhanvien);
@@ -70,15 +69,6 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(164, 713);
             panel1.TabIndex = 0;
-            // 
-            // panNav
-            // 
-            panNav.BackColor = Color.FromArgb(0, 126, 249);
-            panNav.Location = new Point(2, 103);
-            panNav.Margin = new Padding(2);
-            panNav.Name = "panNav";
-            panNav.Size = new Size(5, 71);
-            panNav.TabIndex = 3;
             // 
             // khenthuong
             // 
@@ -98,6 +88,7 @@
             khenthuong.TextImageRelation = TextImageRelation.ImageBeforeText;
             khenthuong.UseVisualStyleBackColor = true;
             khenthuong.Click += button1_Click;
+            khenthuong.Leave += khenthuong_Leave;
             // 
             // chamcong
             // 
@@ -261,6 +252,7 @@
             // 
             // panel2
             // 
+            panel2.Controls.Add(label1);
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(0, 0);
             panel2.Margin = new Padding(0);
@@ -270,13 +262,13 @@
             // 
             // label1
             // 
-            label1.AutoSize = true;
             label1.BackColor = Color.FromArgb(64, 64, 64);
+            label1.Dock = DockStyle.Fill;
             label1.Font = new Font("Segoe UI", 20F);
             label1.ForeColor = SystemColors.HotTrack;
-            label1.Location = new Point(24, 27);
+            label1.Location = new Point(0, 0);
             label1.Name = "label1";
-            label1.Size = new Size(117, 46);
+            label1.Size = new Size(164, 103);
             label1.TabIndex = 0;
             label1.Text = "00 : 00";
             label1.TextAlign = ContentAlignment.MiddleCenter;
@@ -312,7 +304,6 @@
             AutoSize = true;
             BackColor = Color.Silver;
             ClientSize = new Size(1180, 713);
-            Controls.Add(label1);
             Controls.Add(panel5);
             Controls.Add(panel3);
             Controls.Add(panel1);
@@ -322,6 +313,7 @@
             Text = "Quản lý nhân sự";
             Load += Form1_Load;
             panel1.ResumeLayout(false);
+            panel2.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -338,7 +330,6 @@
         private Button nhanvien;
         private Button bangluong;
         private Button thongbao;
-        private Panel panNav;
         private Button phucloi;
         private Panel panel3;
         private Panel panel5;

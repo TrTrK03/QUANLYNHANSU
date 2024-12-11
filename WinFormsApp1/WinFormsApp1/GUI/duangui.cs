@@ -30,6 +30,9 @@ namespace WinFormsApp1.GUI
         static duanbus projectBUS = new duanbus();
         duandto projectDTO = new duandto();
         List<duandto> projects = projectBUS.GetDuAn();
+        static nhanvienbus nhanvienbus = new nhanvienbus();
+        nhanviendto nhanviendto = new nhanviendto();
+        List<nhanviendto> nhanviens = nhanvienbus.GetNhanVien();
 
         private Panel panel1;
         private Panel panel2;
@@ -98,26 +101,26 @@ namespace WinFormsApp1.GUI
             dataGridView1.BorderStyle = BorderStyle.None;
             dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.None;
             dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridView1.ColumnHeadersHeight = 70;
+
+            // Điều chỉnh chiều cao tiêu đề cột để vừa nội dung
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+
             dataGridView1.Dock = DockStyle.Fill;
             dataGridView1.GridColor = SystemColors.Info;
             dataGridView1.Location = new Point(0, 0);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 15F);
-            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.False;
             dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+
             dataGridView1.RowHeadersVisible = false;
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.RowTemplate.Height = 100;
+
+            // Điều chỉnh chiều cao dòng cho phù hợp với nội dung
+            dataGridView1.RowTemplate.Height = 50;
+
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView1.ShowRowErrors = false;
-            dataGridView1.Size = new Size(1030, 654);
+            dataGridView1.Size = new Size(1337, 454);
             dataGridView1.TabIndex = 1;
             dataGridView1.CellMouseClick += dataGridView1_CellMouseClick;
             dataGridView1.DataBindingComplete += dataGridView1_DataBindingComplete;
@@ -323,6 +326,7 @@ namespace WinFormsApp1.GUI
         {
             if (e.RowIndex < 0 || e.ColumnIndex < 0) return;
 
+            // Toggle checkbox logic
             if (dataGridView1.Columns[e.ColumnIndex].Name == "Check")
             {
                 bool isChecked = Convert.ToBoolean(dataGridView1.Rows[e.RowIndex].Cells["Check"].Value);
@@ -330,15 +334,12 @@ namespace WinFormsApp1.GUI
                 return;
             }
 
-            string maDASelected = dataGridView1.Rows[e.RowIndex].Cells["Ma Du An"].Value.ToString();
+            // Get selected project ID
+            string maDASelected = dataGridView1.Rows[e.RowIndex].Cells["Ma Du An"]?.Value?.ToString();
+
+            // Find selected project
             duandto selectedDuAn = projects.FirstOrDefault(duan => duan.MaDuAn == maDASelected);
-
-            if (selectedDuAn == null)
-            {
-                MessageBox.Show($"Không tìm thấy dự án có mã: {maDASelected}");
-                return;
-            }
-
+            // Prepare and show DuAnInfo form
             DuAnInfo duAnInfoForm = new DuAnInfo
             {
                 MaDuAn = selectedDuAn.MaDuAn.Trim(),
@@ -348,6 +349,11 @@ namespace WinFormsApp1.GUI
                 NgayKetThuc = selectedDuAn.NgayKetThuc,
                 QuanLyDuAn = selectedDuAn.QuanLyDuAn.Trim(),
                 PhongBanPhuTrach = selectedDuAn.PhongBanPhuTrach.Trim(),
+
+                // Filter list of employees
+                nhanviens = nhanviens
+                    .Where(h => h.PhongBan == selectedDuAn.PhongBanPhuTrach)
+                    .ToList()
             };
 
             try
@@ -360,6 +366,7 @@ namespace WinFormsApp1.GUI
                 MessageBox.Show($"Lỗi khi hiển thị form: {ex.Message}");
             }
         }
+
 
         private void duangui_MouseClick(object sender, MouseEventArgs e)
         {

@@ -158,7 +158,7 @@ public partial class SuaNhanVien : Form
             {
                 employeeBUS.UpdateNhanVien(employeeDTO);
                 MessageBox.Show("Chỉnh sửa nhân viên thành công!!!");
-                this.Close();
+                Close();
             }
             catch (Exception ex)
             {

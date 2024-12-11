@@ -35,9 +35,14 @@ namespace WinFormsApp1.GUI
 {
     public partial class phongbangui : UserControl
     {
+        DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
         static phongbanbus phongbanBUS = new phongbanbus();
         phongbandto phongbanDTO = new phongbandto();
         List<phongbandto> phongbans = phongbanBUS.GetPhongBan();
+        static nhanvienbus nhanvienbus = new nhanvienbus();
+        nhanviendto nhanviendto = new nhanviendto();
+        List<nhanviendto> nhanviens = nhanvienbus.GetNhanVien();
+
         private Panel panel2;
         private Panel panel6;
         private Button edit;
@@ -192,27 +197,27 @@ namespace WinFormsApp1.GUI
             dataGridView1.BorderStyle = BorderStyle.None;
             dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.None;
             dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridView1.ColumnHeadersHeight = 70;
+
+            // Điều chỉnh chiều cao tiêu đề cột để vừa nội dung
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+
             dataGridView1.Dock = DockStyle.Fill;
             dataGridView1.GridColor = SystemColors.Info;
             dataGridView1.Location = new Point(0, 0);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Control;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 15F);
-            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+
             dataGridView1.RowHeadersVisible = false;
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.RowTemplate.Height = 100;
+
+            // Điều chỉnh chiều cao dòng cho phù hợp với nội dung
+            dataGridView1.RowTemplate.Height = 50;
+
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView1.ShowRowErrors = false;
-            dataGridView1.Size = new Size(1016, 662);
-            dataGridView1.TabIndex = 0;
+            dataGridView1.Size = new Size(1337, 454);
+            dataGridView1.TabIndex = 1;
             dataGridView1.CellMouseClick += dataGridView1_CellMouseClick;
             dataGridView1.DataBindingComplete += dataGridView1_DataBindingComplete;
             // 
@@ -332,7 +337,12 @@ namespace WinFormsApp1.GUI
                     MaPhongBan = selectedphongban.MaPhongBan.Trim(),
                     TruongPhong = selectedphongban.TruongPhong.Trim(),
                     TenPhongBan = selectedphongban.TenPhongBan.Trim(),
-                    MoTa = selectedphongban.MoTa.Trim()
+                    MoTa = selectedphongban.MoTa.Trim(),
+
+                    // Filter list of employees
+                    nhanviens = nhanviens
+                        .Where(h => h.PhongBan == selectedphongban.MaPhongBan)
+                        .ToList()
                 };
 
                 // Hiển thị Formtest
@@ -340,10 +350,6 @@ namespace WinFormsApp1.GUI
                 test.ShowDialog();
             }
 
-            // Hiển thị bảng chi tiết
-            dataGridView1.Size = new Size(1575, 450);
-            dataGridView1.DefaultCellStyle.SelectionForeColor = Color.FromArgb(49, 17, 117);
-            dataGridView1.DefaultCellStyle.SelectionBackColor = Color.Lavender;
         }
 
 

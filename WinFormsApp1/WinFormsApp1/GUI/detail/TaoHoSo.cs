@@ -117,7 +117,7 @@ namespace WinFormsApp1.GUI.detail
                 // Add the new profile using BUS
                 hosotuyendungbus.AddHoSoTuyenDung(hosotuyendungdto);
                 MessageBox.Show("Thêm hồ sơ thành công!");
-                Close();
+                this.Close();
             }
             catch (Exception ex)
             {

@@ -46,8 +46,7 @@ namespace WinFormsApp1.DAO
                             NguoiQuanLy = reader["NguoiQuanLy"].ToString(),
                             PhongBan = reader["PhongBan"].ToString(),
                             ChucVu= reader["ChucVu"].ToString(),
-                            HoSoGioiThieu = reader["HoSoGioiThieu"].ToString(),
-                            TrangThai = Convert.ToInt32(reader["TrangThai"])
+                            HoSoGioiThieu = reader["HoSoGioiThieu"].ToString()
                             
                             
                         };
