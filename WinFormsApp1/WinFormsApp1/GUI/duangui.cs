@@ -285,16 +285,6 @@ namespace WinFormsApp1.GUI
                 dt.Rows.Add(false, project.MaDuAn, project.TenDuAn, project.MoTa, project.NgayBatDau.ToString("dd/MM/yyyy"), project.NgayKetThuc.ToString("dd/MM/yyyy"), project.QuanLyDuAn, project.PhongBanPhuTrach, project.TrangThai);
             }
             dataGridView1.DataSource = dt;
-            // Kiểm tra trạng thái và ẩn dòng nếu trạng thái = 0
-            foreach (DataGridViewRow row in dataGridView1.Rows)
-            {
-                // Kiểm tra trạng thái của dòng
-                if (row.Cells["Trang Thai"].Value != null && (int)row.Cells["Trang Thai"].Value == 0)
-                {
-                    // Ẩn toàn bộ dòng nếu trạng thái = 0
-                    row.Visible = false;
-                }
-            }
             dataGridView1.Columns["Mo ta"].Visible = false;
             dataGridView1.Columns["Ngay Bat Dau"].Visible = false;
             dataGridView1.Columns["Ngay Ket Thuc"].Visible = false;
