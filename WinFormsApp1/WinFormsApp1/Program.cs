@@ -25,16 +25,23 @@ namespace WinFormsApp1
             //im.indanhsach();
 
 
-            Login login = new Login();
-            login.StartPosition = FormStartPosition.CenterParent;
-            DialogResult result = login.ShowDialog();
+            //LandR landR = new LandR();
+            //landR.StartPosition = FormStartPosition.CenterParent;
+            //landR.ShowDialog();
 
-            if (result == DialogResult.OK)
-            {
-                // Login successful, proceed to the main form
-                MainForm mainForm = new MainForm();
-                mainForm.Show();
-            }
+            //landR.hienthiLogin();
+            //Login login = new Login();
+            //login.StartPosition = FormStartPosition.CenterParent;
+            //DialogResult result = login.ShowDialog();
+
+            //if (result == DialogResult.OK)
+            //{
+            //    // Login successful, proceed to the main form
+            //    MainForm mainForm = new MainForm();
+            //    mainForm.Show();
+            //}
+            Application.Run(new index());
+
         }
     }
 }

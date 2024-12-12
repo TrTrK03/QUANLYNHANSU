@@ -40,9 +40,6 @@
     <Compile Update="GUI\index.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="GUI\Home.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Update="GUI\Info\ChiTietPhucLoiNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,9 +87,6 @@
     </Compile>
     <Compile Update="GUI\reward\suaKhenThuong.cs">
       <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="GUI\test.cs">
-      <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="GUI\wave\bangLuongGUI.cs">
       <SubType>UserControl</SubType>

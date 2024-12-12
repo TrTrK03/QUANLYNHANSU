@@ -51,14 +51,15 @@
             chart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             chart1.Legends.Add(legend1);
-            chart1.Location = new Point(68, 29);
+            chart1.Location = new Point(49, 21);
+            chart1.Margin = new Padding(2);
             chart1.Name = "chart1";
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             chart1.Series.Add(series1);
-            chart1.Size = new Size(300, 300);
+            chart1.Size = new Size(218, 214);
             chart1.TabIndex = 0;
             chart1.Text = "chart1";
             // 
@@ -68,7 +69,8 @@
             chart2.ChartAreas.Add(chartArea2);
             legend2.Name = "Legend1";
             chart2.Legends.Add(legend2);
-            chart2.Location = new Point(68, 355);
+            chart2.Location = new Point(49, 254);
+            chart2.Margin = new Padding(2);
             chart2.Name = "chart2";
             chart2.RightToLeft = RightToLeft.Yes;
             series2.ChartArea = "ChartArea1";
@@ -81,7 +83,7 @@
             series3.Name = "Trễ giờ";
             chart2.Series.Add(series2);
             chart2.Series.Add(series3);
-            chart2.Size = new Size(912, 360);
+            chart2.Size = new Size(663, 257);
             chart2.TabIndex = 1;
             chart2.Text = "chart2";
             // 
@@ -90,11 +92,13 @@
             domainUpDown2.Items.Add("2023");
             domainUpDown2.Items.Add("2024");
             domainUpDown2.Items.Add("2025");
-            domainUpDown2.Location = new Point(702, 115);
+            domainUpDown2.Location = new Point(511, 82);
+            domainUpDown2.Margin = new Padding(2);
             domainUpDown2.Name = "domainUpDown2";
             domainUpDown2.ReadOnly = true;
-            domainUpDown2.Size = new Size(120, 34);
+            domainUpDown2.Size = new Size(87, 27);
             domainUpDown2.TabIndex = 16;
+            //domainUpDown2.SelectedItemChanged += domainUpDown2_SelectedItemChanged;
             // 
             // domainUpDown1
             // 
@@ -110,41 +114,46 @@
             domainUpDown1.Items.Add("10");
             domainUpDown1.Items.Add("11");
             domainUpDown1.Items.Add("12");
-            domainUpDown1.Location = new Point(702, 51);
+            domainUpDown1.Location = new Point(511, 36);
+            domainUpDown1.Margin = new Padding(2);
             domainUpDown1.Name = "domainUpDown1";
             domainUpDown1.ReadOnly = true;
-            domainUpDown1.Size = new Size(120, 34);
+            domainUpDown1.Size = new Size(87, 27);
             domainUpDown1.TabIndex = 15;
+            //domainUpDown1.SelectedItemChanged += domainUpDown1_SelectedItemChanged;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(626, 117);
+            label4.Location = new Point(455, 84);
+            label4.Margin = new Padding(2, 0, 2, 0);
             label4.Name = "label4";
-            label4.Size = new Size(58, 28);
+            label4.Size = new Size(44, 20);
             label4.TabIndex = 14;
             label4.Text = "Năm:";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(626, 53);
+            label3.Location = new Point(455, 38);
+            label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
-            label3.Size = new Size(70, 28);
+            label3.Size = new Size(53, 20);
             label3.TabIndex = 13;
             label3.Text = "Tháng:";
             // 
             // Thongke
             // 
-            AutoScaleDimensions = new SizeF(11F, 28F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1080, 746);
+            ClientSize = new Size(785, 533);
             Controls.Add(domainUpDown2);
             Controls.Add(domainUpDown1);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(chart2);
             Controls.Add(chart1);
+            Margin = new Padding(2);
             Name = "Thongke";
             Text = "Thongke";
             ((System.ComponentModel.ISupportInitialize)chart1).EndInit();

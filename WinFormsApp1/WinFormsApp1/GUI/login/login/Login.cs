@@ -80,9 +80,11 @@ namespace WinFormsApp1.GUI
                 {
                     landR.Hide();
                 }
+                this.Hide();
                 index id = new index();
                 id.StartPosition = FormStartPosition.CenterScreen;
                 id.ShowDialog();
+                
             }
             else
             {

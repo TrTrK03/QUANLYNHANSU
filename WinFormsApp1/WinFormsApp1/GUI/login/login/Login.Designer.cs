@@ -47,7 +47,7 @@
             label1.ForeColor = Color.Indigo;
             label1.Location = new Point(185, 90);
             label1.Name = "label1";
-            label1.Size = new Size(115, 39);
+            label1.Size = new Size(145, 50);
             label1.TabIndex = 0;
             label1.Text = "Log in";
             // 
@@ -57,7 +57,7 @@
             Username.ForeColor = Color.DarkGray;
             Username.Location = new Point(78, 177);
             Username.Name = "Username";
-            Username.Size = new Size(75, 19);
+            Username.Size = new Size(88, 23);
             Username.TabIndex = 1;
             Username.Text = "Username\r\n";
             // 
@@ -71,7 +71,6 @@
             txtUsername.Name = "txtUsername";
             txtUsername.Size = new Size(350, 28);
             txtUsername.TabIndex = 2;
-            
             // 
             // label2
             // 
@@ -79,7 +78,7 @@
             label2.ForeColor = Color.DarkGray;
             label2.Location = new Point(78, 261);
             label2.Name = "label2";
-            label2.Size = new Size(70, 19);
+            label2.Size = new Size(84, 23);
             label2.TabIndex = 3;
             label2.Text = "Password\r\n";
             // 
@@ -94,7 +93,6 @@
             txtPassword.PasswordChar = '*';
             txtPassword.Size = new Size(350, 28);
             txtPassword.TabIndex = 4;
-            
             // 
             // chckbxPassword
             // 
@@ -104,7 +102,7 @@
             chckbxPassword.ForeColor = Color.DarkGray;
             chckbxPassword.Location = new Point(297, 317);
             chckbxPassword.Name = "chckbxPassword";
-            chckbxPassword.Size = new Size(127, 23);
+            chckbxPassword.Size = new Size(149, 27);
             chckbxPassword.TabIndex = 7;
             chckbxPassword.Text = "Show Password\r\n";
             chckbxPassword.UseVisualStyleBackColor = true;
@@ -145,7 +143,7 @@
             label4.ForeColor = Color.DarkGray;
             label4.Location = new Point(159, 515);
             label4.Name = "label4";
-            label4.Size = new Size(163, 19);
+            label4.Size = new Size(190, 23);
             label4.TabIndex = 10;
             label4.Text = "Don't Have An Account\r\n";
             // 
@@ -156,15 +154,16 @@
             label5.ForeColor = Color.Indigo;
             label5.Location = new Point(175, 541);
             label5.Name = "label5";
-            label5.Size = new Size(141, 19);
+            label5.Size = new Size(165, 23);
             label5.TabIndex = 11;
             label5.Text = "Regist New Account";
             label5.Click += label5_Click_1;
             // 
             // Login
             // 
-            AutoScaleDimensions = new SizeF(9F, 19F);
+            AutoScaleDimensions = new SizeF(10F, 23F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoValidate = AutoValidate.EnablePreventFocusChange;
             BackColor = Color.White;
             ClientSize = new Size(500, 650);
             Controls.Add(label5);
@@ -179,7 +178,7 @@
             Controls.Add(label1);
             Font = new Font("Palatino Linotype", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             ForeColor = Color.Silver;
-            FormBorderStyle = FormBorderStyle.None;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(4);
             Name = "Login";
             StartPosition = FormStartPosition.CenterScreen;

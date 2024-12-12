@@ -296,6 +296,13 @@ namespace WinFormsApp1.GUI
         {
 
         }
+
+        private void export_Click(object sender, EventArgs e)
+        {
+            Thongke tForm = new Thongke();
+            tForm.StartPosition = FormStartPosition.CenterParent;
+            tForm.ShowDialog();
+        }
     }
 }
 

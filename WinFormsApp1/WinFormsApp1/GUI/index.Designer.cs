@@ -265,7 +265,7 @@
             label1.BackColor = Color.FromArgb(64, 64, 64);
             label1.Dock = DockStyle.Fill;
             label1.Font = new Font("Segoe UI", 20F);
-            label1.ForeColor = SystemColors.HotTrack;
+            label1.ForeColor = Color.White;
             label1.Location = new Point(0, 0);
             label1.Name = "label1";
             label1.Size = new Size(164, 103);

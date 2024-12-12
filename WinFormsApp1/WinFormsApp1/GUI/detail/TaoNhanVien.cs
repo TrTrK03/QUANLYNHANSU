@@ -51,10 +51,28 @@ namespace WinFormsApp1.GUI.detail
         public TaoNhanVien(DTO.nhanviendto selectedEmployee)
         {
             InitializeComponent();
+
             SelectedEmployee = selectedEmployee;
 
             // Assign values from selected employee to fields
-            txtMaNV.Text = selectedEmployee.MaNhanVien;
+            // Get the list of employees and the last employee ID
+            List<nhanviendto> employees = employeeBUS.GetNhanVienLast();
+            lastMaNV = employees[^1].MaNhanVien;
+
+            // Process last employee ID to generate the next one
+            string numericPart = lastMaNV.Substring(2); // Get numeric part
+            if (int.TryParse(numericPart, out int lastIndex))
+            {
+                i = lastIndex + 1; // Increment the index
+            }
+            else
+            {
+                MessageBox.Show("Mã nhân viên không hợp lệ. Đặt mã mặc định là NV00001.");
+                i = 1;
+            }
+
+            // Generate new employee ID
+            txtMaNV.Text = GenerateMaNV(i);
             txtHoTen.Text = selectedEmployee.HoTen;
             txtSDT.Text = selectedEmployee.SDT;
             txtEmail.Text = selectedEmployee.Email;

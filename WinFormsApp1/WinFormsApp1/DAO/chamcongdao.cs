@@ -359,7 +359,7 @@ namespace WinFormsApp1.DAO
 
         private Bitmap VeBieuDoChamCongTheoNgay(int ngay, int dung, int sai)
         {
-            int width = 200;  // Chiều rộng của đối tượng
+            int width = 80;  // Chiều rộng của đối tượng
             int height = 100; // Chiều cao của đối tượng
 
             Bitmap bmp = new Bitmap(width, height);
@@ -371,7 +371,7 @@ namespace WinFormsApp1.DAO
                 int total = dung + sai;
 
                 // Tính tỷ lệ thu nhỏ (scale) nếu tổng vượt quá giới hạn chiều rộng
-                float maxWidth = 180; // Chiều rộng tối đa khả dụng (bỏ khoảng cách và padding)
+                float maxWidth = 50; // Chiều rộng tối đa khả dụng (bỏ khoảng cách và padding)
                 float scale = total > maxWidth / 20 ? (float)maxWidth / (total * 20) : 1.0f;
 
                 // Tính toán chiều rộng sau khi áp dụng tỷ lệ
@@ -379,17 +379,17 @@ namespace WinFormsApp1.DAO
                 float saiWidth = sai * 20 * scale;
 
                 // Vẽ phần "Ngày"
-                g.DrawString($"Ngày: {ngay}", new Font("Arial", 12), Brushes.Black, 10, 10);
+                g.DrawString($"Ngày: {ngay}", new Font("Arial", 10), Brushes.Black, 10, 10);
 
                 // Vẽ phần "Đúng"
                 g.FillRectangle(Brushes.Green, 10, 40, dungWidth, 20);
                 g.DrawRectangle(Pens.Black, 10, 40, dungWidth, 20);
-                g.DrawString($"{dung}", new Font("Arial", 10), Brushes.White, 15, 42);
+                g.DrawString($"{dung}", new Font("Arial", 9), Brushes.White, 15, 42);
 
                 // Vẽ phần "Sai"
                 g.FillRectangle(Brushes.Red, 10 + dungWidth + 5, 40, saiWidth, 20);
                 g.DrawRectangle(Pens.Black, 10 + dungWidth + 5, 40, saiWidth, 20);
-                g.DrawString($"{sai}", new Font("Arial", 10), Brushes.White, 15 + dungWidth + 5, 42);
+                g.DrawString($"{sai}", new Font("Arial", 9), Brushes.White, 15 + dungWidth + 5, 42);
             }
 
             return bmp;

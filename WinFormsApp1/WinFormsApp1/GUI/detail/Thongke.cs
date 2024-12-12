@@ -16,16 +16,16 @@ namespace WinFormsApp1.GUI.detail
     public partial class Thongke : Form
     {
         int thang = DateTime.Now.Month;
-        int nam = DateTime.Now.Year;    
+        int nam = DateTime.Now.Year;
         static chamcongbus chamcongbus = new chamcongbus();
         static chamcongdao chamcongdao = new chamcongdao();
 
         public Thongke()
         {
             InitializeComponent();
-            domainUpDown1.SelectedIndex = thang - 1;
+            domainUpDown1.SelectedIndex = thang - 2;
             domainUpDown2.SelectedIndex = nam - 2023;
-            LoadData(thang, nam);
+            LoadData(11, 2024);
         }
 
         public void LoadData(int thang, int nam)
@@ -49,9 +49,24 @@ namespace WinFormsApp1.GUI.detail
                     tongsai += sai;
                 }
             }
-            chart1.Series["Series1"].Points.AddXY("Đúng: "+tongdung, tongdung);
+            chart1.Series["Series1"].Points.AddXY("Đúng: " + tongdung, tongdung);
             chart1.Series["Series1"].Points.AddXY("Sai: " + tongsai, tongsai);
 
+        }
+
+        private void domainUpDown1_SelectedItemChanged(object sender, EventArgs e)
+        {
+            DomainUpDown domainUpDown1 = sender as DomainUpDown;
+            thang = domainUpDown1.SelectedIndex + 1;
+
+            LoadData(thang, nam);
+        }
+
+        private void domainUpDown2_SelectedItemChanged(object sender, EventArgs e)
+        {
+            DomainUpDown domainUpDown2 = sender as DomainUpDown;
+            nam = domainUpDown2.SelectedIndex + 2023;
+            LoadData(thang, nam);
         }
     }
 }

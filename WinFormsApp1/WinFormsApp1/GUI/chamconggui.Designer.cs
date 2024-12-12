@@ -150,8 +150,9 @@
             export.Name = "export";
             export.Size = new Size(80, 30);
             export.TabIndex = 8;
-            export.Text = "Export";
+            export.Text = "Thống kê";
             export.UseVisualStyleBackColor = false;
+            export.Click += export_Click;
             // 
             // label1
             // 
@@ -253,7 +254,7 @@
             domainUpDown1.Items.Add("11");
             domainUpDown1.Items.Add("12");
             domainUpDown1.Location = new Point(617, 5);
-            domainUpDown1.Margin = new Padding(2, 2, 2, 2);
+            domainUpDown1.Margin = new Padding(2);
             domainUpDown1.Name = "domainUpDown1";
             domainUpDown1.ReadOnly = true;
             domainUpDown1.Size = new Size(87, 27);
@@ -266,7 +267,7 @@
             domainUpDown2.Items.Add("2024");
             domainUpDown2.Items.Add("2025");
             domainUpDown2.Location = new Point(782, 5);
-            domainUpDown2.Margin = new Padding(2, 2, 2, 2);
+            domainUpDown2.Margin = new Padding(2);
             domainUpDown2.Name = "domainUpDown2";
             domainUpDown2.ReadOnly = true;
             domainUpDown2.Size = new Size(87, 27);
@@ -308,7 +309,7 @@
             Controls.Add(panel1);
             Controls.Add(panel5);
             Controls.Add(panel2);
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "chamconggui";
             Size = new Size(1030, 713);
             Load += chamconggui_Load;
