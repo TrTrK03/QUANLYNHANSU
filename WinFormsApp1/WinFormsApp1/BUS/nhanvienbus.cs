@@ -16,6 +16,19 @@ namespace WinFormsApp1.BUS
             return employeeDAO.GetNhanVien();
         }
 
+
+        public void DeleteNhanVien(nhanviendto employee)
+        {
+            employeeDAO.DeleteNhanVien(employee);
+        }
+
+        public List<string> GetMaNV()
+        {
+            return employeeDAO.GetMaNV();
+        }
+
+        
+
         public List<nhanviendto> GetNhanVienLast()
         {
             return employeeDAO.GetNhanVienLast();
@@ -30,16 +43,12 @@ namespace WinFormsApp1.BUS
         {
             employeeDAO.UpdateNhanVien(employee);
         }
-        public void DeleteNhanVien(nhanviendto employee)
-        {
-            employeeDAO.DeleteNhanVien(employee);
-        }
+        
 
         public string GetMaDuAnFromDatabase(nhanviendto employee)
         {
             return employeeDAO.GetMaDuAnFromDatabase(employee); // Gọi phương thức và trả về string
         }
-
         //public List<string> LoadMaTK()
         //{
         //    return employeeDAO.LoadMaTK();

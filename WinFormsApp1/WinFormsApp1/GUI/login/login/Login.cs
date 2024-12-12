@@ -83,12 +83,6 @@ namespace WinFormsApp1.GUI
                 index id = new index();
                 id.StartPosition = FormStartPosition.CenterScreen;
                 id.ShowDialog();
-                if (this.Owner is LandR landR1)
-                {
-                    landR1.Close();
-                }
-
-
             }
             else
             {

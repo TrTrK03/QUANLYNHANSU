@@ -30,15 +30,14 @@ namespace WinFormsApp1
         public index()
         {
             InitializeComponent();
-            //Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
-            //panNav.Height = home.Height;
-            //panNav.Top = home.Top;
-            //panNav.Left = home.Left;
-            //home.BackColor = Color.FromArgb(46, 51, 73);
-            //nhanviengui usctr = new nhanviengui();
-            //Controls.Add(usctr);
-            //usctr.BringToFront();
-            //usctr.Location = new System.Drawing.Point(186, 0);
+            phongban.BackColor = Color.FromArgb(46, 51, 73);
+
+            panel5.Controls.Clear();
+            phongbangui pb = new phongbangui();
+            panel5.Controls.Add(pb);
+            pb.Dock = DockStyle.Fill;
+
+        
 
         }
         private void Form1_Load(object sender, EventArgs e)
@@ -47,17 +46,6 @@ namespace WinFormsApp1
             timer1.Start();
         }
 
-
-
-        private void home_Click(object sender, EventArgs e)
-        {
-            //panNav.Height = home.Height;
-            //panNav.Top = home.Top;
-            //panNav.Left = home.Left;
-            //home.BackColor = Color.FromArgb(46, 51, 73);
-
-
-        }
         private void chamcong_Click(object sender, EventArgs e)
         {
 

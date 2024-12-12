@@ -15,7 +15,12 @@ namespace WinFormsApp1.DAO
     {
         private ketnoi connectObj = new ketnoi();
         public nhanviendao() { }
+
        
+
+       
+
+
         public List<nhanviendto> GetNhanVien()
         {
             List<nhanviendto> employees = new List<nhanviendto>();
@@ -32,26 +37,26 @@ namespace WinFormsApp1.DAO
                 command.Connection = connection;
                 SqlDataReader reader = command.ExecuteReader();
 
-                    while (reader.Read())
+                while (reader.Read())
+                {
+                    nhanviendto employee = new nhanviendto
                     {
-                        nhanviendto employee = new nhanviendto
-                        {
-                            MaNhanVien = reader["MaNhanVien"].ToString(),
-                            HoTen = reader["HoTen"].ToString(),
-                            NgaySinh = DateTime.Parse(reader["ngaysinh"].ToString()),
-                            GioiTinh = reader["GioiTinh"].ToString(),
-                            DiaChi = reader["DiaChi"].ToString(),
-                            Email = reader["Email"].ToString(),
-                            SDT = reader["SDT"].ToString(),
-                            NguoiQuanLy = reader["NguoiQuanLy"].ToString(),
-                            PhongBan = reader["PhongBan"].ToString(),
-                            ChucVu= reader["ChucVu"].ToString(),
-                            HoSoGioiThieu = reader["HoSoGioiThieu"].ToString()
-                            
-                            
-                        };
-                        employees.Add(employee);
-                    }
+                        MaNhanVien = reader["MaNhanVien"].ToString(),
+                        HoTen = reader["HoTen"].ToString(),
+                        NgaySinh = DateTime.Parse(reader["ngaysinh"].ToString()),
+                        GioiTinh = reader["GioiTinh"].ToString(),
+                        DiaChi = reader["DiaChi"].ToString(),
+                        Email = reader["Email"].ToString(),
+                        SDT = reader["SDT"].ToString(),
+                        NguoiQuanLy = reader["NguoiQuanLy"].ToString(),
+                        PhongBan = reader["PhongBan"].ToString(),
+                        ChucVu = reader["ChucVu"].ToString(),
+                        HoSoGioiThieu = reader["HoSoGioiThieu"].ToString()
+
+
+                    };
+                    employees.Add(employee);
+                }
                 reader.Close();
                 connection.Close();
                 return employees;
@@ -170,6 +175,33 @@ namespace WinFormsApp1.DAO
 
 
 
+        public List<string> GetMaNV()
+        {
+            List<string> employees = new List<string>();
+
+            using (SqlConnection connection = connectObj.connection())
+            {
+                if (connection.State == System.Data.ConnectionState.Closed)
+                {
+                    connection.Open();
+                }
+                SqlCommand command = new SqlCommand();
+                command.CommandType = System.Data.CommandType.Text;
+                command.CommandText = "SELECT * FROM NhanVien";
+                command.Connection = connection;
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    string MaNhanvien = reader["MaNhanVien"].ToString();
+                    
+                    employees.Add(MaNhanvien);
+                }
+                reader.Close();
+                connection.Close();
+                return employees;
+            }
+        } 
 
     }
 }

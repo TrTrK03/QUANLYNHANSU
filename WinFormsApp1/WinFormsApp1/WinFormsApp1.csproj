@@ -71,6 +71,7 @@
   <ItemGroup>
     <PackageReference Include="EPPlus" Version="7.5.0" />
     <PackageReference Include="ExcelDataReader" Version="3.7.0" />
+    <PackageReference Include="HIC.System.Windows.Forms.DataVisualization" Version="1.0.1" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
   </ItemGroup>
 

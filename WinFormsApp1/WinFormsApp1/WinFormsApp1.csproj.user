@@ -4,6 +4,9 @@
     <Compile Update="GUI\chamconggui.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="GUI\detail\suachamcong.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="GUI\detail\SuaDuAn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -11,6 +14,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="GUI\detail\SuaPhucLoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\detail\TaoChamCong.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="GUI\detail\TaoChiTietPhucLoi.cs">
@@ -23,6 +29,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="GUI\detail\TaoPhucLoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\detail\Thongke.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="GUI\duangui.cs">

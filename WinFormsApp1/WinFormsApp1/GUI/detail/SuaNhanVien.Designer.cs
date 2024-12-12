@@ -158,6 +158,7 @@
             // 
             // txtMaNV
             // 
+            txtMaNV.Enabled = false;
             resources.ApplyResources(txtMaNV, "txtMaNV");
             txtMaNV.Name = "txtMaNV";
             // 
